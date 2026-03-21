@@ -2,11 +2,11 @@
 title: Launching the Blog Section
 date: 2026-03-22
 authors:
-  - embers-of-the-fire
+    - embers-of-the-fire
 excerpt: The site now includes a dedicated blog, topic-aware navigation, and optional page comments.
 tags:
-  - site
-  - updates
+    - site
+    - updates
 featured: true
 ---
 

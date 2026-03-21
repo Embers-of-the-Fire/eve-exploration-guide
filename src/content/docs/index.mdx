@@ -4,21 +4,21 @@ description: Documentation, blog posts, and changelogs for this EVE-focused know
 template: splash
 giscus: false
 hero:
-  tagline: A Starlight site with dedicated docs, blog, and changelog sections.
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Browse Docs
-      link: /guides/
-      icon: right-arrow
-      variant: primary
-    - text: Read the Blog
-      link: /blog/
-      icon: right-arrow
-    - text: View Changes
-      link: /changelog/
-      icon: right-arrow
-      variant: minimal
+    tagline: A Starlight site with dedicated docs, blog, and changelog sections.
+    image:
+        file: ../../assets/houston.webp
+    actions:
+        - text: Browse Docs
+          link: /guides/
+          icon: right-arrow
+          variant: primary
+        - text: Read the Blog
+          link: /blog/
+          icon: right-arrow
+        - text: View Changes
+          link: /changelog/
+          icon: right-arrow
+          variant: minimal
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
@@ -26,17 +26,17 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 ## Sections
 
 <CardGrid stagger>
-  <Card title="Docs" icon="open-book">
-    Guides and reference material live in dedicated sidebar topic groups.
-  </Card>
-  <Card title="Blog" icon="bars">
-    `starlight-blog` is enabled, including metrics and list views.
-  </Card>
-  <Card title="Changelog" icon="information">
-    Release notes and history have their own surfaced section in navigation.
-  </Card>
-  <Card title="Comments" icon="chat">
-    Giscus is ready to turn on once repository and discussion category IDs are
-    configured.
-  </Card>
+    <Card title="Docs" icon="open-book">
+        Guides and reference material live in dedicated sidebar topic groups.
+    </Card>
+    <Card title="Blog" icon="bars">
+        `starlight-blog` is enabled, including metrics and list views.
+    </Card>
+    <Card title="Changelog" icon="information">
+        Release notes and history have their own surfaced section in navigation.
+    </Card>
+    <Card title="Comments" icon="chat">
+        Giscus is ready to turn on once repository and discussion category IDs
+        are configured.
+    </Card>
 </CardGrid>
