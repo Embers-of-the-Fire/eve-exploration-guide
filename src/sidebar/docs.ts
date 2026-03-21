@@ -15,4 +15,8 @@ export const docsSidebar: Sidebar = [
     collapsed: false,
     autogenerate: { directory: "reference" },
   },
+  {
+    label: "Contributing",
+    link: "https://github.com/Embers-of-the-Fire/eve-exploration-guide/blob/main/CONTRIBUTING.md",
+  },
 ];

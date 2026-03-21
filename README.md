@@ -1,49 +1,21 @@
-# EVE Exploration Guide
+# EVE Exploration Guide EVE 挖坟教程
 
-This site is an Astro + Starlight documentation project with a tailored baseline modeled after `../pdxdoc-next`.
+## 关于此教程
 
-## Structure
+该教程主体内容来自于 南北派专家组 的通用挖坟教程，经过了一定的重新编排、润色和优化。
 
-Content lives under `src/content/docs/`:
+关于原始教程，请参阅：[Notwojack/EVE-Exploration-Guide](https://github.com/NotwoJack/EVE-Exploration-Guide)。
 
-- `guides/` for primary documentation
-- `reference/` for terse reference material
-- `blog/` for dated posts powered by `starlight-blog`
-- `changelog/` for release notes and historical updates
+## 贡献者
 
-Sidebar topic group definitions live in `src/sidebar/`.
+欢迎任何针对仓库内容的贡献，包括但不限于：修复错误、改进表达、增加内容、优化结构等。
 
-## Giscus
+在贡献前，请先阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 以了解贡献指南。
 
-Giscus is partially wired to the real target repository:
+## 版权
 
-- repo: `Embers-of-the-Fire/eve-exploration-guide`
-- repo ID: `R_kgDORtHxWQ`
-- category name: `Ideas`
+该仓库中所有代码（不包含图片和描述性文本）均采用 MIT 许可证或 Apache-2.0 许可证。
 
-The remaining value is `GISCUS_CATEGORY_ID`.
+原始教程文本的版权属于南北派专家组，原始教程中的图片版权属于原作者。
 
-Once the matching category exists for this repository, set:
-
-- `GISCUS_CATEGORY_ID`
-
-`SITE_URL` is optional. If set, Astro can emit absolute metadata and sitemap URLs. If unset, the site still builds normally.
-
-## Included extras
-
-The current baseline includes:
-
-- `starlight-image-zoom`
-- `starlight-giscus` when `GISCUS_CATEGORY_ID` is set
-- `starlight-cooler-credit`
-- `rehype-accessible-emojis`
-
-## Commands
-
-All commands run from the project root:
-
-- `pnpm install`
-- `pnpm dev`
-- `pnpm build`
-- `pnpm preview`
-- `pnpm check`
+本仓库对原始教程中复制、黏贴、整理和修改的部分均遵从原始教程的版权声明，本仓库作者不保留私有版权。
