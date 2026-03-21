@@ -1,11 +1,9 @@
 ---
-title: Docs
-description: Overview pages, walkthroughs, and reference material for the guide.
-giscus: false
+title: 前言
 ---
 
-This section groups the primary documentation for the site.
+完成了EVE四个教学任务，想多尝试下探索方面的内容，又苦于复杂的EVE操作系统的萌新。亦或是厌倦了刷怪打架的生活想多尝试其他游戏内容的大佬，这篇文章详细介绍了各种挖坟方面的知识，提供了详细的操作指南，让你能够快速入门挖坟活动。
 
-- Use [guides](/guides/example/) for walkthrough-style content.
-- Use [reference](/reference/) for stable lookup material.
-- Use [blog](/blog/) for dated updates or analysis that does not belong in the core docs.
+在各个星系之间漫游，与全宇宙的海盗斗智斗勇，体验破解谜题的乐趣，研究独特的挖坟技巧，在挖坟的同时还会遇到刺激的同行竞争，这就是我们的挖坟生活。唯一指定EVE频道‘南北派专家组’，欢迎各路萌新大佬入驻吹比，我们的口号是'挖穿宇宙！'。
+
+我们没有势力倾向，也不要你加军团，只是为了帮助新人更好的融入到游戏。考古交流频道，QQ群：498886377 群名字昵称写上游戏ID。

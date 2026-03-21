@@ -5,7 +5,7 @@ import type { MetaSidebar, SidebarConf } from "./sidebar.type";
 
 export const sidebar: MetaSidebar = [
     {
-        label: "Docs",
+        label: "考古教程",
         icon: "open-book",
         link: "/guides/",
         id: "docs",

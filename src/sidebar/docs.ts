@@ -2,21 +2,16 @@ import type { Sidebar } from "./sidebar.type";
 
 export const docsSidebar: Sidebar = [
     {
-        label: "Guides",
+        label: "前言",
         link: "/guides/",
     },
     {
-        label: "Guide Pages",
-        collapsed: false,
-        autogenerate: { directory: "guides" },
+        label: "序言",
+        collapsed: true,
+        autogenerate: { directory: "guides/preface" },
     },
     {
-        label: "Reference",
-        collapsed: false,
-        autogenerate: { directory: "reference" },
-    },
-    {
-        label: "Contributing",
+        label: "贡献指南",
         link: "https://github.com/Embers-of-the-Fire/eve-exploration-guide/blob/main/CONTRIBUTING.md",
     },
 ];
