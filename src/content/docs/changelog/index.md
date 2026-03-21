@@ -1,6 +1,6 @@
 ---
-title: Changelog
-description: Recent documentation and site-level changes.
+title: 改动日志
+description: 站点和文档内容的改动日志
 giscus: false
 ---
 

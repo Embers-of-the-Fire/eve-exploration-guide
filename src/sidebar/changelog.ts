@@ -2,11 +2,7 @@ import type { Sidebar } from "./sidebar.type";
 
 export const changelogSidebar: Sidebar = [
   {
-    label: "Latest Changes",
+    label: "改动日志",
     link: "/changelog/",
-  },
-  {
-    label: "Release Notes",
-    link: "/changelog/releases/",
   },
 ];
