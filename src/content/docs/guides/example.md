@@ -1,11 +1,12 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Example Exploration Workflow
+description: A starter guide page for documenting exploration routines and best practices.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+Use guide pages for step-by-step walkthroughs, fleet setups, scanning flows, or route-planning procedures.
 
-## Further reading
+## Suggested structure
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+- Start with the goal and required tools.
+- Outline the sequence in the order a pilot or operator will follow it.
+- Add notes for common failure cases and recovery steps.

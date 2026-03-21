@@ -7,11 +7,24 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.38.2",
     "astro": "^6.0.1",
-    "sharp": "^0.34.2"
+    "rehype-accessible-emojis": "^0.3.2",
+    "sharp": "^0.34.2",
+    "starlight-blog": "^0.26.1",
+    "starlight-cooler-credit": "^0.6.0",
+    "starlight-giscus": "^0.9.1",
+    "starlight-image-zoom": "^0.14.1",
+    "starlight-sidebar-topics": "^0.7.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.9.3"
   }
 }

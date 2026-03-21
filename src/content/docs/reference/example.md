@@ -1,11 +1,12 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: Example Reference Entry
+description: A concise reference page for terminology, settings, or route data.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+Reference pages should stay terse and searchable. Use them for naming conventions, ship fits, bookmark standards, or system metadata that readers may need to check repeatedly.
 
-## Further reading
+## Include
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+- Stable terminology
+- Inputs and outputs
+- Limits, caveats, and defaults

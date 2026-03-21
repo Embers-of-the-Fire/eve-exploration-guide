@@ -1,49 +1,49 @@
-# Starlight Starter Kit: Basics
+# EVE Exploration Guide
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+This site is an Astro + Starlight documentation project with a tailored baseline modeled after `../pdxdoc-next`.
 
-```
-pnpm create astro@latest -- --template starlight
-```
+## Structure
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Content lives under `src/content/docs/`:
 
-## 🚀 Project Structure
+- `guides/` for primary documentation
+- `reference/` for terse reference material
+- `blog/` for dated posts powered by `starlight-blog`
+- `changelog/` for release notes and historical updates
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+Sidebar topic group definitions live in `src/sidebar/`.
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+## Giscus
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Giscus is partially wired to the real target repository:
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+- repo: `Embers-of-the-Fire/eve-exploration-guide`
+- repo ID: `R_kgDORtHxWQ`
+- category name: `Ideas`
 
-Static assets, like favicons, can be placed in the `public/` directory.
+The remaining value is `GISCUS_CATEGORY_ID`.
 
-## 🧞 Commands
+Once the matching category exists for this repository, set:
 
-All commands are run from the root of the project, from a terminal:
+- `GISCUS_CATEGORY_ID`
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+`SITE_URL` is optional. If set, Astro can emit absolute metadata and sitemap URLs. If unset, the site still builds normally.
 
-## 👀 Want to learn more?
+## Included extras
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+The current baseline includes:
+
+- `starlight-image-zoom`
+- `starlight-giscus` when `GISCUS_CATEGORY_ID` is set
+- `starlight-cooler-credit`
+- `rehype-accessible-emojis`
+
+## Commands
+
+All commands run from the project root:
+
+- `pnpm install`
+- `pnpm dev`
+- `pnpm build`
+- `pnpm preview`
+- `pnpm check`
