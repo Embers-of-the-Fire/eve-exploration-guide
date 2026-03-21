@@ -2,7 +2,7 @@
 title: Launching the Blog Section
 date: 2026-03-22
 authors:
-  - eve-team
+  - embers-of-the-fire
 excerpt: The site now includes a dedicated blog, topic-aware navigation, and optional page comments.
 tags:
   - site
