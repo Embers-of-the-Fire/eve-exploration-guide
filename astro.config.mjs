@@ -18,7 +18,7 @@ const siteUrl =
 const starlightPlugins = [
     starlightBlog({
         authors,
-        title: "Blog",
+        title: "博客",
         metrics: {
             readingTime: true,
             words: "total",
@@ -62,6 +62,13 @@ export default defineConfig({
                 Pagination: "./src/components/overrides/Pagination.astro",
             },
             title: "EVE Exploration Guide",
+            defaultLocale: "zh-CN",
+            locales: {
+                root: {
+                    label: "简体中文",
+                    lang: "zh-CN",
+                },
+            },
             plugins: starlightPlugins,
         }),
     ],
