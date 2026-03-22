@@ -1,0 +1,1 @@
+"""EVE docs data generator."""
