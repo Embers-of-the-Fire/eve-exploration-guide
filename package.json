@@ -15,7 +15,7 @@
         "format:check": "prettier --check .",
         "lint": "pnpm run lint:code && pnpm run lint:docs",
         "lint:code": "biome lint .",
-        "lint:docs": "remark README.md BUILD.md EXTENSIONS.md CONTRIBUTE.md CONTRIBUTING.md \"src/**/*.md\" \"src/**/*.mdx\" --frail",
+        "lint:docs": "remark README.md BUILD.md EXTENSIONS.md CONTRIBUTING.md \"src/**/*.md\" \"src/**/*.mdx\" --frail",
         "validate": "pnpm run format:check && pnpm run lint && pnpm run check && pnpm run build"
     },
     "dependencies": {
