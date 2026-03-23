@@ -565,7 +565,10 @@ def resolve_icon_bytes(
     if not icon_file:
         return None
 
-    return resource_index.fetch_bytes(icon_file)
+    try:
+        return resource_index.fetch_bytes(icon_file)
+    except FileNotFoundError:
+        return None
 
 
 def resolve_type_image(

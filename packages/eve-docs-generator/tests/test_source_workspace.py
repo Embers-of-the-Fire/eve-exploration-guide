@@ -15,6 +15,7 @@ from eve_docs_generator.source_workspace import (
     WORKSPACE_ENV_VAR,
     build_download_url,
     load_localizations,
+    resolve_icon_bytes,
     resolve_workspace_path,
     resolve_workspace_paths,
 )
@@ -25,7 +26,10 @@ class FakeResourceIndex:
         self._payloads = payloads
 
     def fetch_bytes(self, resource_path: str) -> bytes:
-        return self._payloads[resource_path]
+        try:
+            return self._payloads[resource_path]
+        except KeyError as error:
+            raise FileNotFoundError(resource_path) from error
 
 
 def resolve_path(raw_path: str) -> Path:
@@ -37,6 +41,14 @@ def build_resource_index(root: Path) -> ResourceIndex:
     cache_dir = root / "cache"
     resfileindex_path.write_text("", encoding="utf-8")
     return ResourceIndex(resfileindex_path, cache_dir)
+
+
+class FakeFsdSource:
+    def __init__(self, payloads: dict[str, object]):
+        self._payloads = payloads
+
+    def load(self, fsd_name: str):
+        return self._payloads[fsd_name]
 
 
 class ResourceIndexCachePathTests(unittest.TestCase):
@@ -239,3 +251,13 @@ class LoadLocalizationsTests(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "Invalid localization pickle payload"):
             load_localizations(resource_index, {1})
+
+
+class ResolveIconBytesTests(unittest.TestCase):
+    def test_returns_none_when_icon_resource_is_missing_from_index(self):
+        fsd = FakeFsdSource({"iconids": {7: {"iconFile": "res:/ui/icon.png"}}})
+        resource_index = FakeResourceIndex({})
+
+        self.assertIsNone(
+            resolve_icon_bytes(fsd=fsd, resource_index=resource_index, icon_id=7)
+        )
