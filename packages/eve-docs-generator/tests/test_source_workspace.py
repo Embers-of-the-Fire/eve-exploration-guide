@@ -11,6 +11,7 @@ from eve_docs_generator.source_workspace import (
     DEFAULT_RESOURCE_BASE_URL,
     LOC_EN_RESOURCE,
     LOC_ZH_RESOURCE,
+    ResourceIndex,
     WORKSPACE_ENV_VAR,
     build_download_url,
     load_localizations,
@@ -29,6 +30,29 @@ class FakeResourceIndex:
 
 def resolve_path(raw_path: str) -> Path:
     return Path(raw_path).expanduser().resolve()
+
+
+def build_resource_index(root: Path) -> ResourceIndex:
+    resfileindex_path = root / "resfileindex.txt"
+    cache_dir = root / "cache"
+    resfileindex_path.write_text("", encoding="utf-8")
+    return ResourceIndex(resfileindex_path, cache_dir)
+
+
+class ResourceIndexCachePathTests(unittest.TestCase):
+    def test_rejects_absolute_cache_paths(self):
+        with TemporaryDirectory() as tmp_dir:
+            resource_index = build_resource_index(Path(tmp_dir))
+
+            with self.assertRaisesRegex(ValueError, "within the configured cache"):
+                resource_index.cache_path_for("/etc/passwd")
+
+    def test_rejects_parent_traversal_cache_paths(self):
+        with TemporaryDirectory() as tmp_dir:
+            resource_index = build_resource_index(Path(tmp_dir))
+
+            with self.assertRaisesRegex(ValueError, "within the configured cache"):
+                resource_index.cache_path_for("../../outside.bin")
 
 
 class ResolveWorkspaceTests(unittest.TestCase):

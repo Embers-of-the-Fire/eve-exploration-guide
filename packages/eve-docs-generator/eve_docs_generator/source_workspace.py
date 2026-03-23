@@ -157,7 +157,23 @@ class ResourceIndex:
         if ":/" in normalized:
             normalized = normalized.split(":/", 1)[1]
 
-        return self._resource_cache_dir / PurePosixPath(normalized)
+        cache_root = self._resource_cache_dir.resolve()
+        relative_path = PurePosixPath(normalized)
+
+        if relative_path.is_absolute() or ".." in relative_path.parts:
+            raise ValueError(
+                "Resource cache path must stay within the configured cache directory"
+            )
+
+        cache_path = (cache_root / Path(*relative_path.parts)).resolve()
+        try:
+            cache_path.relative_to(cache_root)
+        except ValueError as error:
+            raise ValueError(
+                "Resource cache path must stay within the configured cache directory"
+            ) from error
+
+        return cache_path
 
 
 def resolve_workspace_path(workspace_arg: str | None, resolve_cli_path):
