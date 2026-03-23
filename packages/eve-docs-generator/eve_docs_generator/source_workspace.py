@@ -10,7 +10,7 @@ from pathlib import Path, PurePosixPath
 import pickle
 import time
 from typing import Any
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit, urlunsplit
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -383,8 +383,13 @@ def build_download_url(resource_base_url: str, resource_url: str) -> str:
             "configured resource base URL"
         )
 
-    download_url = urljoin(resource_base_url, resource_url.lstrip("/"))
     parsed_base_url = urlsplit(resource_base_url)
+    base_path = parsed_base_url.path or "/"
+    if not base_path.endswith("/"):
+        base_path = f"{base_path}/"
+
+    normalized_base_url = urlunsplit(parsed_base_url._replace(path=base_path))
+    download_url = urljoin(normalized_base_url, resource_url.lstrip("/"))
     parsed_download_url = urlsplit(download_url)
 
     if (
@@ -395,6 +400,15 @@ def build_download_url(resource_base_url: str, resource_url: str) -> str:
         raise ValueError(
             "Resolved resource URL escaped the configured resource base URL"
         )
+
+    base_path_prefix = PurePosixPath(base_path)
+    download_path = PurePosixPath(parsed_download_url.path)
+    try:
+        download_path.relative_to(base_path_prefix)
+    except ValueError as error:
+        raise ValueError(
+            "Resolved resource URL escaped the configured resource base URL path"
+        ) from error
 
     return download_url
 

@@ -177,6 +177,22 @@ class BuildDownloadUrlTests(unittest.TestCase):
             "https://resources.eveonline.com/2c/payload",
         )
 
+    def test_rejects_resource_urls_that_escape_base_path(self):
+        with self.assertRaisesRegex(ValueError, "escaped"):
+            build_download_url(
+                "https://mirror.example/resources/",
+                "../../etc/passwd",
+            )
+
+    def test_treats_base_url_without_trailing_slash_as_directory(self):
+        self.assertEqual(
+            build_download_url(
+                "https://mirror.example/resources",
+                "icons/payload.bin",
+            ),
+            "https://mirror.example/resources/icons/payload.bin",
+        )
+
 
 class LoadLocalizationsTests(unittest.TestCase):
     def test_treats_empty_sequences_as_missing(self):
