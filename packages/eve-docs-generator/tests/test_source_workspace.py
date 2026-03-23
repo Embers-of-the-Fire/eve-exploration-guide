@@ -111,6 +111,54 @@ class ResolveWorkspaceTests(unittest.TestCase):
 
             self.assertIsNone(workspace["workspace_root"])
 
+    def test_explicit_start_ini_must_exist(self):
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            resfileindex_path = root / "resfileindex.txt"
+            fsd_dir = root / "fsd"
+
+            resfileindex_path.write_text("", encoding="utf-8")
+            fsd_dir.mkdir()
+
+            with self.assertRaisesRegex(
+                FileNotFoundError,
+                "start.ini path does not exist or is not a file",
+            ):
+                resolve_workspace_paths(
+                    workspace_arg=None,
+                    resfileindex_arg=str(resfileindex_path),
+                    fsd_dir_arg=str(fsd_dir),
+                    start_ini_arg=str(root / "missing-start.ini"),
+                    resource_cache_dir_arg=None,
+                    resource_base_url=DEFAULT_RESOURCE_BASE_URL,
+                    resolve_cli_path=resolve_path,
+                )
+
+    def test_explicit_start_ini_must_be_a_file(self):
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            resfileindex_path = root / "resfileindex.txt"
+            fsd_dir = root / "fsd"
+            start_ini_dir = root / "start.ini"
+
+            resfileindex_path.write_text("", encoding="utf-8")
+            fsd_dir.mkdir()
+            start_ini_dir.mkdir()
+
+            with self.assertRaisesRegex(
+                FileNotFoundError,
+                "start.ini path does not exist or is not a file",
+            ):
+                resolve_workspace_paths(
+                    workspace_arg=None,
+                    resfileindex_arg=str(resfileindex_path),
+                    fsd_dir_arg=str(fsd_dir),
+                    start_ini_arg=str(start_ini_dir),
+                    resource_cache_dir_arg=None,
+                    resource_base_url=DEFAULT_RESOURCE_BASE_URL,
+                    resolve_cli_path=resolve_path,
+                )
+
 
 class BuildDownloadUrlTests(unittest.TestCase):
     def test_rejects_absolute_or_cross_origin_urls(self):

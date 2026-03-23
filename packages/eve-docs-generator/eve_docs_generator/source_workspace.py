@@ -219,7 +219,7 @@ def resolve_workspace_paths(
         else resolve_fsd_dir(workspace_root)
     )
     start_ini_path = (
-        resolve_cli_path(start_ini_arg)
+        resolve_explicit_start_ini_path(start_ini_arg, resolve_cli_path)
         if start_ini_arg
         else resolve_start_ini_path(workspace_root)
     )
@@ -283,6 +283,17 @@ def resolve_start_ini_path(workspace_root: Path | None) -> Path | None:
 
     path = workspace_root / "start.ini"
     return path if path.exists() else None
+
+
+def resolve_explicit_start_ini_path(start_ini_arg: str, resolve_cli_path) -> Path:
+    path = resolve_cli_path(start_ini_arg)
+
+    if not path.exists() or not path.is_file():
+        raise FileNotFoundError(
+            f"start.ini path does not exist or is not a file: {path}"
+        )
+
+    return path
 
 
 def resolve_fsd_file(fsd_dir: Path, fsd_name: str) -> Path:
