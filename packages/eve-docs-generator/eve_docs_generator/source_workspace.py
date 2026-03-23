@@ -319,7 +319,7 @@ def parse_structured_payload(path: Path, raw_bytes: bytes):
 
     try:
         return load_msgpack(raw_bytes)
-    except ValueError:
+    except Exception:
         try:
             return json.loads(raw_bytes.decode("utf-8"))
         except Exception as json_error:
