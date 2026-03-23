@@ -137,21 +137,15 @@ class ResourceIndex:
 
         request = Request(download_url, headers=DOWNLOAD_HEADERS)
 
-        last_error: Exception | None = None
         for attempt in range(DOWNLOAD_RETRY_ATTEMPTS):
             try:
                 with urlopen(request, timeout=60) as response:
                     payload = response.read()
                 break
-            except (HTTPError, OSError, URLError) as error:
-                last_error = error
+            except (HTTPError, OSError, URLError):
                 if attempt == DOWNLOAD_RETRY_ATTEMPTS - 1:
                     raise
                 time.sleep(2**attempt)
-        else:
-            if last_error is not None:
-                raise last_error
-            raise RuntimeError(f"Failed to download resource: {entry.resource_path}")
 
         verify_checksum(payload, entry)
         cache_path.write_bytes(payload)
