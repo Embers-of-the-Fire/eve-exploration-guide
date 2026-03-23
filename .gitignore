@@ -27,6 +27,7 @@ pnpm-debug.log*
 __pycache__/
 *.py[cod]
 packages/eve-docs-generator/.venv/
+*.egg-info
 
 workspace/
 
