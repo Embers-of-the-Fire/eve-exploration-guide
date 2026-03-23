@@ -60,11 +60,7 @@ def resolve_cli_path(raw_path: str) -> Path:
     if path.is_absolute():
         return path.resolve()
 
-    cwd_candidate = (Path.cwd() / path).resolve()
-    if cwd_candidate.exists():
-        return cwd_candidate
-
-    return (REPO_ROOT / path).resolve()
+    return (Path.cwd() / path).resolve()
 
 
 def load_manifest_refs(manifest_path: Path) -> ManifestRefs:

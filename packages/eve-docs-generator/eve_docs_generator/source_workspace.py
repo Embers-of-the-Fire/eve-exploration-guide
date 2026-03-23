@@ -3,13 +3,14 @@ from __future__ import annotations
 import configparser
 import csv
 import hashlib
+import io
 import json
 import os
 from pathlib import Path, PurePosixPath
 import pickle
 import time
 from typing import Any
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -166,13 +167,15 @@ class ResourceIndex:
 
 
 def resolve_workspace_path(workspace_arg: str | None, resolve_cli_path):
-    if not workspace_arg:
+    workspace_value = workspace_arg or os.environ.get(WORKSPACE_ENV_VAR)
+
+    if not workspace_value:
         raise FileNotFoundError(
             "A TQ source workspace is required. Provide --workspace or set "
             f"{WORKSPACE_ENV_VAR}."
         )
 
-    workspace_path = resolve_cli_path(workspace_arg)
+    workspace_path = resolve_cli_path(workspace_value)
     if not workspace_path.exists():
         raise FileNotFoundError(f"Workspace path does not exist: {workspace_path}")
     return workspace_path
@@ -188,7 +191,13 @@ def resolve_workspace_paths(
     resource_base_url: str,
     resolve_cli_path,
 ):
-    workspace_root = resolve_workspace_path(workspace_arg, resolve_cli_path)
+    workspace_value = workspace_arg or os.environ.get(WORKSPACE_ENV_VAR)
+    workspace_root = (
+        resolve_workspace_path(workspace_arg, resolve_cli_path)
+        if workspace_arg
+        or (workspace_value and (not resfileindex_arg or not fsd_dir_arg))
+        else None
+    )
     resfileindex_path = (
         resolve_cli_path(resfileindex_arg)
         if resfileindex_arg
@@ -221,6 +230,8 @@ def resolve_workspace_paths(
         ),
         "workspace_root": workspace_root,
     }
+
+
 def resolve_resfileindex_path(workspace_root: Path | None) -> Path:
     if workspace_root is None:
         raise FileNotFoundError(
@@ -296,6 +307,36 @@ def parse_structured_payload(path: Path, raw_bytes: bytes):
             ) from json_error
 
 
+class RestrictedUnpickler(pickle.Unpickler):
+    def find_class(self, module: str, name: str) -> Any:
+        raise pickle.UnpicklingError(
+            f"Localization payload cannot reference {module}.{name}"
+        )
+
+
+def load_localization_pickle(payload: bytes) -> dict[Any, Any]:
+    try:
+        parsed = RestrictedUnpickler(io.BytesIO(payload)).load()
+    except (
+        AttributeError,
+        EOFError,
+        ImportError,
+        TypeError,
+        ValueError,
+        pickle.PickleError,
+    ) as error:
+        raise ValueError("Invalid localization pickle payload") from error
+
+    if not isinstance(parsed, tuple) or len(parsed) != 2:
+        raise ValueError("Invalid localization pickle payload")
+
+    _, localization_data = parsed
+    if not isinstance(localization_data, dict):
+        raise ValueError("Invalid localization pickle payload")
+
+    return localization_data
+
+
 def load_data_metadata(start_ini_path: Path | None) -> EveDataMetadata:
     if start_ini_path is None:
         return EveDataMetadata(game_build=None, game_version=None)
@@ -314,10 +355,27 @@ def normalize_resource_path(resource_path: str) -> str:
 
 
 def build_download_url(resource_base_url: str, resource_url: str) -> str:
-    if resource_url.startswith(("https://", "http://", "file://")):
-        return resource_url
+    parsed_resource_url = urlsplit(resource_url)
+    if parsed_resource_url.scheme or parsed_resource_url.netloc:
+        raise ValueError(
+            "Resource URLs from resfileindex.txt must be relative to the "
+            "configured resource base URL"
+        )
 
-    return urljoin(resource_base_url, resource_url.lstrip("/"))
+    download_url = urljoin(resource_base_url, resource_url.lstrip("/"))
+    parsed_base_url = urlsplit(resource_base_url)
+    parsed_download_url = urlsplit(download_url)
+
+    if (
+        parsed_base_url.scheme and parsed_download_url.scheme != parsed_base_url.scheme
+    ) or (
+        parsed_base_url.netloc and parsed_download_url.netloc != parsed_base_url.netloc
+    ):
+        raise ValueError(
+            "Resolved resource URL escaped the configured resource base URL"
+        )
+
+    return download_url
 
 
 def verify_checksum(payload: bytes, entry: ResourceEntry) -> None:
@@ -440,8 +498,8 @@ def load_localizations(
     en_payload = resource_index.fetch_bytes(LOC_EN_RESOURCE)
     zh_payload = resource_index.fetch_bytes(LOC_ZH_RESOURCE)
 
-    _, en_data = pickle.loads(en_payload)
-    _, zh_data = pickle.loads(zh_payload)
+    en_data = load_localization_pickle(en_payload)
+    zh_data = load_localization_pickle(zh_payload)
 
     records: dict[int, LocalizationRecord] = {}
 
@@ -566,11 +624,9 @@ def int_or_none(value: Any) -> int | None:
 
 
 def string_list_head(value: Any) -> str:
-    if isinstance(value, list) and value:
-        head = value[0]
-        return str(head) if head is not None else ""
-
-    if isinstance(value, tuple) and value:
+    if isinstance(value, (list, tuple)):
+        if not value:
+            return ""
         head = value[0]
         return str(head) if head is not None else ""
 

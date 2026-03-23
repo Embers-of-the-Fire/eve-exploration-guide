@@ -52,19 +52,21 @@ export function resolveLocalization(
     fallbackId: number,
 ): ResolvedLocalization {
     const entry = getLocalizationEntry(locId);
-
-    if (entry) {
-        return {
-            en: entry.en,
-            missing: false,
-            zhCN: entry.zhCN,
-        };
-    }
-
     const fallbackLabel =
         locId === null || locId === undefined
             ? formatMissingLabel(fallbackKind, fallbackId)
             : formatMissingLabel("loc", locId);
+
+    if (entry) {
+        const en = entry.en || entry.zhCN || fallbackLabel;
+        const zhCN = entry.zhCN || entry.en || fallbackLabel;
+
+        return {
+            en,
+            missing: false,
+            zhCN,
+        };
+    }
 
     return {
         en: fallbackLabel,
