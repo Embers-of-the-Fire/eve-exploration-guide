@@ -11,6 +11,7 @@ from unittest.mock import patch
 
 from eve_loc_fuzz.__main__ import main
 from eve_loc_fuzz.config import RESOURCE_CACHE_ENV_VARS
+from eve_loc_fuzz.dotenv_compat import load_dotenv
 from eve_loc_fuzz.search import (
     DEFAULT_LOCALIZATION_SUBDIR,
     FALLBACK_LOCALIZATION_SUBDIR,
@@ -28,6 +29,21 @@ def write_localization_pickle(
     localization_dir.mkdir(parents=True, exist_ok=True)
     pickle_path = localization_dir / f"localization_fsd_{lang}.pickle"
     pickle_path.write_bytes(pickle.dumps((lang, entries)))
+
+
+class LoadDotenvTests(unittest.TestCase):
+    def test_returns_false_for_invalid_utf8(self):
+        with TemporaryDirectory() as tmp_dir:
+            dotenv_path = Path(tmp_dir) / ".env"
+            dotenv_path.write_bytes(b"\xff")
+
+            self.assertFalse(load_dotenv(str(dotenv_path)))
+
+    def test_returns_false_when_dotenv_cannot_be_read(self):
+        dotenv_path = "/tmp/example.env"
+
+        with patch("pathlib.Path.read_text", side_effect=OSError):
+            self.assertFalse(load_dotenv(dotenv_path))
 
 
 @patch.dict(os.environ, {}, clear=True)

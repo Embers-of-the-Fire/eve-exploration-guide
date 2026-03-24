@@ -20,8 +20,13 @@ def load_dotenv(dotenv_path: str) -> bool:
     if not dotenv_path:
         return False
 
+    try:
+        raw_lines = Path(dotenv_path).read_text(encoding="utf-8").splitlines()
+    except (OSError, UnicodeDecodeError):
+        return False
+
     loaded = False
-    for raw_line in Path(dotenv_path).read_text(encoding="utf-8").splitlines():
+    for raw_line in raw_lines:
         line = raw_line.strip()
         if not line or line.startswith("#"):
             continue
