@@ -110,11 +110,10 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
   `EVE_DOCS_RESOURCE_CACHE_DIR` 或 `EVE_DOCS_WORKSPACE_CACHE_DIR`
   覆盖。
 - FSD 文件当前支持 `json`、`msgpack`、`mpk`、`fsdbinary` 等本地结构化格式。
-- 当前生成器只支持 `tq`，并默认使用
-  `https://resources.eveonline.com/` 解析 `resfileindex.txt`
-  中的资源 URL。
-- 如果工作区里还有 `start.ini`，生成器会一并记录游戏版本和
-  build；没有也可以正常运行。
+- 当前生成器只支持 `tq`，并默认使用 `https://resources.eveonline.com/` 解析 `resfileindex.txt` 中的资源 URL。
+- 下载器会读取标准代理环境变量；如果你走本地 HTTP 代理（例如 `localhost:7897`），请在 `.env` 中设置 `HTTP_PROXY=http://localhost:7897` 和 `HTTPS_PROXY=http://localhost:7897`。如果代理会重签 HTTPS 证书，还需要额外设置 `SSL_CERT_FILE=/absolute/path/to/proxy-ca.pem`。
+- 如果当前 Python 环境没有可用的系统 CA 证书，生成器会自动回退到 `certifi` 提供的公共 CA 集合。
+- 如果工作区里还有 `start.ini`，生成器会一并记录游戏版本和 build；没有也可以正常运行。
 
 生成结果会写到：
 

@@ -13,7 +13,7 @@ import {
 } from "./data";
 
 export interface EveTypeProps {
-    size: number | string;
+    size?: number | string;
     typeId: number;
 }
 
@@ -39,7 +39,7 @@ function describeImageSource(typeData: ReturnType<typeof getTypeEntry>) {
     return typeData.graphicId ? `graphic ${typeData.graphicId}` : "graphic";
 }
 
-export default function EveType({ size, typeId }: EveTypeProps) {
+export default function EveType({ size = 16, typeId }: EveTypeProps) {
     const typeData = getTypeEntry(typeId);
     const name = typeData
         ? resolveLocalization(typeData.typeNameLocId, "type", typeId)

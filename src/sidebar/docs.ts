@@ -10,4 +10,8 @@ export const docsSidebar: Sidebar = [
         collapsed: true,
         autogenerate: { directory: "guides/preface" },
     },
+    {
+        label: "快速指南",
+        link: "/guides/quick-guide",
+    },
 ];

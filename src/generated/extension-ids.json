@@ -2,8 +2,53 @@
     "duplicates": [],
     "entries": [],
     "eveRefs": {
-        "duplicates": [],
+        "duplicates": [
+            {
+                "id": 3412,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 11578,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 11,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 20,
+                        "prop": "typeId"
+                    }
+                ]
+            }
+        ],
         "entries": [
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 66263,
+                "kind": "localization",
+                "line": 14,
+                "prop": "locId"
+            },
             {
                 "component": "EveLocText",
                 "file": "src/content/docs/contributing/extensions.mdx",
@@ -11,6 +56,86 @@
                 "kind": "localization",
                 "line": 21,
                 "prop": "locId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 605,
+                "kind": "type",
+                "line": 15,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 3411,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 3412,
+                "kind": "type",
+                "line": 21,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 3412,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 11192,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 11578,
+                "kind": "type",
+                "line": 11,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 11578,
+                "kind": "type",
+                "line": 20,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 11579,
+                "kind": "type",
+                "line": 20,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 13278,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 21718,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
             },
             {
                 "component": "EveType",
@@ -27,18 +152,99 @@
                 "kind": "type",
                 "line": 26,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 29984,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 30028,
+                "kind": "type",
+                "line": 12,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 30832,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 30834,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 33468,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 33470,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 40520,
+                "kind": "type",
+                "line": 13,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/quick-guide.mdx",
+                "id": 47028,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
             }
         ],
         "iconIds": [],
         "locIds": [
+            66263,
             297962
         ],
         "typeIds": [
+            605,
+            3411,
+            3412,
+            11192,
+            11578,
+            11579,
+            13278,
+            21718,
             28665,
-            28666
+            28666,
+            29984,
+            30028,
+            30832,
+            30834,
+            33468,
+            33470,
+            40520,
+            47028
         ],
         "unresolved": []
     },
-    "generatedAt": "2026-03-24T07:11:09.153Z",
+    "generatedAt": "2026-03-24T20:14:49.970Z",
     "unresolved": []
 }
