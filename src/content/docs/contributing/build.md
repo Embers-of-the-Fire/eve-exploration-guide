@@ -32,6 +32,7 @@ pnpm install
 - `pnpm generate:eve-docs-data`：基于 inspect manifest 和 TQ
   源工作区生成最小化数据。
 - `pnpm loc:fuzz -- <query>`：在本地化 pickle 缓存中按子串检索文本。
+- `pnpm type:fuzz -- <query>`：在类型名称中按子串检索 `type_id`。
 
 ## 查询本地化文本
 
@@ -58,6 +59,35 @@ pnpm loc:fuzz -- ship --lang en-us --workspace /path/to/workspace --limit 20
 - 默认大小写不敏感；需要严格区分大小写时可传入
   `--case-sensitive`。
 - 输出内容为 `loc_id` 和本地化文本，并按文本长度升序排序。
+
+## 查询类型名称
+
+如果你需要根据类型名称反查 `type_id`，可以使用
+`packages/eve-loc-fuzz/` 中的类型检索入口：
+
+```bash
+pnpm type:fuzz -- drake --lang en-us
+pnpm type:fuzz -- "渡鸦" --lang zh
+pnpm type:fuzz -- cruiser --lang en-us --workspace /path/to/workspace \
+  --limit 20
+```
+
+说明：
+
+- 必须显式传入至少一个 `--lang`；可以重复传入 `--lang`
+  来同时查询多个语言包。
+- 默认工作区是仓库根目录下的 `./workspace`。
+- 工具会读取工作区中的 `types` FSD 数据，并用对应语言的
+  localization pickle 解析每个类型的 `typeNameID`。
+- 默认会优先读取 `<workspace>/fsd/`；如果工作区根目录直接放有
+  `types.msgpack`、`types.json` 等 FSD 文件，也会自动识别。
+- 也可以用 `--fsd-dir` 和 `--localization-dir`
+  直接指定类型与本地化数据来源。
+- 匹配规则是简单的子串包含关系，不做 Levenshtein
+  之类的相似度计算。
+- 默认大小写不敏感；需要严格区分大小写时可传入
+  `--case-sensitive`。
+- 输出内容为 `type_id` 和类型名称，并按名称长度升序排序。
 
 ## 刷新 EVE 文档数据
 

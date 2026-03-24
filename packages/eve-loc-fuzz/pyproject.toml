@@ -1,12 +1,16 @@
 [project]
 name = "eve-loc-fuzz"
 version = "0.1.0"
-description = "Substring search for EVE localization pickle files"
+description = "Substring search for EVE localization data and type names"
 readme = "README.md"
 requires-python = ">=3.13"
+dependencies = [
+    "msgpack>=1.1.1,<2",
+]
 
 [project.scripts]
 eve-loc-fuzz = "eve_loc_fuzz.__main__:main"
+eve-type-fuzz = "eve_loc_fuzz.type_main:main"
 
 [build-system]
 requires = ["setuptools>=69"]
