@@ -1,6 +1,7 @@
 // @ts-check
 import react from "@astrojs/react";
 import starlight from "@astrojs/starlight";
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "astro/config";
 import extensionIdsIntegration from "./packages/astro-extension-ids/src/index.ts";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
@@ -16,6 +17,7 @@ const rehypePlugins = /** @type {any} */ ([rehypeAccessibleEmojis]);
 const siteUrl =
     process.env.SITE_URL ??
     "https://github.com/Embers-of-the-Fire/eve-exploration-guide";
+const srcDir = fileURLToPath(new URL("./src", import.meta.url));
 
 const starlightPlugins = [
     starlightBlog({
@@ -53,6 +55,13 @@ const siteConfig = process.env.SITE_URL ? { site: process.env.SITE_URL } : {};
 // https://astro.build/config
 export default defineConfig({
     ...siteConfig,
+    vite: {
+        resolve: {
+            alias: {
+                "@": srcDir,
+            },
+        },
+    },
     markdown: {
         rehypePlugins,
     },
