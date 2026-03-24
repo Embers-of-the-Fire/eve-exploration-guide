@@ -42,6 +42,7 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 
 - `--workspace` 目录应当包含 `resfileindex.txt`，以及 `fsd/` 目录或直接放置的 FSD 文件。
 - 也可以通过环境变量 `EVE_DOCS_WORKSPACE` 提供工作区；生成器会在 Python 侧读取 `.env`。
+- 原始资源缓存默认写到 `<workspace>/.cache/eve-docs-generator/resources`；也可以通过 `--resource-cache-dir`、`--workspace-cache-dir`、`EVE_DOCS_RESOURCE_CACHE_DIR` 或 `EVE_DOCS_WORKSPACE_CACHE_DIR` 覆盖。
 - FSD 文件当前支持 `json`、`msgpack`、`mpk`、`fsdbinary` 等本地结构化格式。
 - 当前生成器只支持 `tq`，并默认使用 `https://resources.eveonline.com/` 解析 `resfileindex.txt` 中的资源 URL。
 - 如果工作区里还有 `start.ini`，生成器会一并记录游戏版本和 build；没有也可以正常运行。
@@ -53,7 +54,7 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 - `src/generated/eve/icons/*.png`
 - `src/generated/eve/types/*.png`
 
-生成器只会下载或复用当前文档真正引用到的资源。下载到的原始资源会放在本地缓存目录中，默认位于 `/tmp/eve-exploration-guide-eve-docs-resource-cache`，不会被提交到仓库。
+生成器只会下载或复用当前文档真正引用到的资源。下载到的原始资源会放在本地缓存目录中，默认位于工作区内，不会被提交到仓库。
 
 ## 验证
 

@@ -9,13 +9,17 @@ from unittest.mock import patch
 
 from eve_docs_generator.source_workspace import (
     DEFAULT_RESOURCE_BASE_URL,
+    DEFAULT_RESOURCE_CACHE_SUBDIR,
     LOC_EN_RESOURCE,
     LOC_ZH_RESOURCE,
+    RESOURCE_CACHE_ENV_VAR,
     ResourceIndex,
+    WORKSPACE_CACHE_ENV_VAR,
     WORKSPACE_ENV_VAR,
     build_download_url,
     load_localizations,
     resolve_icon_bytes,
+    resolve_resource_cache_dir,
     resolve_workspace_path,
     resolve_workspace_paths,
 )
@@ -122,6 +126,81 @@ class ResolveWorkspaceTests(unittest.TestCase):
                 )
 
             self.assertIsNone(workspace["workspace_root"])
+
+    def test_workspace_defaults_resource_cache_under_workspace_root(self):
+        with TemporaryDirectory() as tmp_dir:
+            workspace_root = Path(tmp_dir)
+            (workspace_root / "resfileindex.txt").write_text("", encoding="utf-8")
+            (workspace_root / "fsd").mkdir()
+
+            with patch.dict(
+                os.environ,
+                {
+                    WORKSPACE_ENV_VAR: "",
+                    RESOURCE_CACHE_ENV_VAR: "",
+                    WORKSPACE_CACHE_ENV_VAR: "",
+                },
+                clear=False,
+            ):
+                workspace = resolve_workspace_paths(
+                    workspace_arg=str(workspace_root),
+                    resfileindex_arg=None,
+                    fsd_dir_arg=None,
+                    start_ini_arg=None,
+                    resource_cache_dir_arg=None,
+                    resource_base_url=DEFAULT_RESOURCE_BASE_URL,
+                    resolve_cli_path=resolve_path,
+                )
+
+            expected_cache_root = (
+                workspace_root.resolve() / DEFAULT_RESOURCE_CACHE_SUBDIR
+            )
+            self.assertEqual(
+                workspace["resource_index"].cache_path_for("res:/ui/icon.png"),
+                expected_cache_root / "ui" / "icon.png",
+            )
+
+    def test_resource_cache_env_var_overrides_workspace_default(self):
+        with TemporaryDirectory() as tmp_dir:
+            workspace_root = Path(tmp_dir) / "workspace"
+            cache_dir = Path(tmp_dir) / "cache"
+            workspace_root.mkdir()
+
+            resolved = None
+            with patch.dict(
+                os.environ,
+                {RESOURCE_CACHE_ENV_VAR: str(cache_dir), WORKSPACE_CACHE_ENV_VAR: ""},
+                clear=False,
+            ):
+                resolved = resolve_resource_cache_dir(
+                    resource_cache_dir_arg=None,
+                    workspace_root=workspace_root,
+                    resolve_cli_path=resolve_path,
+                )
+
+            self.assertEqual(resolved, cache_dir.resolve())
+
+    def test_cli_resource_cache_overrides_env_var(self):
+        with TemporaryDirectory() as tmp_dir:
+            workspace_root = Path(tmp_dir) / "workspace"
+            workspace_root.mkdir()
+            cli_cache_dir = Path(tmp_dir) / "cli-cache"
+
+            with patch.dict(
+                os.environ,
+                {
+                    RESOURCE_CACHE_ENV_VAR: str(Path(tmp_dir) / "env-cache"),
+                    WORKSPACE_CACHE_ENV_VAR: str(Path(tmp_dir) / "legacy-env-cache"),
+                },
+                clear=False,
+            ):
+                resolved = resolve_resource_cache_dir(
+                    resource_cache_dir_arg=str(cli_cache_dir),
+                    workspace_root=workspace_root,
+                    resolve_cli_path=resolve_path,
+                )
+
+            self.assertEqual(resolved, cli_cache_dir.resolve())
 
     def test_explicit_start_ini_must_exist(self):
         with TemporaryDirectory() as tmp_dir:

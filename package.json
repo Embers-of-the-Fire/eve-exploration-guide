@@ -10,7 +10,7 @@
         "astro": "astro",
         "check": "astro check",
         "extract:extension-ids": "pnpm run build",
-        "generate:eve-docs-data": "cd packages/eve-docs-generator && UV_CACHE_DIR=${UV_CACHE_DIR:-/tmp/eve-exploration-guide-uv-cache} uv run python -m eve_docs_generator --manifest ../../src/generated/extension-ids.json --output-dir ../../src/generated/eve",
+        "generate:eve-docs-data": "cd packages/eve-docs-generator && uv run python -m eve_docs_generator --manifest ../../src/generated/extension-ids.json --output-dir ../../src/generated/eve",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
         "lint": "pnpm run lint:code && pnpm run lint:docs",
