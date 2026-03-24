@@ -1,22 +1,22 @@
 ---
 title: EVE Exploration Guide
-description: Documentation, blog posts, and changelogs for this EVE-focused knowledge base.
+description: 完整教程、博客和贡献文档的统一入口。
 template: splash
 giscus: false
 hero:
-    tagline: A Starlight site with dedicated docs, blog, and changelog sections.
+    tagline: 一个将完整教程、博客和贡献资料分区整理的 EVE 挖坟知识站点。
     image:
         file: ../../assets/houston.webp
     actions:
-        - text: Browse Docs
+        - text: 阅读教程
           link: /guides/
           icon: right-arrow
           variant: primary
-        - text: Read the Blog
+        - text: 浏览博客
           link: /blog/
           icon: right-arrow
-        - text: View Changes
-          link: /changelog/
+        - text: 贡献与开发
+          link: /contributing/
           icon: right-arrow
           variant: minimal
 ---
@@ -26,17 +26,16 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 ## Sections
 
 <CardGrid stagger>
-    <Card title="Docs" icon="open-book">
-        Guides and reference material live in dedicated sidebar topic groups.
+    <Card title="完整教程" icon="open-book">
+        长期有效的挖坟教程正文收在这个分区。
     </Card>
-    <Card title="Blog" icon="bars">
-        `starlight-blog` is enabled, including metrics and list views.
+    <Card title="博客" icon="bars">
+        用于发布阶段性更新、补充说明和不适合写入长期文档的内容。
     </Card>
-    <Card title="Changelog" icon="information">
-        Release notes and history have their own surfaced section in navigation.
+    <Card title="贡献与开发" icon="pencil">
+        构建指南、扩展组件说明、提交流程和改动日志统一放在这个独立分区。
     </Card>
-    <Card title="Comments" icon="chat">
-        Giscus is ready to turn on once repository and discussion category IDs
-        are configured.
+    <Card title="评论" icon="chat">
+        Giscus 已接入，可在需要时为文档和博客页面开启讨论。
     </Card>
 </CardGrid>

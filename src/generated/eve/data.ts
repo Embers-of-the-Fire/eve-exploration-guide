@@ -29,7 +29,10 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     64268: { en: "Marauder", zhCN: "掠夺舰" },
     66673: { en: "Tech II", zhCN: "二级科技" },
     71714: { en: "Vargur Blueprint", zhCN: "恶狼级蓝图" },
-    94919: { en: "Geared toward versatility and prolonged deployment in hostile environments, Marauders represent the cutting edge in today’s warship technology. While being thick-skinned, hard-hitting monsters on their own, they are also able to use Bastion technology. Similar in effect to capital reconfiguration technology, when activated the Bastion module provides huge bonuses to firepower and the ability to withstand enormous amounts of punishment, at the cost of being stationary.", zhCN: "旨在成为多用途且能够长时间部署于敌方区域的掠夺舰，代表了当代战舰科技的最前沿。它不仅皮糙肉厚、火力凶猛，还能够使用堡垒科技克敌制胜。这种科技与旗舰的配置技术类似，开启堡垒装备后，舰船的火力大幅提高，同时能够承受巨额伤害，但代价是无法移动。" },
+    94919: {
+        en: "Geared toward versatility and prolonged deployment in hostile environments, Marauders represent the cutting edge in today’s warship technology. While being thick-skinned, hard-hitting monsters on their own, they are also able to use Bastion technology. Similar in effect to capital reconfiguration technology, when activated the Bastion module provides huge bonuses to firepower and the ability to withstand enormous amounts of punishment, at the cost of being stationary.",
+        zhCN: "旨在成为多用途且能够长时间部署于敌方区域的掠夺舰，代表了当代战舰科技的最前沿。它不仅皮糙肉厚、火力凶猛，还能够使用堡垒科技克敌制胜。这种科技与旗舰的配置技术类似，开启堡垒装备后，舰船的火力大幅提高，同时能够承受巨额伤害，但代价是无法移动。",
+    },
     106452: { en: "Vargur", zhCN: "恶狼级" },
     297962: { en: "Silent Battleground", zhCN: "寂静的战场" },
 };

@@ -1,34 +1,34 @@
 import { blogSidebar } from "./blog";
-import { changelogSidebar } from "./changelog";
+import { contributingSidebar } from "./contributing";
 import { docsSidebar } from "./docs";
 import type { MetaSidebar, SidebarConf } from "./sidebar.type";
 
 export const sidebar: MetaSidebar = [
     {
-        label: "考古教程",
+        label: "完整教程",
         icon: "open-book",
         link: "/guides/",
         id: "docs",
         items: docsSidebar,
     },
     {
-        label: "Blog",
+        label: "博客",
         icon: "bars",
         link: "/blog/",
         id: "blog",
         items: blogSidebar,
     },
     {
-        label: "Changelog",
-        icon: "information",
-        link: "/changelog/",
-        id: "changelog",
-        items: changelogSidebar,
+        label: "贡献与开发",
+        icon: "pencil",
+        link: "/contributing/",
+        id: "contributing",
+        items: contributingSidebar,
     },
 ];
 
 export const sidebarTopics: SidebarConf = {
-    docs: ["/guides/", "/guides/**/*", "/reference/", "/reference/**/*"],
+    docs: ["/guides/", "/guides/**/*"],
     blog: ["/blog/", "/blog/**/*"],
-    changelog: ["/changelog/", "/changelog/**/*"],
+    contributing: ["/contributing/", "/contributing/**/*"],
 };

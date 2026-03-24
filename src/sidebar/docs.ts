@@ -10,13 +10,4 @@ export const docsSidebar: Sidebar = [
         collapsed: true,
         autogenerate: { directory: "guides/preface" },
     },
-    {
-        label: "站点扩展",
-        collapsed: true,
-        autogenerate: { directory: "reference" },
-    },
-    {
-        label: "贡献指南",
-        link: "https://github.com/Embers-of-the-Fire/eve-exploration-guide/blob/main/CONTRIBUTING.md",
-    },
 ];

@@ -14,7 +14,7 @@ This post marks the first blog entry for the guide.
 
 The project now follows the tailored `pdxdoc-next` baseline more closely:
 
-- docs, blog, and changelog routes are surfaced through topic-based sidebar navigation
+- docs, blog, and contribution routes are surfaced through topic-based sidebar navigation
 - the blog has its own UI integration through `starlight-blog`
 - image zoom, `llms.txt`, accessible emoji handling, and optional Giscus comments are wired in
 
