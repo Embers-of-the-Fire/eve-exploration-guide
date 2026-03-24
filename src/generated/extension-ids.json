@@ -6,7 +6,7 @@
         "entries": [
             {
                 "component": "EveLocText",
-                "file": "src/content/docs/reference/extensions.mdx",
+                "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 297962,
                 "kind": "localization",
                 "line": 21,
@@ -14,7 +14,7 @@
             },
             {
                 "component": "EveType",
-                "file": "src/content/docs/reference/extensions.mdx",
+                "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 28665,
                 "kind": "type",
                 "line": 26,
@@ -22,7 +22,7 @@
             },
             {
                 "component": "EveType",
-                "file": "src/content/docs/reference/extensions.mdx",
+                "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 28666,
                 "kind": "type",
                 "line": 26,
@@ -39,6 +39,6 @@
         ],
         "unresolved": []
     },
-    "generatedAt": "2026-03-22T16:21:48.320Z",
+    "generatedAt": "2026-03-24T07:11:09.153Z",
     "unresolved": []
 }

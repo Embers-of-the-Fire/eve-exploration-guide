@@ -2,7 +2,7 @@ import type { Sidebar } from "./sidebar.type";
 
 export const blogSidebar: Sidebar = [
     {
-        label: "Blog Home",
+        label: "博客首页",
         link: "/blog/",
     },
 ];

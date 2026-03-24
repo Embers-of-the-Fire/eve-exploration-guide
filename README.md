@@ -6,11 +6,20 @@
 
 关于原始教程，请参阅：[Notwojack/EVE-Exploration-Guide](https://github.com/NotwoJack/EVE-Exploration-Guide)。
 
-## 贡献者
+## 仓库内容
+
+- 完整教程：[前言](./src/content/docs/guides/index.md)
+- 博客内容：[博客目录](./src/content/docs/blog/)
+- 贡献与开发：[总览](./src/content/docs/contributing/index.md)
+
+## 开发入口
 
 欢迎任何针对仓库内容的贡献，包括但不限于：修复错误、改进表达、增加内容、优化结构等。
 
-在贡献前，请先阅读 [CONTRIBUTING.md](./CONTRIBUTING.md) 以了解贡献指南。
+- [构建与校验](./src/content/docs/contributing/build.md)
+- [提交流程](./src/content/docs/contributing/workflow.md)
+- [扩展组件](./src/content/docs/contributing/extensions.mdx)
+- [改动日志](./src/content/docs/contributing/changelog.md)
 
 ## 版权
 
