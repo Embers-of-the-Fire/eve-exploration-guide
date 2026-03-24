@@ -1,18 +1,20 @@
 from __future__ import annotations
 
+import asyncio
 import configparser
 import csv
+from dataclasses import dataclass
 import hashlib
 import io
 import json
 import os
 from pathlib import Path, PurePosixPath
 import pickle
-import time
 from typing import Any
 from urllib.parse import urljoin, urlsplit, urlunsplit
-from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
+
+import aiofiles
+import aiohttp
 
 from .model import (
     BLUEPRINT_CATEGORY_ID,
@@ -23,6 +25,7 @@ from .model import (
     MetaGroupRecord,
     ResourceEntry,
     ResolvedTypeImage,
+    TypeImageSource,
     TypeRecord,
 )
 from .msgpack import loads as load_msgpack
@@ -37,6 +40,8 @@ DOWNLOAD_HEADERS = {
     ),
 }
 DOWNLOAD_RETRY_ATTEMPTS = 4
+DOWNLOAD_TIMEOUT_SECONDS = 60
+MAX_PARALLEL_DOWNLOADS = 8
 DEFAULT_RESOURCE_CACHE_SUBDIR = Path(".cache") / "eve-docs-generator" / "resources"
 RESOURCE_CACHE_ENV_VAR = "EVE_DOCS_RESOURCE_CACHE_DIR"
 WORKSPACE_CACHE_ENV_VAR = "EVE_DOCS_WORKSPACE_CACHE_DIR"
@@ -50,6 +55,12 @@ KNOWN_FSD_SUFFIXES = (
 )
 LOC_EN_RESOURCE = "res:/localizationfsd/localization_fsd_en-us.pickle"
 LOC_ZH_RESOURCE = "res:/localizationfsd/localization_fsd_zh.pickle"
+
+
+@dataclass(frozen=True)
+class ResolvedTypeImageResource:
+    resource_path: str
+    source: TypeImageSource
 
 
 class FsdSource:
@@ -118,37 +129,151 @@ class ResourceIndex:
         )
 
     def fetch_bytes(self, resource_path: str) -> bytes:
-        entry = self.get_resource(resource_path)
-        if entry is None:
-            raise FileNotFoundError(
-                f"Resource not found in resfileindex: {resource_path}"
-            )
+        return asyncio.run(self.fetch_bytes_async(resource_path))
 
-        cache_path = self.cache_path_for(entry.resource_path)
+    async def fetch_bytes_async(self, resource_path: str) -> bytes:
+        payloads = await self.prefetch_bytes_async({resource_path})
+        return payloads[normalize_resource_path(resource_path)]
 
-        if cache_path.exists():
-            payload = cache_path.read_bytes()
+    async def prefetch_bytes_async(
+        self,
+        resource_paths: set[str],
+    ) -> dict[str, bytes]:
+        entries: dict[str, ResourceEntry] = {}
+
+        for resource_path in resource_paths:
+            entry = self.get_resource(resource_path)
+            if entry is None:
+                raise FileNotFoundError(
+                    f"Resource not found in resfileindex: {resource_path}"
+                )
+
+            entries[entry.resource_path] = entry
+
+        if not entries:
+            return {}
+
+        ordered_entries = [entries[path] for path in sorted(entries)]
+        payloads: dict[str, bytes] = {}
+        missing_entries: list[tuple[ResourceEntry, Path]] = []
+
+        for entry in ordered_entries:
+            cache_path = self.cache_path_for(entry.resource_path)
+            cached_payload = await self._read_cached_payload_async(cache_path, entry)
+
+            if cached_payload is not None:
+                payloads[entry.resource_path] = cached_payload
+                continue
+
+            missing_entries.append((entry, cache_path))
+
+        if missing_entries:
+            connector = aiohttp.TCPConnector(limit=MAX_PARALLEL_DOWNLOADS)
+            semaphore = asyncio.Semaphore(MAX_PARALLEL_DOWNLOADS)
+            timeout = aiohttp.ClientTimeout(total=DOWNLOAD_TIMEOUT_SECONDS)
+
+            async with aiohttp.ClientSession(
+                connector=connector,
+                headers=DOWNLOAD_HEADERS,
+                timeout=timeout,
+            ) as session:
+                downloaded_payloads = await asyncio.gather(
+                    *[
+                        self._download_and_cache_entry_bytes_async(
+                            entry,
+                            cache_path=cache_path,
+                            session=session,
+                            semaphore=semaphore,
+                        )
+                        for entry, cache_path in missing_entries
+                    ]
+                )
+
+            for (entry, _), payload in zip(
+                missing_entries,
+                downloaded_payloads,
+                strict=True,
+            ):
+                payloads[entry.resource_path] = payload
+
+        return {
+            entry.resource_path: payloads[entry.resource_path]
+            for entry in ordered_entries
+        }
+
+    async def _download_and_cache_entry_bytes_async(
+        self,
+        entry: ResourceEntry,
+        *,
+        cache_path: Path,
+        session: aiohttp.ClientSession,
+        semaphore: asyncio.Semaphore,
+    ) -> bytes:
+        payload = await self._download_entry_bytes_async(
+            entry,
+            cache_path=cache_path,
+            session=session,
+            semaphore=semaphore,
+        )
+        await self._write_cached_payload_async(cache_path, payload)
+        return payload
+
+    async def _read_cached_payload_async(
+        self,
+        cache_path: Path,
+        entry: ResourceEntry,
+    ) -> bytes | None:
+        if not cache_path.exists():
+            return None
+
+        async with aiofiles.open(cache_path, "rb") as handle:
+            payload = await handle.read()
+
+        try:
             verify_checksum(payload, entry)
-            return payload
+        except ValueError:
+            cache_path.unlink(missing_ok=True)
+            return None
 
+        return payload
+
+    async def _download_entry_bytes_async(
+        self,
+        entry: ResourceEntry,
+        *,
+        cache_path: Path,
+        session: aiohttp.ClientSession,
+        semaphore: asyncio.Semaphore,
+    ) -> bytes:
         download_url = build_download_url(self._resource_base_url, entry.url)
         cache_path.parent.mkdir(parents=True, exist_ok=True)
 
-        request = Request(download_url, headers=DOWNLOAD_HEADERS)
-
-        for attempt in range(DOWNLOAD_RETRY_ATTEMPTS):
-            try:
-                with urlopen(request, timeout=60) as response:
-                    payload = response.read()
-                break
-            except (HTTPError, OSError, URLError):
-                if attempt == DOWNLOAD_RETRY_ATTEMPTS - 1:
-                    raise
-                time.sleep(2**attempt)
+        async with semaphore:
+            for attempt in range(DOWNLOAD_RETRY_ATTEMPTS):
+                try:
+                    async with session.get(download_url) as response:
+                        response.raise_for_status()
+                        payload = await response.read()
+                    break
+                except (aiohttp.ClientError, asyncio.TimeoutError, OSError):
+                    if attempt == DOWNLOAD_RETRY_ATTEMPTS - 1:
+                        raise
+                    await asyncio.sleep(2**attempt)
 
         verify_checksum(payload, entry)
-        cache_path.write_bytes(payload)
         return payload
+
+    async def _write_cached_payload_async(
+        self,
+        cache_path: Path,
+        payload: bytes,
+    ) -> None:
+        temp_path = cache_path.parent / f".{cache_path.name}.{os.getpid()}.tmp"
+
+        async with aiofiles.open(temp_path, "wb") as handle:
+            await handle.write(payload)
+
+        temp_path.replace(cache_path)
 
     def cache_path_for(self, resource_path: str) -> Path:
         normalized = normalize_resource_path(resource_path)
@@ -551,9 +676,19 @@ def load_localizations(
     if not wanted_ids:
         return {}
 
-    en_payload = resource_index.fetch_bytes(LOC_EN_RESOURCE)
-    zh_payload = resource_index.fetch_bytes(LOC_ZH_RESOURCE)
+    return load_localizations_from_payloads(
+        en_payload=resource_index.fetch_bytes(LOC_EN_RESOURCE),
+        wanted_ids=wanted_ids,
+        zh_payload=resource_index.fetch_bytes(LOC_ZH_RESOURCE),
+    )
 
+
+def load_localizations_from_payloads(
+    *,
+    en_payload: bytes,
+    wanted_ids: set[int],
+    zh_payload: bytes,
+) -> dict[int, LocalizationRecord]:
     en_data = load_localization_pickle(en_payload)
     zh_data = load_localization_pickle(zh_payload)
 
@@ -577,6 +712,21 @@ def resolve_icon_bytes(
     resource_index: ResourceIndex,
     icon_id: int,
 ) -> bytes | None:
+    icon_file = resolve_icon_resource_path(fsd=fsd, icon_id=icon_id)
+    if icon_file is None:
+        return None
+
+    try:
+        return resource_index.fetch_bytes(icon_file)
+    except FileNotFoundError:
+        return None
+
+
+def resolve_icon_resource_path(
+    *,
+    fsd: FsdSource,
+    icon_id: int,
+) -> str | None:
     raw_icons = fsd.load("iconids")
     icon_data = mapping_lookup(raw_icons, icon_id)
     if not isinstance(icon_data, dict):
@@ -586,10 +736,7 @@ def resolve_icon_bytes(
     if not icon_file:
         return None
 
-    try:
-        return resource_index.fetch_bytes(icon_file)
-    except FileNotFoundError:
-        return None
+    return icon_file
 
 
 def resolve_type_image(
@@ -599,6 +746,28 @@ def resolve_type_image(
     type_record: TypeRecord,
     category_id: int | None,
 ) -> ResolvedTypeImage | None:
+    resolved_resource = resolve_type_image_resource(
+        fsd=fsd,
+        resource_index=resource_index,
+        type_record=type_record,
+        category_id=category_id,
+    )
+    if resolved_resource is None:
+        return None
+
+    return ResolvedTypeImage(
+        bytes_=resource_index.fetch_bytes(resolved_resource.resource_path),
+        source=resolved_resource.source,
+    )
+
+
+def resolve_type_image_resource(
+    *,
+    fsd: FsdSource,
+    resource_index: ResourceIndex,
+    type_record: TypeRecord,
+    category_id: int | None,
+) -> ResolvedTypeImageResource | None:
     raw_graphics = fsd.load("graphicids")
 
     if type_record.graphic_id is not None:
@@ -617,19 +786,18 @@ def resolve_type_image(
                 )
                 if selected_entry is not None:
                     entry, source = selected_entry
-                    return ResolvedTypeImage(
-                        bytes_=resource_index.fetch_bytes(entry.resource_path),
+                    return ResolvedTypeImageResource(
+                        resource_path=entry.resource_path,
                         source=source,
                     )
 
     if type_record.icon_id is not None:
-        icon_bytes = resolve_icon_bytes(
+        icon_path = resolve_icon_resource_path(
             fsd=fsd,
-            resource_index=resource_index,
             icon_id=type_record.icon_id,
         )
-        if icon_bytes is not None:
-            return ResolvedTypeImage(bytes_=icon_bytes, source="icon")
+        if icon_path is not None and resource_index.get_resource(icon_path) is not None:
+            return ResolvedTypeImageResource(resource_path=icon_path, source="icon")
 
     return None
 

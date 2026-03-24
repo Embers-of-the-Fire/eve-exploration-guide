@@ -1,10 +1,14 @@
 from __future__ import annotations
 
+import asyncio
 from dataclasses import dataclass
 from datetime import datetime, timezone
 import json
 from pathlib import Path
 import shutil
+from typing import Awaitable
+
+import aiofiles
 
 from .model import (
     CategoryRecord,
@@ -16,13 +20,16 @@ from .model import (
 )
 from .source_workspace import (
     DEFAULT_RESOURCE_BASE_URL,
+    LOC_EN_RESOURCE,
+    LOC_ZH_RESOURCE,
+    ResolvedTypeImageResource,
     collect_category_records,
     collect_group_records,
     collect_meta_group_records,
     collect_type_records,
-    load_localizations,
-    resolve_icon_bytes,
-    resolve_type_image,
+    load_localizations_from_payloads,
+    resolve_icon_resource_path,
+    resolve_type_image_resource,
     resolve_workspace_paths,
 )
 
@@ -96,6 +103,31 @@ def generate_docs_data(
     manifest_path: Path = DEFAULT_MANIFEST_PATH,
     output_dir: Path = DEFAULT_OUTPUT_DIR,
 ) -> GeneratedSummary:
+    return asyncio.run(
+        generate_docs_data_async(
+            workspace_arg=workspace_arg,
+            resfileindex_arg=resfileindex_arg,
+            fsd_dir_arg=fsd_dir_arg,
+            start_ini_arg=start_ini_arg,
+            resource_cache_dir_arg=resource_cache_dir_arg,
+            resource_base_url=resource_base_url,
+            manifest_path=manifest_path,
+            output_dir=output_dir,
+        )
+    )
+
+
+async def generate_docs_data_async(
+    *,
+    workspace_arg: str | None,
+    resfileindex_arg: str | None,
+    fsd_dir_arg: str | None,
+    start_ini_arg: str | None,
+    resource_cache_dir_arg: str | None,
+    resource_base_url: str = DEFAULT_RESOURCE_BASE_URL,
+    manifest_path: Path = DEFAULT_MANIFEST_PATH,
+    output_dir: Path = DEFAULT_OUTPUT_DIR,
+) -> GeneratedSummary:
     refs = load_manifest_refs(manifest_path)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -134,24 +166,50 @@ def generate_docs_data(
             if record.meta_group_id is not None
         },
     )
-    localizations = load_localizations(
-        resource_index,
-        collect_needed_localization_ids(
-            refs=refs,
-            type_records=type_records,
-            group_records=group_records,
-            category_records=category_records,
-            meta_group_records=meta_group_records,
-        ),
-    )
-    generated_assets = write_generated_assets(
-        fsd=fsd,
-        resource_index=resource_index,
-        output_dir=output_dir,
+    needed_localization_ids = collect_needed_localization_ids(
         refs=refs,
         type_records=type_records,
         group_records=group_records,
+        category_records=category_records,
         meta_group_records=meta_group_records,
+    )
+    icon_asset_ids = collect_icon_asset_ids(
+        refs=refs,
+        meta_group_records=meta_group_records,
+        type_records=type_records,
+    )
+    icon_resource_paths = collect_icon_resource_paths(
+        fsd=fsd,
+        resource_index=resource_index,
+        icon_asset_ids=icon_asset_ids,
+    )
+    type_image_requests = collect_type_image_requests(
+        fsd=fsd,
+        group_records=group_records,
+        resource_index=resource_index,
+        type_records=type_records,
+    )
+    resource_paths = set(icon_resource_paths.values()) | {
+        request.resource_path for request in type_image_requests.values()
+    }
+    if needed_localization_ids:
+        resource_paths.update({LOC_EN_RESOURCE, LOC_ZH_RESOURCE})
+
+    resource_payloads = await resource_index.prefetch_bytes_async(resource_paths)
+    localizations = (
+        load_localizations_from_payloads(
+            en_payload=resource_payloads[LOC_EN_RESOURCE],
+            wanted_ids=needed_localization_ids,
+            zh_payload=resource_payloads[LOC_ZH_RESOURCE],
+        )
+        if needed_localization_ids
+        else {}
+    )
+    generated_assets = await write_generated_assets(
+        icon_resource_paths=icon_resource_paths,
+        output_dir=output_dir,
+        resource_payloads=resource_payloads,
+        type_image_requests=type_image_requests,
     )
     write_generated_data_file(
         metadata=metadata,
@@ -171,6 +229,74 @@ def generate_docs_data(
         output_dir=output_dir,
         type_count=len(type_records),
     )
+
+
+def collect_icon_asset_ids(
+    *,
+    refs: ManifestRefs,
+    meta_group_records: dict[int, MetaGroupRecord],
+    type_records: dict[int, TypeRecord],
+) -> set[int]:
+    icon_asset_ids = set(refs.icon_ids)
+
+    for type_record in type_records.values():
+        if type_record.meta_group_id is None:
+            continue
+
+        meta_group_record = meta_group_records.get(type_record.meta_group_id)
+        if meta_group_record is not None and meta_group_record.icon_id is not None:
+            icon_asset_ids.add(meta_group_record.icon_id)
+
+    return icon_asset_ids
+
+
+def collect_icon_resource_paths(
+    *,
+    fsd,
+    resource_index,
+    icon_asset_ids: set[int],
+) -> dict[int, str]:
+    icon_resource_paths: dict[int, str] = {}
+
+    for icon_id in sorted(icon_asset_ids):
+        icon_resource_path = resolve_icon_resource_path(fsd=fsd, icon_id=icon_id)
+        if (
+            icon_resource_path is None
+            or resource_index.get_resource(icon_resource_path) is None
+        ):
+            continue
+        icon_resource_paths[icon_id] = icon_resource_path
+
+    return icon_resource_paths
+
+
+def collect_type_image_requests(
+    *,
+    fsd,
+    group_records: dict[int, GroupRecord],
+    resource_index,
+    type_records: dict[int, TypeRecord],
+) -> dict[int, ResolvedTypeImageResource]:
+    requests: dict[int, ResolvedTypeImageResource] = {}
+
+    for type_id, type_record in sorted(type_records.items()):
+        category_id = None
+        group_record = group_records.get(type_record.group_id)
+        if group_record is not None:
+            category_id = group_record.category_id
+
+        resolved_resource = resolve_type_image_resource(
+            fsd=fsd,
+            resource_index=resource_index,
+            type_record=type_record,
+            category_id=category_id,
+        )
+        if resolved_resource is None:
+            continue
+
+        requests[type_id] = resolved_resource
+
+    return requests
 
 
 def collect_needed_localization_ids(
@@ -205,75 +331,49 @@ def collect_needed_localization_ids(
     return needed_loc_ids
 
 
-def write_generated_assets(
+async def write_generated_assets(
     *,
-    fsd,
-    resource_index,
+    icon_resource_paths: dict[int, str],
     output_dir: Path,
-    refs: ManifestRefs,
-    type_records: dict[int, TypeRecord],
-    group_records: dict[int, GroupRecord],
-    meta_group_records: dict[int, MetaGroupRecord],
+    resource_payloads: dict[str, bytes],
+    type_image_requests: dict[int, ResolvedTypeImageResource],
 ) -> GeneratedAssets:
     icon_output_dir = output_dir / "icons"
     type_output_dir = output_dir / "types"
     reset_generated_directory(icon_output_dir)
     reset_generated_directory(type_output_dir)
 
-    icon_asset_ids = set(refs.icon_ids)
-    for type_record in type_records.values():
-        if type_record.meta_group_id is None:
-            continue
-
-        meta_group_record = meta_group_records.get(type_record.meta_group_id)
-        if meta_group_record is not None and meta_group_record.icon_id is not None:
-            icon_asset_ids.add(meta_group_record.icon_id)
-
     resolved_icon_asset_ids: set[int] = set()
-    for icon_id in sorted(icon_asset_ids):
-        try:
-            icon_bytes = resolve_icon_bytes(
-                fsd=fsd,
-                resource_index=resource_index,
-                icon_id=icon_id,
-            )
-        except FileNotFoundError:
-            continue
-
+    writes: list[Awaitable[None]] = []
+    for icon_id, resource_path in sorted(icon_resource_paths.items()):
+        icon_bytes = resource_payloads.get(resource_path)
         if icon_bytes is None:
             continue
 
-        (icon_output_dir / f"{icon_id}.png").write_bytes(icon_bytes)
+        writes.append(write_binary_file(icon_output_dir / f"{icon_id}.png", icon_bytes))
         resolved_icon_asset_ids.add(icon_id)
 
     type_image_sources: dict[int, str] = {}
-    for type_id, type_record in sorted(type_records.items()):
-        category_id = None
-        group_record = group_records.get(type_record.group_id)
-        if group_record is not None:
-            category_id = group_record.category_id
-
-        try:
-            resolved_image = resolve_type_image(
-                fsd=fsd,
-                resource_index=resource_index,
-                type_record=type_record,
-                category_id=category_id,
-            )
-        except FileNotFoundError:
+    for type_id, resolved_resource in sorted(type_image_requests.items()):
+        payload = resource_payloads.get(resolved_resource.resource_path)
+        if payload is None:
             continue
 
-        if resolved_image is None:
-            continue
+        writes.append(write_binary_file(type_output_dir / f"{type_id}.png", payload))
+        type_image_sources[type_id] = resolved_resource.source
 
-        (type_output_dir / f"{type_id}.png").write_bytes(resolved_image.bytes_)
-        type_image_sources[type_id] = resolved_image.source
+    await asyncio.gather(*writes)
 
     return GeneratedAssets(
         generated_at=datetime.now(timezone.utc).isoformat(),
         icon_asset_ids=resolved_icon_asset_ids,
         type_image_sources=type_image_sources,
     )
+
+
+async def write_binary_file(path: Path, payload: bytes) -> None:
+    async with aiofiles.open(path, "wb") as handle:
+        await handle.write(payload)
 
 
 def reset_generated_directory(target_dir: Path) -> None:

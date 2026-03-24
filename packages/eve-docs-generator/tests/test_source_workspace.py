@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import asyncio
+import hashlib
 import os
 from pathlib import Path
 import pickle
@@ -47,12 +49,103 @@ def build_resource_index(root: Path) -> ResourceIndex:
     return ResourceIndex(resfileindex_path, cache_dir)
 
 
+def build_resource_index_with_entries(
+    root: Path,
+    entries: list[tuple[str, str, bytes]],
+) -> ResourceIndex:
+    rows = [
+        ",".join(
+            (
+                resource_path,
+                resource_url,
+                hashlib.md5(payload).hexdigest(),
+            )
+        )
+        for resource_path, resource_url, payload in entries
+    ]
+    resfileindex_path = root / "resfileindex.txt"
+    cache_dir = root / "cache"
+    resfileindex_path.write_text("\n".join(rows), encoding="utf-8")
+    return ResourceIndex(resfileindex_path, cache_dir)
+
+
 class FakeFsdSource:
     def __init__(self, payloads: dict[str, object]):
         self._payloads = payloads
 
     def load(self, fsd_name: str):
         return self._payloads[fsd_name]
+
+
+class ParallelDownloadTracker:
+    def __init__(self, expected_active: int):
+        self._active = 0
+        self._expected_active = expected_active
+        self._ready = asyncio.Event()
+        self.peak = 0
+
+    async def read(self, payload: bytes) -> bytes:
+        self._active += 1
+        self.peak = max(self.peak, self._active)
+        if self._active >= self._expected_active:
+            self._ready.set()
+
+        try:
+            await asyncio.wait_for(self._ready.wait(), timeout=1.0)
+            await asyncio.sleep(0)
+            return payload
+        finally:
+            self._active -= 1
+
+
+class FakeClientResponse:
+    def __init__(
+        self,
+        *,
+        payload: bytes,
+        tracker: ParallelDownloadTracker | None = None,
+    ):
+        self._payload = payload
+        self._tracker = tracker
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb):
+        return False
+
+    def raise_for_status(self) -> None:
+        return None
+
+    async def read(self) -> bytes:
+        if self._tracker is None:
+            await asyncio.sleep(0)
+            return self._payload
+
+        return await self._tracker.read(self._payload)
+
+
+class FakeClientSession:
+    def __init__(
+        self,
+        *,
+        payloads: dict[str, bytes],
+        tracker: ParallelDownloadTracker | None = None,
+        **_,
+    ):
+        self._payloads = payloads
+        self._tracker = tracker
+        self.requested_urls: list[str] = []
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb):
+        return False
+
+    def get(self, url: str) -> FakeClientResponse:
+        self.requested_urls.append(url)
+        return FakeClientResponse(payload=self._payloads[url], tracker=self._tracker)
 
 
 class ResourceIndexCachePathTests(unittest.TestCase):
@@ -69,6 +162,111 @@ class ResourceIndexCachePathTests(unittest.TestCase):
 
             with self.assertRaisesRegex(ValueError, "within the configured cache"):
                 resource_index.cache_path_for("../../outside.bin")
+
+
+class ResourceIndexAsyncDownloadTests(unittest.IsolatedAsyncioTestCase):
+    async def test_prefetch_bytes_async_downloads_missing_resources_in_parallel(self):
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            alpha_payload = b"alpha"
+            beta_payload = b"beta"
+            resource_index = build_resource_index_with_entries(
+                root,
+                [
+                    ("res:/ui/alpha.png", "/alpha", alpha_payload),
+                    ("res:/ui/beta.png", "/beta", beta_payload),
+                ],
+            )
+            tracker = ParallelDownloadTracker(expected_active=2)
+            sessions: list[FakeClientSession] = []
+
+            def session_factory(*args, **kwargs):
+                session = FakeClientSession(
+                    payloads={
+                        "https://resources.eveonline.com/alpha": alpha_payload,
+                        "https://resources.eveonline.com/beta": beta_payload,
+                    },
+                    tracker=tracker,
+                    **kwargs,
+                )
+                sessions.append(session)
+                return session
+
+            with patch(
+                "eve_docs_generator.source_workspace.aiohttp.ClientSession",
+                side_effect=session_factory,
+            ):
+                payloads = await resource_index.prefetch_bytes_async(
+                    {"res:/ui/alpha.png", "res:/ui/beta.png"}
+                )
+
+            self.assertEqual(payloads["res:/ui/alpha.png"], alpha_payload)
+            self.assertEqual(payloads["res:/ui/beta.png"], beta_payload)
+            self.assertGreaterEqual(tracker.peak, 2)
+            self.assertEqual(len(sessions), 1)
+            self.assertEqual(
+                sorted(sessions[0].requested_urls),
+                [
+                    "https://resources.eveonline.com/alpha",
+                    "https://resources.eveonline.com/beta",
+                ],
+            )
+            self.assertEqual(
+                resource_index.cache_path_for("res:/ui/alpha.png").read_bytes(),
+                alpha_payload,
+            )
+            self.assertEqual(
+                resource_index.cache_path_for("res:/ui/beta.png").read_bytes(),
+                beta_payload,
+            )
+
+    async def test_prefetch_bytes_async_uses_valid_cache_without_http_session(self):
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = b"cached"
+            resource_index = build_resource_index_with_entries(
+                root,
+                [("res:/ui/icon.png", "/icon", payload)],
+            )
+            cache_path = resource_index.cache_path_for("res:/ui/icon.png")
+            cache_path.parent.mkdir(parents=True, exist_ok=True)
+            cache_path.write_bytes(payload)
+
+            with patch(
+                "eve_docs_generator.source_workspace.aiohttp.ClientSession",
+                side_effect=AssertionError("cached fetch should not create a session"),
+            ):
+                payloads = await resource_index.prefetch_bytes_async(
+                    {"res:/ui/icon.png"}
+                )
+
+            self.assertEqual(payloads["res:/ui/icon.png"], payload)
+
+    async def test_prefetch_bytes_async_redownloads_invalid_cached_payloads(self):
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = b"fresh"
+            resource_index = build_resource_index_with_entries(
+                root,
+                [("res:/ui/icon.png", "/icon", payload)],
+            )
+            cache_path = resource_index.cache_path_for("res:/ui/icon.png")
+            cache_path.parent.mkdir(parents=True, exist_ok=True)
+            cache_path.write_bytes(b"stale")
+
+            with patch(
+                "eve_docs_generator.source_workspace.aiohttp.ClientSession",
+                side_effect=lambda *args, **kwargs: FakeClientSession(
+                    payloads={"https://resources.eveonline.com/icon": payload},
+                    **kwargs,
+                ),
+            ):
+                payloads = await resource_index.prefetch_bytes_async(
+                    {"res:/ui/icon.png"}
+                )
+
+            self.assertEqual(payloads["res:/ui/icon.png"], payload)
+            self.assertEqual(cache_path.read_bytes(), payload)
 
 
 class ResolveWorkspaceTests(unittest.TestCase):
