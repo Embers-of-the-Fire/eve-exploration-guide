@@ -12,7 +12,7 @@ giscus: false
 
 ## 2026-03-22
 
-- Added topic-based sidebar sections for docs, blog, and changelog routes.
-- Enabled `starlight-blog` with metrics and blog list UI integration.
-- Wired in `starlight-giscus`, `starlight-image-zoom`, `starlight-llms-txt`, and accessible emoji support.
-- Left out scroll-to-top and fullscreen/code-expansion features by design.
+- 为文档、博客和改动日志路由新增了基于主题的侧边栏分组。
+- 启用了 `starlight-blog`，并集成了指标统计与博客列表界面。
+- 接入了 `starlight-giscus`、`starlight-image-zoom`、`starlight-llms-txt` 以及无障碍表情符号支持。
+- 按设计决定未加入返回顶部以及全屏/代码展开等功能。
