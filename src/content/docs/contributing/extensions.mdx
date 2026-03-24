@@ -3,8 +3,8 @@ title: 扩展组件
 description: 面向 EVE Online 文档的 React MDX 内联组件，以及对应的数据生成工作流。
 ---
 
-import EveLocText from "../../../components/docs/eve/EveLocText.tsx";
-import EveType from "../../../components/docs/eve/EveType.tsx";
+import EveLocText from "@/components/docs/eve/EveLocText.tsx";
+import EveType from "@/components/docs/eve/EveType.tsx";
 
 本文记录当前站点可在 MDX 中直接使用的 EVE 文档组件。它们都是 `tsx`
 组件，渲染时只读取仓库内已生成的最小化 TQ 数据子集，不会依赖运行时请求。
@@ -29,8 +29,8 @@ import EveType from "../../../components/docs/eve/EveType.tsx";
 ## 导入方式
 
 ```mdx
-import EveLocText from "../../../components/docs/eve/EveLocText.tsx";
-import EveType from "../../../components/docs/eve/EveType.tsx";
+import EveLocText from "@/components/docs/eve/EveLocText.tsx";
+import EveType from "@/components/docs/eve/EveType.tsx";
 ```
 
 ## `EveType` API
@@ -110,8 +110,8 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 ## 代码示例
 
 ```mdx
-import EveLocText from "../../../components/docs/eve/EveLocText.tsx";
-import EveType from "../../../components/docs/eve/EveType.tsx";
+import EveLocText from "@/components/docs/eve/EveLocText.tsx";
+import EveType from "@/components/docs/eve/EveType.tsx";
 
 在正文中可以直接混排
 

@@ -3,12 +3,12 @@ import {
     eveIcons,
     eveLocalizations,
     eveTypes,
-} from "../../../generated/eve/data";
+} from "@/generated/eve/data";
 import type {
     EveIconEntry,
     EveLocalizationEntry,
     EveTypeEntry,
-} from "../../../generated/eve/schema";
+} from "@/generated/eve/schema";
 
 export interface ResolvedLocalization {
     en: string;
