@@ -13,6 +13,7 @@ from eve_loc_fuzz.search import (
     DEFAULT_LOCALIZATION_SUBDIR,
     FALLBACK_LOCALIZATION_SUBDIR,
     resolve_localization_dir,
+    resolve_languages,
     search_localizations,
 )
 
@@ -54,6 +55,10 @@ class ResolveLocalizationDirTests(unittest.TestCase):
 
 
 class SearchLocalizationsTests(unittest.TestCase):
+    def test_resolve_languages_rejects_missing_languages(self):
+        with self.assertRaisesRegex(ValueError, "At least one language is required"):
+            resolve_languages(None)
+
     def test_search_localizations_sorts_matches_by_text_length(self):
         with TemporaryDirectory() as tmp_dir:
             localization_dir = Path(tmp_dir)
@@ -120,7 +125,7 @@ class SearchLocalizationsTests(unittest.TestCase):
             workspace_path = Path(tmp_dir) / "workspace"
             localization_dir = workspace_path / FALLBACK_LOCALIZATION_SUBDIR
             write_localization_pickle(localization_dir, "en-us", {100: ["Ship"]})
-            write_localization_pickle(localization_dir, "zh", {200: ["舰船"]})
+            write_localization_pickle(localization_dir, "zh", {200: ["ship"]})
 
             output = io.StringIO()
             with redirect_stdout(output):
@@ -129,11 +134,18 @@ class SearchLocalizationsTests(unittest.TestCase):
                         "ship",
                         "--workspace",
                         str(workspace_path),
+                        "--lang",
+                        "en-us",
+                        "--lang",
+                        "zh",
                     ]
                 )
 
             self.assertEqual(exit_code, 0)
-            self.assertEqual(output.getvalue().splitlines(), ["[en-us] 100\tShip"])
+            self.assertEqual(
+                output.getvalue().splitlines(),
+                ["[en-us] 100\tShip", "[zh] 200\tship"],
+            )
 
     def test_main_accepts_pnpm_style_leading_separator(self):
         with TemporaryDirectory() as tmp_dir:
@@ -160,3 +172,22 @@ class SearchLocalizationsTests(unittest.TestCase):
 
             self.assertEqual(exit_code, 0)
             self.assertEqual(output.getvalue().splitlines(), ["100\tWarp"])
+
+    def test_main_requires_explicit_language(self):
+        with TemporaryDirectory() as tmp_dir:
+            workspace_path = Path(tmp_dir) / "workspace"
+            localization_dir = workspace_path / FALLBACK_LOCALIZATION_SUBDIR
+            write_localization_pickle(localization_dir, "en-us", {100: ["Warp"]})
+
+            stderr = io.StringIO()
+            with self.assertRaises(SystemExit) as error:
+                with patch("sys.stderr", stderr):
+                    main(
+                        [
+                            "warp",
+                            "--workspace",
+                            str(workspace_path),
+                        ]
+                    )
+
+            self.assertEqual(error.exception.code, 2)

@@ -4,7 +4,6 @@ import argparse
 import sys
 
 from .search import (
-    DEFAULT_LANGUAGES,
     resolve_languages,
     resolve_localization_dir,
     search_localizations,
@@ -31,9 +30,9 @@ def build_parser() -> argparse.ArgumentParser:
         action="append",
         dest="languages",
         metavar="LANG",
+        required=True,
         help=(
-            "Language code to search. Repeat to search multiple languages. "
-            f"Defaults to {', '.join(DEFAULT_LANGUAGES)}."
+            "Language code to search. Repeat to search multiple languages. Required."
         ),
     )
     parser.add_argument(

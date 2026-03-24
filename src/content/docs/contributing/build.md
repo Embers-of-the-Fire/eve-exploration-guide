@@ -39,15 +39,15 @@ pnpm install
 `packages/eve-loc-fuzz/` 提供的检索工具：
 
 ```bash
-pnpm loc:fuzz -- warp
+pnpm loc:fuzz -- warp --lang en-us
 pnpm loc:fuzz -- "跃迁" --lang zh
-pnpm loc:fuzz -- ship --workspace /path/to/workspace --limit 20
+pnpm loc:fuzz -- ship --lang en-us --workspace /path/to/workspace --limit 20
 ```
 
 说明：
 
-- 默认查询 `en-us` 和 `zh` 两个语言包；可以重复传入 `--lang`
-  来限制或扩展查询语言。
+- 必须显式传入至少一个 `--lang`；可以重复传入 `--lang`
+  来同时查询多个语言包。
 - 默认工作区是仓库根目录下的 `./workspace`。
 - 工具会优先读取 `<workspace>/.cache/resources/localizationfsd/`；
   如果该目录不存在，会回退到当前仓库实际使用的

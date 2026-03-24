@@ -6,7 +6,6 @@ from pathlib import Path
 import pickle
 from typing import Any
 
-DEFAULT_LANGUAGES = ("en-us", "zh")
 DEFAULT_WORKSPACE_DIRNAME = "workspace"
 DEFAULT_LOCALIZATION_SUBDIR = Path(".cache/resources/localizationfsd")
 FALLBACK_LOCALIZATION_SUBDIR = Path(
@@ -68,7 +67,10 @@ def resolve_localization_dir(
 
 
 def resolve_languages(languages: list[str] | None) -> list[str]:
-    raw_languages = languages or list(DEFAULT_LANGUAGES)
+    if languages is None:
+        raise ValueError("At least one language is required")
+
+    raw_languages = languages
     resolved_languages: list[str] = []
     for raw_language in raw_languages:
         language = raw_language.strip().lower()
