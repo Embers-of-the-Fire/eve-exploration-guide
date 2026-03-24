@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-import os
 
 from dotenv import find_dotenv, load_dotenv
 
@@ -11,7 +10,12 @@ from .generator import (
     generate_docs_data,
     resolve_cli_path,
 )
-from .source_workspace import DEFAULT_RESOURCE_BASE_URL, WORKSPACE_ENV_VAR
+from .source_workspace import (
+    DEFAULT_RESOURCE_BASE_URL,
+    RESOURCE_CACHE_ENV_VAR,
+    WORKSPACE_CACHE_ENV_VAR,
+    WORKSPACE_ENV_VAR,
+)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -43,9 +47,15 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--resource-cache-dir",
+        "--workspace-cache-dir",
+        dest="resource_cache_dir",
         help=(
             "Optional cache directory for downloaded TQ resources such as "
-            "localization pickles and icons."
+            "localization pickles and icons. Defaults to "
+            "<workspace>/.cache/eve-docs-generator/resources when a workspace "
+            "is configured, otherwise ./.cache/eve-docs-generator/resources. "
+            f"Can also be set with {RESOURCE_CACHE_ENV_VAR} or "
+            f"{WORKSPACE_CACHE_ENV_VAR}."
         ),
     )
     parser.add_argument(
@@ -75,7 +85,7 @@ def main() -> int:
     args = parser.parse_args()
 
     summary = generate_docs_data(
-        workspace_arg=args.workspace or os.environ.get(WORKSPACE_ENV_VAR),
+        workspace_arg=args.workspace,
         resfileindex_arg=args.resfileindex,
         fsd_dir_arg=args.fsd_dir,
         start_ini_arg=args.start_ini,

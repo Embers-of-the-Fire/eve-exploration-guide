@@ -37,10 +37,9 @@ DOWNLOAD_HEADERS = {
     ),
 }
 DOWNLOAD_RETRY_ATTEMPTS = 4
-DEFAULT_RESOURCE_CACHE_DIR = (
-    Path(os.environ.get("TMPDIR", "/tmp"))
-    / "eve-exploration-guide-eve-docs-resource-cache"
-)
+DEFAULT_RESOURCE_CACHE_SUBDIR = Path(".cache") / "eve-docs-generator" / "resources"
+RESOURCE_CACHE_ENV_VAR = "EVE_DOCS_RESOURCE_CACHE_DIR"
+WORKSPACE_CACHE_ENV_VAR = "EVE_DOCS_WORKSPACE_CACHE_DIR"
 WORKSPACE_ENV_VAR = "EVE_DOCS_WORKSPACE"
 KNOWN_FSD_SUFFIXES = (
     ".msgpack",
@@ -223,10 +222,10 @@ def resolve_workspace_paths(
         if start_ini_arg
         else resolve_start_ini_path(workspace_root)
     )
-    resource_cache_dir = (
-        resolve_cli_path(resource_cache_dir_arg)
-        if resource_cache_dir_arg
-        else DEFAULT_RESOURCE_CACHE_DIR
+    resource_cache_dir = resolve_resource_cache_dir(
+        resource_cache_dir_arg=resource_cache_dir_arg,
+        workspace_root=workspace_root,
+        resolve_cli_path=resolve_cli_path,
     )
 
     return {
@@ -240,6 +239,28 @@ def resolve_workspace_paths(
         ),
         "workspace_root": workspace_root,
     }
+
+
+def resolve_resource_cache_dir(
+    *,
+    resource_cache_dir_arg: str | None,
+    workspace_root: Path | None,
+    resolve_cli_path,
+) -> Path:
+    resource_cache_dir_value = resource_cache_dir_arg
+
+    if not resource_cache_dir_value:
+        for env_var in (RESOURCE_CACHE_ENV_VAR, WORKSPACE_CACHE_ENV_VAR):
+            env_value = os.environ.get(env_var)
+            if env_value:
+                resource_cache_dir_value = env_value
+                break
+
+    if resource_cache_dir_value:
+        return resolve_cli_path(resource_cache_dir_value)
+
+    cache_root = workspace_root if workspace_root is not None else Path.cwd()
+    return (cache_root / DEFAULT_RESOURCE_CACHE_SUBDIR).resolve()
 
 
 def resolve_resfileindex_path(workspace_root: Path | None) -> Path:
