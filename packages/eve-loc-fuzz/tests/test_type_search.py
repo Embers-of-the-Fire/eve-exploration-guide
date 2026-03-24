@@ -3,6 +3,7 @@ from __future__ import annotations
 from contextlib import redirect_stdout
 import io
 import json
+import os
 from pathlib import Path
 import pickle
 from tempfile import TemporaryDirectory
@@ -11,6 +12,7 @@ from unittest.mock import patch
 
 import msgpack
 
+from eve_loc_fuzz.config import FSD_DIR_ENV_VAR
 from eve_loc_fuzz.fsd import resolve_fsd_dir
 from eve_loc_fuzz.type_main import main
 from eve_loc_fuzz.type_search import search_type_names
@@ -48,6 +50,7 @@ def write_types_fsd(
     raise ValueError(f"Unsupported FSD suffix for test fixture: {suffix}")
 
 
+@patch.dict(os.environ, {}, clear=True)
 class ResolveFsdDirTests(unittest.TestCase):
     def test_prefers_workspace_fsd_subdirectory(self):
         with TemporaryDirectory() as tmp_dir:
@@ -68,7 +71,20 @@ class ResolveFsdDirTests(unittest.TestCase):
                 workspace_path,
             )
 
+    def test_reads_fsd_dir_from_env_var(self):
+        with TemporaryDirectory() as tmp_dir:
+            fsd_dir = Path(tmp_dir) / "fsd"
+            fsd_dir.mkdir(parents=True)
 
+            with patch.dict(
+                os.environ,
+                {FSD_DIR_ENV_VAR: str(fsd_dir)},
+                clear=False,
+            ):
+                self.assertEqual(resolve_fsd_dir(None, None), fsd_dir)
+
+
+@patch.dict(os.environ, {}, clear=True)
 class SearchTypeNamesTests(unittest.TestCase):
     def test_search_type_names_reads_msgpack_with_integer_keys(self):
         with TemporaryDirectory() as tmp_dir:
@@ -269,6 +285,41 @@ class SearchTypeNamesTests(unittest.TestCase):
                     ],
                 ):
                     exit_code = main()
+
+            self.assertEqual(exit_code, 0)
+            self.assertEqual(output.getvalue().splitlines(), ["100\tWarp"])
+
+    def test_main_loads_workspace_from_root_dotenv(self):
+        with TemporaryDirectory() as tmp_dir:
+            repo_root = Path(tmp_dir)
+            package_dir = repo_root / "packages" / "eve-loc-fuzz"
+            package_dir.mkdir(parents=True)
+
+            workspace_path = repo_root / "shared-workspace"
+            write_types_fsd(
+                workspace_path,
+                {
+                    100: {"typeID": 100, "typeNameID": 10},
+                },
+            )
+            localization_dir = (
+                workspace_path / ".cache" / "resources" / "localizationfsd"
+            )
+            write_localization_pickle(localization_dir, "en-us", {10: ["Warp"]})
+
+            (repo_root / ".env").write_text(
+                f'EVE_DOCS_WORKSPACE="{workspace_path}"\n',
+                encoding="utf-8",
+            )
+
+            output = io.StringIO()
+            previous_cwd = Path.cwd()
+            try:
+                os.chdir(package_dir)
+                with redirect_stdout(output):
+                    exit_code = main(["warp", "--lang", "en-us"])
+            finally:
+                os.chdir(previous_cwd)
 
             self.assertEqual(exit_code, 0)
             self.assertEqual(output.getvalue().splitlines(), ["100\tWarp"])

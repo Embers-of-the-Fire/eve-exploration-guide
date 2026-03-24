@@ -26,8 +26,10 @@ pnpm-debug.log*
 # Python generator artifacts
 __pycache__/
 *.py[cod]
+.venv/
 packages/eve-docs-generator/.venv/
 *.egg-info
 
+# workspace files
 workspace/
-
+workspace

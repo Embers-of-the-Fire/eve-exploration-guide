@@ -1,7 +1,10 @@
 # eve-docs-generator
 
-Local `uv`-driven helper for generating the minimal checked-in EVE docs dataset
-used by the MDX React components in this repository.
+Local `uv` workspace helper for generating the minimal checked-in EVE docs
+dataset used by the MDX React components in this repository.
+
+From the repository root, run it with `pnpm run generate:eve-docs-data -- ...`
+or directly with `uv run --package eve-docs-generator eve-docs-generator ...`.
 
 Inputs are a TQ source workspace, not a prebuilt bundle:
 

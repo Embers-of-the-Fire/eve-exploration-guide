@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from .config import FSD_DIR_ENV_VAR, resolve_config_value
 from .msgpack import loads as load_msgpack
 from .search import resolve_cli_path, resolve_workspace_path
 
@@ -19,8 +20,9 @@ def resolve_fsd_dir(
     fsd_dir_arg: str | None,
     workspace_arg: str | None,
 ) -> Path:
-    if fsd_dir_arg:
-        fsd_dir = resolve_cli_path(fsd_dir_arg)
+    fsd_dir_value = fsd_dir_arg or resolve_config_value(FSD_DIR_ENV_VAR)
+    if fsd_dir_value:
+        fsd_dir = resolve_cli_path(fsd_dir_value)
         if not fsd_dir.exists() or not fsd_dir.is_dir():
             raise FileNotFoundError(
                 f"FSD directory does not exist or is not a directory: {fsd_dir}"

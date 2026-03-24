@@ -86,7 +86,7 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 第二步读取的是 TQ 源工作区，而不是预构建 bundle。工作区必须显式提供：
 
 - 直接通过 `--workspace /path/to/tq-source-workspace`
-- 或在 `packages/eve-docs-generator/.env` 中设置 `EVE_DOCS_WORKSPACE=/path/to/tq-source-workspace`
+- 或在仓库根目录的 `.env` 中设置 `EVE_DOCS_WORKSPACE=/path/to/tq-source-workspace`
 - 如需覆盖默认的工作区内缓存目录，可额外传入 `--resource-cache-dir` / `--workspace-cache-dir`，或设置 `EVE_DOCS_RESOURCE_CACHE_DIR`
 
 该目录至少需要：

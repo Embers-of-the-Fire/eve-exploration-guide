@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from contextlib import redirect_stdout
 import io
+import os
 from pathlib import Path
 import pickle
 from tempfile import TemporaryDirectory
@@ -9,6 +10,8 @@ import unittest
 from unittest.mock import patch
 
 from eve_loc_fuzz.__main__ import main
+from eve_loc_fuzz.config import RESOURCE_CACHE_ENV_VARS
+from eve_loc_fuzz.dotenv_compat import load_dotenv
 from eve_loc_fuzz.search import (
     DEFAULT_LOCALIZATION_SUBDIR,
     FALLBACK_LOCALIZATION_SUBDIR,
@@ -28,6 +31,22 @@ def write_localization_pickle(
     pickle_path.write_bytes(pickle.dumps((lang, entries)))
 
 
+class LoadDotenvTests(unittest.TestCase):
+    def test_returns_false_for_invalid_utf8(self):
+        with TemporaryDirectory() as tmp_dir:
+            dotenv_path = Path(tmp_dir) / ".env"
+            dotenv_path.write_bytes(b"\xff")
+
+            self.assertFalse(load_dotenv(str(dotenv_path)))
+
+    def test_returns_false_when_dotenv_cannot_be_read(self):
+        dotenv_path = "/tmp/example.env"
+
+        with patch("pathlib.Path.read_text", side_effect=OSError):
+            self.assertFalse(load_dotenv(dotenv_path))
+
+
+@patch.dict(os.environ, {}, clear=True)
 class ResolveLocalizationDirTests(unittest.TestCase):
     def test_prefers_primary_cache_path(self):
         with TemporaryDirectory() as tmp_dir:
@@ -53,7 +72,21 @@ class ResolveLocalizationDirTests(unittest.TestCase):
                 fallback_dir,
             )
 
+    def test_reads_shared_resource_cache_env_var(self):
+        with TemporaryDirectory() as tmp_dir:
+            cache_dir = Path(tmp_dir) / "custom-cache"
+            localization_dir = cache_dir / "localizationfsd"
+            localization_dir.mkdir(parents=True)
 
+            with patch.dict(
+                os.environ,
+                {RESOURCE_CACHE_ENV_VARS[0]: str(cache_dir)},
+                clear=False,
+            ):
+                self.assertEqual(resolve_localization_dir(None, None), localization_dir)
+
+
+@patch.dict(os.environ, {}, clear=True)
 class SearchLocalizationsTests(unittest.TestCase):
     def test_resolve_languages_rejects_missing_languages(self):
         with self.assertRaisesRegex(ValueError, "At least one language is required"):
@@ -169,6 +202,33 @@ class SearchLocalizationsTests(unittest.TestCase):
                     ],
                 ):
                     exit_code = main()
+
+            self.assertEqual(exit_code, 0)
+            self.assertEqual(output.getvalue().splitlines(), ["100\tWarp"])
+
+    def test_main_loads_workspace_from_root_dotenv(self):
+        with TemporaryDirectory() as tmp_dir:
+            repo_root = Path(tmp_dir)
+            package_dir = repo_root / "packages" / "eve-loc-fuzz"
+            package_dir.mkdir(parents=True)
+
+            workspace_path = repo_root / "shared-workspace"
+            localization_dir = workspace_path / FALLBACK_LOCALIZATION_SUBDIR
+            write_localization_pickle(localization_dir, "en-us", {100: ["Warp"]})
+
+            (repo_root / ".env").write_text(
+                f'EVE_DOCS_WORKSPACE="{workspace_path}"\n',
+                encoding="utf-8",
+            )
+
+            output = io.StringIO()
+            previous_cwd = Path.cwd()
+            try:
+                os.chdir(package_dir)
+                with redirect_stdout(output):
+                    exit_code = main(["warp", "--lang", "en-us"])
+            finally:
+                os.chdir(previous_cwd)
 
             self.assertEqual(exit_code, 0)
             self.assertEqual(output.getvalue().splitlines(), ["100\tWarp"])
