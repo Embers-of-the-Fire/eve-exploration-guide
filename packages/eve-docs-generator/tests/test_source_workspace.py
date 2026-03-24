@@ -12,18 +12,24 @@ from unittest.mock import patch
 from eve_docs_generator.source_workspace import (
     DEFAULT_RESOURCE_BASE_URL,
     DEFAULT_RESOURCE_CACHE_SUBDIR,
+    HTTP_PROXY_ENV_VAR,
+    HTTPS_PROXY_ENV_VAR,
     LOC_EN_RESOURCE,
     LOC_ZH_RESOURCE,
     RESOURCE_CACHE_ENV_VAR,
     ResourceIndex,
+    SKIP_SSL_VERIFY_ENV_VAR,
     WORKSPACE_CACHE_ENV_VAR,
     WORKSPACE_ENV_VAR,
     build_download_url,
     load_localizations,
+    parse_env_flag,
     resolve_icon_bytes,
+    resolve_download_proxy_url,
     resolve_resource_cache_dir,
     resolve_workspace_path,
     resolve_workspace_paths,
+    should_skip_download_ssl_verification,
 )
 
 
@@ -136,6 +142,8 @@ class FakeClientSession:
         self._payloads = payloads
         self._tracker = tracker
         self.requested_urls: list[str] = []
+        self.requested_proxies: list[str | None] = []
+        self.requested_ssls: list[bool | None] = []
 
     async def __aenter__(self):
         return self
@@ -143,8 +151,16 @@ class FakeClientSession:
     async def __aexit__(self, exc_type, exc, tb):
         return False
 
-    def get(self, url: str) -> FakeClientResponse:
+    def get(
+        self,
+        url: str,
+        *,
+        proxy: str | None = None,
+        ssl: bool | None = None,
+    ) -> FakeClientResponse:
         self.requested_urls.append(url)
+        self.requested_proxies.append(proxy)
+        self.requested_ssls.append(ssl)
         return FakeClientResponse(payload=self._payloads[url], tracker=self._tracker)
 
 
@@ -267,6 +283,86 @@ class ResourceIndexAsyncDownloadTests(unittest.IsolatedAsyncioTestCase):
 
             self.assertEqual(payloads["res:/ui/icon.png"], payload)
             self.assertEqual(cache_path.read_bytes(), payload)
+
+    async def test_prefetch_bytes_async_uses_proxy_from_environment(self):
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = b"proxied"
+            resource_index = build_resource_index_with_entries(
+                root,
+                [("res:/ui/icon.png", "/icon", payload)],
+            )
+            sessions: list[FakeClientSession] = []
+
+            def session_factory(*args, **kwargs):
+                session = FakeClientSession(
+                    payloads={"https://resources.eveonline.com/icon": payload},
+                    **kwargs,
+                )
+                sessions.append(session)
+                return session
+
+            with (
+                patch.dict(
+                    os.environ,
+                    {
+                        HTTPS_PROXY_ENV_VAR: "http://127.0.0.1:8080",
+                        HTTP_PROXY_ENV_VAR: "",
+                    },
+                    clear=False,
+                ),
+                patch(
+                    "eve_docs_generator.source_workspace.aiohttp.ClientSession",
+                    side_effect=session_factory,
+                ),
+            ):
+                payloads = await resource_index.prefetch_bytes_async(
+                    {"res:/ui/icon.png"}
+                )
+
+            self.assertEqual(payloads["res:/ui/icon.png"], payload)
+            self.assertEqual(sessions[0].requested_proxies, ["http://127.0.0.1:8080"])
+            self.assertEqual(sessions[0].requested_ssls, [None])
+
+    async def test_prefetch_bytes_async_can_disable_ssl_verification(self):
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir)
+            payload = b"insecure"
+            resource_index = build_resource_index_with_entries(
+                root,
+                [("res:/ui/icon.png", "/icon", payload)],
+            )
+            sessions: list[FakeClientSession] = []
+
+            def session_factory(*args, **kwargs):
+                session = FakeClientSession(
+                    payloads={"https://resources.eveonline.com/icon": payload},
+                    **kwargs,
+                )
+                sessions.append(session)
+                return session
+
+            with (
+                patch.dict(
+                    os.environ,
+                    {
+                        SKIP_SSL_VERIFY_ENV_VAR: "true",
+                        HTTPS_PROXY_ENV_VAR: "",
+                        HTTP_PROXY_ENV_VAR: "",
+                    },
+                    clear=False,
+                ),
+                patch(
+                    "eve_docs_generator.source_workspace.aiohttp.ClientSession",
+                    side_effect=session_factory,
+                ),
+            ):
+                payloads = await resource_index.prefetch_bytes_async(
+                    {"res:/ui/icon.png"}
+                )
+
+            self.assertEqual(payloads["res:/ui/icon.png"], payload)
+            self.assertEqual(sessions[0].requested_ssls, [False])
 
 
 class ResolveWorkspaceTests(unittest.TestCase):
@@ -481,6 +577,93 @@ class BuildDownloadUrlTests(unittest.TestCase):
             ),
             "https://mirror.example/resources/icons/payload.bin",
         )
+
+
+class ResolveDownloadProxyUrlTests(unittest.TestCase):
+    def test_prefers_https_proxy_for_https_downloads(self):
+        with patch.dict(
+            os.environ,
+            {
+                HTTPS_PROXY_ENV_VAR: "http://127.0.0.1:8443",
+                HTTP_PROXY_ENV_VAR: "http://127.0.0.1:8080",
+            },
+            clear=False,
+        ):
+            proxy_url = resolve_download_proxy_url(
+                "https://resources.eveonline.com/icon"
+            )
+
+        self.assertEqual(proxy_url, "http://127.0.0.1:8443")
+
+    def test_falls_back_to_http_proxy_for_https_downloads(self):
+        with patch.dict(
+            os.environ,
+            {
+                HTTPS_PROXY_ENV_VAR: "",
+                HTTP_PROXY_ENV_VAR: "http://127.0.0.1:8080",
+            },
+            clear=False,
+        ):
+            proxy_url = resolve_download_proxy_url(
+                "https://resources.eveonline.com/icon"
+            )
+
+        self.assertEqual(proxy_url, "http://127.0.0.1:8080")
+
+    def test_uses_http_proxy_for_http_downloads(self):
+        with patch.dict(
+            os.environ,
+            {
+                HTTPS_PROXY_ENV_VAR: "http://127.0.0.1:8443",
+                HTTP_PROXY_ENV_VAR: "http://127.0.0.1:8080",
+            },
+            clear=False,
+        ):
+            proxy_url = resolve_download_proxy_url("http://mirror.example/icon")
+
+        self.assertEqual(proxy_url, "http://127.0.0.1:8080")
+
+    def test_returns_none_when_proxy_envs_are_missing(self):
+        with patch.dict(
+            os.environ,
+            {HTTPS_PROXY_ENV_VAR: "", HTTP_PROXY_ENV_VAR: ""},
+            clear=False,
+        ):
+            proxy_url = resolve_download_proxy_url(
+                "https://resources.eveonline.com/icon"
+            )
+
+        self.assertIsNone(proxy_url)
+
+
+class DownloadSslFlagTests(unittest.TestCase):
+    def test_parse_env_flag_accepts_common_truthy_values(self):
+        for raw_value in ("1", "true", "TRUE", " yes ", "on"):
+            with self.subTest(raw_value=raw_value):
+                with patch.dict(
+                    os.environ,
+                    {SKIP_SSL_VERIFY_ENV_VAR: raw_value},
+                    clear=False,
+                ):
+                    self.assertTrue(parse_env_flag(SKIP_SSL_VERIFY_ENV_VAR))
+
+    def test_parse_env_flag_rejects_missing_or_falsey_values(self):
+        for env_patch in (
+            {},
+            {SKIP_SSL_VERIFY_ENV_VAR: ""},
+            {SKIP_SSL_VERIFY_ENV_VAR: "false"},
+        ):
+            with self.subTest(env_patch=env_patch):
+                with patch.dict(os.environ, env_patch, clear=False):
+                    self.assertFalse(parse_env_flag(SKIP_SSL_VERIFY_ENV_VAR))
+
+    def test_should_skip_download_ssl_verification_reads_environment(self):
+        with patch.dict(
+            os.environ,
+            {SKIP_SSL_VERIFY_ENV_VAR: "true"},
+            clear=False,
+        ):
+            self.assertTrue(should_skip_download_ssl_verification())
 
 
 class LoadLocalizationsTests(unittest.TestCase):

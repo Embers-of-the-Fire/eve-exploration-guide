@@ -46,6 +46,9 @@ DEFAULT_RESOURCE_CACHE_SUBDIR = Path(".cache") / "eve-docs-generator" / "resourc
 RESOURCE_CACHE_ENV_VAR = "EVE_DOCS_RESOURCE_CACHE_DIR"
 WORKSPACE_CACHE_ENV_VAR = "EVE_DOCS_WORKSPACE_CACHE_DIR"
 WORKSPACE_ENV_VAR = "EVE_DOCS_WORKSPACE"
+HTTP_PROXY_ENV_VAR = "HTTP_PROXY"
+HTTPS_PROXY_ENV_VAR = "HTTPS_PROXY"
+SKIP_SSL_VERIFY_ENV_VAR = "EVE_DOCS_SKIP_SSL_VERIFY"
 KNOWN_FSD_SUFFIXES = (
     ".msgpack",
     ".mpk",
@@ -176,6 +179,7 @@ class ResourceIndex:
                 connector=connector,
                 headers=DOWNLOAD_HEADERS,
                 timeout=timeout,
+                trust_env=True,
             ) as session:
                 downloaded_payloads = await asyncio.gather(
                     *[
@@ -246,12 +250,18 @@ class ResourceIndex:
         semaphore: asyncio.Semaphore,
     ) -> bytes:
         download_url = build_download_url(self._resource_base_url, entry.url)
+        proxy_url = resolve_download_proxy_url(download_url)
+        ssl = False if should_skip_download_ssl_verification() else None
         cache_path.parent.mkdir(parents=True, exist_ok=True)
 
         async with semaphore:
             for attempt in range(DOWNLOAD_RETRY_ATTEMPTS):
                 try:
-                    async with session.get(download_url) as response:
+                    async with session.get(
+                        download_url,
+                        proxy=proxy_url,
+                        ssl=ssl,
+                    ) as response:
                         response.raise_for_status()
                         payload = await response.read()
                     break
@@ -557,6 +567,42 @@ def build_download_url(resource_base_url: str, resource_url: str) -> str:
         ) from error
 
     return download_url
+
+
+def resolve_download_proxy_url(download_url: str) -> str | None:
+    scheme = urlsplit(download_url).scheme.lower()
+
+    if scheme == "https":
+        return (
+            os.environ.get(HTTPS_PROXY_ENV_VAR)
+            or os.environ.get(HTTP_PROXY_ENV_VAR)
+            or None
+        )
+
+    if scheme == "http":
+        return (
+            os.environ.get(HTTP_PROXY_ENV_VAR)
+            or os.environ.get(HTTPS_PROXY_ENV_VAR)
+            or None
+        )
+
+    return (
+        os.environ.get(HTTPS_PROXY_ENV_VAR)
+        or os.environ.get(HTTP_PROXY_ENV_VAR)
+        or None
+    )
+
+
+def should_skip_download_ssl_verification() -> bool:
+    return parse_env_flag(SKIP_SSL_VERIFY_ENV_VAR)
+
+
+def parse_env_flag(env_var: str) -> bool:
+    raw_value = os.environ.get(env_var)
+    if raw_value is None:
+        return False
+
+    return raw_value.strip().lower() in {"1", "true", "yes", "on"}
 
 
 def verify_checksum(payload: bytes, entry: ResourceEntry) -> None:

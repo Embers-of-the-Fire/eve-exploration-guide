@@ -21,3 +21,9 @@ contain:
 EVE_DOCS_WORKSPACE=/absolute/path/to/tq-source-workspace
 EVE_DOCS_RESOURCE_CACHE_DIR=/absolute/path/to/tq-source-workspace/.cache/eve-docs-generator/resources
 ```
+
+HTTP downloads also honor `HTTPS_PROXY` / `HTTP_PROXY` when either variable is
+set.
+
+If your proxy re-signs TLS traffic and you need to skip certificate validation
+for these downloads, set `EVE_DOCS_SKIP_SSL_VERIFY=true`.
