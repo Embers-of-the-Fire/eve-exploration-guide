@@ -22,7 +22,7 @@ description: 文档修改、生成数据同步和 PR 提交流程说明。
 1. 修改 `src/content/docs/**/*.md(x)` 中的组件调用。
 2. 运行 `pnpm extract:extension-ids` 刷新 inspect manifest。
 3. 运行 `pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace` 同步最小化 TQ 数据。
-   也可以在 `packages/eve-docs-generator/.env` 中设置 `EVE_DOCS_WORKSPACE`；如需覆盖工作区内默认缓存目录，还可以设置 `EVE_DOCS_RESOURCE_CACHE_DIR`。
+   也可以在仓库根目录的 `.env` 中设置 `EVE_DOCS_WORKSPACE`；如需覆盖工作区内默认缓存目录，还可以设置 `EVE_DOCS_RESOURCE_CACHE_DIR`。
 4. 检查并提交以下生成结果：
     - `src/generated/extension-ids.json`
     - `src/generated/eve/data.ts`

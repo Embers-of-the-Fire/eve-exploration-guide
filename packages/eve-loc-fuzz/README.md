@@ -1,7 +1,14 @@
 # eve-loc-fuzz
 
-Local `uv` CLIs for substring search across EVE localization data and type
-names.
+Local `uv` workspace CLIs for substring search across EVE localization data and
+type names.
+
+The repository root is a shared `uv` workspace. Both CLIs can be run from the
+repository root via `pnpm`, or directly with
+`uv run --package eve-loc-fuzz eve-loc-fuzz ...` and
+`uv run --package eve-loc-fuzz eve-type-fuzz ...`. They load `.env` files from
+the current directory and parent directories, so a repo-root `.env` works
+without changing into `packages/eve-loc-fuzz/`.
 
 ## Localization search
 
@@ -27,6 +34,13 @@ pnpm run loc:fuzz -- ship --lang en-us --workspace /absolute/path/to/workspace \
 
 Matches are printed in ascending localization text length.
 
+Configuration can come from CLI flags, environment variables, or `.env`:
+
+- `--workspace`, `EVE_LOC_FUZZ_WORKSPACE`, or `EVE_DOCS_WORKSPACE`
+- `--localization-dir` or `EVE_LOC_FUZZ_LOCALIZATION_DIR`
+- `EVE_DOCS_RESOURCE_CACHE_DIR` or `EVE_DOCS_WORKSPACE_CACHE_DIR`
+  when you want to reuse the docs generator cache directly
+
 ## Type search
 
 `pnpm run type:fuzz -- <query> --lang <lang>`
@@ -45,3 +59,6 @@ pnpm run type:fuzz -- cruiser --lang en-us \
 ```
 
 Matches are printed in ascending type-name length.
+
+Type search uses the same workspace resolution as localization search and also
+accepts `--fsd-dir` or `EVE_LOC_FUZZ_FSD_DIR`.

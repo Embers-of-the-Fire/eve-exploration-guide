@@ -6,10 +6,14 @@ from pathlib import Path
 import pickle
 from typing import Any
 
-DEFAULT_WORKSPACE_DIRNAME = "workspace"
-DEFAULT_LOCALIZATION_SUBDIR = Path(".cache/resources/localizationfsd")
-FALLBACK_LOCALIZATION_SUBDIR = Path(
-    ".cache/eve-docs-generator/resources/localizationfsd"
+from .config import (
+    DEFAULT_LOCALIZATION_SUBDIR,
+    FALLBACK_LOCALIZATION_SUBDIR,
+    LOCALIZATION_DIR_ENV_VAR,
+    RESOURCE_CACHE_ENV_VARS,
+    resolve_cli_path,
+    resolve_config_value,
+    resolve_workspace_path,
 )
 
 
@@ -27,42 +31,59 @@ class LocalizationMatch:
     text: str
 
 
-def resolve_cli_path(raw_path: str) -> Path:
-    return Path(raw_path).expanduser().resolve()
-
-
-def resolve_workspace_path(workspace_arg: str | None) -> Path:
-    workspace_value = workspace_arg or str(Path.cwd() / DEFAULT_WORKSPACE_DIRNAME)
-    workspace_path = resolve_cli_path(workspace_value)
-    if not workspace_path.exists():
-        raise FileNotFoundError(f"Workspace path does not exist: {workspace_path}")
-    return workspace_path
-
-
 def resolve_localization_dir(
     localization_dir_arg: str | None,
     workspace_arg: str | None,
 ) -> Path:
-    if localization_dir_arg:
-        localization_dir = resolve_cli_path(localization_dir_arg)
+    localization_dir_value = localization_dir_arg or resolve_config_value(
+        LOCALIZATION_DIR_ENV_VAR
+    )
+    if localization_dir_value:
+        localization_dir = resolve_cli_path(localization_dir_value)
         if not localization_dir.is_dir():
             raise FileNotFoundError(
                 f"Localization directory does not exist: {localization_dir}"
             )
         return localization_dir
 
-    workspace_path = resolve_workspace_path(workspace_arg)
-    candidates = (
-        workspace_path / DEFAULT_LOCALIZATION_SUBDIR,
-        workspace_path / FALLBACK_LOCALIZATION_SUBDIR,
-    )
+    candidates: list[Path] = []
+    resource_cache_dir = resolve_config_value(*RESOURCE_CACHE_ENV_VARS)
+    if resource_cache_dir:
+        candidates.append(resolve_cli_path(resource_cache_dir) / "localizationfsd")
+
+    try:
+        workspace_path = resolve_workspace_path(workspace_arg)
+    except FileNotFoundError:
+        workspace_path = None
+    else:
+        candidates.extend(
+            (
+                workspace_path / DEFAULT_LOCALIZATION_SUBDIR,
+                workspace_path / FALLBACK_LOCALIZATION_SUBDIR,
+            )
+        )
+
+    checked_paths: list[str] = []
+    seen_paths: set[Path] = set()
     for candidate in candidates:
+        if candidate in seen_paths:
+            continue
+
+        seen_paths.add(candidate)
+        checked_paths.append(str(candidate))
         if candidate.is_dir():
             return candidate
 
-    checked_paths = ", ".join(str(candidate) for candidate in candidates)
+    if not checked_paths and workspace_path is None:
+        raise FileNotFoundError(
+            "A localization directory is required. Provide --localization-dir, "
+            f"set {LOCALIZATION_DIR_ENV_VAR}, configure one of "
+            f"{', '.join(RESOURCE_CACHE_ENV_VARS)}, or provide a workspace."
+        )
+
     raise FileNotFoundError(
-        f"Could not find a localization pickle directory. Checked: {checked_paths}"
+        "Could not find a localization pickle directory. Checked: "
+        f"{', '.join(checked_paths)}"
     )
 
 

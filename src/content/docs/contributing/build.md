@@ -14,11 +14,17 @@ description: 本地开发环境、常用命令，以及提交前必须完成的�
 pnpm install
 ```
 
-> EVE 文档数据生成器位于 `packages/eve-docs-generator/`，通过 `uv run`
-> 作为独立 Python 项目执行。
+如需预热整个 Python workspace 的共享环境，可在仓库根目录执行：
+
+```bash
+uv sync --all-packages
+```
+
+> EVE 文档数据生成器和本地化模糊检索工具都作为仓库根目录下同一个
+> `uv` workspace 的成员包运行。
 >
-> 本地化模糊检索工具位于 `packages/eve-loc-fuzz/`，同样通过 `uv`
-> 作为独立 Python 项目执行。
+> 仓库根目录下的 `pnpm` 脚本已经封装好了 `uv run --package ...`，
+> 不需要先 `cd` 到对应子目录。
 
 ## 常用命令
 
@@ -50,10 +56,16 @@ pnpm loc:fuzz -- ship --lang en-us --workspace /path/to/workspace --limit 20
 - 必须显式传入至少一个 `--lang`；可以重复传入 `--lang`
   来同时查询多个语言包。
 - 默认工作区是仓库根目录下的 `./workspace`。
+- 也可以通过 `--workspace`、`EVE_LOC_FUZZ_WORKSPACE` 或共享的
+  `EVE_DOCS_WORKSPACE` 提供工作区；CLI 会自动读取当前目录或父目录中的
+  `.env`，因此仓库根目录下的 `.env` 可以直接复用。
 - 工具会优先读取 `<workspace>/.cache/resources/localizationfsd/`；
   如果该目录不存在，会回退到当前仓库实际使用的
   `<workspace>/.cache/eve-docs-generator/resources/localizationfsd/`。
-- 也可以用 `--localization-dir` 直接指定 pickle 所在目录。
+- 也可以用 `--localization-dir` 或 `EVE_LOC_FUZZ_LOCALIZATION_DIR`
+  直接指定 pickle 所在目录；如果你已经为生成器配置了
+  `EVE_DOCS_RESOURCE_CACHE_DIR` 或 `EVE_DOCS_WORKSPACE_CACHE_DIR`，
+  检索工具也会复用对应缓存目录。
 - 匹配规则是简单的子串包含关系，不做 Levenshtein
   之类的相似度计算。
 - 默认大小写不敏感；需要严格区分大小写时可传入
@@ -77,12 +89,15 @@ pnpm type:fuzz -- cruiser --lang en-us --workspace /path/to/workspace \
 - 必须显式传入至少一个 `--lang`；可以重复传入 `--lang`
   来同时查询多个语言包。
 - 默认工作区是仓库根目录下的 `./workspace`。
+- 也可以通过 `--workspace`、`EVE_LOC_FUZZ_WORKSPACE` 或共享的
+  `EVE_DOCS_WORKSPACE` 提供工作区；CLI 会自动读取当前目录或父目录中的
+  `.env`。
 - 工具会读取工作区中的 `types` FSD 数据，并用对应语言的
   localization pickle 解析每个类型的 `typeNameID`。
 - 默认会优先读取 `<workspace>/fsd/`；如果工作区根目录直接放有
   `types.msgpack`、`types.json` 等 FSD 文件，也会自动识别。
-- 也可以用 `--fsd-dir` 和 `--localization-dir`
-  直接指定类型与本地化数据来源。
+- 也可以用 `--fsd-dir`、`EVE_LOC_FUZZ_FSD_DIR`、`--localization-dir`
+  和 `EVE_LOC_FUZZ_LOCALIZATION_DIR` 直接指定类型与本地化数据来源。
 - 匹配规则是简单的子串包含关系，不做 Levenshtein
   之类的相似度计算。
 - 默认大小写不敏感；需要严格区分大小写时可传入
@@ -103,7 +118,8 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 - `--workspace` 目录应当包含 `resfileindex.txt`，以及 `fsd/`
   目录或直接放置的 FSD 文件。
 - 也可以通过环境变量 `EVE_DOCS_WORKSPACE` 提供工作区；
-  生成器会在 Python 侧读取 `.env`。
+  生成器会在 Python 侧读取当前目录或父目录中的 `.env`，因此仓库根目录
+  下的 `.env` 可以直接复用。
 - 原始资源缓存默认写到
   `<workspace>/.cache/eve-docs-generator/resources`；也可以通过
   `--resource-cache-dir`、`--workspace-cache-dir`、

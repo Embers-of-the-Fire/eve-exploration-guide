@@ -3,6 +3,12 @@ from __future__ import annotations
 import argparse
 import sys
 
+from .config import (
+    FSD_DIR_ENV_VAR,
+    LOCALIZATION_DIR_ENV_VAR,
+    WORKSPACE_ENV_VARS,
+    load_cli_environment,
+)
 from .fsd import resolve_fsd_dir
 from .search import resolve_languages, resolve_localization_dir
 from .type_search import search_type_names
@@ -35,15 +41,25 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--workspace",
-        help="Workspace root. Defaults to ./workspace from the current directory.",
+        help=(
+            "Workspace root. Defaults to "
+            f"{' or '.join(WORKSPACE_ENV_VARS)}, then ./workspace from the "
+            "current directory."
+        ),
     )
     parser.add_argument(
         "--fsd-dir",
-        help="Explicit FSD directory. Overrides the workspace-derived location.",
+        help=(
+            "Explicit FSD directory. Overrides the workspace-derived location. "
+            f"Can also be set with {FSD_DIR_ENV_VAR}."
+        ),
     )
     parser.add_argument(
         "--localization-dir",
-        help="Explicit localization pickle directory. Overrides --workspace.",
+        help=(
+            "Explicit localization pickle directory. Overrides --workspace. Can "
+            f"also be set with {LOCALIZATION_DIR_ENV_VAR}."
+        ),
     )
     parser.add_argument(
         "--case-sensitive",
@@ -59,6 +75,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    load_cli_environment()
     parser = build_parser()
     raw_argv = list(sys.argv[1:] if argv is None else argv)
     if raw_argv and raw_argv[0] == "--":
