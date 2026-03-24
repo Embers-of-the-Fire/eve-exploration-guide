@@ -1,0 +1,44 @@
+{
+    "duplicates": [],
+    "entries": [],
+    "eveRefs": {
+        "duplicates": [],
+        "entries": [
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/reference/extensions.mdx",
+                "id": 297962,
+                "kind": "localization",
+                "line": 21,
+                "prop": "locId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/reference/extensions.mdx",
+                "id": 28665,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/reference/extensions.mdx",
+                "id": 28666,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            }
+        ],
+        "iconIds": [],
+        "locIds": [
+            297962
+        ],
+        "typeIds": [
+            28665,
+            28666
+        ],
+        "unresolved": []
+    },
+    "generatedAt": "2026-03-22T16:21:48.320Z",
+    "unresolved": []
+}

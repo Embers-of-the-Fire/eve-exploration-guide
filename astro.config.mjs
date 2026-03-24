@@ -1,6 +1,8 @@
 // @ts-check
+import react from "@astrojs/react";
 import starlight from "@astrojs/starlight";
 import { defineConfig } from "astro/config";
+import extensionIdsIntegration from "./packages/astro-extension-ids/src/index.ts";
 import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import starlightBlog from "starlight-blog";
 import starlightCoolerCredit from "starlight-cooler-credit";
@@ -55,6 +57,8 @@ export default defineConfig({
         rehypePlugins,
     },
     integrations: [
+        extensionIdsIntegration(),
+        react(),
         starlight({
             components: {
                 MarkdownContent:

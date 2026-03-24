@@ -23,3 +23,11 @@ pnpm-debug.log*
 .vscode
 .idea
 
+# Python generator artifacts
+__pycache__/
+*.py[cod]
+packages/eve-docs-generator/.venv/
+*.egg-info
+
+workspace/
+

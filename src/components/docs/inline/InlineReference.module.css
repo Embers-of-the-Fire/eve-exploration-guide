@@ -1,0 +1,153 @@
+.localized {
+    align-items: center;
+    appearance: none;
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: help;
+    display: inline-flex;
+    font: inherit;
+    gap: 0.3rem;
+    padding: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+:global(.main-pane) {
+    isolation: auto;
+}
+
+.localized:focus-visible {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: 0.2rem;
+}
+
+.label {
+    border-bottom: 1px dotted var(--sl-color-gray-4);
+    color: var(--sl-color-white);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.iconPrefix {
+    display: inline-flex;
+}
+
+.popoverTable {
+    --popover-label-column: minmax(4.75rem, max-content);
+    --popover-value-column: fit-content(20rem);
+    display: grid;
+    gap: 0.3rem;
+    inline-size: max-content;
+    max-inline-size: 100%;
+}
+
+.popover {
+    background: var(--sl-color-black);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.85rem;
+    box-shadow: var(--sl-shadow-lg);
+    color: var(--sl-color-text);
+    inline-size: fit-content;
+    inset-inline-start: 50%;
+    max-block-size: min(24rem, calc(100vh - 6rem));
+    max-inline-size: min(30rem, calc(100vw - 2rem));
+    min-inline-size: min(12rem, calc(100vw - 2rem));
+    opacity: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.85rem 0.95rem;
+    pointer-events: none;
+    position: absolute;
+    scrollbar-width: thin;
+    top: calc(100% + 0.45rem);
+    transform: translate(-50%, -0.25rem);
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease;
+    z-index: 20;
+}
+
+.localized:is(:hover, :focus-visible, :focus-within) .popover {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+.localized:is(:hover, :focus-visible, :focus-within) {
+    z-index: var(--sl-z-index-skiplink);
+}
+
+.popoverRow {
+    align-items: start;
+    display: grid;
+    grid-template-columns: var(--popover-label-column) 1rem var(
+            --popover-value-column
+        );
+}
+
+.popoverRow::before {
+    align-self: stretch;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        var(--sl-color-gray-5) 18%,
+        var(--sl-color-gray-4) 50%,
+        var(--sl-color-gray-5) 82%,
+        transparent 100%
+    );
+    content: "";
+    filter: blur(0.75px);
+    grid-column: 2;
+    justify-self: center;
+    margin-block: 0.15rem;
+    width: 1px;
+}
+
+.popoverLabel {
+    color: var(--sl-color-gray-3);
+    font-family: var(--sl-font-system-mono);
+    font-size: var(--sl-text-xs);
+    grid-column: 1;
+    text-align: end;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.popoverValue {
+    color: var(--sl-color-white);
+    font-size: var(--sl-text-sm);
+    grid-column: 3;
+    line-height: 1.5;
+    max-inline-size: 20rem;
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
+    text-wrap: pretty;
+    white-space: normal;
+    text-align: start;
+}
+
+.icon {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.35rem;
+    display: inline-block;
+    flex-shrink: 0;
+    object-fit: contain;
+    vertical-align: text-bottom;
+}
+
+.image {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    display: inline-block;
+    max-inline-size: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.rounded {
+    border-radius: 999px;
+}

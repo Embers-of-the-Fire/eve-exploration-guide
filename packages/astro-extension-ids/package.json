@@ -1,0 +1,8 @@
+{
+    "name": "@eve-exploration-guide/astro-extension-ids",
+    "private": true,
+    "type": "module",
+    "peerDependency": {
+        "astro": "^6.0.1"
+    }
+}

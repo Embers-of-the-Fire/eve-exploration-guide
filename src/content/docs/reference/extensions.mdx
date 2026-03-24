@@ -1,0 +1,123 @@
+---
+title: 扩展组件
+description: 面向 EVE Online 文档的 React MDX 内联组件，以及对应的数据生成工作流。
+---
+
+import EveLocText from "../../../components/docs/eve/EveLocText.tsx";
+import EveType from "../../../components/docs/eve/EveType.tsx";
+
+本文记录当前站点可在 MDX 中直接使用的 EVE 文档组件。它们都是 `tsx`
+组件，渲染时只读取仓库内已生成的最小化 TQ 数据子集，不会依赖运行时请求。
+
+> 如果 `src/generated/eve/data.ts` 还没有针对当前文档引用完成同步，这些组件会回退为
+> `type:...`、`loc:...` 和占位图标，以保证构建本身不被阻塞。
+
+## 当前测试引用
+
+这个页面保留了最小的真实调用点，用来验证 remark inspect 和本地数据生成：
+
+<p>
+    文本：
+    <EveLocText locId={297962} />
+</p>
+
+<p>
+    类型：
+    <EveType typeId={28665} size={32} />、<EveType typeId={28666} size={32} />
+</p>
+
+## 导入方式
+
+```mdx
+import EveLocText from "../../../components/docs/eve/EveLocText.tsx";
+import EveType from "../../../components/docs/eve/EveType.tsx";
+```
+
+## `EveType` API
+
+| Prop     | Type               | Default  | 说明                                                           |
+| -------- | ------------------ | -------- | -------------------------------------------------------------- |
+| `typeId` | `number`           | Required | TQ `type_id`。                                                 |
+| `size`   | `number \| string` | Required | 内联图像尺寸。推荐始终显式传入，例如 `24`、`32` 或 `"1.5em"`。 |
+
+行为说明：
+
+- 正文中显示类型的 `zh-CN` 名称。
+- 正文前缀会显示类型图像，优先取 `graphics`，其次回退到 `icons`。
+- 如果类型存在 Meta Group 图标，会在页面渲染时叠加一个小角标，而不会修改原始图片资产。
+- 悬停浮层会显示名称、描述、组、类别、Meta Group 以及图像来源信息。
+
+```mdx
+可以直接写 <EveType typeId={28665} size={32} /> 或 <EveType typeId={28666} size={32} />。
+```
+
+## `EveLocText` API
+
+| Prop    | Type     | Default  | 说明                         |
+| ------- | -------- | -------- | ---------------------------- |
+| `locId` | `number` | Required | TQ localization message ID。 |
+
+行为说明：
+
+- 正文中显示 `zh-CN` 文本。
+- 悬停浮层中同时显示 `zh-CN` 和 `en`。
+
+```mdx
+你可以在正文中直接写 <EveLocText locId={297962} />。
+```
+
+## `EveIcon` API
+
+| Prop     | Type               | Default           | 说明                                                           |
+| -------- | ------------------ | ----------------- | -------------------------------------------------------------- |
+| `iconId` | `number`           | Required          | TQ icon registry ID。                                          |
+| `size`   | `number \| string` | Required          | 内联图标尺寸。                                                 |
+| `alt`    | `string`           | `"EVE icon {id}"` | 替代文本；如果该图标只用于装饰，建议在调用侧显式传入空字符串。 |
+
+## Inspect 与生成
+
+新增或修改这类组件引用后，推荐按如下顺序刷新数据：
+
+```bash
+pnpm extract:extension-ids
+pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
+```
+
+第二步读取的是 TQ 源工作区，而不是预构建 bundle。工作区必须显式提供：
+
+- 直接通过 `--workspace /path/to/tq-source-workspace`
+- 或在 `packages/eve-docs-generator/.env` 中设置 `EVE_DOCS_WORKSPACE=/path/to/tq-source-workspace`
+
+该目录至少需要：
+
+- `resfileindex.txt`
+- `fsd/` 目录，或直接放置的 FSD 文件
+
+如果存在 `start.ini`，生成器还会把游戏版本和 build 一并写进生成数据。
+
+生成器读取 `src/generated/extension-ids.json` 中的 `eveRefs` 字段，只同步实际被文档调用到的资源：
+
+- `eveRefs.typeIds`
+- `eveRefs.locIds`
+- `eveRefs.iconIds`
+
+并写出：
+
+- `src/generated/eve/data.ts`
+- `src/generated/eve/icons/*.png`
+- `src/generated/eve/types/*.png`
+
+## 代码示例
+
+```mdx
+import EveLocText from "../../../components/docs/eve/EveLocText.tsx";
+import EveType from "../../../components/docs/eve/EveType.tsx";
+
+在正文中可以直接混排
+
+<EveLocText locId={297962} />
+、
+<EveType typeId={28665} size={32} />
+和
+<EveType typeId={28666} size={32} />。
+```

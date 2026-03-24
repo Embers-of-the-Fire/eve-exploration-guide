@@ -1,25 +1,66 @@
 # 贡献指南
 
-该指南只提供了关于贡献流程的基本信息。关于如何构建项目，请参照 [构建指南](BUILD.md)。
+构建与校验命令请先参照 [BUILD.md](BUILD.md)。本文件补充文档扩展相关的提交流程，尤其是 EVE 组件引用带来的生成数据同步。
 
-## 只想提供文字上的帮助？
+## 纯文档修改
 
-我们欢迎任何形式的贡献。对于中小型的纯文献改动，你可以不使用下文中提及的绝大部分现代工作流。请在提交 PR 时在标题的开头添加 `[文档]` 标签以供我们识别。
+对于中小型的纯文本改动，可以直接修改文档内容并提交 PR。建议在 PR 标题前加上 `[文档]`，方便维护者快速识别。
 
-## 想要修改更多，但是不理解源代码如何运作？
+如果你更习惯 `CONTRIBUTE.md` 这个文件名，仓库根目录也保留了一个入口文件；但
+GitHub 侧的默认贡献文档仍以 `CONTRIBUTING.md` 为准。
 
-欢迎通过 [讨论区](https://github.com/Embers-of-the-Fire/eve-exploration-guide/discussions) 或 [问题](https://github.com/Embers-of-the-Fire/eve-exploration-guide/issues) 提出你的想法，我们会尽力提供帮助。
+## 修改或新增 EVE 文档组件调用
 
-## 我知道怎么修改了，但不清楚如何提交 PR？
+如果你的改动涉及以下组件：
 
-前往 [PR](https://github.com/Embers-of-the-Fire/eve-exploration-guide/pulls)，填写一个简洁明了的标题。如果你不清楚如何撰写标题，可以在标题栏中添加 `@coderabbitai` 来使用 AI 帮助你撰写标题。AI 还会帮助你撰写 PR 描述，同时审查你的提交。请务必在要求开发者介入之前先解决 AI 提出的问题。
+- `EveType`
+- `EveLocText`
+- `EveIcon`
 
-## 我是开发者，我想要修改代码或者添加功能
+除了正文本身，你还需要同步最小化生成数据。推荐流程如下：
 
-如果你是开发者，我们希望你能够遵循一些既定的步骤，从而帮助我们更好地管理和维护这个项目：
+1. 修改 `src/content/docs/**/*.md(x)` 中的组件调用。
+2. 运行 `pnpm extract:extension-ids` 刷新 inspect manifest。
+3. 运行 `pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace` 同步最小化 TQ 数据。
+   也可以在 `packages/eve-docs-generator/.env` 中设置 `EVE_DOCS_WORKSPACE`。
+4. 检查并提交以下生成结果：
+    - `src/generated/extension-ids.json`
+    - `src/generated/eve/data.ts`
+    - `src/generated/eve/icons/*.png`
+    - `src/generated/eve/types/*.png`
+5. 运行验证：
+    - `pnpm format`
+    - `pnpm lint`
+    - `pnpm check`
+    - `pnpm build`
 
-1. Fork 这个仓库。
-2. 在你的 Fork 上创建一个新的分支，命名形式为 `type/brief-description`。其中的类型可以是任意 [Conventional Message](https://www.conventionalcommits.org/en/v1.0.0/)。
-3. 提交一个 PR。你应该可以得到来自 coderabbitai 的协助。
+不要提交整套原始资源，也不要把原始资源复制到 `public/`。站点只需要生成器筛出来的最小化子集。
 
-请注意，我们并不总有时间审查每一个 PR。在请求开发者人工审阅之前，请务必借助 AI 完善你的更改。
+## 修改生成器或 inspect 集成
+
+如果你改动了：
+
+- `packages/astro-extension-ids/`
+- `packages/eve-docs-generator/`
+- `src/generated/eve/schema.ts`
+- `src/components/docs/eve/`
+
+请额外确认：
+
+- remark inspect 输出的 `eveRefs` 结构没有破坏兼容性
+- `pnpm generate:eve-docs-data` 仍然能基于 TQ 源工作区生成可用结果
+- Python 代码已经过 `ruff format` 和 `ruff check`
+
+对应的 Python 校验命令：
+
+```bash
+nix-shell -p ruff --run "ruff format packages/eve-docs-generator && ruff check packages/eve-docs-generator"
+```
+
+## PR 提交
+
+开发者提交流程保持不变：
+
+1. Fork 仓库。
+2. 在自己的 Fork 中创建 `type/brief-description` 形式的新分支。
+3. 提交 PR，并在请求人工审阅前先处理自动审查工具给出的反馈。
