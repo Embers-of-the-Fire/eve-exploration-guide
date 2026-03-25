@@ -1,0 +1,13 @@
+---
+const { url } = Astro.props;
+---
+
+<iframe title={`Url Video at ${url}`} src={url} allowfullscreen={true}></iframe>
+
+<style>
+    iframe {
+        border: none;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+    }
+</style>

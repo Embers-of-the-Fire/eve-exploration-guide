@@ -106,5 +106,9 @@ export const docsSidebar: Sidebar = [
                 link: "/guides/survival/escape",
             }
         ]
+    },
+    {
+        label: "进阶",
+        autogenerate: { directory: "guides/advance" },
     }
 ];

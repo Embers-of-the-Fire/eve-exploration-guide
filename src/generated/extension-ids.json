@@ -112,6 +112,24 @@
                 ]
             },
             {
+                "id": 111814,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 41,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 56,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
                 "id": 111820,
                 "kind": "localization",
                 "occurrences": [
@@ -125,6 +143,24 @@
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                         "line": 80,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 111883,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 94,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 64,
                         "prop": "locId"
                     }
                 ]
@@ -148,6 +184,42 @@
                 ]
             },
             {
+                "id": 111951,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 50,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 57,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 125604,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 105,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 113,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
                 "id": 125892,
                 "kind": "localization",
                 "occurrences": [
@@ -161,6 +233,24 @@
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                         "line": 78,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 267768,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 105,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 113,
                         "prop": "locId"
                     }
                 ]
@@ -207,6 +297,12 @@
                 "occurrences": [
                     {
                         "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 18,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
                         "line": 38,
                         "prop": "locId"
@@ -243,6 +339,12 @@
                 "occurrences": [
                     {
                         "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/limited-sleeper.mdx",
+                        "line": 9,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
                         "line": 42,
                         "prop": "locId"
@@ -259,6 +361,12 @@
                 "id": 297403,
                 "kind": "localization",
                 "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 9,
+                        "prop": "locId"
+                    },
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
@@ -279,6 +387,12 @@
                 "occurrences": [
                     {
                         "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 9,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
                         "line": 44,
                         "prop": "locId"
@@ -287,6 +401,54 @@
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                         "line": 136,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 297921,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 25,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 74,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 75,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 123,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 297936,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 31,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 115,
                         "prop": "locId"
                     }
                 ]
@@ -317,6 +479,24 @@
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                         "line": 173,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 298362,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 201,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 205,
                         "prop": "locId"
                     }
                 ]
@@ -361,6 +541,12 @@
                 "id": 605,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/ships.mdx",
@@ -568,6 +754,24 @@
                 ]
             },
             {
+                "id": 11646,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 96,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 13278,
                 "kind": "type",
                 "occurrences": [
@@ -652,6 +856,60 @@
                 ]
             },
             {
+                "id": 23828,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 74,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 79,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 83,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 84,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 96,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25307,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 14,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 46,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 29984,
                 "kind": "type",
                 "occurrences": [
@@ -665,6 +923,24 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30462,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 92,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 104,
                         "prop": "typeId"
                     }
                 ]
@@ -715,6 +991,24 @@
                 "id": 30834,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 56,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 52,
+                        "prop": "typeId"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
@@ -831,6 +1125,18 @@
                 "occurrences": [
                     {
                         "component": "EveType",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
                         "file": "src/content/docs/guides/equipment/index.mdx",
                         "line": 11,
                         "prop": "typeId"
@@ -844,9 +1150,483 @@
                 ]
             },
             {
+                "id": 34299,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 24,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 70,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 74,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 76,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 123,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 136,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34300,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 77,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 136,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 76,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 165,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34303,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 101,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 123,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34305,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/limited-sleeper.mdx",
+                        "line": 18,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 78,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 78,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 91,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 103,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 113,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 125,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 126,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 98,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 147,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34315,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 20,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 55,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 49,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 102,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 124,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34373,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 69,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 80,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34374,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 69,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 81,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34375,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 68,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 79,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34378,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 136,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 168,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34384,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 50,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 97,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 105,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 127,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34385,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 124,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 166,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34403,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 24,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 77,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34406,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 35,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 83,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34438,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 99,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34449,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 207,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 208,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 216,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34453,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 103,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 122,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 210,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 41534,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 12,
+                        "prop": "typeId"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
@@ -865,6 +1645,12 @@
                 "id": 47028,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 12,
+                        "prop": "typeId"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
@@ -977,10 +1763,26 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 111362,
+                "kind": "localization",
+                "line": 83,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111367,
                 "kind": "localization",
                 "line": 59,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 111370,
+                "kind": "localization",
+                "line": 56,
                 "prop": "locId"
             },
             {
@@ -1065,6 +1867,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 111814,
+                "kind": "localization",
+                "line": 41,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111814,
                 "kind": "localization",
@@ -1097,6 +1907,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 111883,
+                "kind": "localization",
+                "line": 94,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111883,
                 "kind": "localization",
@@ -1121,6 +1939,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 111951,
+                "kind": "localization",
+                "line": 50,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111951,
                 "kind": "localization",
@@ -1133,6 +1959,86 @@
                 "id": 120680,
                 "kind": "localization",
                 "line": 60,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125602,
+                "kind": "localization",
+                "line": 104,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125604,
+                "kind": "localization",
+                "line": 105,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125604,
+                "kind": "localization",
+                "line": 113,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125605,
+                "kind": "localization",
+                "line": 106,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125606,
+                "kind": "localization",
+                "line": 107,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125607,
+                "kind": "localization",
+                "line": 108,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125608,
+                "kind": "localization",
+                "line": 109,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125609,
+                "kind": "localization",
+                "line": 110,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125831,
+                "kind": "localization",
+                "line": 39,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 125832,
+                "kind": "localization",
+                "line": 48,
                 "prop": "locId"
             },
             {
@@ -1153,10 +2059,42 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 127156,
+                "kind": "localization",
+                "line": 111,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267688,
+                "kind": "localization",
+                "line": 104,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267694,
+                "kind": "localization",
+                "line": 110,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
                 "id": 267708,
                 "kind": "localization",
                 "line": 10,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267710,
+                "kind": "localization",
+                "line": 106,
                 "prop": "locId"
             },
             {
@@ -1201,10 +2139,58 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267768,
+                "kind": "localization",
+                "line": 105,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267768,
+                "kind": "localization",
+                "line": 113,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267780,
+                "kind": "localization",
+                "line": 108,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
                 "id": 267784,
                 "kind": "localization",
                 "line": 9,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267790,
+                "kind": "localization",
+                "line": 109,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267794,
+                "kind": "localization",
+                "line": 111,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 267798,
+                "kind": "localization",
+                "line": 107,
                 "prop": "locId"
             },
             {
@@ -1221,6 +2207,22 @@
                 "id": 277674,
                 "kind": "localization",
                 "line": 55,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 287004,
+                "kind": "localization",
+                "line": 77,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 292073,
+                "kind": "localization",
+                "line": 16,
                 "prop": "locId"
             },
             {
@@ -1257,6 +2259,22 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 292086,
+                "kind": "localization",
+                "line": 19,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 292089,
+                "kind": "localization",
+                "line": 18,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
                 "id": 292089,
                 "kind": "localization",
@@ -1269,6 +2287,14 @@
                 "id": 292089,
                 "kind": "localization",
                 "line": 119,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 292092,
+                "kind": "localization",
+                "line": 17,
                 "prop": "locId"
             },
             {
@@ -1289,6 +2315,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/limited-sleeper.mdx",
+                "id": 296755,
+                "kind": "localization",
+                "line": 9,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
                 "id": 296755,
                 "kind": "localization",
@@ -1301,6 +2335,14 @@
                 "id": 296755,
                 "kind": "localization",
                 "line": 134,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 297403,
+                "kind": "localization",
+                "line": 9,
                 "prop": "locId"
             },
             {
@@ -1321,6 +2363,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 297744,
+                "kind": "localization",
+                "line": 9,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
                 "id": 297744,
                 "kind": "localization",
@@ -1333,6 +2383,54 @@
                 "id": 297744,
                 "kind": "localization",
                 "line": 136,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 297921,
+                "kind": "localization",
+                "line": 25,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 297921,
+                "kind": "localization",
+                "line": 74,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 297921,
+                "kind": "localization",
+                "line": 75,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 297921,
+                "kind": "localization",
+                "line": 123,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 297936,
+                "kind": "localization",
+                "line": 31,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 297936,
+                "kind": "localization",
+                "line": 115,
                 "prop": "locId"
             },
             {
@@ -1365,6 +2463,38 @@
                 "id": 297962,
                 "kind": "localization",
                 "line": 173,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 298073,
+                "kind": "localization",
+                "line": 339,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 298362,
+                "kind": "localization",
+                "line": 201,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 298362,
+                "kind": "localization",
+                "line": 205,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 298448,
+                "kind": "localization",
+                "line": 221,
                 "prop": "locId"
             },
             {
@@ -1461,6 +2591,14 @@
                 "id": 526,
                 "kind": "type",
                 "line": 98,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 605,
+                "kind": "type",
+                "line": 32,
                 "prop": "typeId"
             },
             {
@@ -1713,6 +2851,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 9950,
+                "kind": "type",
+                "line": 136,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 10998,
                 "kind": "type",
@@ -1817,10 +2963,26 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 11646,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 11646,
                 "kind": "type",
                 "line": 96,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 11987,
+                "kind": "type",
+                "line": 45,
                 "prop": "typeId"
             },
             {
@@ -1845,6 +3007,30 @@
                 "id": 13976,
                 "kind": "type",
                 "line": 102,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 15463,
+                "kind": "type",
+                "line": 136,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 15479,
+                "kind": "type",
+                "line": 136,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 17715,
+                "kind": "type",
+                "line": 96,
                 "prop": "typeId"
             },
             {
@@ -2001,6 +3187,86 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 23828,
+                "kind": "type",
+                "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 23828,
+                "kind": "type",
+                "line": 79,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 23828,
+                "kind": "type",
+                "line": 83,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 23828,
+                "kind": "type",
+                "line": 84,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 23828,
+                "kind": "type",
+                "line": 96,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 25303,
+                "kind": "type",
+                "line": 45,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 25307,
+                "kind": "type",
+                "line": 14,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 25307,
+                "kind": "type",
+                "line": 46,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 25308,
+                "kind": "type",
+                "line": 69,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 25538,
+                "kind": "type",
+                "line": 14,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 25622,
                 "kind": "type",
@@ -2121,6 +3387,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 28668,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 28758,
                 "kind": "type",
@@ -2169,6 +3443,46 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 30299,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 30460,
+                "kind": "type",
+                "line": 92,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 30461,
+                "kind": "type",
+                "line": 92,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 30462,
+                "kind": "type",
+                "line": 92,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 30462,
+                "kind": "type",
+                "line": 104,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 30488,
                 "kind": "type",
@@ -2205,6 +3519,30 @@
                 "id": 30832,
                 "kind": "type",
                 "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 30834,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 30834,
+                "kind": "type",
+                "line": 56,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 30834,
+                "kind": "type",
+                "line": 52,
                 "prop": "typeId"
             },
             {
@@ -2401,6 +3739,22 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 33474,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 33474,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/index.mdx",
                 "id": 33474,
                 "kind": "type",
@@ -2425,6 +3779,46 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 33530,
+                "kind": "type",
+                "line": 72,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 33531,
+                "kind": "type",
+                "line": 73,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 33532,
+                "kind": "type",
+                "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 33533,
+                "kind": "type",
+                "line": 75,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/ghost.mdx",
+                "id": 33534,
+                "kind": "type",
+                "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 33971,
                 "kind": "type",
@@ -2441,10 +3835,626 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34299,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34299,
+                "kind": "type",
+                "line": 70,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34299,
+                "kind": "type",
+                "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34299,
+                "kind": "type",
+                "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34299,
+                "kind": "type",
+                "line": 123,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34299,
+                "kind": "type",
+                "line": 136,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34300,
+                "kind": "type",
+                "line": 77,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34300,
+                "kind": "type",
+                "line": 136,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34300,
+                "kind": "type",
+                "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34300,
+                "kind": "type",
+                "line": 165,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/limited-sleeper.mdx",
+                "id": 34301,
+                "kind": "type",
+                "line": 19,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/limited-sleeper.mdx",
+                "id": 34302,
+                "kind": "type",
+                "line": 20,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34303,
+                "kind": "type",
+                "line": 101,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34303,
+                "kind": "type",
+                "line": 123,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/limited-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 18,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 21,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 78,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 78,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 91,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 103,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 113,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 125,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 126,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 98,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34305,
+                "kind": "type",
+                "line": 147,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34315,
+                "kind": "type",
+                "line": 20,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34315,
+                "kind": "type",
+                "line": 55,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34315,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34315,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34315,
+                "kind": "type",
+                "line": 102,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34315,
+                "kind": "type",
+                "line": 124,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34373,
+                "kind": "type",
+                "line": 69,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34373,
+                "kind": "type",
+                "line": 80,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34374,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34374,
+                "kind": "type",
+                "line": 69,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34374,
+                "kind": "type",
+                "line": 81,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34375,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34375,
+                "kind": "type",
+                "line": 68,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34375,
+                "kind": "type",
+                "line": 79,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34378,
+                "kind": "type",
+                "line": 136,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34378,
+                "kind": "type",
+                "line": 168,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34381,
+                "kind": "type",
+                "line": 79,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34382,
+                "kind": "type",
+                "line": 79,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34383,
+                "kind": "type",
+                "line": 79,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34384,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34384,
+                "kind": "type",
+                "line": 50,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34384,
+                "kind": "type",
+                "line": 97,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34384,
+                "kind": "type",
+                "line": 105,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34384,
+                "kind": "type",
+                "line": 127,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34385,
+                "kind": "type",
+                "line": 124,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34385,
+                "kind": "type",
+                "line": 166,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                "id": 34386,
+                "kind": "type",
+                "line": 93,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34391,
+                "kind": "type",
+                "line": 73,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34398,
+                "kind": "type",
+                "line": 78,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34399,
+                "kind": "type",
+                "line": 82,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34400,
+                "kind": "type",
+                "line": 73,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34401,
+                "kind": "type",
+                "line": 78,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34402,
+                "kind": "type",
+                "line": 82,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34403,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34403,
+                "kind": "type",
+                "line": 77,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34406,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34406,
+                "kind": "type",
+                "line": 83,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 34412,
                 "kind": "type",
                 "line": 150,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34438,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34438,
+                "kind": "type",
+                "line": 99,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34447,
+                "kind": "type",
+                "line": 206,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34449,
+                "kind": "type",
+                "line": 207,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34449,
+                "kind": "type",
+                "line": 208,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34449,
+                "kind": "type",
+                "line": 216,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34450,
+                "kind": "type",
+                "line": 208,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34453,
+                "kind": "type",
+                "line": 103,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34453,
+                "kind": "type",
+                "line": 122,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34453,
+                "kind": "type",
+                "line": 210,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 34455,
+                "kind": "type",
+                "line": 207,
                 "prop": "typeId"
             },
             {
@@ -2489,6 +4499,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 41534,
+                "kind": "type",
+                "line": 12,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
                 "id": 41534,
                 "kind": "type",
@@ -2501,6 +4519,38 @@
                 "id": 41534,
                 "kind": "type",
                 "line": 89,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 46230,
+                "kind": "type",
+                "line": 45,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 46235,
+                "kind": "type",
+                "line": 69,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/gas.mdx",
+                "id": 46251,
+                "kind": "type",
+                "line": 46,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                "id": 47028,
+                "kind": "type",
+                "line": 12,
                 "prop": "typeId"
             },
             {
@@ -2538,7 +4588,9 @@
             111162,
             111181,
             111193,
+            111362,
             111367,
+            111370,
             111372,
             111382,
             111385,
@@ -2553,24 +4605,51 @@
             111949,
             111951,
             120680,
+            125602,
+            125604,
+            125605,
+            125606,
+            125607,
+            125608,
+            125609,
+            125831,
+            125832,
             125892,
+            127156,
+            267688,
+            267694,
             267708,
+            267710,
             267718,
             267724,
             267732,
             267746,
             267758,
+            267768,
+            267780,
             267784,
+            267790,
+            267794,
+            267798,
             267810,
             277674,
+            287004,
+            292073,
             292079,
             292084,
+            292086,
             292089,
+            292092,
             292094,
             296755,
             297403,
             297744,
+            297921,
+            297936,
             297962,
+            298073,
+            298362,
+            298448,
             500105,
             500106,
             500107,
@@ -2606,6 +4685,7 @@
             5973,
             6131,
             6160,
+            9950,
             10998,
             11192,
             11370,
@@ -2613,8 +4693,12 @@
             11578,
             11579,
             11646,
+            11987,
             13278,
             13976,
+            15463,
+            15479,
+            17715,
             17938,
             18937,
             20411,
@@ -2629,6 +4713,11 @@
             22808,
             22809,
             23707,
+            23828,
+            25303,
+            25307,
+            25308,
+            25538,
             25622,
             25739,
             25810,
@@ -2644,11 +4733,16 @@
             28363,
             28665,
             28666,
+            28668,
             28758,
             28808,
             29984,
             30013,
             30028,
+            30299,
+            30460,
+            30461,
+            30462,
             30488,
             30832,
             30834,
@@ -2670,15 +4764,54 @@
             33470,
             33474,
             33516,
+            33530,
+            33531,
+            33532,
+            33533,
+            33534,
             33971,
             34201,
+            34299,
+            34300,
+            34301,
+            34302,
+            34303,
+            34305,
+            34315,
+            34373,
+            34374,
+            34375,
+            34378,
+            34381,
+            34382,
+            34383,
+            34384,
+            34385,
+            34386,
+            34391,
+            34398,
+            34399,
+            34400,
+            34401,
+            34402,
+            34403,
+            34406,
             34412,
+            34438,
+            34447,
+            34449,
+            34450,
+            34453,
+            34455,
             40520,
             40730,
             40750,
             41040,
             41533,
             41534,
+            46230,
+            46235,
+            46251,
             47028
         ],
         "unresolved": [
@@ -2691,6 +4824,6 @@
             }
         ]
     },
-    "generatedAt": "2026-03-25T13:49:09.039Z",
+    "generatedAt": "2026-03-25T17:11:29.518Z",
     "unresolved": []
 }
