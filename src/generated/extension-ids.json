@@ -16,7 +16,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 83,
+                        "line": 79,
                         "prop": "locId"
                     }
                 ]
@@ -34,7 +34,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 88,
+                        "line": 84,
                         "prop": "locId"
                     }
                 ]
@@ -52,7 +52,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 89,
+                        "line": 85,
                         "prop": "locId"
                     }
                 ]
@@ -70,7 +70,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 136,
+                        "line": 144,
                         "prop": "locId"
                     }
                 ]
@@ -88,7 +88,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 137,
+                        "line": 145,
                         "prop": "locId"
                     }
                 ]
@@ -106,7 +106,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 150,
+                        "line": 158,
                         "prop": "locId"
                     }
                 ]
@@ -124,7 +124,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 84,
+                        "line": 80,
                         "prop": "locId"
                     }
                 ]
@@ -142,7 +142,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 90,
+                        "line": 86,
                         "prop": "locId"
                     }
                 ]
@@ -160,7 +160,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 82,
+                        "line": 78,
                         "prop": "locId"
                     }
                 ]
@@ -178,7 +178,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 109,
+                        "line": 117,
                         "prop": "locId"
                     }
                 ]
@@ -196,7 +196,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 110,
+                        "line": 118,
                         "prop": "locId"
                     }
                 ]
@@ -214,7 +214,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 111,
+                        "line": 119,
                         "prop": "locId"
                     }
                 ]
@@ -232,7 +232,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 112,
+                        "line": 120,
                         "prop": "locId"
                     }
                 ]
@@ -250,7 +250,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 126,
+                        "line": 134,
                         "prop": "locId"
                     }
                 ]
@@ -268,7 +268,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 127,
+                        "line": 135,
                         "prop": "locId"
                     }
                 ]
@@ -286,7 +286,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 128,
+                        "line": 136,
                         "prop": "locId"
                     }
                 ]
@@ -310,13 +310,13 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 162,
+                        "line": 170,
                         "prop": "locId"
                     },
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 165,
+                        "line": 173,
                         "prop": "locId"
                     }
                 ]
@@ -334,7 +334,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 46,
+                        "line": 42,
                         "prop": "locId"
                     }
                 ]
@@ -352,8 +352,86 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
-                        "line": 27,
+                        "line": 22,
                         "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 605,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/ships.mdx",
+                        "line": 20,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 15,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 1405,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 9,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 57,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 2605,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 9,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 35,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 3411,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/implants.mdx",
+                        "line": 89,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/skills.mdx",
+                        "line": 69,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 26,
+                        "prop": "typeId"
                     }
                 ]
             },
@@ -361,6 +439,12 @@
                 "id": 3412,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/skills.mdx",
+                        "line": 47,
+                        "prop": "typeId"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
@@ -376,9 +460,57 @@
                 ]
             },
             {
+                "id": 6160,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 10,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 86,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 10998,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 11,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 76,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 11578,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 10,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 84,
+                        "prop": "typeId"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
@@ -394,6 +526,120 @@
                 ]
             },
             {
+                "id": 11579,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 10,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 20,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 13278,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/skills.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 17938,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 9,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 21718,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 46,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/skills.mdx",
+                        "line": 53,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 29984,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/ships.mdx",
+                        "line": 52,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30488,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 9,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 56,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 30832,
                 "kind": "type",
                 "occurrences": [
@@ -401,6 +647,12 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
                         "line": 42,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 73,
                         "prop": "typeId"
                     },
                     {
@@ -423,8 +675,140 @@
                     },
                     {
                         "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 57,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 22,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 31153,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                        "line": 9,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                        "line": 77,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 31213,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                        "line": 9,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 31310,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                        "line": 9,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                        "line": 61,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33468,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/ships.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 24,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33470,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/ships.mdx",
+                        "line": 41,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33474,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/index.mdx",
+                        "line": 11,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/misc.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 41534,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                        "line": 42,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 89,
                         "prop": "typeId"
                     }
                 ]
@@ -437,6 +821,12 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
                         "line": 43,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/implants.mdx",
+                        "line": 86,
                         "prop": "typeId"
                     },
                     {
@@ -462,7 +852,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 70930,
                 "kind": "localization",
-                "line": 40,
+                "line": 36,
                 "prop": "locId"
             },
             {
@@ -486,7 +876,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 110644,
                 "kind": "localization",
-                "line": 51,
+                "line": 47,
                 "prop": "locId"
             },
             {
@@ -502,7 +892,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111162,
                 "kind": "localization",
-                "line": 83,
+                "line": 79,
                 "prop": "locId"
             },
             {
@@ -518,7 +908,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111181,
                 "kind": "localization",
-                "line": 88,
+                "line": 84,
                 "prop": "locId"
             },
             {
@@ -534,7 +924,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111193,
                 "kind": "localization",
-                "line": 89,
+                "line": 85,
                 "prop": "locId"
             },
             {
@@ -542,7 +932,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111367,
                 "kind": "localization",
-                "line": 63,
+                "line": 59,
                 "prop": "locId"
             },
             {
@@ -550,7 +940,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111372,
                 "kind": "localization",
-                "line": 59,
+                "line": 55,
                 "prop": "locId"
             },
             {
@@ -558,7 +948,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111382,
                 "kind": "localization",
-                "line": 52,
+                "line": 48,
                 "prop": "locId"
             },
             {
@@ -566,7 +956,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111385,
                 "kind": "localization",
-                "line": 54,
+                "line": 50,
                 "prop": "locId"
             },
             {
@@ -574,7 +964,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111387,
                 "kind": "localization",
-                "line": 55,
+                "line": 51,
                 "prop": "locId"
             },
             {
@@ -590,7 +980,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111644,
                 "kind": "localization",
-                "line": 136,
+                "line": 144,
                 "prop": "locId"
             },
             {
@@ -606,7 +996,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111659,
                 "kind": "localization",
-                "line": 137,
+                "line": 145,
                 "prop": "locId"
             },
             {
@@ -622,7 +1012,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111800,
                 "kind": "localization",
-                "line": 150,
+                "line": 158,
                 "prop": "locId"
             },
             {
@@ -630,7 +1020,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111814,
                 "kind": "localization",
-                "line": 60,
+                "line": 56,
                 "prop": "locId"
             },
             {
@@ -646,7 +1036,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111820,
                 "kind": "localization",
-                "line": 84,
+                "line": 80,
                 "prop": "locId"
             },
             {
@@ -654,7 +1044,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111879,
                 "kind": "localization",
-                "line": 69,
+                "line": 65,
                 "prop": "locId"
             },
             {
@@ -662,7 +1052,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111883,
                 "kind": "localization",
-                "line": 68,
+                "line": 64,
                 "prop": "locId"
             },
             {
@@ -678,7 +1068,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111949,
                 "kind": "localization",
-                "line": 90,
+                "line": 86,
                 "prop": "locId"
             },
             {
@@ -686,7 +1076,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 111951,
                 "kind": "localization",
-                "line": 61,
+                "line": 57,
                 "prop": "locId"
             },
             {
@@ -702,7 +1092,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 125892,
                 "kind": "localization",
-                "line": 82,
+                "line": 78,
                 "prop": "locId"
             },
             {
@@ -782,7 +1172,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 292079,
                 "kind": "localization",
-                "line": 109,
+                "line": 117,
                 "prop": "locId"
             },
             {
@@ -798,7 +1188,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 292084,
                 "kind": "localization",
-                "line": 110,
+                "line": 118,
                 "prop": "locId"
             },
             {
@@ -814,7 +1204,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 292089,
                 "kind": "localization",
-                "line": 111,
+                "line": 119,
                 "prop": "locId"
             },
             {
@@ -830,7 +1220,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 292094,
                 "kind": "localization",
-                "line": 112,
+                "line": 120,
                 "prop": "locId"
             },
             {
@@ -846,7 +1236,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 296755,
                 "kind": "localization",
-                "line": 126,
+                "line": 134,
                 "prop": "locId"
             },
             {
@@ -862,7 +1252,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 297403,
                 "kind": "localization",
-                "line": 127,
+                "line": 135,
                 "prop": "locId"
             },
             {
@@ -878,7 +1268,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 297744,
                 "kind": "localization",
-                "line": 128,
+                "line": 136,
                 "prop": "locId"
             },
             {
@@ -902,7 +1292,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 297962,
                 "kind": "localization",
-                "line": 162,
+                "line": 170,
                 "prop": "locId"
             },
             {
@@ -910,7 +1300,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 297962,
                 "kind": "localization",
-                "line": 165,
+                "line": 173,
                 "prop": "locId"
             },
             {
@@ -942,7 +1332,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 500107,
                 "kind": "localization",
-                "line": 46,
+                "line": 42,
                 "prop": "locId"
             },
             {
@@ -958,7 +1348,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 500108,
                 "kind": "localization",
-                "line": 27,
+                "line": 22,
                 "prop": "locId"
             },
             {
@@ -979,6 +1369,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/ships.mdx",
+                "id": 605,
+                "kind": "type",
+                "line": 20,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 605,
                 "kind": "type",
@@ -987,10 +1385,114 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 1403,
+                "kind": "type",
+                "line": 51,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 1405,
+                "kind": "type",
+                "line": 9,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 1405,
+                "kind": "type",
+                "line": 57,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 2038,
+                "kind": "type",
+                "line": 39,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 2603,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 2605,
+                "kind": "type",
+                "line": 9,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 2605,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 3119,
+                "kind": "type",
+                "line": 48,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 3327,
+                "kind": "type",
+                "line": 75,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 3331,
+                "kind": "type",
+                "line": 99,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 3411,
+                "kind": "type",
+                "line": 89,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 3411,
+                "kind": "type",
+                "line": 69,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 3411,
                 "kind": "type",
                 "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 3412,
+                "kind": "type",
+                "line": 47,
                 "prop": "typeId"
             },
             {
@@ -1011,10 +1513,114 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 3428,
+                "kind": "type",
+                "line": 93,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 3429,
+                "kind": "type",
+                "line": 87,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 3453,
+                "kind": "type",
+                "line": 81,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 3551,
+                "kind": "type",
+                "line": 59,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 4258,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 4384,
                 "kind": "type",
-                "line": 99,
+                "line": 103,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 5533,
+                "kind": "type",
+                "line": 63,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 5599,
+                "kind": "type",
+                "line": 41,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 5973,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 6131,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 6160,
+                "kind": "type",
+                "line": 10,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 6160,
+                "kind": "type",
+                "line": 86,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 10998,
+                "kind": "type",
+                "line": 11,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 10998,
+                "kind": "type",
+                "line": 76,
                 "prop": "typeId"
             },
             {
@@ -1023,6 +1629,38 @@
                 "id": 11192,
                 "kind": "type",
                 "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 11370,
+                "kind": "type",
+                "line": 72,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 11577,
+                "kind": "type",
+                "line": 78,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 11578,
+                "kind": "type",
+                "line": 10,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 11578,
+                "kind": "type",
+                "line": 84,
                 "prop": "typeId"
             },
             {
@@ -1043,10 +1681,34 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 11579,
+                "kind": "type",
+                "line": 10,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 11579,
                 "kind": "type",
                 "line": 20,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 11646,
+                "kind": "type",
+                "line": 96,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 13278,
+                "kind": "type",
+                "line": 23,
                 "prop": "typeId"
             },
             {
@@ -1059,10 +1721,42 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 13976,
+                "kind": "type",
+                "line": 102,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 17938,
+                "kind": "type",
+                "line": 9,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 17938,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 18937,
+                "kind": "type",
+                "line": 108,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 20411,
                 "kind": "type",
-                "line": 98,
+                "line": 100,
                 "prop": "typeId"
             },
             {
@@ -1070,7 +1764,23 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 21074,
                 "kind": "type",
-                "line": 100,
+                "line": 106,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 21718,
+                "kind": "type",
+                "line": 46,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 21718,
+                "kind": "type",
+                "line": 53,
                 "prop": "typeId"
             },
             {
@@ -1083,10 +1793,154 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 22175,
+                "kind": "type",
+                "line": 51,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 22177,
+                "kind": "type",
+                "line": 67,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                "id": 22778,
+                "kind": "type",
+                "line": 70,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 22806,
+                "kind": "type",
+                "line": 111,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 22807,
+                "kind": "type",
+                "line": 113,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 22808,
+                "kind": "type",
+                "line": 115,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 22809,
+                "kind": "type",
+                "line": 117,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/misc.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 37,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 25622,
                 "kind": "type",
-                "line": 96,
+                "line": 94,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 25739,
+                "kind": "type",
+                "line": 41,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 25810,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 25811,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 27187,
+                "kind": "type",
+                "line": 60,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 27188,
+                "kind": "type",
+                "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 27192,
+                "kind": "type",
+                "line": 62,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 27193,
+                "kind": "type",
+                "line": 58,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 27194,
+                "kind": "type",
+                "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 27195,
+                "kind": "type",
+                "line": 72,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 27260,
+                "kind": "type",
+                "line": 99,
                 "prop": "typeId"
             },
             {
@@ -1094,7 +1948,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 28277,
                 "kind": "type",
-                "line": 155,
+                "line": 163,
                 "prop": "typeId"
             },
             {
@@ -1102,7 +1956,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 28363,
                 "kind": "type",
-                "line": 154,
+                "line": 162,
                 "prop": "typeId"
             },
             {
@@ -1123,10 +1977,42 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 28758,
+                "kind": "type",
+                "line": 40,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 28808,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/ships.mdx",
+                "id": 29984,
+                "kind": "type",
+                "line": 52,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 29984,
                 "kind": "type",
                 "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 30013,
+                "kind": "type",
+                "line": 50,
                 "prop": "typeId"
             },
             {
@@ -1139,10 +2025,34 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 30488,
+                "kind": "type",
+                "line": 9,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 30488,
+                "kind": "type",
+                "line": 56,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
                 "id": 30832,
                 "kind": "type",
                 "line": 42,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 30832,
+                "kind": "type",
+                "line": 73,
                 "prop": "typeId"
             },
             {
@@ -1163,6 +2073,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 30834,
+                "kind": "type",
+                "line": 57,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 30834,
                 "kind": "type",
@@ -1179,6 +2097,142 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31153,
+                "kind": "type",
+                "line": 9,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31153,
+                "kind": "type",
+                "line": 77,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31159,
+                "kind": "type",
+                "line": 93,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31165,
+                "kind": "type",
+                "line": 99,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31171,
+                "kind": "type",
+                "line": 83,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31213,
+                "kind": "type",
+                "line": 9,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31213,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31220,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31274,
+                "kind": "type",
+                "line": 45,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31280,
+                "kind": "type",
+                "line": 51,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31310,
+                "kind": "type",
+                "line": 9,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31310,
+                "kind": "type",
+                "line": 61,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                "id": 31316,
+                "kind": "type",
+                "line": 67,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                "id": 32246,
+                "kind": "type",
+                "line": 62,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/skills.mdx",
+                "id": 33078,
+                "kind": "type",
+                "line": 105,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 33180,
+                "kind": "type",
+                "line": 99,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/ships.mdx",
+                "id": 33468,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 33468,
                 "kind": "type",
@@ -1187,10 +2241,50 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/ships.mdx",
+                "id": 33470,
+                "kind": "type",
+                "line": 41,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 33470,
                 "kind": "type",
                 "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/index.mdx",
+                "id": 33474,
+                "kind": "type",
+                "line": 11,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/misc.mdx",
+                "id": 33474,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 33516,
+                "kind": "type",
+                "line": 41,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 33971,
+                "kind": "type",
+                "line": 23,
                 "prop": "typeId"
             },
             {
@@ -1206,7 +2300,7 @@
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 34412,
                 "kind": "type",
-                "line": 142,
+                "line": 150,
                 "prop": "typeId"
             },
             {
@@ -1219,6 +2313,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 41533,
+                "kind": "type",
+                "line": 83,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
                 "id": 41534,
                 "kind": "type",
@@ -1227,10 +2329,26 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                "id": 41534,
+                "kind": "type",
+                "line": 89,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
                 "id": 47028,
                 "kind": "type",
                 "line": 43,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/equipment/implants.mdx",
+                "id": 47028,
+                "kind": "type",
+                "line": 86,
                 "prop": "typeId"
             },
             {
@@ -1292,36 +2410,100 @@
         ],
         "typeIds": [
             605,
+            1403,
+            1405,
+            2038,
+            2603,
+            2605,
+            3119,
+            3327,
+            3331,
             3411,
             3412,
+            3428,
+            3429,
+            3453,
+            3551,
+            4258,
             4384,
+            5533,
+            5599,
+            5973,
+            6131,
+            6160,
+            10998,
             11192,
+            11370,
+            11577,
             11578,
             11579,
+            11646,
             13278,
+            13976,
+            17938,
+            18937,
             20411,
             21074,
             21718,
+            22175,
+            22177,
+            22778,
+            22806,
+            22807,
+            22808,
+            22809,
+            23707,
             25622,
+            25739,
+            25810,
+            25811,
+            27187,
+            27188,
+            27192,
+            27193,
+            27194,
+            27195,
+            27260,
             28277,
             28363,
             28665,
             28666,
+            28758,
+            28808,
             29984,
+            30013,
             30028,
+            30488,
             30832,
             30834,
             30889,
+            31153,
+            31159,
+            31165,
+            31171,
+            31213,
+            31220,
+            31274,
+            31280,
+            31310,
+            31316,
+            32246,
+            33078,
+            33180,
             33468,
             33470,
+            33474,
+            33516,
+            33971,
             34201,
             34412,
             40520,
+            41533,
             41534,
             47028
         ],
         "unresolved": []
     },
-    "generatedAt": "2026-03-25T01:13:24.526Z",
+    "generatedAt": "2026-03-25T03:38:59.490Z",
     "unresolved": []
 }

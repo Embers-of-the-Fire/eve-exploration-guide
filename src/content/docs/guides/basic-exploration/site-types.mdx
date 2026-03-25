@@ -5,11 +5,6 @@ title: 信号类型
 import EveType from "@/components/docs/eve/EveType.tsx";
 import EveLocText from "@/components/docs/eve/EveLocText.tsx";
 
-{/*
-本部分使用 <table> 而非 Markdown 语法的表格是为了更好地兼容 MDX。
-同时，由于表格中存在图片且文字长度差距显著，使用 Markdown 表格会极为混乱。
-*/}
-
 <table style={{ overflow: "unset" }}>
 
 <thead>
@@ -27,7 +22,8 @@ import EveLocText from "@/components/docs/eve/EveLocText.tsx";
         <EveLocText locId={500108} />
     </td>
     <td>
-        各种各样<br />
+        各种各样
+        <br />
         战斗气云
     </td>
     <td>普通异常、死亡或空代任务</td>
@@ -90,15 +86,27 @@ import EveLocText from "@/components/docs/eve/EveLocText.tsx";
 - <EveLocText locId={111949} />
 </td>
 <td>
-**新人主挖这种坟。**<br/>
-无怪，分布于各安等与1、2、3级虫洞，
-产出：
-- 打捞件（<EveType typeId={25622} />）、
-- 解码器（<EveType typeId={34201} />）、
-- 数据核心（<EveType typeId={20411} />）、
-- 蓝图拷贝（<EveType typeId={4384} />）、
-- 各种组件（<EveType typeId={21074} />）、
-- 以及其他杂项。
+    <strong>新人主挖这种坟。</strong>
+    <br />
+    无怪，分布于各安等与1、2、3级虫洞，产出：
+    <ul>
+        <li>
+            打捞件（<EveType typeId={25622} />）、
+        </li>
+        <li>
+            解码器（<EveType typeId={34201} />）、
+        </li>
+        <li>
+            数据核心（<EveType typeId={20411} />）、
+        </li>
+        <li>
+            蓝图拷贝（<EveType typeId={4384} />）、
+        </li>
+        <li>
+            各种组件（<EveType typeId={21074} />）、
+        </li>
+        <li>以及其他杂项。</li>
+    </ul>
 </td>
 </tr>
 
