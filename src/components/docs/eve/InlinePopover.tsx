@@ -32,13 +32,19 @@ export default function InlinePopover({
                     : baseStyles.localized
             }
             data-eve-ref={dataRef}
+            data-inline-popover-root=""
             type="button"
         >
             {prefix ? (
                 <span className={baseStyles.iconPrefix}>{prefix}</span>
             ) : null}
             {label}
-            <span className={baseStyles.popover} id={tooltipId} role="tooltip">
+            <span
+                className={baseStyles.popover}
+                data-inline-popover=""
+                id={tooltipId}
+                role="tooltip"
+            >
                 {children}
             </span>
         </button>

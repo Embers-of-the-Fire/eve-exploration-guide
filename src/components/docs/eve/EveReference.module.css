@@ -1,5 +1,6 @@
 .inlineReference {
     align-items: baseline;
+    gap: 0.42rem;
     margin-inline-end: 0.16rem;
     margin-inline-start: 0.32rem;
 }

@@ -7,3 +7,9 @@ import Default from "starlight-blog/overrides/MarkdownContent.astro";
 <Default {...Astro.props}>
     <slot />
 </Default>
+
+<script>
+    import { registerInlinePopovers } from "@/scripts/inlinePopovers";
+
+    registerInlinePopovers();
+</script>

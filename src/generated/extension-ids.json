@@ -574,7 +574,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/ships.mdx",
-                        "line": 20,
+                        "line": 12,
                         "prop": "typeId"
                     },
                     {
@@ -598,7 +598,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
-                        "line": 57,
+                        "line": 24,
                         "prop": "typeId"
                     }
                 ]
@@ -616,7 +616,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
-                        "line": 35,
+                        "line": 20,
                         "prop": "typeId"
                     }
                 ]
@@ -628,13 +628,13 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/implants.mdx",
-                        "line": 89,
+                        "line": 23,
                         "prop": "typeId"
                     },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/skills.mdx",
-                        "line": 69,
+                        "line": 21,
                         "prop": "typeId"
                     },
                     {
@@ -652,7 +652,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/skills.mdx",
-                        "line": 47,
+                        "line": 17,
                         "prop": "typeId"
                     },
                     {
@@ -682,7 +682,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
-                        "line": 86,
+                        "line": 29,
                         "prop": "typeId"
                     }
                 ]
@@ -700,13 +700,13 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
-                        "line": 76,
+                        "line": 27,
                         "prop": "typeId"
                     },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/survival/escape.mdx",
-                        "line": 93,
+                        "line": 71,
                         "prop": "typeId"
                     }
                 ]
@@ -718,7 +718,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
-                        "line": 72,
+                        "line": 26,
                         "prop": "typeId"
                     },
                     {
@@ -742,7 +742,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
-                        "line": 84,
+                        "line": 28,
                         "prop": "typeId"
                     },
                     {
@@ -790,7 +790,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
-                        "line": 96,
+                        "line": 31,
                         "prop": "typeId"
                     }
                 ]
@@ -802,7 +802,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/skills.mdx",
-                        "line": 23,
+                        "line": 13,
                         "prop": "typeId"
                     },
                     {
@@ -826,7 +826,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
-                        "line": 28,
+                        "line": 18,
                         "prop": "typeId"
                     }
                 ]
@@ -838,13 +838,13 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/med-slots.mdx",
-                        "line": 46,
+                        "line": 17,
                         "prop": "typeId"
                     },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/skills.mdx",
-                        "line": 53,
+                        "line": 18,
                         "prop": "typeId"
                     },
                     {
@@ -862,7 +862,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/misc.mdx",
-                        "line": 37,
+                        "line": 15,
                         "prop": "typeId"
                     },
                     {
@@ -874,7 +874,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/survival/escape.mdx",
-                        "line": 102,
+                        "line": 72,
                         "prop": "typeId"
                     }
                 ]
@@ -940,7 +940,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/ships.mdx",
-                        "line": 52,
+                        "line": 15,
                         "prop": "typeId"
                     },
                     {
@@ -982,7 +982,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
-                        "line": 56,
+                        "line": 23,
                         "prop": "typeId"
                     }
                 ]
@@ -1000,7 +1000,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/med-slots.mdx",
-                        "line": 73,
+                        "line": 22,
                         "prop": "typeId"
                     },
                     {
@@ -1042,7 +1042,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/med-slots.mdx",
-                        "line": 57,
+                        "line": 19,
                         "prop": "typeId"
                     },
                     {
@@ -1066,7 +1066,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/rig-slots.mdx",
-                        "line": 77,
+                        "line": 28,
                         "prop": "typeId"
                     }
                 ]
@@ -1084,7 +1084,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/rig-slots.mdx",
-                        "line": 29,
+                        "line": 19,
                         "prop": "typeId"
                     }
                 ]
@@ -1102,7 +1102,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/rig-slots.mdx",
-                        "line": 61,
+                        "line": 25,
                         "prop": "typeId"
                     }
                 ]
@@ -1114,7 +1114,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/ships.mdx",
-                        "line": 30,
+                        "line": 13,
                         "prop": "typeId"
                     },
                     {
@@ -1132,7 +1132,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/ships.mdx",
-                        "line": 41,
+                        "line": 14,
                         "prop": "typeId"
                     },
                     {
@@ -1168,7 +1168,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/misc.mdx",
-                        "line": 25,
+                        "line": 13,
                         "prop": "typeId"
                     }
                 ]
@@ -1660,7 +1660,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/med-slots.mdx",
-                        "line": 89,
+                        "line": 25,
                         "prop": "typeId"
                     }
                 ]
@@ -1684,7 +1684,7 @@
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/implants.mdx",
-                        "line": 86,
+                        "line": 23,
                         "prop": "typeId"
                     },
                     {
@@ -2838,7 +2838,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 447,
                 "kind": "type",
-                "line": 89,
+                "line": 71,
                 "prop": "typeId"
             },
             {
@@ -2846,7 +2846,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 526,
                 "kind": "type",
-                "line": 98,
+                "line": 72,
                 "prop": "typeId"
             },
             {
@@ -2862,7 +2862,7 @@
                 "file": "src/content/docs/guides/equipment/ships.mdx",
                 "id": 605,
                 "kind": "type",
-                "line": 20,
+                "line": 12,
                 "prop": "typeId"
             },
             {
@@ -2878,7 +2878,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 1403,
                 "kind": "type",
-                "line": 51,
+                "line": 23,
                 "prop": "typeId"
             },
             {
@@ -2894,7 +2894,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 1405,
                 "kind": "type",
-                "line": 57,
+                "line": 24,
                 "prop": "typeId"
             },
             {
@@ -2902,7 +2902,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 2038,
                 "kind": "type",
-                "line": 39,
+                "line": 16,
                 "prop": "typeId"
             },
             {
@@ -2910,7 +2910,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 2603,
                 "kind": "type",
-                "line": 29,
+                "line": 19,
                 "prop": "typeId"
             },
             {
@@ -2926,7 +2926,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 2605,
                 "kind": "type",
-                "line": 35,
+                "line": 20,
                 "prop": "typeId"
             },
             {
@@ -2934,7 +2934,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 3119,
                 "kind": "type",
-                "line": 48,
+                "line": 17,
                 "prop": "typeId"
             },
             {
@@ -2942,7 +2942,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 3242,
                 "kind": "type",
-                "line": 80,
+                "line": 70,
                 "prop": "typeId"
             },
             {
@@ -2950,7 +2950,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 3327,
                 "kind": "type",
-                "line": 75,
+                "line": 22,
                 "prop": "typeId"
             },
             {
@@ -2958,7 +2958,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 3331,
                 "kind": "type",
-                "line": 99,
+                "line": 26,
                 "prop": "typeId"
             },
             {
@@ -2966,7 +2966,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 3411,
                 "kind": "type",
-                "line": 89,
+                "line": 23,
                 "prop": "typeId"
             },
             {
@@ -2974,7 +2974,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 3411,
                 "kind": "type",
-                "line": 69,
+                "line": 21,
                 "prop": "typeId"
             },
             {
@@ -2990,7 +2990,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 3412,
                 "kind": "type",
-                "line": 47,
+                "line": 17,
                 "prop": "typeId"
             },
             {
@@ -3014,7 +3014,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 3428,
                 "kind": "type",
-                "line": 93,
+                "line": 25,
                 "prop": "typeId"
             },
             {
@@ -3022,7 +3022,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 3429,
                 "kind": "type",
-                "line": 87,
+                "line": 24,
                 "prop": "typeId"
             },
             {
@@ -3030,7 +3030,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 3453,
                 "kind": "type",
-                "line": 81,
+                "line": 23,
                 "prop": "typeId"
             },
             {
@@ -3038,7 +3038,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 3551,
                 "kind": "type",
-                "line": 59,
+                "line": 19,
                 "prop": "typeId"
             },
             {
@@ -3046,7 +3046,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 4258,
                 "kind": "type",
-                "line": 34,
+                "line": 19,
                 "prop": "typeId"
             },
             {
@@ -3062,7 +3062,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 5533,
                 "kind": "type",
-                "line": 63,
+                "line": 25,
                 "prop": "typeId"
             },
             {
@@ -3070,7 +3070,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 5599,
                 "kind": "type",
-                "line": 41,
+                "line": 21,
                 "prop": "typeId"
             },
             {
@@ -3078,7 +3078,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 5973,
                 "kind": "type",
-                "line": 23,
+                "line": 13,
                 "prop": "typeId"
             },
             {
@@ -3086,7 +3086,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 6131,
                 "kind": "type",
-                "line": 33,
+                "line": 15,
                 "prop": "typeId"
             },
             {
@@ -3102,7 +3102,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 6160,
                 "kind": "type",
-                "line": 86,
+                "line": 29,
                 "prop": "typeId"
             },
             {
@@ -3126,7 +3126,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 10998,
                 "kind": "type",
-                "line": 76,
+                "line": 27,
                 "prop": "typeId"
             },
             {
@@ -3134,7 +3134,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 10998,
                 "kind": "type",
-                "line": 93,
+                "line": 71,
                 "prop": "typeId"
             },
             {
@@ -3150,7 +3150,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 11370,
                 "kind": "type",
-                "line": 72,
+                "line": 26,
                 "prop": "typeId"
             },
             {
@@ -3166,7 +3166,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 11577,
                 "kind": "type",
-                "line": 78,
+                "line": 27,
                 "prop": "typeId"
             },
             {
@@ -3182,7 +3182,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 11578,
                 "kind": "type",
-                "line": 84,
+                "line": 28,
                 "prop": "typeId"
             },
             {
@@ -3230,7 +3230,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 11646,
                 "kind": "type",
-                "line": 96,
+                "line": 31,
                 "prop": "typeId"
             },
             {
@@ -3246,7 +3246,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 13278,
                 "kind": "type",
-                "line": 23,
+                "line": 13,
                 "prop": "typeId"
             },
             {
@@ -3262,7 +3262,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 13976,
                 "kind": "type",
-                "line": 102,
+                "line": 32,
                 "prop": "typeId"
             },
             {
@@ -3302,7 +3302,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 17938,
                 "kind": "type",
-                "line": 28,
+                "line": 18,
                 "prop": "typeId"
             },
             {
@@ -3310,7 +3310,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 18937,
                 "kind": "type",
-                "line": 108,
+                "line": 33,
                 "prop": "typeId"
             },
             {
@@ -3334,7 +3334,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 21718,
                 "kind": "type",
-                "line": 46,
+                "line": 17,
                 "prop": "typeId"
             },
             {
@@ -3342,7 +3342,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 21718,
                 "kind": "type",
-                "line": 53,
+                "line": 18,
                 "prop": "typeId"
             },
             {
@@ -3358,7 +3358,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 22175,
                 "kind": "type",
-                "line": 51,
+                "line": 18,
                 "prop": "typeId"
             },
             {
@@ -3366,7 +3366,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 22177,
                 "kind": "type",
-                "line": 67,
+                "line": 21,
                 "prop": "typeId"
             },
             {
@@ -3374,7 +3374,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 22456,
                 "kind": "type",
-                "line": 102,
+                "line": 72,
                 "prop": "typeId"
             },
             {
@@ -3382,7 +3382,7 @@
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 22778,
                 "kind": "type",
-                "line": 70,
+                "line": 26,
                 "prop": "typeId"
             },
             {
@@ -3390,7 +3390,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 22806,
                 "kind": "type",
-                "line": 111,
+                "line": 28,
                 "prop": "typeId"
             },
             {
@@ -3398,7 +3398,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 22807,
                 "kind": "type",
-                "line": 113,
+                "line": 28,
                 "prop": "typeId"
             },
             {
@@ -3406,7 +3406,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 22808,
                 "kind": "type",
-                "line": 115,
+                "line": 28,
                 "prop": "typeId"
             },
             {
@@ -3414,7 +3414,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 22809,
                 "kind": "type",
-                "line": 117,
+                "line": 28,
                 "prop": "typeId"
             },
             {
@@ -3422,7 +3422,7 @@
                 "file": "src/content/docs/guides/equipment/misc.mdx",
                 "id": 23707,
                 "kind": "type",
-                "line": 37,
+                "line": 15,
                 "prop": "typeId"
             },
             {
@@ -3438,7 +3438,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 23707,
                 "kind": "type",
-                "line": 102,
+                "line": 72,
                 "prop": "typeId"
             },
             {
@@ -3534,7 +3534,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 25739,
                 "kind": "type",
-                "line": 41,
+                "line": 16,
                 "prop": "typeId"
             },
             {
@@ -3542,7 +3542,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 25810,
                 "kind": "type",
-                "line": 35,
+                "line": 15,
                 "prop": "typeId"
             },
             {
@@ -3550,7 +3550,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 25811,
                 "kind": "type",
-                "line": 29,
+                "line": 14,
                 "prop": "typeId"
             },
             {
@@ -3558,7 +3558,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 27187,
                 "kind": "type",
-                "line": 60,
+                "line": 19,
                 "prop": "typeId"
             },
             {
@@ -3566,7 +3566,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 27188,
                 "kind": "type",
-                "line": 74,
+                "line": 21,
                 "prop": "typeId"
             },
             {
@@ -3574,7 +3574,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 27192,
                 "kind": "type",
-                "line": 62,
+                "line": 19,
                 "prop": "typeId"
             },
             {
@@ -3582,7 +3582,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 27193,
                 "kind": "type",
-                "line": 58,
+                "line": 19,
                 "prop": "typeId"
             },
             {
@@ -3590,7 +3590,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 27194,
                 "kind": "type",
-                "line": 76,
+                "line": 21,
                 "prop": "typeId"
             },
             {
@@ -3598,7 +3598,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 27195,
                 "kind": "type",
-                "line": 72,
+                "line": 21,
                 "prop": "typeId"
             },
             {
@@ -3606,7 +3606,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 27260,
                 "kind": "type",
-                "line": 99,
+                "line": 25,
                 "prop": "typeId"
             },
             {
@@ -3654,7 +3654,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 28758,
                 "kind": "type",
-                "line": 40,
+                "line": 20,
                 "prop": "typeId"
             },
             {
@@ -3662,7 +3662,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 28808,
                 "kind": "type",
-                "line": 30,
+                "line": 14,
                 "prop": "typeId"
             },
             {
@@ -3670,7 +3670,7 @@
                 "file": "src/content/docs/guides/equipment/ships.mdx",
                 "id": 29984,
                 "kind": "type",
-                "line": 52,
+                "line": 15,
                 "prop": "typeId"
             },
             {
@@ -3686,7 +3686,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 30013,
                 "kind": "type",
-                "line": 50,
+                "line": 22,
                 "prop": "typeId"
             },
             {
@@ -3750,7 +3750,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 30488,
                 "kind": "type",
-                "line": 56,
+                "line": 23,
                 "prop": "typeId"
             },
             {
@@ -3766,7 +3766,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 30832,
                 "kind": "type",
-                "line": 73,
+                "line": 22,
                 "prop": "typeId"
             },
             {
@@ -3814,7 +3814,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 30834,
                 "kind": "type",
-                "line": 57,
+                "line": 19,
                 "prop": "typeId"
             },
             {
@@ -3846,7 +3846,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31153,
                 "kind": "type",
-                "line": 77,
+                "line": 28,
                 "prop": "typeId"
             },
             {
@@ -3854,7 +3854,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31159,
                 "kind": "type",
-                "line": 93,
+                "line": 31,
                 "prop": "typeId"
             },
             {
@@ -3862,7 +3862,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31165,
                 "kind": "type",
-                "line": 99,
+                "line": 32,
                 "prop": "typeId"
             },
             {
@@ -3870,7 +3870,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31171,
                 "kind": "type",
-                "line": 83,
+                "line": 29,
                 "prop": "typeId"
             },
             {
@@ -3886,7 +3886,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31213,
                 "kind": "type",
-                "line": 29,
+                "line": 19,
                 "prop": "typeId"
             },
             {
@@ -3894,7 +3894,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31220,
                 "kind": "type",
-                "line": 35,
+                "line": 20,
                 "prop": "typeId"
             },
             {
@@ -3902,7 +3902,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31274,
                 "kind": "type",
-                "line": 45,
+                "line": 22,
                 "prop": "typeId"
             },
             {
@@ -3910,7 +3910,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31280,
                 "kind": "type",
-                "line": 51,
+                "line": 23,
                 "prop": "typeId"
             },
             {
@@ -3926,7 +3926,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31310,
                 "kind": "type",
-                "line": 61,
+                "line": 25,
                 "prop": "typeId"
             },
             {
@@ -3934,7 +3934,7 @@
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31316,
                 "kind": "type",
-                "line": 67,
+                "line": 26,
                 "prop": "typeId"
             },
             {
@@ -3942,7 +3942,7 @@
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 32246,
                 "kind": "type",
-                "line": 62,
+                "line": 24,
                 "prop": "typeId"
             },
             {
@@ -3950,7 +3950,7 @@
                 "file": "src/content/docs/guides/equipment/skills.mdx",
                 "id": 33078,
                 "kind": "type",
-                "line": 105,
+                "line": 27,
                 "prop": "typeId"
             },
             {
@@ -3958,7 +3958,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 33180,
                 "kind": "type",
-                "line": 99,
+                "line": 27,
                 "prop": "typeId"
             },
             {
@@ -3966,7 +3966,7 @@
                 "file": "src/content/docs/guides/equipment/ships.mdx",
                 "id": 33468,
                 "kind": "type",
-                "line": 30,
+                "line": 13,
                 "prop": "typeId"
             },
             {
@@ -3982,7 +3982,7 @@
                 "file": "src/content/docs/guides/equipment/ships.mdx",
                 "id": 33470,
                 "kind": "type",
-                "line": 41,
+                "line": 14,
                 "prop": "typeId"
             },
             {
@@ -4022,7 +4022,7 @@
                 "file": "src/content/docs/guides/equipment/misc.mdx",
                 "id": 33474,
                 "kind": "type",
-                "line": 25,
+                "line": 13,
                 "prop": "typeId"
             },
             {
@@ -4030,7 +4030,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 33516,
                 "kind": "type",
-                "line": 41,
+                "line": 16,
                 "prop": "typeId"
             },
             {
@@ -4078,7 +4078,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 33971,
                 "kind": "type",
-                "line": 23,
+                "line": 13,
                 "prop": "typeId"
             },
             {
@@ -4726,7 +4726,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 40730,
                 "kind": "type",
-                "line": 82,
+                "line": 70,
                 "prop": "typeId"
             },
             {
@@ -4734,7 +4734,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 40750,
                 "kind": "type",
-                "line": 91,
+                "line": 71,
                 "prop": "typeId"
             },
             {
@@ -4742,7 +4742,7 @@
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 41040,
                 "kind": "type",
-                "line": 100,
+                "line": 72,
                 "prop": "typeId"
             },
             {
@@ -4750,7 +4750,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 41533,
                 "kind": "type",
-                "line": 83,
+                "line": 24,
                 "prop": "typeId"
             },
             {
@@ -4774,7 +4774,7 @@
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 41534,
                 "kind": "type",
-                "line": 89,
+                "line": 25,
                 "prop": "typeId"
             },
             {
@@ -4822,7 +4822,7 @@
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 47028,
                 "kind": "type",
-                "line": 86,
+                "line": 23,
                 "prop": "typeId"
             },
             {
@@ -5107,6 +5107,6 @@
             }
         ]
     },
-    "generatedAt": "2026-03-25T17:50:38.490Z",
+    "generatedAt": "2026-03-25T19:24:30.106Z",
     "unresolved": []
 }

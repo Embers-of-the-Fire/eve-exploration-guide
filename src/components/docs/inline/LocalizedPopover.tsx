@@ -22,13 +22,19 @@ export default function LocalizedPopover({
             aria-label={`${zhCN} / ${en}`}
             className={styles.localized}
             data-extension-id={id}
+            data-inline-popover-root=""
             type="button"
         >
             {prefix ? (
                 <span className={styles.iconPrefix}>{prefix}</span>
             ) : null}
             <strong className={styles.label}>{zhCN}</strong>
-            <span className={styles.popover} id={tooltipId} role="tooltip">
+            <span
+                className={styles.popover}
+                data-inline-popover=""
+                id={tooltipId}
+                role="tooltip"
+            >
                 <span className={styles.popoverTable}>
                     <span className={styles.popoverRow}>
                         <span className={styles.popoverLabel}>zh-CN</span>

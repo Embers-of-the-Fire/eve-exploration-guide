@@ -24,10 +24,15 @@
 }
 
 .label {
-    border-bottom: 1px dotted var(--sl-color-gray-4);
     color: var(--sl-color-white);
     font-weight: 700;
     line-height: 1.4;
+    text-decoration-color: var(--sl-color-gray-4);
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.16em;
 }
 
 .iconPrefix {
@@ -70,14 +75,42 @@
     z-index: 20;
 }
 
-.localized:is(:hover, :focus-visible, :focus-within) .popover {
+.localized:not([data-inline-popover-mounted="true"]):is(
+        :hover,
+        :focus-visible,
+        :focus-within
+    )
+    .popover {
     opacity: 1;
     pointer-events: auto;
     transform: translate(-50%, 0);
 }
 
-.localized:is(:hover, :focus-visible, :focus-within) {
+.localized:not([data-inline-popover-mounted="true"]):is(
+        :hover,
+        :focus-visible,
+        :focus-within
+    ) {
     z-index: var(--sl-z-index-skiplink);
+}
+
+.localized[data-inline-popover-open="true"] {
+    z-index: var(--sl-z-index-skiplink);
+}
+
+.popover[data-inline-popover-ported="true"] {
+    inset-inline-start: auto;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: none;
+    z-index: calc(var(--sl-z-index-skiplink) + 1);
+}
+
+.popover[data-inline-popover-open="true"] {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
 }
 
 .popoverRow {
