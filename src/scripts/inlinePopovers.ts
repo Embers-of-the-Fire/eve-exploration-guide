@@ -1,4 +1,5 @@
 interface InlinePopoverController {
+    abortController: AbortController;
     closeTimer: number | null;
     popover: HTMLElement;
     trigger: HTMLElement;
@@ -62,6 +63,16 @@ function restorePopover(controller: InlinePopoverController) {
 
     if (controller.popover.parentElement !== controller.trigger) {
         controller.trigger.append(controller.popover);
+    }
+}
+
+function disposeController(controller: InlinePopoverController) {
+    cancelClose(controller);
+    controller.abortController.abort();
+    restorePopover(controller);
+
+    if (activeController === controller) {
+        activeController = null;
     }
 }
 
@@ -178,7 +189,9 @@ function scheduleClose(controller: InlinePopoverController, delay = 80) {
 }
 
 function bindController(trigger: HTMLElement, popover: HTMLElement) {
+    const abortController = new AbortController();
     const controller: InlinePopoverController = {
+        abortController,
         closeTimer: null,
         popover,
         trigger,
@@ -189,53 +202,89 @@ function bindController(trigger: HTMLElement, popover: HTMLElement) {
     popover.setAttribute("aria-hidden", "true");
     moveToPortal(controller);
 
-    trigger.addEventListener("pointerenter", () => {
-        openPopover(controller);
-    });
-    trigger.addEventListener("pointerleave", () => {
-        scheduleClose(controller);
-    });
-    trigger.addEventListener("focusin", () => {
-        openPopover(controller);
-    });
-    trigger.addEventListener("focusout", (event) => {
-        const nextTarget = event.relatedTarget;
-
-        if (
-            nextTarget instanceof Node &&
-            (trigger.contains(nextTarget) || popover.contains(nextTarget))
-        ) {
-            return;
-        }
-
-        scheduleClose(controller, 0);
-    });
-    trigger.addEventListener("click", () => {
-        if (!supportsHover()) {
+    trigger.addEventListener(
+        "pointerenter",
+        () => {
             openPopover(controller);
-        }
-    });
-    popover.addEventListener("pointerenter", () => {
-        cancelClose(controller);
-    });
-    popover.addEventListener("pointerleave", () => {
-        scheduleClose(controller);
-    });
-    popover.addEventListener("focusin", () => {
-        cancelClose(controller);
-    });
-    popover.addEventListener("focusout", (event) => {
-        const nextTarget = event.relatedTarget;
+        },
+        { signal: abortController.signal },
+    );
+    trigger.addEventListener(
+        "pointerleave",
+        () => {
+            scheduleClose(controller);
+        },
+        { signal: abortController.signal },
+    );
+    trigger.addEventListener(
+        "focusin",
+        () => {
+            openPopover(controller);
+        },
+        { signal: abortController.signal },
+    );
+    trigger.addEventListener(
+        "focusout",
+        (event) => {
+            const nextTarget = event.relatedTarget;
 
-        if (
-            nextTarget instanceof Node &&
-            (trigger.contains(nextTarget) || popover.contains(nextTarget))
-        ) {
-            return;
-        }
+            if (
+                nextTarget instanceof Node &&
+                (trigger.contains(nextTarget) || popover.contains(nextTarget))
+            ) {
+                return;
+            }
 
-        scheduleClose(controller, 0);
-    });
+            scheduleClose(controller, 0);
+        },
+        { signal: abortController.signal },
+    );
+    trigger.addEventListener(
+        "click",
+        () => {
+            if (!supportsHover()) {
+                openPopover(controller);
+            }
+        },
+        { signal: abortController.signal },
+    );
+    popover.addEventListener(
+        "pointerenter",
+        () => {
+            cancelClose(controller);
+        },
+        { signal: abortController.signal },
+    );
+    popover.addEventListener(
+        "pointerleave",
+        () => {
+            scheduleClose(controller);
+        },
+        { signal: abortController.signal },
+    );
+    popover.addEventListener(
+        "focusin",
+        () => {
+            cancelClose(controller);
+        },
+        { signal: abortController.signal },
+    );
+    popover.addEventListener(
+        "focusout",
+        (event) => {
+            const nextTarget = event.relatedTarget;
+
+            if (
+                nextTarget instanceof Node &&
+                (trigger.contains(nextTarget) || popover.contains(nextTarget))
+            ) {
+                return;
+            }
+
+            scheduleClose(controller, 0);
+        },
+        { signal: abortController.signal },
+    );
 }
 
 function resetInlinePopovers() {
@@ -247,8 +296,7 @@ function resetInlinePopovers() {
     activeController = null;
 
     for (const controller of controllers) {
-        cancelClose(controller);
-        restorePopover(controller);
+        disposeController(controller);
     }
 
     controllers.clear();
