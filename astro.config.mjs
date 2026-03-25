@@ -11,19 +11,27 @@ import starlightGiscus from "starlight-giscus";
 import starlightImageZoom from "starlight-image-zoom";
 import starlightSidebarTopics from "starlight-sidebar-topics";
 import authors from "./author.ts";
+import { blogPrefix, coolerCredit, giscusConfig } from "./src/config/site.ts";
 import { sidebar, sidebarTopics } from "./src/sidebar/sidebar.ts";
 
 const rehypePlugins = /** @type {any} */ ([rehypeAccessibleEmojis]);
-const siteUrl =
-    process.env.SITE_URL ??
-    "https://github.com/Embers-of-the-Fire/eve-exploration-guide";
-const qqGroupUrl = "https://qm.qq.com/q/s1IGiwB7jO";
+/** @param {string | undefined} value */
+const normalizeSiteUrl = (value) => {
+    if (!value) return undefined;
+    return value.startsWith("http://") || value.startsWith("https://")
+        ? value
+        : `https://${value}`;
+};
+const siteUrl = normalizeSiteUrl(
+    process.env.SITE_URL ?? "https://github.com/Embers-of-the-Fire/eve-exploration-guide"
+);
 const srcDir = fileURLToPath(new URL("./src", import.meta.url));
 
 const starlightPlugins = [
     starlightBlog({
         authors,
         title: "博客",
+        prefix: blogPrefix,
         metrics: {
             readingTime: true,
             words: "total",
@@ -34,26 +42,15 @@ const starlightPlugins = [
         topics: sidebarTopics,
     }),
     starlightImageZoom(),
+    starlightGiscus(giscusConfig),
     starlightCoolerCredit({
-        credit: {
-            title: "南北派专家组 组织汇编",
-            href: qqGroupUrl,
-            description: "点击加入 QQ 群“南北派专家组”",
-        },
-    }),
-    starlightGiscus({
-        repo: "Embers-of-the-Fire/eve-exploration-guide",
-        repoId: "R_kgDORtHxWQ",
-        category: "Announcements",
-        categoryId: "DIC_kwDORtHxWc4C499C",
-        inputPosition: "top",
-        lazy: true,
+        credit: coolerCredit,
     }),
 ];
 
 // https://astro.build/config
 export default defineConfig({
-    site: siteUrl,
+    ...(siteUrl ? { site: siteUrl } : {}),
     vite: {
         resolve: {
             alias: {
@@ -69,11 +66,16 @@ export default defineConfig({
         react(),
         starlight({
             components: {
+                Footer: "./src/components/overrides/Footer.astro",
                 MarkdownContent:
                     "./src/components/overrides/MarkdownContent.astro",
-                Pagination: "./src/components/overrides/Pagination.astro",
+                PageSidebar: "./src/components/overrides/PageSidebar.astro",
             },
             title: "EVE Exploration Guide",
+            editLink: {
+                baseUrl:
+                    "https://github.com/Embers-of-the-Fire/eve-exploration-guide/edit/main/",
+            },
             defaultLocale: "zh-CN",
             locales: {
                 root: {

@@ -1,12 +1,31 @@
 ---
+import { blogPrefix } from "@/config/site";
 import ImageZoom from "starlight-image-zoom/components/ImageZoom.astro";
 import Default from "starlight-blog/overrides/MarkdownContent.astro";
+
+const { id } = Astro.locals.starlightRoute;
+const normalizedBlogPrefix = blogPrefix.replace(/^\/+|\/+$/g, "");
+const isBlogRoute =
+    id === normalizedBlogPrefix || id.startsWith(`${normalizedBlogPrefix}/`);
+const correctiveLayoutCss = isBlogRoute
+    ? undefined
+    : `
+        .content-panel:first-of-type {
+            display: block;
+        }
+
+        .content-panel:nth-of-type(2) {
+            border-top: 1px solid var(--sl-color-hairline);
+        }
+    `;
 ---
 
 <ImageZoom />
 <Default {...Astro.props}>
     <slot />
 </Default>
+
+{correctiveLayoutCss && <style is:inline set:html={correctiveLayoutCss} />}
 
 <script>
     import { registerInlinePopovers } from "@/scripts/inlinePopovers";
