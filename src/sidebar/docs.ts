@@ -48,4 +48,45 @@ export const docsSidebar: Sidebar = [
             },
         ],
     },
+    {
+        label: "装备",
+        items: [
+            {
+                label: "概述",
+                link: "/guides/equipment/",
+            },
+            {
+                label: "飞船",
+                link: "/guides/equipment/ships",
+            },
+            {
+                label: "高槽",
+                link: "/guides/equipment/high-slots",
+            },
+            {
+                label: "中槽",
+                link: "/guides/equipment/med-slots",
+            },
+            {
+                label: "低槽",
+                link: "/guides/equipment/low-slots",
+            },
+            {
+                label: "改装件",
+                link: "/guides/equipment/rig-slots",
+            },
+            {
+                label: "脑插",
+                link: "/guides/equipment/implants",
+            },
+            {
+                label: "其他",
+                link: "/guides/equipment/misc",
+            },
+            {
+                label: "技能",
+                link: "/guides/equipment/skills",
+            },
+        ],
+    },
 ];

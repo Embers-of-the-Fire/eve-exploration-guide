@@ -3,8 +3,18 @@
 </div>
 
 <style>
+    .top-aligned-table :global(table) {
+        overflow: unset;
+    }
+
     .top-aligned-table :global(th),
     .top-aligned-table :global(td) {
         vertical-align: top;
+    }
+
+    .top-aligned-table :global(tr) td:first-child,
+    .top-aligned-table :global(tr) th:first-child {
+        width: 1%;
+        white-space: nowrap;
     }
 </style>
