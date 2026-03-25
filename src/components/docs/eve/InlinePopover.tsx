@@ -4,6 +4,7 @@ import baseStyles from "../inline/InlineReference.module.css";
 export interface InlinePopoverProps {
     ariaLabel: string;
     children: ReactNode;
+    className?: string;
     dataRef: string;
     id: string;
     label: ReactNode;
@@ -13,6 +14,7 @@ export interface InlinePopoverProps {
 export default function InlinePopover({
     ariaLabel,
     children,
+    className,
     dataRef,
     id,
     label,
@@ -24,7 +26,11 @@ export default function InlinePopover({
         <button
             aria-describedby={tooltipId}
             aria-label={ariaLabel}
-            className={baseStyles.localized}
+            className={
+                className
+                    ? `${baseStyles.localized} ${className}`
+                    : baseStyles.localized
+            }
             data-eve-ref={dataRef}
             type="button"
         >

@@ -1,3 +1,16 @@
+.inlineReference {
+    align-items: baseline;
+    margin-inline: 0.16rem;
+}
+
+.inlineLabel {
+    line-height: 1.25;
+}
+
+.inlineAsset {
+    margin-inline: 0.16rem;
+}
+
 .detailGrid {
     display: grid;
     gap: 0.7rem;
@@ -80,18 +93,24 @@
 }
 
 .typeImage {
-    display: inline-flex;
-    position: relative;
+    display: inline-grid;
+    flex-shrink: 0;
+    line-height: 0;
+    place-items: start;
 }
 
 .typeImageMain {
-    display: inline-block;
+    display: block;
+    grid-area: 1 / 1;
 }
 
 .typeOverlay {
-    inset-block-start: -0.15rem;
-    inset-inline-start: -0.15rem;
-    position: absolute;
+    align-self: start;
+    grid-area: 1 / 1;
+    justify-self: start;
+    pointer-events: none;
+    transform: translate(-18%, -18%);
+    z-index: 1;
 }
 
 .typeOverlayIcon {

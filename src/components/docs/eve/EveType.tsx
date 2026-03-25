@@ -80,9 +80,14 @@ export default function EveType({ size = 16, typeId }: EveTypeProps) {
     return (
         <InlinePopover
             ariaLabel={`${name.zhCN} / ${name.en}`}
+            className={styles.inlineReference}
             dataRef={formatEveRef("type", typeId)}
             id={`eve-type-${typeId}`}
-            label={<strong className={baseStyles.label}>{name.zhCN}</strong>}
+            label={
+                <strong className={`${baseStyles.label} ${styles.inlineLabel}`}>
+                    {name.zhCN}
+                </strong>
+            }
             prefix={
                 <span className={styles.typeImage}>
                     {typeData?.imageSrc ? (
