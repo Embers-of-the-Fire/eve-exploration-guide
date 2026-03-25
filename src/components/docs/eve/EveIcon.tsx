@@ -26,7 +26,7 @@ export default function EveIcon({ alt, iconId, size }: EveIconProps) {
         return (
             <span
                 aria-label={`${resolvedAlt} (missing generated asset)`}
-                className={styles.missingIcon}
+                className={`${styles.missingIcon} ${styles.inlineAsset}`}
                 data-eve-ref={formatEveRef("icon", iconId)}
                 role="img"
                 style={iconStyle}
@@ -40,7 +40,7 @@ export default function EveIcon({ alt, iconId, size }: EveIconProps) {
     return (
         <img
             alt={resolvedAlt}
-            className={baseStyles.icon}
+            className={`${baseStyles.icon} ${styles.inlineAsset}`}
             data-eve-ref={formatEveRef("icon", iconId)}
             decoding="async"
             src={iconEntry.src}
