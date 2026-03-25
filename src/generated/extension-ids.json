@@ -2163,6 +2163,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 142426,
+                "kind": "localization",
+                "line": 13,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/expert/shortcut-setting.mdx",
                 "id": 232310,
                 "kind": "localization",
@@ -2263,6 +2271,14 @@
                 "id": 263155,
                 "kind": "localization",
                 "line": 30,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 263697,
+                "kind": "localization",
+                "line": 13,
                 "prop": "locId"
             },
             {
@@ -2779,6 +2795,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 500191,
+                "kind": "localization",
+                "line": 20,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
                 "id": 500298,
                 "kind": "localization",
@@ -2790,7 +2814,7 @@
                 "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
                 "id": 500299,
                 "kind": "localization",
-                "line": 13,
+                "line": 14,
                 "prop": "locId"
             },
             {
@@ -2831,6 +2855,14 @@
                 "id": 510255,
                 "kind": "localization",
                 "line": 19,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 524661,
+                "kind": "localization",
+                "line": 12,
                 "prop": "locId"
             },
             {
@@ -4880,6 +4912,7 @@
             125832,
             125892,
             127156,
+            142426,
             232310,
             237116,
             237118,
@@ -4893,6 +4926,7 @@
             237240,
             237262,
             263155,
+            263697,
             267688,
             267694,
             267708,
@@ -4934,13 +4968,15 @@
             500106,
             500107,
             500108,
+            500191,
             500298,
             500299,
             502483,
             503504,
             503992,
             510254,
-            510255
+            510255,
+            524661
         ],
         "typeIds": [
             447,
@@ -5107,6 +5143,6 @@
             }
         ]
     },
-    "generatedAt": "2026-03-25T21:43:39.555Z",
+    "generatedAt": "2026-03-25T23:18:32.369Z",
     "unresolved": []
 }

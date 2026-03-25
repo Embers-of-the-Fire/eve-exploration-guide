@@ -163,7 +163,7 @@ import type46235Url from "./types/46235.png?url";
 import type46251Url from "./types/46251.png?url";
 import type47028Url from "./types/47028.png?url";
 
-export const eveGeneratedAt = "2026-03-25T17:50:39.964759+00:00";
+export const eveGeneratedAt = "2026-03-25T23:18:33.893050+00:00";
 
 export const eveDataMetadata: EveDataMetadata | null = {
     serverId: "tq",
@@ -471,6 +471,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     125832: { en: "Chemical Lab ", zhCN: "化学实验室" },
     125892: { en: "Local Blood Data Terminal", zhCN: "本地血袭者数据终端" },
     127156: { en: "Digital Compound", zhCN: "数字混合体" },
+    142426: { en: "Cosmic Signatures", zhCN: "空间信号" },
     232310: { en: "Keep at Range", zhCN: "保持距离" },
     237116: { en: "Lock target", zhCN: "锁定目标" },
     237118: { en: "Activate Medium Power Slot 1", zhCN: "激活中能量槽1" },
@@ -486,6 +487,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     261694: { en: "Core Probe Launcher II", zhCN: "核心探针发射器 II" },
     263155: { en: "Loot All", zhCN: "全部拾取" },
     263157: { en: "Launcher for <a href=showinfo:30013>Core Scanner Probes</a>, which are used to scan down Cosmic Signatures in space.\r\n\r\nNote: Only one probe launcher can be fitted per ship.\r\n\r\n5% bonus to strength of scan probes.", zhCN: "这是发射<a href=showinfo:30013>核心扫描探针</a>的发射器，用来扫描太空中的空间信号。\n\n\n\n注：每艘飞船只能安装一个探针发射器。\n\n\n\n它能将探针的扫描强度增加5%。" },
+    263697: { en: "Filter", zhCN: "过滤器" },
     267688: { en: "Vale of the Silent", zhCN: "静寂谷" },
     267694: { en: "Wicked Creek", zhCN: "邪恶湾流" },
     267708: { en: "Malpais", zhCN: "糟粕之域" },
@@ -629,6 +631,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     500106: { en: "Data Site", zhCN: "数据地点" },
     500107: { en: "Gas Site", zhCN: "气云地点" },
     500108: { en: "Combat Site", zhCN: "战斗地点" },
+    500191: { en: "Launch Pinpoint Formation", zhCN: "精确式发射" },
     500298: { en: "Strength", zhCN: "强度" },
     500299: { en: "Coherence", zhCN: "同步率" },
     502483: { en: "Personal Assets", zhCN: "个人资产" },
@@ -650,6 +653,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     516519: { en: "As this multi-use analyzer has both fully integrated archaeology and hacking systems, it can be used to both analyze ancient ruins and bypass electronic security systems.\r\n\r\nWhilst comparatively weaker than its more specialized counterparts, its combined functionality provides the user with an increased flexibility when it comes to fitting.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "这个多用途分析仪完美整合了考古和破译系统，即可用于分析远古遗迹，也可以用来破解电子安全系统。\n\n\n\n虽然每项能力都比专业装备要弱，但它的多功能性使得其装配灵活性有所提高。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     516520: { en: "As this multi-use analyzer has both fully integrated archaeology and hacking systems, it can be used to both analyze ancient ruins and bypass electronic security systems.\r\n\r\nWhilst comparatively weaker than its more specialized counterparts, its combined functionality provides the user with an increased flexibility when it comes to fitting.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "这个多用途分析仪完美整合了考古和破译系统，即可用于分析远古遗迹，也可以用来破解电子安全系统。\n\n\n\n虽然每项能力都比专业装备要弱，但它的多功能性使得其装配灵活性有所提高。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     518135: { en: "Skill Injectors", zhCN: "技能注入器" },
+    524661: { en: "Dock In Solar System Map", zhCN: "使用恒星系图停靠" },
     526846: { en: "Biochemical Reaction Formulas", zhCN: "生化反应公式" },
     528588: { en: "Standard Blue Pill Booster Reaction Formula", zhCN: "标准型蓝色药丸增效体反应配方" },
     528593: { en: "Strong Blue Pill Booster Reaction Formula", zhCN: "超强型蓝色药丸增效体反应配方" },
