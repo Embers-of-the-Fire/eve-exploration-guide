@@ -4,6 +4,360 @@
     "eveRefs": {
         "duplicates": [
             {
+                "id": 111162,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 27,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 83,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 111181,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 20,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 88,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 111193,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 21,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 89,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 111644,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 23,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 136,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 111659,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 29,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 137,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 111800,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 33,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 150,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 111820,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 28,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 84,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 111949,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 22,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 90,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 125892,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 26,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 82,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 292079,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 36,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 109,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 292084,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 37,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 110,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 292089,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 38,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 111,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 292094,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 39,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 112,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 296755,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 42,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 126,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 297403,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 43,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 127,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 297744,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 44,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 128,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 297962,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 21,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                        "line": 30,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 162,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 165,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 500107,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                        "line": 33,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 46,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 500108,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                        "line": 33,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 27,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
                 "id": 3412,
                 "kind": "type",
                 "occurrences": [
@@ -38,6 +392,60 @@
                         "prop": "typeId"
                     }
                 ]
+            },
+            {
+                "id": 30832,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                        "line": 42,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30834,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                        "line": 42,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 47028,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                        "line": 43,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/quick-guide.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    }
+                ]
             }
         ],
         "entries": [
@@ -51,10 +459,522 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 70930,
+                "kind": "localization",
+                "line": 40,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 78660,
+                "kind": "localization",
+                "line": 36,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 78662,
+                "kind": "localization",
+                "line": 36,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 110644,
+                "kind": "localization",
+                "line": 51,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 111162,
+                "kind": "localization",
+                "line": 27,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111162,
+                "kind": "localization",
+                "line": 83,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 111181,
+                "kind": "localization",
+                "line": 20,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111181,
+                "kind": "localization",
+                "line": 88,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 111193,
+                "kind": "localization",
+                "line": 21,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111193,
+                "kind": "localization",
+                "line": 89,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111367,
+                "kind": "localization",
+                "line": 63,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111372,
+                "kind": "localization",
+                "line": 59,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111382,
+                "kind": "localization",
+                "line": 52,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111385,
+                "kind": "localization",
+                "line": 54,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111387,
+                "kind": "localization",
+                "line": 55,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 111644,
+                "kind": "localization",
+                "line": 23,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111644,
+                "kind": "localization",
+                "line": 136,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 111659,
+                "kind": "localization",
+                "line": 29,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111659,
+                "kind": "localization",
+                "line": 137,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 111800,
+                "kind": "localization",
+                "line": 33,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111800,
+                "kind": "localization",
+                "line": 150,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111814,
+                "kind": "localization",
+                "line": 60,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 111820,
+                "kind": "localization",
+                "line": 28,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111820,
+                "kind": "localization",
+                "line": 84,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111879,
+                "kind": "localization",
+                "line": 69,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111883,
+                "kind": "localization",
+                "line": 68,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 111949,
+                "kind": "localization",
+                "line": 22,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111949,
+                "kind": "localization",
+                "line": 90,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 111951,
+                "kind": "localization",
+                "line": 61,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 125892,
+                "kind": "localization",
+                "line": 26,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 125892,
+                "kind": "localization",
+                "line": 82,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
+                "id": 267708,
+                "kind": "localization",
+                "line": 10,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
+                "id": 267718,
+                "kind": "localization",
+                "line": 12,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
+                "id": 267724,
+                "kind": "localization",
+                "line": 11,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
+                "id": 267732,
+                "kind": "localization",
+                "line": 12,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
+                "id": 267746,
+                "kind": "localization",
+                "line": 11,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
+                "id": 267758,
+                "kind": "localization",
+                "line": 10,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
+                "id": 267784,
+                "kind": "localization",
+                "line": 9,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
+                "id": 267810,
+                "kind": "localization",
+                "line": 9,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 292079,
+                "kind": "localization",
+                "line": 36,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 292079,
+                "kind": "localization",
+                "line": 109,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 292084,
+                "kind": "localization",
+                "line": 37,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 292084,
+                "kind": "localization",
+                "line": 110,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 292089,
+                "kind": "localization",
+                "line": 38,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 292089,
+                "kind": "localization",
+                "line": 111,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 292094,
+                "kind": "localization",
+                "line": 39,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 292094,
+                "kind": "localization",
+                "line": 112,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 296755,
+                "kind": "localization",
+                "line": 42,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 296755,
+                "kind": "localization",
+                "line": 126,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 297403,
+                "kind": "localization",
+                "line": 43,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 297403,
+                "kind": "localization",
+                "line": 127,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 297744,
+                "kind": "localization",
+                "line": 44,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 297744,
+                "kind": "localization",
+                "line": 128,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 297962,
                 "kind": "localization",
                 "line": 21,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
+                "id": 297962,
+                "kind": "localization",
+                "line": 30,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 297962,
+                "kind": "localization",
+                "line": 162,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 297962,
+                "kind": "localization",
+                "line": 165,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 500105,
+                "kind": "localization",
+                "line": 34,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 500106,
+                "kind": "localization",
+                "line": 34,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 500107,
+                "kind": "localization",
+                "line": 33,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 500107,
+                "kind": "localization",
+                "line": 46,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/probing.mdx",
+                "id": 500108,
+                "kind": "localization",
+                "line": 33,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 500108,
+                "kind": "localization",
+                "line": 27,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                "id": 500298,
+                "kind": "localization",
+                "line": 15,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                "id": 500299,
+                "kind": "localization",
+                "line": 13,
                 "prop": "locId"
             },
             {
@@ -87,6 +1007,14 @@
                 "id": 3412,
                 "kind": "type",
                 "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 4384,
+                "kind": "type",
+                "line": 99,
                 "prop": "typeId"
             },
             {
@@ -131,10 +1059,50 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 20411,
+                "kind": "type",
+                "line": 98,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 21074,
+                "kind": "type",
+                "line": 100,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 21718,
                 "kind": "type",
                 "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 25622,
+                "kind": "type",
+                "line": 96,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 28277,
+                "kind": "type",
+                "line": 155,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 28363,
+                "kind": "type",
+                "line": 154,
                 "prop": "typeId"
             },
             {
@@ -171,6 +1139,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                "id": 30832,
+                "kind": "type",
+                "line": 42,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 30832,
                 "kind": "type",
@@ -179,10 +1155,26 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                "id": 30834,
+                "kind": "type",
+                "line": 42,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 30834,
                 "kind": "type",
                 "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/areas/wormhole.mdx",
+                "id": 30889,
+                "kind": "type",
+                "line": 17,
                 "prop": "typeId"
             },
             {
@@ -203,10 +1195,42 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 34201,
+                "kind": "type",
+                "line": 97,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                "id": 34412,
+                "kind": "type",
+                "line": 142,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 40520,
                 "kind": "type",
                 "line": 13,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                "id": 41534,
+                "kind": "type",
+                "line": 42,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/basic-exploration/hacking.mdx",
+                "id": 47028,
+                "kind": "type",
+                "line": 43,
                 "prop": "typeId"
             },
             {
@@ -221,30 +1245,83 @@
         "iconIds": [],
         "locIds": [
             66263,
-            297962
+            70930,
+            78660,
+            78662,
+            110644,
+            111162,
+            111181,
+            111193,
+            111367,
+            111372,
+            111382,
+            111385,
+            111387,
+            111644,
+            111659,
+            111800,
+            111814,
+            111820,
+            111879,
+            111883,
+            111949,
+            111951,
+            125892,
+            267708,
+            267718,
+            267724,
+            267732,
+            267746,
+            267758,
+            267784,
+            267810,
+            292079,
+            292084,
+            292089,
+            292094,
+            296755,
+            297403,
+            297744,
+            297962,
+            500105,
+            500106,
+            500107,
+            500108,
+            500298,
+            500299
         ],
         "typeIds": [
             605,
             3411,
             3412,
+            4384,
             11192,
             11578,
             11579,
             13278,
+            20411,
+            21074,
             21718,
+            25622,
+            28277,
+            28363,
             28665,
             28666,
             29984,
             30028,
             30832,
             30834,
+            30889,
             33468,
             33470,
+            34201,
+            34412,
             40520,
+            41534,
             47028
         ],
         "unresolved": []
     },
-    "generatedAt": "2026-03-24T20:14:49.970Z",
+    "generatedAt": "2026-03-25T01:13:24.526Z",
     "unresolved": []
 }
