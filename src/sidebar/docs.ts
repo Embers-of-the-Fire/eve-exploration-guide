@@ -110,5 +110,9 @@ export const docsSidebar: Sidebar = [
     {
         label: "进阶",
         autogenerate: { directory: "guides/advance" },
+    },
+    {
+        label: "高阶技巧",
+        autogenerate: { directory: "guides/expert" },
     }
 ];

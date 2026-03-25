@@ -163,7 +163,7 @@ import type46235Url from "./types/46235.png?url";
 import type46251Url from "./types/46251.png?url";
 import type47028Url from "./types/47028.png?url";
 
-export const eveGeneratedAt = "2026-03-25T17:11:31.551587+00:00";
+export const eveGeneratedAt = "2026-03-25T17:50:39.964759+00:00";
 
 export const eveDataMetadata: EveDataMetadata | null = {
     serverId: "tq",
@@ -178,6 +178,8 @@ export const eveDataMetadata: EveDataMetadata | null = {
 };
 
 export const eveLocalizations: Record<number, EveLocalizationEntry> = {
+    61359: { en: "Save Location...", zhCN: "保存地点..." },
+    61566: { en: "Open Cargo", zhCN: "打开货柜" },
     63541: { en: "Celestial", zhCN: "天体" },
     63543: { en: "Material", zhCN: "材料" },
     63544: { en: "Ship", zhCN: "舰船" },
@@ -436,6 +438,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     106878: { en: "5MN Y-T8 Compact Microwarpdrive", zhCN: "Y-T8紧凑型5MN微型跃迁推进器" },
     106901: { en: "Type-E Enduring Cargo Scanner", zhCN: "持久型货柜扫描器 E型" },
     110644: { en: "Arctic Fox Nebula", zhCN: "北极狐星云" },
+    111152: { en: "Crumbling Blood Raider Crystal Quarry ", zhCN: "荒废的血袭者水晶开采地" },
     111162: { en: "Regional Sansha Mainframe", zhCN: "萨沙区域大型主机" },
     111181: { en: "Crumbling Guristas Excavation", zhCN: "荒废的古斯塔斯矿场" },
     111193: { en: "Decayed Blood Raider Quarry ", zhCN: "腐蚀的血袭者开采地" },
@@ -453,6 +456,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     111820: { en: "Central Angel Survey Site", zhCN: "天使探测中心" },
     111879: { en: "Digital Complex", zhCN: "数字复合体" },
     111883: { en: "Digital Network", zhCN: "数字网络" },
+    111891: { en: "Local Angel Minor Shipyard", zhCN: "本地天使小船坞" },
     111949: { en: "Ruined Serpentis Temple Site", zhCN: "毁坏的天蛇神庙遗址" },
     111951: { en: "Serpentis Chemical Lab ", zhCN: "天蛇化学实验室" },
     120680: { en: "Warp Distrupted", zhCN: "已被跃迁扰断" },
@@ -467,7 +471,20 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     125832: { en: "Chemical Lab ", zhCN: "化学实验室" },
     125892: { en: "Local Blood Data Terminal", zhCN: "本地血袭者数据终端" },
     127156: { en: "Digital Compound", zhCN: "数字混合体" },
+    232310: { en: "Keep at Range", zhCN: "保持距离" },
+    237116: { en: "Lock target", zhCN: "锁定目标" },
+    237118: { en: "Activate Medium Power Slot 1", zhCN: "激活中能量槽1" },
+    237141: { en: "Activate Medium Power Slot 2", zhCN: "激活中能量槽2" },
+    237144: { en: "Activate Medium Power Slot 3", zhCN: "激活中能量槽3" },
+    237175: { en: "Orbit", zhCN: "环绕" },
+    237183: { en: "Unlock target", zhCN: "解除目标锁定" },
+    237217: { en: "Dock/Jump/Activate gate", zhCN: "停靠/跳跃/激活轨道" },
+    237225: { en: "Activate Medium Power Slot 4", zhCN: "激活中能量槽4" },
+    237227: { en: "Stop Ship", zhCN: "停止舰船" },
+    237240: { en: "Activate High Power Slot 1", zhCN: "激活高能量槽1" },
+    237262: { en: "Approach", zhCN: "接近" },
     261694: { en: "Core Probe Launcher II", zhCN: "核心探针发射器 II" },
+    263155: { en: "Loot All", zhCN: "全部拾取" },
     263157: { en: "Launcher for <a href=showinfo:30013>Core Scanner Probes</a>, which are used to scan down Cosmic Signatures in space.\r\n\r\nNote: Only one probe launcher can be fitted per ship.\r\n\r\n5% bonus to strength of scan probes.", zhCN: "这是发射<a href=showinfo:30013>核心扫描探针</a>的发射器，用来扫描太空中的空间信号。\n\n\n\n注：每艘飞船只能安装一个探针发射器。\n\n\n\n它能将探针的扫描强度增加5%。" },
     267688: { en: "Vale of the Silent", zhCN: "静寂谷" },
     267694: { en: "Wicked Creek", zhCN: "邪恶湾流" },
@@ -491,6 +508,9 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     286441: { en: "Armor Layering", zhCN: "装甲覆层理论" },
     286442: { en: "Skill at installing upgraded armor plates efficiently and securely, reducing the impact they have on agility and speed. Grants a 5% reduction to armor plate mass penalty per level.", zhCN: "能够安全高效地安装升级装甲附甲板的技能，可以降低其对舰船敏捷性和速度的影响。每升一级，装甲附甲板的质量惩罚降低5%。" },
     287004: { en: "Production Facility", zhCN: "生产设施" },
+    287137: { en: "Tag item as: A", zhCN: "标记物品为：A" },
+    287802: { en: "Scatter Container", zhCN: "散落货柜" },
+    287833: { en: "Tag item from sequence: 1 through 9", zhCN: "按从1到9的顺序标记物品" },
     287835: { en: "Armor", zhCN: "装甲" },
     287841: { en: "Targeting", zhCN: "锁定系统" },
     287847: { en: "Scanning", zhCN: "扫描" },
@@ -613,6 +633,9 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     500299: { en: "Coherence", zhCN: "同步率" },
     502483: { en: "Personal Assets", zhCN: "个人资产" },
     503504: { en: "Warp Scrambled", zhCN: "被跃迁扰频" },
+    503992: { en: "Bracket Preset", zhCN: "图标预设" },
+    510254: { en: "Directional Scan", zhCN: "定向扫描" },
+    510255: { en: "Refresh Probe Scan", zhCN: "刷新探针扫描结果" },
     514024: { en: "Large Skill Injector", zhCN: "大型技能注入器" },
     514247: { en: "This item can be activated in a station to grant the user unallocated skill points. The injectors are consumed immediately once activated.\r\n\r\nThe amount of skill points granted depends on the total skill points (including unallocated skill points) the using character possesses, according to the following scale:\r\n\r\nCharacters with less than 5,000,000 skill points will receive 500,000 unallocated skill points.\r\nCharacters with between 5,000,000 and 50,000,000 skill points will receive 400,000 unallocated skill points.\r\nCharacters with between 50,000,000 and 80,000,000 skill points will receive 300,000 unallocated skill points.\r\nCharacters with more than 80,000,000 skill points will receive 150,000 unallocated skill points.\r\n\r\nLarge Skill Injectors are created using a <a href=showinfo:40519>Skill Extractor</a>.", zhCN: "这个物品可以在空间站中使用来给予玩家未分配的技能点数。一旦使用后，技能注入器便会消失。\n\n\n\n获得的技能点数根据人物的总技能点数（包括未分配技能点）而定，具体规则如下：\n\n\n\n技能点数低于5,000,000的人物，获得500,000未分配技能点。\n\n技能点数高于5,000,000而低于50,000,000的人物，获得400,000未分配技能点。\n\n技能点数高于50,000,000而低于80,000,000的人物，获得300,000未分配技能点。\n\n技能点数高于80,000,000的人物，获得150,000未分配技能点。\n\n\n\n技能注入器是由<a href=showinfo:40519>技能提取器</a>生成而来。" },
     514644: { en: "Heavy Warp Disruptor I", zhCN: "重型跃迁扰断器 I" },
