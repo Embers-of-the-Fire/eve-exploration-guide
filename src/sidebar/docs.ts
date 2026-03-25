@@ -89,4 +89,22 @@ export const docsSidebar: Sidebar = [
             },
         ],
     },
+    {
+        label: "生存",
+        collapsed: true,
+        items: [
+            {
+                label: "基本设置",
+                link: "/guides/survival/setting",
+            },
+            {
+                label: "技巧",
+                link: "/guides/survival/tricks",
+            },
+            {
+                label: "逃跑",
+                link: "/guides/survival/escape",
+            }
+        ]
+    }
 ];

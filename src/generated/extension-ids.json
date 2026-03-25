@@ -492,6 +492,30 @@
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
                         "line": 76,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/survival/escape.mdx",
+                        "line": 93,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 11370,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 72,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/survival/escape.mdx",
+                        "line": 9,
+                        "prop": "typeId"
                     }
                 ]
             },
@@ -599,6 +623,30 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 22,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23707,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/misc.mdx",
+                        "line": 37,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/survival/escape.mdx",
+                        "line": 61,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/survival/escape.mdx",
+                        "line": 102,
                         "prop": "typeId"
                     }
                 ]
@@ -1081,6 +1129,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 120680,
+                "kind": "localization",
+                "line": 60,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/areas/index.mdx",
                 "id": 125892,
                 "kind": "localization",
@@ -1157,6 +1213,14 @@
                 "id": 267810,
                 "kind": "localization",
                 "line": 9,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 277674,
+                "kind": "localization",
+                "line": 55,
                 "prop": "locId"
             },
             {
@@ -1368,6 +1432,38 @@
                 "prop": "locId"
             },
             {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 502483,
+                "kind": "localization",
+                "line": 13,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 503504,
+                "kind": "localization",
+                "line": 55,
+                "prop": "locId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 447,
+                "kind": "type",
+                "line": 89,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 526,
+                "kind": "type",
+                "line": 98,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/ships.mdx",
                 "id": 605,
@@ -1445,6 +1541,14 @@
                 "id": 3119,
                 "kind": "type",
                 "line": 48,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 3242,
+                "kind": "type",
+                "line": 80,
                 "prop": "typeId"
             },
             {
@@ -1625,6 +1729,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 10998,
+                "kind": "type",
+                "line": 93,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/quick-guide.mdx",
                 "id": 11192,
                 "kind": "type",
@@ -1637,6 +1749,14 @@
                 "id": 11370,
                 "kind": "type",
                 "line": 72,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 11370,
+                "kind": "type",
+                "line": 9,
                 "prop": "typeId"
             },
             {
@@ -1809,6 +1929,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 22456,
+                "kind": "type",
+                "line": 102,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 22778,
                 "kind": "type",
@@ -1853,6 +1981,22 @@
                 "id": 23707,
                 "kind": "type",
                 "line": 37,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 61,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 102,
                 "prop": "typeId"
             },
             {
@@ -2313,6 +2457,30 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 40730,
+                "kind": "type",
+                "line": 82,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 40750,
+                "kind": "type",
+                "line": 91,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "id": 41040,
+                "kind": "type",
+                "line": 100,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 41533,
                 "kind": "type",
@@ -2384,6 +2552,7 @@
             111883,
             111949,
             111951,
+            120680,
             125892,
             267708,
             267718,
@@ -2393,6 +2562,7 @@
             267758,
             267784,
             267810,
+            277674,
             292079,
             292084,
             292089,
@@ -2406,9 +2576,13 @@
             500107,
             500108,
             500298,
-            500299
+            500299,
+            502483,
+            503504
         ],
         "typeIds": [
+            447,
+            526,
             605,
             1403,
             1405,
@@ -2416,6 +2590,7 @@
             2603,
             2605,
             3119,
+            3242,
             3327,
             3331,
             3411,
@@ -2447,6 +2622,7 @@
             21718,
             22175,
             22177,
+            22456,
             22778,
             22806,
             22807,
@@ -2498,12 +2674,23 @@
             34201,
             34412,
             40520,
+            40730,
+            40750,
+            41040,
             41533,
             41534,
             47028
         ],
-        "unresolved": []
+        "unresolved": [
+            {
+                "component": "EveLocText",
+                "expectedProp": "locId",
+                "file": "src/content/docs/guides/survival/escape.mdx",
+                "kind": "localization",
+                "line": 25
+            }
+        ]
     },
-    "generatedAt": "2026-03-25T03:38:59.490Z",
+    "generatedAt": "2026-03-25T13:49:09.039Z",
     "unresolved": []
 }

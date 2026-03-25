@@ -9,6 +9,8 @@ import icon24147Url from "./icons/24147.png?url";
 import icon24148Url from "./icons/24148.png?url";
 import icon24150Url from "./icons/24150.png?url";
 import icon24151Url from "./icons/24151.png?url";
+import type447Url from "./types/447.png?url";
+import type526Url from "./types/526.png?url";
 import type605Url from "./types/605.png?url";
 import type1403Url from "./types/1403.png?url";
 import type1405Url from "./types/1405.png?url";
@@ -16,6 +18,7 @@ import type2038Url from "./types/2038.png?url";
 import type2603Url from "./types/2603.png?url";
 import type2605Url from "./types/2605.png?url";
 import type3119Url from "./types/3119.png?url";
+import type3242Url from "./types/3242.png?url";
 import type3327Url from "./types/3327.png?url";
 import type3331Url from "./types/3331.png?url";
 import type3411Url from "./types/3411.png?url";
@@ -47,6 +50,7 @@ import type21074Url from "./types/21074.png?url";
 import type21718Url from "./types/21718.png?url";
 import type22175Url from "./types/22175.png?url";
 import type22177Url from "./types/22177.png?url";
+import type22456Url from "./types/22456.png?url";
 import type22778Url from "./types/22778.png?url";
 import type22806Url from "./types/22806.png?url";
 import type22807Url from "./types/22807.png?url";
@@ -98,11 +102,14 @@ import type33971Url from "./types/33971.png?url";
 import type34201Url from "./types/34201.png?url";
 import type34412Url from "./types/34412.png?url";
 import type40520Url from "./types/40520.png?url";
+import type40730Url from "./types/40730.png?url";
+import type40750Url from "./types/40750.png?url";
+import type41040Url from "./types/41040.png?url";
 import type41533Url from "./types/41533.png?url";
 import type41534Url from "./types/41534.png?url";
 import type47028Url from "./types/47028.png?url";
 
-export const eveGeneratedAt = "2026-03-25T03:39:05.465481+00:00";
+export const eveGeneratedAt = "2026-03-25T13:49:15.801212+00:00";
 
 export const eveDataMetadata: EveDataMetadata | null = {
     serverId: "tq",
@@ -136,6 +143,8 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     63598: { en: "Cruiser", zhCN: "巡洋舰" },
     63610: { en: "Propulsion Module", zhCN: "推进装备" },
     63611: { en: "Cargo Scanner", zhCN: "货柜舱扫描设备" },
+    63614: { en: "Warp Scrambler", zhCN: "跃迁扰乱设备" },
+    63625: { en: "Stasis Web", zhCN: "能量滞停光束网" },
     63655: { en: "Battleship Blueprint", zhCN: "战列舰蓝图" },
     63704: { en: "Combat Drone Blueprint", zhCN: "战斗无人机蓝图" },
     63729: { en: "Sensor Booster", zhCN: "感应增强器" },
@@ -150,6 +159,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     63915: { en: "Scanner Probe", zhCN: "扫描探针" },
     63917: { en: "Scan Probe Launcher", zhCN: "扫描探针发射器" },
     63969: { en: "Data Miners", zhCN: "数据采掘设备" },
+    63971: { en: "Interdictor", zhCN: "拦截舰" },
     64042: { en: "Electronic Warfare Drone", zhCN: "电子战无人机" },
     64126: { en: "Decryptors - Talocan", zhCN: "解码器—塔洛迦" },
     64137: { en: "Cyber Navigation", zhCN: "脑控导航" },
@@ -177,11 +187,14 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     73333: { en: "Core Scanner Probe I", zhCN: "核心扫描探针 I" },
     73336: { en: "Sisters Core Scanner Probe", zhCN: "姐妹会核心扫描探针" },
     73339: { en: "Warp Disrupt Probe", zhCN: "跃迁干扰探针" },
+    73391: { en: "Sabre", zhCN: "剑齿虎级" },
     75595: { en: "RSS Core Scanner Probe", zhCN: "RSS核心扫描探针" },
     76453: { en: "Planet (Shattered)", zhCN: "行星（碎裂）" },
+    76523: { en: "Stasis Webifier I", zhCN: "停滞缠绕光束 I" },
     76638: { en: "Inertial Stabilizers I", zhCN: "惯性稳定器 I" },
     76640: { en: "Inertial Stabilizers II", zhCN: "惯性稳定器 II" },
     76717: { en: "Cargo Scanner II", zhCN: "货柜扫描器 II" },
+    76777: { en: "Warp Disruptor I", zhCN: "跃迁扰断器 I" },
     76803: { en: "Spaceship Command", zhCN: "飞船操控学" },
     76807: { en: "Amarr Frigate", zhCN: "艾玛护卫舰操作" },
     76856: { en: "Cybernetics", zhCN: "控制论" },
@@ -197,11 +210,14 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     84256: { en: "A scanner probe used for scanning down Cosmic Signatures in space.\r\n\r\nCan be launched from <a href=showinfo:17938>Core Probe Launchers</a> and <a href=showinfo:18639>Expanded Probe Launchers</a>.", zhCN: "这是一个用来扫描空间信号的扫描探针。\n\n\n\n能从<a href=showinfo:17938>核心探针发射器</a>与<a href=showinfo:18639>延伸探针发射器</a>上发射。" },
     84259: { en: "A scanner probe used for scanning down Cosmic Signatures in space.\r\n\r\nCan be launched from <a href=showinfo:17938>Core Probe Launchers</a> and <a href=showinfo:18639>Expanded Probe Launchers</a>.", zhCN: "这是一个用来扫描空间信号的扫描探针。\n\n\n\n能从<a href=showinfo:17938>核心探针发射器</a>与<a href=showinfo:18639>延伸探针发射器</a>上发射。" },
     84262: { en: "Deployed from an Interdiction Sphere Launcher fitted to an Interdictor this probe prevents warping from within its area of effect.", zhCN: "这种探针由安装在拦截舰上的拦截泡发射器部署，可以阻止其有效区域内的跃迁。" },
+    84314: { en: "Interdictors are destroyer-sized vessels built to fill a single important tactical niche: the breaching of enemy warp tunnels. Capable of launching warp-disrupting interdiction spheres, interdictors are of great value in locations of strategic importance where enemy movement must be restricted. Additionally, much like their destroyer-class progenitors, they are well-suited to offensive strikes against frigate-sized craft.\r\n", zhCN: "拦截舰是驱逐舰大小的舰船，其建造目的是为了填补一项重要战略用途：破坏敌人的跃迁通道。由于能够发射扰断跃迁的拦截弹，拦截舰具有重要价值，常被部署在必须限制敌人移动的战略要点。另外，就像它们的驱逐舰级前身一样，它们也非常适合攻击护卫舰大小的飞船。\r\n" },
     86425: { en: "A scanner probe used for scanning down Cosmic Signatures in space.\r\n\r\nCan be launched from <a href=showinfo:17938>Core Probe Launchers</a> and <a href=showinfo:18639>Expanded Probe Launchers</a>.", zhCN: "这是一个用来扫描空间信号的扫描探针。\n\n\n\n能从<a href=showinfo:17938>核心探针发射器</a>与<a href=showinfo:18639>延伸探针发射器</a>上发射。" },
     87116: { en: "Shattered worlds were once terrestrial planets, torn asunder by some immense cataclysm. All such worlds in the New Eden cluster are products of the disastrous stellar events that occurred during the \"Seyllin Incident\". However, reports continue to circulate of similar planets discovered in the unmapped systems reached exclusively through unstable wormholes. How these met their fate, if indeed they exist at all, is unknown.", zhCN: "碎裂行星曾经是一个类地的星球，在经历了某种灾难事件后被完全粉碎肢解。在新伊甸宇宙中，所有这种星体都是因为遭受了\"瑟伊林事故\"期间的灾变性恒星影响而形成的。不过，也有报道称在虫洞彼端的未知空间里也发现了这种碎裂星体。是什么造成了它们的灾难命运，目前此问题还未得到确信的解释。" },
+    87171: { en: "Reduces the maximum speed of a ship by employing micro energy streams which effectively entangle the target temporarily, thereby slowing it down.", zhCN: "通过使用微能流来降低对方舰船的最大速度，该装备可以有效地暂时束缚目标，降低其速度。" },
     87223: { en: "Improves ship handling and maneuverability.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "增强舰船控制和机动性能。惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     87224: { en: "Improves ship handling and maneuverability.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "增强舰船控制和机动性能。惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     87279: { en: "Scans the cargo hold of another ship.", zhCN: "扫描另一艘舰船的货柜舱。" },
+    87313: { en: "Disrupts the target ship's navigation computer which prevents it from warping.", zhCN: "干扰目标舰船的导航计算机从而阻止其进行跃迁。" },
     87337: { en: "The basic operation of spaceships. 2% improved ship agility for all ships per skill level.", zhCN: "操控舰船的基本技能。每升一级，所有飞船的灵活性提升2%。" },
     87341: { en: "Skill at operating Amarr frigates.", zhCN: "操作艾玛护卫舰的技能。" },
     87388: { en: "The science of interfacing biological and machine components. Allows the use of cybernetic implants.", zhCN: "协调生物和机械组件的技能。掌握后可以使用脑控植入体。" },
@@ -223,6 +239,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     90494: { en: "Greater accuracy in hunting down targets found through scanning. Reduces maximum scan deviation by 5% per level.", zhCN: "增加扫描所发现目标的定位精度的技能。每升一级，扫描误差降低5%。" },
     90875: { en: "This ocular filter has been modified by Sisters of EVE scientists for use by their elite officers.\n\nPrimary Effect: +3 bonus to Perception \n\nSecondary Effect: 1% bonus to scan strength of probes\n\nSet Effect: 10% bonus to the strength of all Virtue implant secondary effects", zhCN: "姐妹会科学家对这种视觉滤镜做了专门修改，以便于他们的精英官员使用。\n\n主要效果：感知属性值增加3 \n\n次要效果：探针扫描强度提高1%\n\n套件效果：所有“美德”植入体次要效果增加10%" },
     90992: { en: "Skill at operating ship and cargo scanners. 5% improvement per level in the scan speeds of those module types.", zhCN: "操作船体扫描器、货柜扫描器和测量扫描器的技能。每升一级，该类装备的扫描速度各提升5%。" },
+    91222: { en: "Disrupts the target ship's navigation computer, disabling warping, jumping, microwarpdrives and micro jump drives.", zhCN: "干扰对方舰船的导航计算机，防止其跃迁、跳跃、使用微型跃迁推进器或微型跳跃引擎。" },
     91318: { en: "An archaeology system used to analyze and search ancient ruins, potentially revealing valuable items for collection.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "这是一个用于分析和研究古代遗迹的考古系统，有可能会发掘出珍贵的藏品。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     91320: { en: "Launcher for <a href=showinfo:30013>Core Scanner Probes</a>, which are used to scan down Cosmic Signatures in space.\r\n\r\nNote: Only one probe launcher can be fitted per ship.", zhCN: "这是发射<a href=showinfo:30013>核心扫描探针</a>的发射器，用来扫描太空中的空间信号。\n\n\n\n注：每艘飞船只能安装一个探针发射器。" },
     91413: { en: "An archaeology system used to analyze and search ancient ruins, potentially revealing valuable items for collection.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "这是一个用于分析和研究古代遗迹的考古系统，有可能会发掘出珍贵的藏品。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
@@ -280,6 +297,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     100188: { en: "Astrometric Pinpointing", zhCN: "定点测量学" },
     100668: { en: "Mid-grade Virtue Alpha", zhCN: "中级美德—阿尔法型" },
     100785: { en: "Survey", zhCN: "测量学" },
+    101021: { en: "Warp Scrambler I", zhCN: "跃迁扰频器 I" },
     101132: { en: "Relic Analyzer I", zhCN: "遗迹分析仪 I" },
     101134: { en: "Core Probe Launcher I", zhCN: "核心探针发射器 I" },
     101240: { en: "Relic Analyzer II", zhCN: "遗迹分析仪 II" },
@@ -342,6 +360,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     111883: { en: "Digital Network", zhCN: "数字网络" },
     111949: { en: "Ruined Serpentis Temple Site", zhCN: "毁坏的天蛇神庙遗址" },
     111951: { en: "Serpentis Chemical Lab ", zhCN: "天蛇化学实验室" },
+    120680: { en: "Warp Distrupted", zhCN: "已被跃迁扰断" },
     125892: { en: "Local Blood Data Terminal", zhCN: "本地血袭者数据终端" },
     261694: { en: "Core Probe Launcher II", zhCN: "核心探针发射器 II" },
     263157: { en: "Launcher for <a href=showinfo:30013>Core Scanner Probes</a>, which are used to scan down Cosmic Signatures in space.\r\n\r\nNote: Only one probe launcher can be fitted per ship.\r\n\r\n5% bonus to strength of scan probes.", zhCN: "这是发射<a href=showinfo:30013>核心扫描探针</a>的发射器，用来扫描太空中的空间信号。\n\n\n\n注：每艘飞船只能安装一个探针发射器。\n\n\n\n它能将探针的扫描强度增加5%。" },
@@ -354,6 +373,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     267784: { en: "Cobalt Edge", zhCN: "钴蓝边域" },
     267810: { en: "Perrigen Falls", zhCN: "佩利根弗" },
     277173: { en: "Large Micro Jump Drive Blueprint", zhCN: "大型微型跳跃引擎蓝图" },
+    277674: { en: "Webified", zhCN: "被停滞缠绕" },
     283702: { en: "Micro Jump Drive Blueprint", zhCN: "微型跳跃引擎蓝图" },
     286441: { en: "Armor Layering", zhCN: "装甲覆层理论" },
     286442: { en: "Skill at installing upgraded armor plates efficiently and securely, reducing the impact they have on agility and speed. Grants a 5% reduction to armor plate mass penalty per level.", zhCN: "能够安全高效地安装升级装甲附甲板的技能，可以降低其对舰船敏捷性和速度的影响。每升一级，装甲附甲板的质量惩罚降低5%。" },
@@ -397,10 +417,19 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     500108: { en: "Combat Site", zhCN: "战斗地点" },
     500298: { en: "Strength", zhCN: "强度" },
     500299: { en: "Coherence", zhCN: "同步率" },
+    502483: { en: "Personal Assets", zhCN: "个人资产" },
+    503504: { en: "Warp Scrambled", zhCN: "被跃迁扰频" },
     514024: { en: "Large Skill Injector", zhCN: "大型技能注入器" },
     514247: { en: "This item can be activated in a station to grant the user unallocated skill points. The injectors are consumed immediately once activated.\r\n\r\nThe amount of skill points granted depends on the total skill points (including unallocated skill points) the using character possesses, according to the following scale:\r\n\r\nCharacters with less than 5,000,000 skill points will receive 500,000 unallocated skill points.\r\nCharacters with between 5,000,000 and 50,000,000 skill points will receive 400,000 unallocated skill points.\r\nCharacters with between 50,000,000 and 80,000,000 skill points will receive 300,000 unallocated skill points.\r\nCharacters with more than 80,000,000 skill points will receive 150,000 unallocated skill points.\r\n\r\nLarge Skill Injectors are created using a <a href=showinfo:40519>Skill Extractor</a>.", zhCN: "这个物品可以在空间站中使用来给予玩家未分配的技能点数。一旦使用后，技能注入器便会消失。\n\n\n\n获得的技能点数根据人物的总技能点数（包括未分配技能点）而定，具体规则如下：\n\n\n\n技能点数低于5,000,000的人物，获得500,000未分配技能点。\n\n技能点数高于5,000,000而低于50,000,000的人物，获得400,000未分配技能点。\n\n技能点数高于50,000,000而低于80,000,000的人物，获得300,000未分配技能点。\n\n技能点数高于80,000,000的人物，获得150,000未分配技能点。\n\n\n\n技能注入器是由<a href=showinfo:40519>技能提取器</a>生成而来。" },
+    514644: { en: "Heavy Warp Disruptor I", zhCN: "重型跃迁扰断器 I" },
+    514665: { en: "Heavy Warp Scrambler I", zhCN: "重型跃迁扰频器 I" },
+    515060: { en: "Stasis Grappler", zhCN: "停滞捕捉光束" },
+    515061: { en: "Heavy Stasis Grappler I", zhCN: "重型停滞捕捉光束 I" },
+    515062: { en: "Stasis Grapplers reduce the maximum speed of a target ship by employing micro energy streams which effectively entangle the target temporarily, thereby slowing it down.\r\nThis slowing effect is strongest at very close ranges, and diminishes as range increases.\r\nHeavy Stasis Grapplers require a very stable base platform, and therefore may only be fitted to Battleships and Capital Ships.", zhCN: "停滞捕捉光束通过使用微能流来降低目标舰船的最大速度，该装备可以有效地暂时束缚目标，降低其速度。\n\n这种减速效果在近距离时十分有效，随着距离增加而逐渐减弱。\n\n装配重型停滞捕捉光束需要非常稳定的基础平台，所以只能装配在战列舰和旗舰级舰船上。" },
     516253: { en: "Ligature Integrated Analyzer", zhCN: "绷带集成式分析仪" },
     516254: { en: "Zeugma Integrated Analyzer", zhCN: "轭式集成式分析仪" },
+    516445: { en: "Disrupts the target ship's navigation computer which prevents it from warping.", zhCN: "干扰目标舰船的导航计算机从而阻止其进行跃迁。" },
+    516450: { en: "Disrupts the target ship's navigation computer, disabling warping, jumping, microwarpdrives and micro jump drives.", zhCN: "干扰对方舰船的导航计算机，防止其跃迁、跳跃、使用微型跃迁推进器或微型跳跃引擎。" },
     516519: { en: "As this multi-use analyzer has both fully integrated archaeology and hacking systems, it can be used to both analyze ancient ruins and bypass electronic security systems.\r\n\r\nWhilst comparatively weaker than its more specialized counterparts, its combined functionality provides the user with an increased flexibility when it comes to fitting.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "这个多用途分析仪完美整合了考古和破译系统，即可用于分析远古遗迹，也可以用来破解电子安全系统。\n\n\n\n虽然每项能力都比专业装备要弱，但它的多功能性使得其装配灵活性有所提高。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     516520: { en: "As this multi-use analyzer has both fully integrated archaeology and hacking systems, it can be used to both analyze ancient ruins and bypass electronic security systems.\r\n\r\nWhilst comparatively weaker than its more specialized counterparts, its combined functionality provides the user with an increased flexibility when it comes to fitting.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "这个多用途分析仪完美整合了考古和破译系统，即可用于分析远古遗迹，也可以用来破解电子安全系统。\n\n\n\n虽然每项能力都比专业装备要弱，但它的多功能性使得其装配灵活性有所提高。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     518135: { en: "Skill Injectors", zhCN: "技能注入器" },
@@ -417,6 +446,34 @@ export const eveIcons: Record<number, EveIconEntry> = {
 };
 
 export const eveTypes: Record<number, EveTypeEntry> = {
+    447: {
+        groupId: 52,
+        groupNameLocId: 63614,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 91222,
+        iconId: 3433,
+        metaGroupId: 1,
+        metaGroupNameLocId: 66672,
+        imageSource: "icon",
+        imageSrc: type447Url,
+        typeId: 447,
+        typeNameLocId: 101021,
+    },
+    526: {
+        groupId: 65,
+        groupNameLocId: 63625,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 87171,
+        iconId: 1284,
+        metaGroupId: 1,
+        metaGroupNameLocId: 66672,
+        imageSource: "icon",
+        imageSrc: type526Url,
+        typeId: 526,
+        typeNameLocId: 76523,
+    },
     605: {
         groupId: 25,
         groupNameLocId: 63597,
@@ -515,6 +572,20 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         imageSrc: type3119Url,
         typeId: 3119,
         typeNameLocId: 105182,
+    },
+    3242: {
+        groupId: 52,
+        groupNameLocId: 63614,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 87313,
+        iconId: 111,
+        metaGroupId: 1,
+        metaGroupNameLocId: 66672,
+        imageSource: "icon",
+        imageSrc: type3242Url,
+        typeId: 3242,
+        typeNameLocId: 76777,
     },
     3327: {
         groupId: 257,
@@ -926,6 +997,21 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         imageSrc: type22177Url,
         typeId: 22177,
         typeNameLocId: 101132,
+    },
+    22456: {
+        groupId: 541,
+        groupNameLocId: 63971,
+        categoryId: 6,
+        categoryNameLocId: 63544,
+        descriptionLocId: 84314,
+        graphicId: 2814,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "graphic",
+        imageSrc: type22456Url,
+        typeId: 22456,
+        typeNameLocId: 73391,
     },
     22778: {
         groupId: 548,
@@ -1620,6 +1706,48 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         imageSrc: type40520Url,
         typeId: 40520,
         typeNameLocId: 514024,
+    },
+    40730: {
+        groupId: 52,
+        groupNameLocId: 63614,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 516445,
+        iconId: 111,
+        metaGroupId: 1,
+        metaGroupNameLocId: 66672,
+        imageSource: "icon",
+        imageSrc: type40730Url,
+        typeId: 40730,
+        typeNameLocId: 514644,
+    },
+    40750: {
+        groupId: 52,
+        groupNameLocId: 63614,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 516450,
+        iconId: 3433,
+        metaGroupId: 1,
+        metaGroupNameLocId: 66672,
+        imageSource: "icon",
+        imageSrc: type40750Url,
+        typeId: 40750,
+        typeNameLocId: 514665,
+    },
+    41040: {
+        groupId: 1672,
+        groupNameLocId: 515060,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 515062,
+        iconId: 21581,
+        metaGroupId: 1,
+        metaGroupNameLocId: 66672,
+        imageSource: "icon",
+        imageSrc: type41040Url,
+        typeId: 41040,
+        typeNameLocId: 515061,
     },
     41533: {
         groupId: 538,
