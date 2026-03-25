@@ -4,7 +4,9 @@
 
 <style>
     .top-aligned-table :global(table) {
-        overflow: unset;
+        display: block;
+        overflow-x: auto;
+        max-width: 100%;
     }
 
     .top-aligned-table :global(th),
@@ -15,6 +17,6 @@
     .top-aligned-table :global(tr) td:first-child,
     .top-aligned-table :global(tr) th:first-child {
         width: 1%;
-        white-space: nowrap;
+        white-space: normal;
     }
 </style>
