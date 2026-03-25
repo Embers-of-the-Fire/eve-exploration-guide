@@ -17,6 +17,7 @@ const rehypePlugins = /** @type {any} */ ([rehypeAccessibleEmojis]);
 const siteUrl =
     process.env.SITE_URL ??
     "https://github.com/Embers-of-the-Fire/eve-exploration-guide";
+const qqGroupUrl = "https://qm.qq.com/q/s1IGiwB7jO";
 const srcDir = fileURLToPath(new URL("./src", import.meta.url));
 
 const starlightPlugins = [
@@ -35,10 +36,9 @@ const starlightPlugins = [
     starlightImageZoom(),
     starlightCoolerCredit({
         credit: {
-            title: "Maintained by the EVE Exploration Guide team",
-            href: siteUrl,
-            description:
-                "This site uses a tailored Starlight baseline modeled after pdxdoc-next.",
+            title: "南北派专家组 组织汇编",
+            href: qqGroupUrl,
+            description: "点击加入 QQ 群“南北派专家组”",
         },
     }),
     starlightGiscus({
@@ -50,11 +50,10 @@ const starlightPlugins = [
         lazy: true,
     }),
 ];
-const siteConfig = process.env.SITE_URL ? { site: process.env.SITE_URL } : {};
 
 // https://astro.build/config
 export default defineConfig({
-    ...siteConfig,
+    site: siteUrl,
     vite: {
         resolve: {
             alias: {

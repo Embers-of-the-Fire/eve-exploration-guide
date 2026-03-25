@@ -50,6 +50,7 @@ export const docsSidebar: Sidebar = [
     },
     {
         label: "装备",
+        collapsed: true,
         items: [
             {
                 label: "概述",
@@ -104,8 +105,8 @@ export const docsSidebar: Sidebar = [
             {
                 label: "逃跑",
                 link: "/guides/survival/escape",
-            }
-        ]
+            },
+        ],
     },
     {
         label: "进阶",
@@ -113,6 +114,7 @@ export const docsSidebar: Sidebar = [
     },
     {
         label: "高阶技巧",
+        collapsed: true,
         autogenerate: { directory: "guides/expert" },
-    }
+    },
 ];
