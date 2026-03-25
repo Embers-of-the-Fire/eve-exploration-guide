@@ -6,40 +6,12 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 import TopAlignedTable from "@/components/docs/TopAlignedTable.astro";
 
 <TopAlignedTable>
-    <table>
-        <thead>
-            <tr>
-                <th>名称</th>
-                <th>加成</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>移动机库</td>
-                <td>
-                    极其推荐带上，回家时换上2个核心稳定器两个皮球，不怕抓。遇到危险可以把身上货物放入，保存位置，减少损失
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <EveType typeId={33474} />
-                </td>
-                <td>
-                    一分钟锚定，提供换装，储存服务，可回收，只能自己使用，30天有效期
-                </td>
-            </tr>
-            <tr>
-                <td>无人机</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <EveType typeId={23707} />
-                </td>
-                <td>
-                    ECM无人机，一定几率使敌方丢失锁定。推荐，被抓可反抗，拼人品
-                </td>
-            </tr>
-        </tbody>
-    </table>
+
+| 名称                       | 加成                                                                                                  |
+| -------------------------- | ----------------------------------------------------------------------------------------------------- |
+| 移动机库                   | 极其推荐带上，回家时换上2个核心稳定器两个皮球，不怕抓。遇到危险可以把身上货物放入，保存位置，减少损失 |
+| <EveType typeId={33474} /> | 一分钟锚定，提供换装，储存服务，可回收，只能自己使用，30天有效期                                      |
+| 无人机                     |                                                                                                       |
+| <EveType typeId={23707} /> | ECM无人机，一定几率使敌方丢失锁定。推荐，被抓可反抗，拼人品                                           |
+
 </TopAlignedTable>
