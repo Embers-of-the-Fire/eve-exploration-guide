@@ -1,6 +1,7 @@
 .inlineReference {
     align-items: baseline;
-    margin-inline: 0.16rem;
+    margin-inline-end: 0.16rem;
+    margin-inline-start: 0.32rem;
 }
 
 .inlineLabel {
