@@ -448,10 +448,6 @@ function unwrapQuotedLiteral(rawValue: string): string | null {
     return null;
 }
 
-function escapeRegExp(value: string) {
-    return value.replaceAll(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
 function parseLiteralString(value: MdxJsxAttribute["value"]): string | null {
     if (typeof value === "string") {
         return value;
@@ -487,98 +483,52 @@ function parseLiteralInteger(value: MdxJsxAttribute["value"]): number | null {
     return parsedValue;
 }
 
-function parseLiteralIntegerList(
-    value: MdxJsxAttribute["value"],
-    itemProp: string,
-): number[] | null {
-    const rawValue =
-        typeof value === "string" ? value.trim() : value?.value.trim();
+function skipWhitespace(value: string, startIndex: number) {
+    let cursor = startIndex;
 
-    if (!rawValue) {
-        return null;
-    }
-
-    const unwrappedValue = unwrapQuotedLiteral(rawValue)?.trim() ?? rawValue;
-
-    if (!unwrappedValue.startsWith("[") || !unwrappedValue.endsWith("]")) {
-        return null;
-    }
-
-    if (unwrappedValue === "[]") {
-        return [];
-    }
-
-    const pattern = new RegExp(
-        `(?:^|[,{])\\s*["']?${escapeRegExp(itemProp)}["']?\\s*:\\s*(-?\\d+)\\s*(?=[,}])`,
-        "g",
-    );
-    const matches = [...unwrappedValue.matchAll(pattern)];
-
-    if (matches.length === 0) {
-        return null;
-    }
-
-    return matches
-        .map((match) => Number(match[1]))
-        .filter(Number.isSafeInteger);
-}
-
-function extractObjectPropertyArray(
-    value: MdxJsxAttribute["value"],
-    propertyName: string,
-): string | null | undefined {
-    const rawValue =
-        typeof value === "string" ? value.trim() : value?.value.trim();
-
-    if (!rawValue) {
-        return null;
-    }
-
-    const unwrappedValue = unwrapQuotedLiteral(rawValue)?.trim() ?? rawValue;
-
-    if (!unwrappedValue.startsWith("{") || !unwrappedValue.endsWith("}")) {
-        return null;
-    }
-
-    const propertyPattern = new RegExp(
-        `["']?${escapeRegExp(propertyName)}["']?\\s*:`,
-        "g",
-    );
-    const match = propertyPattern.exec(unwrappedValue);
-
-    if (!match) {
-        return undefined;
-    }
-
-    let cursor = match.index + match[0].length;
-
-    while (
-        cursor < unwrappedValue.length &&
-        /\s/.test(unwrappedValue[cursor])
-    ) {
+    while (cursor < value.length && /\s/.test(value[cursor])) {
         cursor += 1;
     }
 
-    if (unwrappedValue[cursor] !== "[") {
-        return null;
-    }
-
-    const end = findMatchingBracket(unwrappedValue, cursor, "[", "]");
-
-    if (end === null) {
-        return null;
-    }
-
-    return unwrappedValue.slice(cursor, end + 1);
+    return cursor;
 }
 
-function findMatchingBracket(
+function findQuotedStringEnd(value: string, startIndex: number): number | null {
+    const quote = value[startIndex];
+
+    if (quote !== '"' && quote !== "'" && quote !== "`") {
+        return null;
+    }
+
+    let isEscaped = false;
+
+    for (let index = startIndex + 1; index < value.length; index += 1) {
+        const current = value[index];
+
+        if (isEscaped) {
+            isEscaped = false;
+            continue;
+        }
+
+        if (current === "\\") {
+            isEscaped = true;
+            continue;
+        }
+
+        if (current === quote) {
+            return index;
+        }
+    }
+
+    return null;
+}
+
+function findExpressionBoundary(
     value: string,
     startIndex: number,
-    openBracket: "[" | "{",
-    closeBracket: "]" | "}",
+    terminators: ReadonlySet<string>,
 ): number | null {
-    let depth = 0;
+    const bracketStack: Array<")" | "]" | "}"> = [];
     let quote: '"' | "'" | "`" | null = null;
     let isEscaped = false;
 
@@ -608,21 +558,255 @@ function findMatchingBracket(
             continue;
         }
 
-        if (current === openBracket) {
-            depth += 1;
+        if (current === "(") {
+            bracketStack.push(")");
             continue;
         }
 
-        if (current === closeBracket) {
-            depth -= 1;
+        if (current === "[") {
+            bracketStack.push("]");
+            continue;
+        }
 
-            if (depth === 0) {
+        if (current === "{") {
+            bracketStack.push("}");
+            continue;
+        }
+
+        if (current === ")" || current === "]" || current === "}") {
+            if (bracketStack.at(-1) === current) {
+                bracketStack.pop();
+                continue;
+            }
+
+            if (bracketStack.length === 0 && terminators.has(current)) {
                 return index;
             }
+
+            return null;
+        }
+
+        if (bracketStack.length === 0 && terminators.has(current)) {
+            return index;
         }
     }
 
     return null;
+}
+
+function readObjectPropertyKey(
+    value: string,
+    startIndex: number,
+): { key: string; nextIndex: number } | null {
+    let cursor = skipWhitespace(value, startIndex);
+    const current = value[cursor];
+
+    if (!current || current === "," || current === "}") {
+        return null;
+    }
+
+    let key: string;
+
+    if (current === '"' || current === "'" || current === "`") {
+        const end = findQuotedStringEnd(value, cursor);
+
+        if (end === null) {
+            return null;
+        }
+
+        key = value.slice(cursor + 1, end);
+        cursor = end + 1;
+    } else {
+        const match = /[$A-Za-z_][\w$]*/.exec(value.slice(cursor));
+
+        if (!match || match.index !== 0) {
+            return null;
+        }
+
+        key = match[0];
+        cursor += key.length;
+    }
+
+    cursor = skipWhitespace(value, cursor);
+
+    if (value[cursor] !== ":") {
+        return null;
+    }
+
+    return {
+        key,
+        nextIndex: cursor + 1,
+    };
+}
+
+function extractObjectPropertyValue(
+    value: MdxJsxAttribute["value"],
+    propertyName: string,
+): string | null | undefined {
+    const rawValue =
+        typeof value === "string" ? value.trim() : value?.value.trim();
+
+    if (!rawValue) {
+        return null;
+    }
+
+    const unwrappedValue = unwrapQuotedLiteral(rawValue)?.trim() ?? rawValue;
+
+    if (!unwrappedValue.startsWith("{") || !unwrappedValue.endsWith("}")) {
+        return null;
+    }
+
+    let cursor = skipWhitespace(unwrappedValue, 1);
+
+    while (cursor < unwrappedValue.length - 1) {
+        const current = unwrappedValue[cursor];
+
+        if (current === "}") {
+            return undefined;
+        }
+
+        if (current === ",") {
+            cursor = skipWhitespace(unwrappedValue, cursor + 1);
+            continue;
+        }
+
+        const property = readObjectPropertyKey(unwrappedValue, cursor);
+
+        if (!property) {
+            return null;
+        }
+
+        const valueStart = skipWhitespace(unwrappedValue, property.nextIndex);
+        const valueEnd = findExpressionBoundary(
+            unwrappedValue,
+            valueStart,
+            new Set([",", "}"]),
+        );
+
+        if (valueStart >= unwrappedValue.length || valueEnd === null) {
+            return null;
+        }
+
+        const propertyValue = unwrappedValue.slice(valueStart, valueEnd).trim();
+
+        if (propertyValue.length === 0) {
+            return null;
+        }
+
+        if (property.key === propertyName) {
+            return propertyValue;
+        }
+
+        if (unwrappedValue[valueEnd] === "}") {
+            return undefined;
+        }
+
+        cursor = skipWhitespace(unwrappedValue, valueEnd + 1);
+    }
+
+    return undefined;
+}
+
+function splitTopLevelArrayItems(value: string): string[] | null {
+    if (!value.startsWith("[") || !value.endsWith("]")) {
+        return null;
+    }
+
+    const items: string[] = [];
+    let cursor = skipWhitespace(value, 1);
+
+    while (cursor < value.length - 1) {
+        const end = findExpressionBoundary(value, cursor, new Set([",", "]"]));
+
+        if (end === null) {
+            return null;
+        }
+
+        const item = value.slice(cursor, end).trim();
+
+        if (item.length === 0) {
+            if (value[end] === "]") {
+                return items;
+            }
+
+            return null;
+        }
+
+        items.push(item);
+
+        if (value[end] === "]") {
+            return items;
+        }
+
+        cursor = skipWhitespace(value, end + 1);
+    }
+
+    return items;
+}
+
+function parseLiteralIntegerList(
+    value: MdxJsxAttribute["value"],
+    itemProp: string,
+): number[] | null {
+    const rawValue =
+        typeof value === "string" ? value.trim() : value?.value.trim();
+
+    if (!rawValue) {
+        return null;
+    }
+
+    const unwrappedValue = unwrapQuotedLiteral(rawValue)?.trim() ?? rawValue;
+
+    if (!unwrappedValue.startsWith("[") || !unwrappedValue.endsWith("]")) {
+        return null;
+    }
+
+    if (unwrappedValue === "[]") {
+        return [];
+    }
+
+    const items = splitTopLevelArrayItems(unwrappedValue);
+
+    if (!items) {
+        return null;
+    }
+
+    const literalValues: number[] = [];
+
+    for (const item of items) {
+        const propertyValue = extractObjectPropertyValue(item, itemProp);
+
+        if (propertyValue === null || propertyValue === undefined) {
+            return null;
+        }
+
+        const literalValue = parseLiteralInteger(propertyValue);
+
+        if (literalValue === null) {
+            return null;
+        }
+
+        literalValues.push(literalValue);
+    }
+
+    return literalValues;
+}
+
+function extractObjectPropertyArray(
+    value: MdxJsxAttribute["value"],
+    propertyName: string,
+): string | null | undefined {
+    const propertyValue = extractObjectPropertyValue(value, propertyName);
+
+    if (propertyValue === null || propertyValue === undefined) {
+        return propertyValue;
+    }
+
+    if (!propertyValue.startsWith("[") || !propertyValue.endsWith("]")) {
+        return null;
+    }
+
+    return propertyValue;
 }
 
 function getAttributeValue(node: MdxJsxElement, propName: string) {
