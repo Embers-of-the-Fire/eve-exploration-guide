@@ -18,5 +18,12 @@
     "starlightBlog.sidebar.authors": "作者",
     "starlightBlog.sidebar.rss": "RSS",
     "starlightBlog.tags.count_one": "{{count}} 篇具有标签 “{{tag}}” 的文章",
-    "starlightBlog.tags.count_other": "{{count}} 篇具有标签 “{{tag}}” 的文章"
+    "starlightBlog.tags.count_other": "{{count}} 篇具有标签 “{{tag}}” 的文章",
+    "eveFit.section.cargo": "货舱",
+    "eveFit.section.charges": "弹药",
+    "eveFit.section.drones": "无人机",
+    "eveFit.section.high": "高槽",
+    "eveFit.section.low": "低槽",
+    "eveFit.section.med": "中槽",
+    "eveFit.section.rig": "改装件"
 }

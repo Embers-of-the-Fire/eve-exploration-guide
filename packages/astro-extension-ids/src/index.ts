@@ -82,6 +82,14 @@ interface EveRefSpec {
     prop: string;
 }
 
+interface EveRefArraySpec {
+    component: string;
+    itemProp: string;
+    kind: EveRefKind;
+    objectProp?: string;
+    prop: string;
+}
+
 interface ExtensionIdsIntegrationOptions {
     outputFile?: string;
 }
@@ -156,6 +164,63 @@ const eveRefSpecs: EveRefSpec[] = [
         component: "EveIcon",
         kind: "icon",
         prop: "iconId",
+    },
+    {
+        component: "EveFit",
+        kind: "type",
+        prop: "shipId",
+    },
+];
+
+const eveRefArraySpecs: EveRefArraySpec[] = [
+    {
+        component: "EveFit",
+        itemProp: "id",
+        kind: "type",
+        prop: "data",
+        objectProp: "high",
+    },
+    {
+        component: "EveFit",
+        itemProp: "id",
+        kind: "type",
+        prop: "data",
+        objectProp: "med",
+    },
+    {
+        component: "EveFit",
+        itemProp: "id",
+        kind: "type",
+        prop: "data",
+        objectProp: "low",
+    },
+    {
+        component: "EveFit",
+        itemProp: "id",
+        kind: "type",
+        prop: "data",
+        objectProp: "rig",
+    },
+    {
+        component: "EveFit",
+        itemProp: "id",
+        kind: "type",
+        prop: "data",
+        objectProp: "charges",
+    },
+    {
+        component: "EveFit",
+        itemProp: "id",
+        kind: "type",
+        prop: "data",
+        objectProp: "drones",
+    },
+    {
+        component: "EveFit",
+        itemProp: "id",
+        kind: "type",
+        prop: "data",
+        objectProp: "cargo",
     },
 ];
 
@@ -383,6 +448,10 @@ function unwrapQuotedLiteral(rawValue: string): string | null {
     return null;
 }
 
+function escapeRegExp(value: string) {
+    return value.replaceAll(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
 function parseLiteralString(value: MdxJsxAttribute["value"]): string | null {
     if (typeof value === "string") {
         return value;
@@ -418,6 +487,144 @@ function parseLiteralInteger(value: MdxJsxAttribute["value"]): number | null {
     return parsedValue;
 }
 
+function parseLiteralIntegerList(
+    value: MdxJsxAttribute["value"],
+    itemProp: string,
+): number[] | null {
+    const rawValue =
+        typeof value === "string" ? value.trim() : value?.value.trim();
+
+    if (!rawValue) {
+        return null;
+    }
+
+    const unwrappedValue = unwrapQuotedLiteral(rawValue)?.trim() ?? rawValue;
+
+    if (!unwrappedValue.startsWith("[") || !unwrappedValue.endsWith("]")) {
+        return null;
+    }
+
+    if (unwrappedValue === "[]") {
+        return [];
+    }
+
+    const pattern = new RegExp(
+        `(?:^|[,{])\\s*["']?${escapeRegExp(itemProp)}["']?\\s*:\\s*(-?\\d+)\\s*(?=[,}])`,
+        "g",
+    );
+    const matches = [...unwrappedValue.matchAll(pattern)];
+
+    if (matches.length === 0) {
+        return null;
+    }
+
+    return matches
+        .map((match) => Number(match[1]))
+        .filter(Number.isSafeInteger);
+}
+
+function extractObjectPropertyArray(
+    value: MdxJsxAttribute["value"],
+    propertyName: string,
+): string | null | undefined {
+    const rawValue =
+        typeof value === "string" ? value.trim() : value?.value.trim();
+
+    if (!rawValue) {
+        return null;
+    }
+
+    const unwrappedValue = unwrapQuotedLiteral(rawValue)?.trim() ?? rawValue;
+
+    if (!unwrappedValue.startsWith("{") || !unwrappedValue.endsWith("}")) {
+        return null;
+    }
+
+    const propertyPattern = new RegExp(
+        `["']?${escapeRegExp(propertyName)}["']?\\s*:`,
+        "g",
+    );
+    const match = propertyPattern.exec(unwrappedValue);
+
+    if (!match) {
+        return undefined;
+    }
+
+    let cursor = match.index + match[0].length;
+
+    while (
+        cursor < unwrappedValue.length &&
+        /\s/.test(unwrappedValue[cursor])
+    ) {
+        cursor += 1;
+    }
+
+    if (unwrappedValue[cursor] !== "[") {
+        return null;
+    }
+
+    const end = findMatchingBracket(unwrappedValue, cursor, "[", "]");
+
+    if (end === null) {
+        return null;
+    }
+
+    return unwrappedValue.slice(cursor, end + 1);
+}
+
+function findMatchingBracket(
+    value: string,
+    startIndex: number,
+    openBracket: "[" | "{",
+    closeBracket: "]" | "}",
+): number | null {
+    let depth = 0;
+    let quote: '"' | "'" | "`" | null = null;
+    let isEscaped = false;
+
+    for (let index = startIndex; index < value.length; index += 1) {
+        const current = value[index];
+
+        if (quote) {
+            if (isEscaped) {
+                isEscaped = false;
+                continue;
+            }
+
+            if (current === "\\") {
+                isEscaped = true;
+                continue;
+            }
+
+            if (current === quote) {
+                quote = null;
+            }
+
+            continue;
+        }
+
+        if (current === '"' || current === "'" || current === "`") {
+            quote = current;
+            continue;
+        }
+
+        if (current === openBracket) {
+            depth += 1;
+            continue;
+        }
+
+        if (current === closeBracket) {
+            depth -= 1;
+
+            if (depth === 0) {
+                return index;
+            }
+        }
+    }
+
+    return null;
+}
+
 function getAttributeValue(node: MdxJsxElement, propName: string) {
     return node.attributes
         ?.filter(isMdxJsxAttribute)
@@ -436,6 +643,34 @@ function getLiteralIntegerAttributeValue(
     propName: string,
 ): number | null {
     return parseLiteralInteger(getAttributeValue(node, propName));
+}
+
+function getLiteralIntegerListAttributeValue(
+    node: MdxJsxElement,
+    propName: string,
+    itemProp: string,
+    objectProp?: string,
+): number[] | null {
+    const attributeValue = getAttributeValue(node, propName);
+
+    if (!objectProp) {
+        return parseLiteralIntegerList(attributeValue, itemProp);
+    }
+
+    const objectPropertyValue = extractObjectPropertyArray(
+        attributeValue,
+        objectProp,
+    );
+
+    if (objectPropertyValue === undefined) {
+        return [];
+    }
+
+    if (objectPropertyValue === null) {
+        return null;
+    }
+
+    return parseLiteralIntegerList(objectPropertyValue, itemProp);
 }
 
 function getLineNumber(node: MdxJsxElement) {
@@ -559,6 +794,46 @@ function createRemarkExtensionIdPlugin(
                         line,
                         prop: spec.prop,
                     });
+                }
+
+                for (const spec of eveRefArraySpecs) {
+                    if (node.name !== spec.component) {
+                        continue;
+                    }
+
+                    const literalValues = getLiteralIntegerListAttributeValue(
+                        node,
+                        spec.prop,
+                        spec.itemProp,
+                        spec.objectProp,
+                    );
+                    const line = getLineNumber(node);
+
+                    if (literalValues === null) {
+                        eveUnresolved.push({
+                            component: spec.component,
+                            expectedProp: spec.objectProp
+                                ? `${spec.prop}.${spec.objectProp}[].${spec.itemProp}`
+                                : `${spec.prop}[].${spec.itemProp}`,
+                            file: relativeFile,
+                            kind: spec.kind,
+                            line,
+                        });
+                        continue;
+                    }
+
+                    for (const literalValue of literalValues) {
+                        eveEntries.push({
+                            component: spec.component,
+                            file: relativeFile,
+                            id: literalValue,
+                            kind: spec.kind,
+                            line,
+                            prop: spec.objectProp
+                                ? `${spec.prop}.${spec.objectProp}[].${spec.itemProp}`
+                                : `${spec.prop}[].${spec.itemProp}`,
+                        });
+                    }
                 }
             });
 

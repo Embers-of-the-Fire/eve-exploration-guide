@@ -1,0 +1,37 @@
+---
+import { Code } from "@astrojs/starlight/components";
+import {
+    createFitText,
+    eveFitSectionOrder,
+    resolveFitSections,
+    type EveFitData,
+} from "./EveFit.shared";
+import EveFitList from "./EveFitList";
+import styles from "./EveFit.module.css";
+
+interface Props {
+    data: EveFitData;
+    name: string;
+    shipId: number;
+}
+
+const { data, name, shipId } = Astro.props as Props;
+const resolvedSections = resolveFitSections(data);
+const fitText = createFitText(name, shipId, resolvedSections);
+const sectionLabels = eveFitSectionOrder.map((key) => ({
+    key,
+    label: Astro.locals.t(`eveFit.section.${key}`),
+}));
+---
+
+<div class={styles.fit}>
+    <EveFitList
+        name={name}
+        sectionLabels={sectionLabels}
+        sections={resolvedSections}
+        shipId={shipId}
+    />
+    <div class={styles.codeBlock}>
+        <Code code={fitText} lang="" />
+    </div>
+</div>

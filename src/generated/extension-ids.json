@@ -566,6 +566,12 @@
                 "kind": "type",
                 "occurrences": [
                     {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "shipId"
+                    },
+                    {
                         "component": "EveType",
                         "file": "src/content/docs/guides/advance/ghost.mdx",
                         "line": 32,
@@ -581,6 +587,24 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 15,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 1403,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.low[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 23,
                         "prop": "typeId"
                     }
                 ]
@@ -670,6 +694,42 @@
                 ]
             },
             {
+                "id": 5973,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 13,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 6131,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 15,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 6160,
                 "kind": "type",
                 "occurrences": [
@@ -715,6 +775,12 @@
                 "id": 11370,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.high[].id"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
@@ -818,6 +884,12 @@
                 "kind": "type",
                 "occurrences": [
                     {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.high[].id"
+                    },
+                    {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
                         "line": 9,
@@ -856,9 +928,51 @@
                 ]
             },
             {
+                "id": 22175,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 18,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 22177,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 23707,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.drones[].id"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/misc.mdx",
@@ -947,6 +1061,24 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30013,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.charges[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 22,
                         "prop": "typeId"
                     }
                 ]
@@ -1075,6 +1207,12 @@
                 "id": 31213,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.rig[].id"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/rig-slots.mdx",
@@ -2882,6 +3020,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 605,
+                "kind": "type",
+                "line": 29,
+                "prop": "shipId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/advance/ghost.mdx",
                 "id": 605,
@@ -2904,6 +3050,14 @@
                 "kind": "type",
                 "line": 15,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 1403,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.low[].id"
             },
             {
                 "component": "EveType",
@@ -3106,12 +3260,28 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 5973,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 5973,
                 "kind": "type",
                 "line": 13,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 6131,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.med[].id"
             },
             {
                 "component": "EveType",
@@ -3176,6 +3346,14 @@
                 "kind": "type",
                 "line": 28,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 11370,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.high[].id"
             },
             {
                 "component": "EveType",
@@ -3322,6 +3500,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 17938,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.high[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 17938,
@@ -3386,12 +3572,28 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 22175,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 22175,
                 "kind": "type",
                 "line": 18,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 22177,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.med[].id"
             },
             {
                 "component": "EveType",
@@ -3448,6 +3650,14 @@
                 "kind": "type",
                 "line": 28,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.drones[].id"
             },
             {
                 "component": "EveType",
@@ -3714,6 +3924,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 30013,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.charges[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 30013,
@@ -3904,6 +4122,14 @@
                 "kind": "type",
                 "line": 29,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 31213,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.rig[].id"
             },
             {
                 "component": "EveType",
@@ -4868,270 +5094,39 @@
         ],
         "iconIds": [],
         "locIds": [
-            61359,
-            61566,
-            63735,
-            63773,
-            63841,
-            64301,
-            66263,
-            70930,
-            78660,
-            78662,
-            110644,
-            111152,
-            111162,
-            111181,
-            111193,
-            111362,
-            111367,
-            111370,
-            111372,
-            111382,
-            111385,
-            111387,
-            111644,
-            111659,
-            111800,
-            111814,
-            111820,
-            111879,
-            111883,
-            111891,
-            111949,
-            111951,
-            120680,
-            125602,
-            125604,
-            125605,
-            125606,
-            125607,
-            125608,
-            125609,
-            125831,
-            125832,
-            125892,
-            127156,
-            142426,
-            232310,
-            237116,
-            237118,
-            237141,
-            237144,
-            237175,
-            237183,
-            237217,
-            237225,
-            237227,
-            237240,
-            237262,
-            263155,
-            263697,
-            267688,
-            267694,
-            267708,
-            267710,
-            267718,
-            267724,
-            267732,
-            267746,
-            267758,
-            267768,
-            267780,
-            267784,
-            267790,
-            267794,
-            267798,
-            267810,
-            277674,
-            287004,
-            287137,
-            287802,
-            287833,
-            292073,
-            292079,
-            292084,
-            292086,
-            292089,
-            292092,
-            292094,
-            296755,
-            297403,
-            297744,
-            297921,
-            297936,
-            297962,
-            298073,
-            298362,
-            298448,
-            500105,
-            500106,
-            500107,
-            500108,
-            500191,
-            500298,
-            500299,
-            502483,
-            503504,
-            503992,
-            510254,
-            510255,
-            524661
+            61359, 61566, 63735, 63773, 63841, 64301, 66263, 70930, 78660,
+            78662, 110644, 111152, 111162, 111181, 111193, 111362, 111367,
+            111370, 111372, 111382, 111385, 111387, 111644, 111659, 111800,
+            111814, 111820, 111879, 111883, 111891, 111949, 111951, 120680,
+            125602, 125604, 125605, 125606, 125607, 125608, 125609, 125831,
+            125832, 125892, 127156, 142426, 232310, 237116, 237118, 237141,
+            237144, 237175, 237183, 237217, 237225, 237227, 237240, 237262,
+            263155, 263697, 267688, 267694, 267708, 267710, 267718, 267724,
+            267732, 267746, 267758, 267768, 267780, 267784, 267790, 267794,
+            267798, 267810, 277674, 287004, 287137, 287802, 287833, 292073,
+            292079, 292084, 292086, 292089, 292092, 292094, 296755, 297403,
+            297744, 297921, 297936, 297962, 298073, 298362, 298448, 500105,
+            500106, 500107, 500108, 500191, 500298, 500299, 502483, 503504,
+            503992, 510254, 510255, 524661
         ],
         "typeIds": [
-            447,
-            526,
-            605,
-            1403,
-            1405,
-            2038,
-            2603,
-            2605,
-            3119,
-            3242,
-            3327,
-            3331,
-            3411,
-            3412,
-            3428,
-            3429,
-            3453,
-            3551,
-            4258,
-            4384,
-            5533,
-            5599,
-            5973,
-            6131,
-            6160,
-            9950,
-            10998,
-            11192,
-            11370,
-            11577,
-            11578,
-            11579,
-            11646,
-            11987,
-            13278,
-            13976,
-            15463,
-            15479,
-            17715,
-            17938,
-            18937,
-            20411,
-            21074,
-            21718,
-            22175,
-            22177,
-            22456,
-            22778,
-            22806,
-            22807,
-            22808,
-            22809,
-            23707,
-            23828,
-            25303,
-            25307,
-            25308,
-            25538,
-            25622,
-            25739,
-            25810,
-            25811,
-            27187,
-            27188,
-            27192,
-            27193,
-            27194,
-            27195,
-            27260,
-            28277,
-            28363,
-            28665,
-            28666,
-            28668,
-            28758,
-            28808,
-            29984,
-            30013,
-            30028,
-            30299,
-            30460,
-            30461,
-            30462,
-            30488,
-            30832,
-            30834,
-            30889,
-            31153,
-            31159,
-            31165,
-            31171,
-            31213,
-            31220,
-            31274,
-            31280,
-            31310,
-            31316,
-            32246,
-            33078,
-            33180,
-            33468,
-            33470,
-            33474,
-            33516,
-            33530,
-            33531,
-            33532,
-            33533,
-            33534,
-            33971,
-            34201,
-            34299,
-            34300,
-            34301,
-            34302,
-            34303,
-            34305,
-            34315,
-            34373,
-            34374,
-            34375,
-            34378,
-            34381,
-            34382,
-            34383,
-            34384,
-            34385,
-            34386,
-            34391,
-            34398,
-            34399,
-            34400,
-            34401,
-            34402,
-            34403,
-            34406,
-            34412,
-            34438,
-            34447,
-            34449,
-            34450,
-            34453,
-            34455,
-            40520,
-            40730,
-            40750,
-            41040,
-            41533,
-            41534,
-            46230,
-            46235,
-            46251,
-            47028
+            447, 526, 605, 1403, 1405, 2038, 2603, 2605, 3119, 3242, 3327, 3331,
+            3411, 3412, 3428, 3429, 3453, 3551, 4258, 4384, 5533, 5599, 5973,
+            6131, 6160, 9950, 10998, 11192, 11370, 11577, 11578, 11579, 11646,
+            11987, 13278, 13976, 15463, 15479, 17715, 17938, 18937, 20411,
+            21074, 21718, 22175, 22177, 22456, 22778, 22806, 22807, 22808,
+            22809, 23707, 23828, 25303, 25307, 25308, 25538, 25622, 25739,
+            25810, 25811, 27187, 27188, 27192, 27193, 27194, 27195, 27260,
+            28277, 28363, 28665, 28666, 28668, 28758, 28808, 29984, 30013,
+            30028, 30299, 30460, 30461, 30462, 30488, 30832, 30834, 30889,
+            31153, 31159, 31165, 31171, 31213, 31220, 31274, 31280, 31310,
+            31316, 32246, 33078, 33180, 33468, 33470, 33474, 33516, 33530,
+            33531, 33532, 33533, 33534, 33971, 34201, 34299, 34300, 34301,
+            34302, 34303, 34305, 34315, 34373, 34374, 34375, 34378, 34381,
+            34382, 34383, 34384, 34385, 34386, 34391, 34398, 34399, 34400,
+            34401, 34402, 34403, 34406, 34412, 34438, 34447, 34449, 34450,
+            34453, 34455, 40520, 40730, 40750, 41040, 41533, 41534, 46230,
+            46235, 46251, 47028
         ],
         "unresolved": [
             {
@@ -5143,6 +5138,6 @@
             }
         ]
     },
-    "generatedAt": "2026-03-25T23:18:32.369Z",
+    "generatedAt": "2026-03-27T03:26:15.089Z",
     "unresolved": []
 }

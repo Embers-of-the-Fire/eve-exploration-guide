@@ -106,7 +106,7 @@ pnpm type:fuzz -- cruiser --lang en-us --workspace /path/to/workspace \
 
 ## 刷新 EVE 文档数据
 
-当你新增或修改了 `EveType`、`EveLocText`、`EveIcon` 的调用点时，需要额外同步一次生成数据：
+当你新增或修改了 `EveType`、`EveLocText`、`EveIcon`、`EveFit` 的调用点时，需要额外同步一次生成数据：
 
 ```bash
 pnpm extract:extension-ids
@@ -117,6 +117,8 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 
 - `--workspace` 目录应当包含 `resfileindex.txt`，以及 `fsd/`
   目录或直接放置的 FSD 文件。
+- `EveFit` 会把 `shipId` 和 `data.high[].id`、`data.med[].id`、`data.low[].id`、`data.rig[].id`、`data.charges[].id`、`data.drones[].id`、`data.cargo[].id` 一并写入 `eveRefs.typeIds`；
+  这些字段应保持字面量整数，避免 inspect manifest 漏掉引用。
 - 也可以通过环境变量 `EVE_DOCS_WORKSPACE` 提供工作区；
   生成器会在 Python 侧读取当前目录或父目录中的 `.env`，因此仓库根目录
   下的 `.env` 可以直接复用。
