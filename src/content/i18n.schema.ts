@@ -8,6 +8,11 @@ const eveFitI18nSchemaShape = {
     "eveFit.section.low": z.string(),
     "eveFit.section.med": z.string(),
     "eveFit.section.rig": z.string(),
+    "eveTypePrice.buy": z.string(),
+    "eveTypePrice.isk": z.string(),
+    "eveTypePrice.loading": z.string(),
+    "eveTypePrice.sell": z.string(),
+    "eveTypePrice.unavailable": z.string(),
 };
 
 // Aggregate project-specific Starlight UI translations here.

@@ -13,6 +13,66 @@
     margin-inline: 0.16rem;
 }
 
+.priceReference {
+    align-items: flex-start;
+}
+
+.priceLabelBlock {
+    display: inline-grid;
+    gap: 0.12rem;
+    justify-items: start;
+}
+
+.priceRows {
+    align-items: baseline;
+    column-gap: 0.35rem;
+    display: grid;
+    grid-template-columns: max-content minmax(7ch, max-content) max-content;
+    row-gap: 0.08rem;
+}
+
+.priceRowLabel {
+    color: inherit;
+    white-space: nowrap;
+}
+
+.priceValue {
+    font-variant-numeric: tabular-nums;
+    min-inline-size: 7ch;
+    text-align: end;
+    white-space: nowrap;
+}
+
+.pricePopoverValue {
+    align-items: baseline;
+    column-gap: 0.35rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.priceValueSell {
+    color: var(--sl-color-red);
+}
+
+.priceValueBuy {
+    color: var(--sl-color-green);
+}
+
+.priceUnit {
+    color: var(--sl-color-gray-3);
+    white-space: nowrap;
+}
+
+.priceReference:not([data-eve-type-price-state="ready"]) .priceValueSell,
+.priceReference:not([data-eve-type-price-state="ready"]) .priceValueBuy {
+    color: var(--sl-color-gray-3);
+}
+
+.priceReference:not([data-eve-type-price-state="ready"]) .priceUnit {
+    display: none;
+}
+
 .detailGrid {
     display: grid;
     gap: 0.7rem;

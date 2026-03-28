@@ -28,7 +28,9 @@ const correctiveLayoutCss = isBlogRoute
 {correctiveLayoutCss && <style is:inline set:html={correctiveLayoutCss} />}
 
 <script>
+    import { registerEveTypePrices } from "@/scripts/eveTypePrices";
     import { registerInlinePopovers } from "@/scripts/inlinePopovers";
 
+    registerEveTypePrices();
     registerInlinePopovers();
 </script>

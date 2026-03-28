@@ -1,0 +1,231 @@
+---
+import {
+    registerEveTypePriceId,
+    resolveExtensionIdRenderMeta,
+    type WithExtensionIdSourceProps,
+} from "@astro-extension-ids/runtime";
+import baseStyles from "../inline/InlineReference.module.css";
+import styles from "./EveReference.module.css";
+import {
+    formatEveRef,
+    formatMissingLabel,
+    getIconEntry,
+    getTypeEntry,
+    resolveLocalization,
+    shouldShowMissingDataNote,
+} from "./data";
+
+interface Props extends WithExtensionIdSourceProps {
+    regionId?: number;
+    size?: number | string;
+    typeId: number;
+}
+
+const DEFAULT_REGION_ID = 10000002;
+
+function toCssSize(value: number | string): string {
+    return typeof value === "number" ? `${value}px` : value;
+}
+
+const {
+    __extensionIdFile,
+    __extensionIdLine,
+    regionId = DEFAULT_REGION_ID,
+    size = 16,
+    typeId,
+} = Astro.props as Props;
+
+registerEveTypePriceId(
+    typeId,
+    resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+);
+
+const typeData = getTypeEntry(typeId);
+const name = typeData
+    ? resolveLocalization(typeData.typeNameLocId, "type", typeId)
+    : {
+          en: formatMissingLabel("type", typeId),
+          missing: true,
+          zhCN: formatMissingLabel("type", typeId),
+      };
+const sellLabel = Astro.locals.t("eveTypePrice.sell");
+const buyLabel = Astro.locals.t("eveTypePrice.buy");
+const iskLabel = Astro.locals.t("eveTypePrice.isk");
+const loadingLabel = Astro.locals.t("eveTypePrice.loading");
+const unavailableLabel = Astro.locals.t("eveTypePrice.unavailable");
+const pageLocale = (Astro.currentLocale ?? "zh-CN").toLowerCase();
+const accessibleName = pageLocale.startsWith("en") ? name.en : name.zhCN;
+const resolvedSize = toCssSize(size);
+const iconStyle = {
+    height: resolvedSize,
+    width: resolvedSize,
+};
+const overlaySize =
+    typeof size === "number"
+        ? `${Math.max(12, Math.min(16, size * 0.5))}px`
+        : "0.6em";
+const overlayStyle = {
+    height: overlaySize,
+    width: overlaySize,
+};
+const metaGroupIcon = getIconEntry(typeData?.metaGroupIconId ?? -1);
+const showMissingNote = shouldShowMissingDataNote([
+    !typeData,
+    name.missing,
+    !typeData?.imageSrc,
+]);
+const popoverId = `eve-type-price-${regionId}-${typeId}-popover`;
+const initialSummary = `${sellLabel} ${loadingLabel}; ${buyLabel} ${loadingLabel}`;
+---
+
+<button
+    aria-describedby={popoverId}
+    aria-label={`${accessibleName}: ${initialSummary}`}
+    class={`${baseStyles.localized} ${styles.inlineReference} ${styles.priceReference}`}
+    data-eve-ref={formatEveRef("type", typeId)}
+    data-eve-type-price=""
+    data-eve-type-price-buy-label={buyLabel}
+    data-eve-type-price-isk-label={iskLabel}
+    data-eve-type-price-loading-label={loadingLabel}
+    data-eve-type-price-name={accessibleName}
+    data-eve-type-price-region-id={regionId}
+    data-eve-type-price-sell-label={sellLabel}
+    data-eve-type-price-state="loading"
+    data-eve-type-price-type-id={typeId}
+    data-eve-type-price-unavailable-label={unavailableLabel}
+    data-inline-popover-root=""
+    type="button"
+>
+    <span class={baseStyles.iconPrefix}>
+        <span class={styles.typeImage}>
+            {
+                typeData?.imageSrc ? (
+                    <img
+                        alt={accessibleName}
+                        class={`${baseStyles.icon} ${styles.typeImageMain}`}
+                        decoding="async"
+                        src={typeData.imageSrc}
+                        style={iconStyle}
+                    />
+                ) : (
+                    <span
+                        aria-hidden="true"
+                        class={`${styles.missingIcon} ${styles.typeImageMain}`}
+                        style={iconStyle}
+                    >
+                        ?
+                    </span>
+                )
+            }
+            {
+                metaGroupIcon ? (
+                    <span class={styles.typeOverlay}>
+                        <img
+                            alt=""
+                            aria-hidden="true"
+                            class={styles.typeOverlayIcon}
+                            decoding="async"
+                            src={metaGroupIcon.src}
+                            style={overlayStyle}
+                        />
+                    </span>
+                ) : null
+            }
+        </span>
+    </span>
+    <strong
+        class={`${baseStyles.label} ${styles.inlineLabel} ${styles.priceLabelBlock}`}
+    >
+        <span class={styles.priceRows}>
+            <span class={styles.priceRowLabel}>{sellLabel}</span>
+            <span
+                class={`${styles.priceValue} ${styles.priceValueSell}`}
+                data-eve-type-price-value="sell"
+            >
+                {loadingLabel}
+            </span>
+            <span class={styles.priceUnit}>{iskLabel}</span>
+            <span class={styles.priceRowLabel}>{buyLabel}</span>
+            <span
+                class={`${styles.priceValue} ${styles.priceValueBuy}`}
+                data-eve-type-price-value="buy"
+            >
+                {loadingLabel}
+            </span>
+            <span class={styles.priceUnit}>{iskLabel}</span>
+        </span>
+    </strong>
+    <span
+        class={baseStyles.popover}
+        data-inline-popover=""
+        id={popoverId}
+        role="tooltip"
+    >
+        <span class={styles.detailGrid}>
+            <span class={styles.section}>
+                <span class={baseStyles.popoverTable}>
+                    <span class={baseStyles.popoverRow}>
+                        <span class={baseStyles.popoverLabel}>NAME.ZH-CN</span>
+                        <span class={baseStyles.popoverValue}>{name.zhCN}</span>
+                    </span>
+                    <span class={baseStyles.popoverRow}>
+                        <span class={baseStyles.popoverLabel}>NAME.EN</span>
+                        <span class={baseStyles.popoverValue}>{name.en}</span>
+                    </span>
+                </span>
+            </span>
+            <span class={styles.section}>
+                <span
+                    class={`${baseStyles.popoverTable} ${styles.compactAttributeTable}`}
+                >
+                    <span class={baseStyles.popoverRow}>
+                        <span class={baseStyles.popoverLabel}>{sellLabel}</span>
+                        <span class={baseStyles.popoverValue}>
+                            <span class={styles.pricePopoverValue}>
+                                <span
+                                    class={`${styles.priceValue} ${styles.priceValueSell}`}
+                                    data-eve-type-price-value="sell"
+                                >
+                                    {loadingLabel}
+                                </span>
+                                <span class={styles.priceUnit}>{iskLabel}</span>
+                            </span>
+                        </span>
+                    </span>
+                    <span class={baseStyles.popoverRow}>
+                        <span class={baseStyles.popoverLabel}>{buyLabel}</span>
+                        <span class={baseStyles.popoverValue}>
+                            <span class={styles.pricePopoverValue}>
+                                <span
+                                    class={`${styles.priceValue} ${styles.priceValueBuy}`}
+                                    data-eve-type-price-value="buy"
+                                >
+                                    {loadingLabel}
+                                </span>
+                                <span class={styles.priceUnit}>{iskLabel}</span>
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            </span>
+            <span class={styles.metaList}>
+                <span class={styles.metaRow}>
+                    <span class={styles.metaLabel}>Type ID</span>
+                    <span class={styles.metaValue}>{typeId}</span>
+                </span>
+                <span class={styles.metaRow}>
+                    <span class={styles.metaLabel}>Region ID</span>
+                    <span class={styles.metaValue}>{regionId}</span>
+                </span>
+            </span>
+        </span>
+        {
+            showMissingNote ? (
+                <span class={styles.missingNote}>
+                    Missing generated TQ type data. Run the EVE docs generator
+                    after updating doc references.
+                </span>
+            ) : null
+        }
+    </span>
+</button>

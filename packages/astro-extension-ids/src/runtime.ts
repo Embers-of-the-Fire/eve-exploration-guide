@@ -485,6 +485,13 @@ export function registerEveTypeId(
     registerEveReference("EveType", "type", "typeId", value, meta);
 }
 
+export function registerEveTypePriceId(
+    value: unknown,
+    meta: ExtensionIdRenderMeta | undefined,
+) {
+    registerEveReference("EveTypePrice", "type", "typeId", value, meta);
+}
+
 export function registerEveLocId(
     value: unknown,
     meta: ExtensionIdRenderMeta | undefined,

@@ -41,6 +41,7 @@ const instrumentedComponents = new Set([
     "EveIcon",
     "EveLocText",
     "EveType",
+    "EveTypePrice",
     "InlineIcon",
     "InlineImage",
     "LocalizedIconText",

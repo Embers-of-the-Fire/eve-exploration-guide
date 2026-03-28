@@ -1,4 +1,9 @@
 {
+    "eveTypePrice.buy": "Buy",
+    "eveTypePrice.isk": "ISK",
+    "eveTypePrice.loading": "Loading",
+    "eveTypePrice.sell": "Sell",
+    "eveTypePrice.unavailable": "Unavailable",
     "eveFit.section.cargo": "Cargo",
     "eveFit.section.charges": "Charges",
     "eveFit.section.drones": "Drones",
