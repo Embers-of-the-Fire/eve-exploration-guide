@@ -33,11 +33,14 @@ export default function InlineImage({
     height,
     rounded = false,
 }: InlineImageProps) {
-    registerImageExtensionId(
-        "InlineImage",
-        id,
-        resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+    const extensionIdMeta = resolveExtensionIdRenderMeta(
+        __extensionIdFile,
+        __extensionIdLine,
     );
+
+    if (id !== undefined) {
+        registerImageExtensionId("InlineImage", id, extensionIdMeta);
+    }
 
     const className = rounded
         ? `${styles.image} ${styles.rounded}`
