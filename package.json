@@ -5,12 +5,16 @@
     "scripts": {
         "dev": "astro dev",
         "start": "astro dev",
-        "build": "astro build",
+        "build": "pnpm run build:render",
+        "build:collect": "EXTENSION_IDS_MODE=collect astro build",
+        "build:render": "EXTENSION_IDS_MODE=render astro build",
+        "build:all": "node ./src/scripts/eveBuildPipeline.mjs build-all",
         "preview": "astro preview",
         "astro": "astro",
         "check": "astro check",
-        "extract:extension-ids": "pnpm run build",
+        "extract:extension-ids": "pnpm run build:collect",
         "generate:eve-docs-data": "uv run --package eve-docs-generator eve-docs-generator",
+        "generate:all": "node ./src/scripts/eveBuildPipeline.mjs generate-all",
         "loc:fuzz": "uv run --package eve-loc-fuzz eve-loc-fuzz",
         "type:fuzz": "uv run --package eve-loc-fuzz eve-type-fuzz",
         "format": "prettier --write .",
@@ -18,7 +22,7 @@
         "lint": "pnpm run lint:code && pnpm run lint:docs",
         "lint:code": "biome lint .",
         "lint:docs": "remark README.md \"src/**/*.md\" \"src/**/*.mdx\" --frail",
-        "validate": "pnpm run format:check && pnpm run lint && pnpm run check && pnpm run build"
+        "validate": "pnpm run format:check && pnpm run lint && pnpm run check && pnpm run build:render"
     },
     "dependencies": {
         "@astrojs/react": "^5.0.1",

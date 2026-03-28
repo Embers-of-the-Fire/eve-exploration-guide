@@ -1,6 +1,11 @@
 ---
 import { Code } from "@astrojs/starlight/components";
 import {
+    registerEveFitRefs,
+    resolveExtensionIdRenderMeta,
+    type WithExtensionIdSourceProps,
+} from "@astro-extension-ids/runtime";
+import {
     createFitText,
     eveFitSectionOrder,
     resolveFitSections,
@@ -9,13 +14,19 @@ import {
 import EveFitList from "./EveFitList";
 import styles from "./EveFit.module.css";
 
-interface Props {
+interface Props extends WithExtensionIdSourceProps {
     data: EveFitData;
     name: string;
     shipId: number;
 }
 
-const { data, name, shipId } = Astro.props as Props;
+const { __extensionIdFile, __extensionIdLine, data, name, shipId } =
+    Astro.props as Props;
+registerEveFitRefs(
+    shipId,
+    data,
+    resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+);
 const resolvedSections = resolveFitSections(data);
 const fitText = createFitText(name, shipId, resolvedSections);
 const sectionLabels = eveFitSectionOrder.map((key) => ({

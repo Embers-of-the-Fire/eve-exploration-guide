@@ -1,3 +1,7 @@
+import {
+    registerLocalizedIconTextExtensionIds,
+    resolveExtensionIdRenderMeta,
+} from "@astro-extension-ids/runtime";
 import InlineIcon from "./InlineIcon";
 import type { InlineIconProps } from "./InlineIcon";
 import LocalizedPopover from "./LocalizedPopover";
@@ -11,12 +15,20 @@ export interface LocalizedIconTextProps extends LocalizedTextProps {
 }
 
 export default function LocalizedIconText({
+    __extensionIdFile,
+    __extensionIdLine,
     iconAlt,
     iconId,
     iconSize,
     iconSrc,
     ...textProps
 }: LocalizedIconTextProps) {
+    registerLocalizedIconTextExtensionIds(
+        textProps.id,
+        iconId,
+        resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+    );
+
     return (
         <LocalizedPopover
             {...textProps}

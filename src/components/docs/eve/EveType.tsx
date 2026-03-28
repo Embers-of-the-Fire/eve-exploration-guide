@@ -1,4 +1,9 @@
 import type { CSSProperties } from "react";
+import {
+    registerEveTypeId,
+    resolveExtensionIdRenderMeta,
+    type WithExtensionIdSourceProps,
+} from "@astro-extension-ids/runtime";
 import baseStyles from "../inline/InlineReference.module.css";
 import styles from "./EveReference.module.css";
 import InlinePopover from "./InlinePopover";
@@ -12,7 +17,7 @@ import {
     shouldShowMissingDataNote,
 } from "./data";
 
-export interface EveTypeProps {
+export interface EveTypeProps extends WithExtensionIdSourceProps {
     size?: number | string;
     typeId: number;
 }
@@ -39,7 +44,17 @@ function describeImageSource(typeData: ReturnType<typeof getTypeEntry>) {
     return typeData.graphicId ? `graphic ${typeData.graphicId}` : "graphic";
 }
 
-export default function EveType({ size = 16, typeId }: EveTypeProps) {
+export default function EveType({
+    __extensionIdFile,
+    __extensionIdLine,
+    size = 16,
+    typeId,
+}: EveTypeProps) {
+    registerEveTypeId(
+        typeId,
+        resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+    );
+
     const typeData = getTypeEntry(typeId);
     const name = typeData
         ? resolveLocalization(typeData.typeNameLocId, "type", typeId)

@@ -1,9 +1,14 @@
 import type { CSSProperties } from "react";
+import {
+    registerEveIconId,
+    resolveExtensionIdRenderMeta,
+    type WithExtensionIdSourceProps,
+} from "@astro-extension-ids/runtime";
 import baseStyles from "../inline/InlineReference.module.css";
 import styles from "./EveReference.module.css";
 import { formatEveRef, formatMissingLabel, getIconEntry } from "./data";
 
-export interface EveIconProps {
+export interface EveIconProps extends WithExtensionIdSourceProps {
     alt?: string;
     iconId: number;
     size: number | string;
@@ -13,7 +18,18 @@ function toCssSize(value: number | string): string {
     return typeof value === "number" ? `${value}px` : value;
 }
 
-export default function EveIcon({ alt, iconId, size }: EveIconProps) {
+export default function EveIcon({
+    __extensionIdFile,
+    __extensionIdLine,
+    alt,
+    iconId,
+    size,
+}: EveIconProps) {
+    registerEveIconId(
+        iconId,
+        resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+    );
+
     const iconEntry = getIconEntry(iconId);
     const resolvedSize = toCssSize(size);
     const iconStyle: CSSProperties = {

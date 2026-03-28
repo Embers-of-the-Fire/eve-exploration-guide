@@ -1,7 +1,12 @@
 import type { CSSProperties } from "react";
+import {
+    registerIconExtensionId,
+    resolveExtensionIdRenderMeta,
+    type WithExtensionIdSourceProps,
+} from "@astro-extension-ids/runtime";
 import styles from "./InlineReference.module.css";
 
-export interface InlineIconProps {
+export interface InlineIconProps extends WithExtensionIdSourceProps {
     id: string;
     src: string;
     alt: string;
@@ -14,12 +19,20 @@ function toCssSize(value: number | string): string {
 }
 
 export default function InlineIcon({
+    __extensionIdFile,
+    __extensionIdLine,
     id,
     src,
     alt,
     size,
     rounded = false,
 }: InlineIconProps) {
+    registerIconExtensionId(
+        "InlineIcon",
+        id,
+        resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+    );
+
     const resolvedSize = toCssSize(size);
     const className = rounded
         ? `${styles.icon} ${styles.rounded}`

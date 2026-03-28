@@ -14,7 +14,7 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 
 ## 当前测试引用
 
-这个页面保留了最小的真实调用点，用来验证 remark inspect 和本地数据生成：
+这个页面保留了最小的真实调用点，用来验证渲染期引用收集和本地数据生成：
 
 <p>
     文本：
@@ -105,7 +105,7 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 - 右侧代码块会生成可直接复制的纯文本 fit 文本，舰船和条目名称使用 `en`，但不会写出任何槽位标题。
 - `shipId` 和各分组中的 `data.<section>[].id` 都会被纳入 `eveRefs.typeIds`，因此新增调用点后同样要刷新 inspect manifest。
 - `count` 在模块与改装件（`categoryId === 7`）上会展开成多行，其他类别会折叠成 `xN`。
-- 为了让 `pnpm extract:extension-ids` 正确提取类型引用，`shipId` 和 `data.<section>[].id` 需要写成字面量整数。
+- `pnpm build:collect` 会在组件实际渲染时读取这些 prop 的求值结果；只要收集构建能正常运行，`shipId` 和 `data.<section>[].id` 就会进入 manifest。
 
 ```mdx
 <EveFit
@@ -127,11 +127,16 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 新增或修改这类组件引用后，推荐按如下顺序刷新数据：
 
 ```bash
-pnpm extract:extension-ids
-pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
+pnpm generate:all -- --workspace /path/to/tq-source-workspace
 ```
 
-第二步读取的是 TQ 源工作区，而不是预构建 bundle。工作区必须显式提供：
+如果你想把最终站点渲染也串起来，可以直接运行：
+
+```bash
+pnpm build:all -- --workspace /path/to/tq-source-workspace
+```
+
+数据生成步骤读取的是 TQ 源工作区，而不是预构建 bundle。工作区必须显式提供：
 
 - 直接通过 `--workspace /path/to/tq-source-workspace`
 - 或在仓库根目录的 `.env` 中设置 `EVE_DOCS_WORKSPACE=/path/to/tq-source-workspace`

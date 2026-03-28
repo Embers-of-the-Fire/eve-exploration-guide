@@ -29,14 +29,17 @@ uv sync --all-packages
 ## 常用命令
 
 - `pnpm dev`：启动 Astro 开发服务器。
-- `pnpm build`：构建站点。
+- `pnpm build`：渲染站点；当前等价于 `pnpm build:render`。
+- `pnpm build:collect`：执行一次收集构建，并刷新 `src/generated/extension-ids.json`。
+- `pnpm build:render`：只基于当前已生成数据渲染站点，不刷新引用 manifest。
+- `pnpm build:all`：串联执行收集、EVE 数据生成和最终渲染。
 - `pnpm format`：运行 Prettier。
 - `pnpm lint`：运行 Biome 和文档 remark lint。
 - `pnpm check`：运行 Astro 类型检查。
-- `pnpm extract:extension-ids`：触发构建并刷新
-  `src/generated/extension-ids.json`。
-- `pnpm generate:eve-docs-data`：基于 inspect manifest 和 TQ
+- `pnpm extract:extension-ids`：`pnpm build:collect` 的兼容别名。
+- `pnpm generate:eve-docs-data`：基于引用 manifest 和 TQ
   源工作区生成最小化数据。
+- `pnpm generate:all`：串联执行收集构建和 EVE 数据生成。
 - `pnpm loc:fuzz -- <query>`：在本地化 pickle 缓存中按子串检索文本。
 - `pnpm type:fuzz -- <query>`：在类型名称中按子串检索 `type_id`。
 
@@ -109,8 +112,13 @@ pnpm type:fuzz -- cruiser --lang en-us --workspace /path/to/workspace \
 当你新增或修改了 `EveType`、`EveLocText`、`EveIcon`、`EveFit` 的调用点时，需要额外同步一次生成数据：
 
 ```bash
-pnpm extract:extension-ids
-pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
+pnpm generate:all -- --workspace /path/to/tq-source-workspace
+```
+
+如果你还想把最终站点也一起渲染出来，可以直接运行：
+
+```bash
+pnpm build:all -- --workspace /path/to/tq-source-workspace
 ```
 
 说明：
@@ -118,7 +126,9 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 - `--workspace` 目录应当包含 `resfileindex.txt`，以及 `fsd/`
   目录或直接放置的 FSD 文件。
 - `EveFit` 会把 `shipId` 和 `data.high[].id`、`data.med[].id`、`data.low[].id`、`data.rig[].id`、`data.charges[].id`、`data.drones[].id`、`data.cargo[].id` 一并写入 `eveRefs.typeIds`；
-  这些字段应保持字面量整数，避免 inspect manifest 漏掉引用。
+- `pnpm build:collect` 会在组件实际渲染时读取这些 prop 的求值结果并写入
+  manifest；只要收集构建本身能正常求值，`shipId` 和 `data.<section>[].id`
+  就会被纳入 `eveRefs.typeIds`。
 - 也可以通过环境变量 `EVE_DOCS_WORKSPACE` 提供工作区；
   生成器会在 Python 侧读取当前目录或父目录中的 `.env`，因此仓库根目录
   下的 `.env` 可以直接复用。
@@ -150,7 +160,7 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 pnpm format
 pnpm lint
 pnpm check
-pnpm build
+pnpm build:render
 ```
 
 如果你修改了 `packages/eve-docs-generator/` 下的 Python 代码，还应额外运行：

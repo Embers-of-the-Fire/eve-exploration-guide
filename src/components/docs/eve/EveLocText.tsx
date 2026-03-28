@@ -1,3 +1,8 @@
+import {
+    registerEveLocId,
+    resolveExtensionIdRenderMeta,
+    type WithExtensionIdSourceProps,
+} from "@astro-extension-ids/runtime";
 import baseStyles from "../inline/InlineReference.module.css";
 import styles from "./EveReference.module.css";
 import InlinePopover from "./InlinePopover";
@@ -7,11 +12,20 @@ import {
     shouldShowMissingDataNote,
 } from "./data";
 
-export interface EveLocTextProps {
+export interface EveLocTextProps extends WithExtensionIdSourceProps {
     locId: number;
 }
 
-export default function EveLocText({ locId }: EveLocTextProps) {
+export default function EveLocText({
+    __extensionIdFile,
+    __extensionIdLine,
+    locId,
+}: EveLocTextProps) {
+    registerEveLocId(
+        locId,
+        resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+    );
+
     const localization = resolveLocalization(locId, "loc", locId);
     const showMissingNote = shouldShowMissingDataNote([localization.missing]);
 
