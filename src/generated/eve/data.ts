@@ -12,9 +12,15 @@ import icon24151Url from "./icons/24151.png?url";
 import type447Url from "./types/447.png?url";
 import type526Url from "./types/526.png?url";
 import type605Url from "./types/605.png?url";
+import type1183Url from "./types/1183.png?url";
 import type1403Url from "./types/1403.png?url";
 import type1405Url from "./types/1405.png?url";
+import type2032Url from "./types/2032.png?url";
 import type2038Url from "./types/2038.png?url";
+import type2048Url from "./types/2048.png?url";
+import type2454Url from "./types/2454.png?url";
+import type2456Url from "./types/2456.png?url";
+import type2488Url from "./types/2488.png?url";
 import type2603Url from "./types/2603.png?url";
 import type2605Url from "./types/2605.png?url";
 import type3119Url from "./types/3119.png?url";
@@ -37,6 +43,7 @@ import type6160Url from "./types/6160.png?url";
 import type9950Url from "./types/9950.png?url";
 import type10998Url from "./types/10998.png?url";
 import type11192Url from "./types/11192.png?url";
+import type11269Url from "./types/11269.png?url";
 import type11370Url from "./types/11370.png?url";
 import type11577Url from "./types/11577.png?url";
 import type11578Url from "./types/11578.png?url";
@@ -47,9 +54,16 @@ import type13278Url from "./types/13278.png?url";
 import type13976Url from "./types/13976.png?url";
 import type15463Url from "./types/15463.png?url";
 import type15479Url from "./types/15479.png?url";
+import type15709Url from "./types/15709.png?url";
+import type15729Url from "./types/15729.png?url";
+import type16297Url from "./types/16297.png?url";
 import type17715Url from "./types/17715.png?url";
 import type17938Url from "./types/17938.png?url";
+import type18710Url from "./types/18710.png?url";
 import type18937Url from "./types/18937.png?url";
+import type19009Url from "./types/19009.png?url";
+import type19325Url from "./types/19325.png?url";
+import type20347Url from "./types/20347.png?url";
 import type20411Url from "./types/20411.png?url";
 import type21074Url from "./types/21074.png?url";
 import type21718Url from "./types/21718.png?url";
@@ -62,6 +76,7 @@ import type22807Url from "./types/22807.png?url";
 import type22808Url from "./types/22808.png?url";
 import type22809Url from "./types/22809.png?url";
 import type23707Url from "./types/23707.png?url";
+import type23787Url from "./types/23787.png?url";
 import type23828Url from "./types/23828.png?url";
 import type25303Url from "./types/25303.png?url";
 import type25307Url from "./types/25307.png?url";
@@ -96,6 +111,7 @@ import type30488Url from "./types/30488.png?url";
 import type30832Url from "./types/30832.png?url";
 import type30834Url from "./types/30834.png?url";
 import type30889Url from "./types/30889.png?url";
+import type31057Url from "./types/31057.png?url";
 import type31153Url from "./types/31153.png?url";
 import type31159Url from "./types/31159.png?url";
 import type31165Url from "./types/31165.png?url";
@@ -106,9 +122,14 @@ import type31274Url from "./types/31274.png?url";
 import type31280Url from "./types/31280.png?url";
 import type31310Url from "./types/31310.png?url";
 import type31316Url from "./types/31316.png?url";
+import type31904Url from "./types/31904.png?url";
+import type31906Url from "./types/31906.png?url";
+import type31924Url from "./types/31924.png?url";
 import type32246Url from "./types/32246.png?url";
+import type33076Url from "./types/33076.png?url";
 import type33078Url from "./types/33078.png?url";
 import type33180Url from "./types/33180.png?url";
+import type33201Url from "./types/33201.png?url";
 import type33468Url from "./types/33468.png?url";
 import type33470Url from "./types/33470.png?url";
 import type33474Url from "./types/33474.png?url";
@@ -163,7 +184,7 @@ import type46235Url from "./types/46235.png?url";
 import type46251Url from "./types/46251.png?url";
 import type47028Url from "./types/47028.png?url";
 
-export const eveGeneratedAt = "2026-03-26T23:35:51.816293+00:00";
+export const eveGeneratedAt = "2026-03-28T14:07:14.759405+00:00";
 
 export const eveDataMetadata: EveDataMetadata | null = {
     serverId: "tq",
@@ -198,10 +219,16 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     63583: { en: "Planet", zhCN: "行星" },
     63597: { en: "Frigate", zhCN: "护卫舰" },
     63598: { en: "Cruiser", zhCN: "巡洋舰" },
+    63605: { en: "Shield Extender", zhCN: "护盾扩展装置" },
+    63609: { en: "Capacitor Recharger", zhCN: "电容器回充设备" },
     63610: { en: "Propulsion Module", zhCN: "推进装备" },
     63611: { en: "Cargo Scanner", zhCN: "货柜舱扫描设备" },
     63614: { en: "Warp Scrambler", zhCN: "跃迁扰乱设备" },
+    63621: { en: "Damage Control", zhCN: "损伤控制" },
+    63623: { en: "Armor Repair Unit", zhCN: "装甲维修组件" },
     63625: { en: "Stasis Web", zhCN: "能量滞停光束网" },
+    63648: { en: "Armor Coating", zhCN: "装甲附甲" },
+    63650: { en: "Combat Drone", zhCN: "战斗无人机" },
     63655: { en: "Battleship Blueprint", zhCN: "战列舰蓝图" },
     63704: { en: "Combat Drone Blueprint", zhCN: "战斗无人机蓝图" },
     63729: { en: "Sensor Booster", zhCN: "感应增强器" },
@@ -215,7 +242,9 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     63781: { en: "Miscellaneous", zhCN: "其他" },
     63782: { en: "Warp Core Stabilizer", zhCN: "跃迁稳定器" },
     63786: { en: "Large Collidable Structure", zhCN: "大型可撞击的建筑" },
+    63791: { en: "Energized Armor Membrane", zhCN: "电压装甲薄膜" },
     63792: { en: "Armor Hardener", zhCN: "装甲增强器" },
+    63793: { en: "Armor Plate", zhCN: "装甲附甲板" },
     63794: { en: "Cloaking Device", zhCN: "隐身设备" },
     63796: { en: "Datacores", zhCN: "数据核心" },
     63824: { en: "Warp Gate", zhCN: "跃迁门" },
@@ -231,6 +260,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     64143: { en: "Salvaged Materials", zhCN: "打捞材料" },
     64151: { en: "Inertial Stabilizer", zhCN: "惯性稳定器" },
     64152: { en: "Nanofiber Internal Structure", zhCN: "纳米纤维内部构架" },
+    64162: { en: "Rig Armor", zhCN: "装甲改装件" },
     64171: { en: "Rig Navigation", zhCN: "改装件导航" },
     64216: { en: "Covert Ops", zhCN: "隐形特勤舰" },
     64218: { en: "Logistics", zhCN: "后勤舰" },
@@ -264,8 +294,10 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     75595: { en: "RSS Core Scanner Probe", zhCN: "RSS核心扫描探针" },
     76453: { en: "Planet (Shattered)", zhCN: "行星（碎裂）" },
     76523: { en: "Stasis Webifier I", zhCN: "停滞缠绕光束 I" },
+    76560: { en: "Small Armor Repairer II", zhCN: "小型装甲维修器 II" },
     76638: { en: "Inertial Stabilizers I", zhCN: "惯性稳定器 I" },
     76640: { en: "Inertial Stabilizers II", zhCN: "惯性稳定器 II" },
+    76715: { en: "Cap Recharger II", zhCN: "电容回充器 II" },
     76717: { en: "Cargo Scanner II", zhCN: "货柜扫描器 II" },
     76777: { en: "Warp Disruptor I", zhCN: "跃迁扰断器 I" },
     76803: { en: "Spaceship Command", zhCN: "飞船操控学" },
@@ -292,8 +324,10 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     86425: { en: "A scanner probe used for scanning down Cosmic Signatures in space.\r\n\r\nCan be launched from <a href=showinfo:17938>Core Probe Launchers</a> and <a href=showinfo:18639>Expanded Probe Launchers</a>.", zhCN: "这是一个用来扫描空间信号的扫描探针。\n\n\n\n能从<a href=showinfo:17938>核心探针发射器</a>与<a href=showinfo:18639>延伸探针发射器</a>上发射。" },
     87116: { en: "Shattered worlds were once terrestrial planets, torn asunder by some immense cataclysm. All such worlds in the New Eden cluster are products of the disastrous stellar events that occurred during the \"Seyllin Incident\". However, reports continue to circulate of similar planets discovered in the unmapped systems reached exclusively through unstable wormholes. How these met their fate, if indeed they exist at all, is unknown.", zhCN: "碎裂行星曾经是一个类地的星球，在经历了某种灾难事件后被完全粉碎肢解。在新伊甸宇宙中，所有这种星体都是因为遭受了\"瑟伊林事故\"期间的灾变性恒星影响而形成的。不过，也有报道称在虫洞彼端的未知空间里也发现了这种碎裂星体。是什么造成了它们的灾难命运，目前此问题还未得到确信的解释。" },
     87171: { en: "Reduces the maximum speed of a ship by employing micro energy streams which effectively entangle the target temporarily, thereby slowing it down.", zhCN: "通过使用微能流来降低对方舰船的最大速度，该装备可以有效地暂时束缚目标，降低其速度。" },
+    87177: { en: "This module uses nano-assemblers to repair damage done to the armor of the ship.", zhCN: "该装备使用纳米级装配器来修复对舰船装甲造成的损伤。" },
     87223: { en: "Improves ship handling and maneuverability.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "增强舰船控制和机动性能。惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     87224: { en: "Improves ship handling and maneuverability.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "增强舰船控制和机动性能。惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
+    87278: { en: "Increases the capacitor recharge rate.", zhCN: "提高电容器再充电的速率。" },
     87279: { en: "Scans the cargo hold of another ship.", zhCN: "扫描另一艘舰船的货柜舱。" },
     87313: { en: "Disrupts the target ship's navigation computer which prevents it from warping.", zhCN: "干扰目标舰船的导航计算机从而阻止其进行跃迁。" },
     87337: { en: "The basic operation of spaceships. 2% improved ship agility for all ships per skill level.", zhCN: "操控舰船的基本技能。每升一级，所有飞船的灵活性提升2%。" },
@@ -306,7 +340,10 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     87617: { en: "Gives an increase to targeting range, scan resolution and sensor strength. This module can be loaded with scripts to increase its effectiveness in certain areas.  \r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "扩大锁定距离并提高扫描分辨率和感应强度。该装备可与脚本合用来提升其在某些方面的效果。  \n\n\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     88006: { en: "An enhanced version of the standard explosive armor plating. Uses advanced magnetic field generators to strengthen the Nanobot Plating integrity.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "标准爆炸装甲附甲的加强版本。使用了先进的磁场发生器来增强纳米技术附甲的完整性。\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     88249: { en: "An enhanced version of the standard explosive armor plating. Uses advanced magnetic field generators to strengthen the Nanobot Plating integrity.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "标准爆炸装甲附甲的加强版本。使用了先进的磁场发生器来增强纳米技术附甲的完整性。\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
+    89351: { en: "This version of armor coating increases the armor protection against all types of damage, however it is less effective than coatings tuned against a specific damage profile.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "这种装甲涂层能够提高装甲对所有类型伤害的抗性，但效果比对单一属性伤害的抗性要差一点。\n\n\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     89460: { en: "An enhanced version of the standard explosive armor plating. Uses advanced magnetic field generators to strengthen the Nanobot Plating integrity.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "标准爆炸装甲附甲的加强版本。使用了先进的磁场发生器来增强纳米技术附甲的完整性。\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
+    89493: { en: "This module uses nano-assemblers to repair damage done to the armor of the ship.", zhCN: "该装备使用纳米级装配器来修复对舰船装甲造成的损伤。" },
+    89740: { en: "Increases the maximum strength of the Armor.\r\n\r\nPenalty: Adds to your ship's mass, making it less agile and maneuverable in addition to decreasing the factor of thrust gained from speed modules like Afterburners and MicroWarpdrives.", zhCN: "增加装甲的最大强度。\n\n\n\n惩罚：增加舰船质量，使其灵活性和机动能力降低，减少诸如加力燃烧器和微型跃迁推进器等速度装备的推力加成效果。" },
     89750: { en: "This datacore is a veritable storehouse of information, containing a considerable portion of mankind's collected knowledge in the field of high energy physics.", zhCN: "这个核心是一个庞大的数据库，包含了大量关于人类在高能物理方面的科研资料和信息。" },
     90023: { en: "A Hacking system used to override electronic security systems, potentially providing access to valuable data or items.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "用于绕过电子安保系统的黑客系统，也许能够访问珍贵的数据或物品。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     90101: { en: "5% bonus to EM resistance per level for Armor Coatings and Energized Membranes.", zhCN: "每升一级，装甲附甲和电压薄膜的电磁抗性提高5%。" },
@@ -318,9 +355,12 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     90494: { en: "Greater accuracy in hunting down targets found through scanning. Reduces maximum scan deviation by 5% per level.", zhCN: "增加扫描所发现目标的定位精度的技能。每升一级，扫描误差降低5%。" },
     90875: { en: "This ocular filter has been modified by Sisters of EVE scientists for use by their elite officers.\n\nPrimary Effect: +3 bonus to Perception \n\nSecondary Effect: 1% bonus to scan strength of probes\n\nSet Effect: 10% bonus to the strength of all Virtue implant secondary effects", zhCN: "姐妹会科学家对这种视觉滤镜做了专门修改，以便于他们的精英官员使用。\n\n主要效果：感知属性值增加3 \n\n次要效果：探针扫描强度提高1%\n\n套件效果：所有“美德”植入体次要效果增加10%" },
     90992: { en: "Skill at operating ship and cargo scanners. 5% improvement per level in the scan speeds of those module types.", zhCN: "操作船体扫描器、货柜扫描器和测量扫描器的技能。每升一级，该类装备的扫描速度各提升5%。" },
+    91000: { en: "Increases the maximum strength of the Armor.\r\n\r\nPenalty: Adds to your ship's mass, making it less agile and maneuverable in addition to decreasing the factor of thrust gained from speed modules like Afterburners and MicroWarpdrives.", zhCN: "增加装甲的最大强度。\n\n\n\n惩罚：增加舰船质量，使其灵活性和机动能力降低，减少诸如加力燃烧器和微型跃迁推进器等加速装备的推力加成效果。" },
     91222: { en: "Disrupts the target ship's navigation computer, disabling warping, jumping, microwarpdrives and micro jump drives.", zhCN: "干扰对方舰船的导航计算机，防止其跃迁、跳跃、使用微型跃迁推进器或微型跳跃引擎。" },
     91318: { en: "An archaeology system used to analyze and search ancient ruins, potentially revealing valuable items for collection.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "这是一个用于分析和研究古代遗迹的考古系统，有可能会发掘出珍贵的藏品。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     91320: { en: "Launcher for <a href=showinfo:30013>Core Scanner Probes</a>, which are used to scan down Cosmic Signatures in space.\r\n\r\nNote: Only one probe launcher can be fitted per ship.", zhCN: "这是发射<a href=showinfo:30013>核心扫描探针</a>的发射器，用来扫描太空中的空间信号。\n\n\n\n注：每艘飞船只能安装一个探针发射器。" },
+    91377: { en: "Utilizes a combination of containment field emitters and redundancy systems to mitigate the impact of critical system damage. \r\n\r\nGrants a bonus to resistance for shield, armor and hull.\r\n\r\nOnly one Damage Control can be fit at a given time.", zhCN: "将围场发射器和冗余系统结合使用，减轻由严重系统性损坏造成的影响。 \n\n\n\n提高护盾、装甲和结构的抗性。\n\n\n\n只能同时装配一个损伤控制。" },
+    91390: { en: "An enhanced version of the multispectrum armor coating. Uses advanced magnetic field generators to strengthen the effect. Grants a bonus to armor resistance against all types of damage. It is less effective than membranes tuned against a specific damage profile.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "多谱式装甲涂层的加强版本。使用了先进的磁场发生器来提高效果。提高装甲的所有抗性。效果比对单一伤害类型的抗性要差一些。\n\n\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     91413: { en: "An archaeology system used to analyze and search ancient ruins, potentially revealing valuable items for collection.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "这是一个用于分析和研究古代遗迹的考古系统，有可能会发掘出珍贵的藏品。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     91414: { en: "A Hacking system used to override electronic security systems, potentially providing access to valuable data or items.\r\n\r\nNote: Due to recently discovered branch prediction vulnerabilities in certain Upwell Consortium Recursive Computing Modules this analyzer may also be used to collect sensitive information concerning reinforcement periods of Upwell Structures.", zhCN: "用于绕过电子安保系统的黑客系统，也许能够访问珍贵的数据或物品。\n\n\n\n注意：由于最近发现的特定昇威递推计算模块的漏洞，这个分析仪也可能用于收集关于昇威建筑增强时间的机密信息。" },
     91441: { en: "A very specialized piece of technology, the covert ops cloak is designed for use in tandem with specific covert ops vessels. Although it could theoretically work on other ships, its spatial distortion field is so unstable that trying to compensate for its fluctuations will overwhelm non-specialized computing hardware. \r\n\r\nNote: This particular module is advanced enough that it allows a ship to warp while cloaked. However, fitting two or more cloaking devices to a ship negates their use, as unsynchronized light deflection causes interference.", zhCN: "作为一种非常特殊的技术，隐秘行动隐形装置被设计为与某些隐秘类型的舰船协同使用。尽管理论上它也能配备在其他舰船上，但是其空间扭曲立场非常不稳定，要弥补这种波动，即使最大的标准舰载电脑也会不堪重负。 \n\n注意：这种高级装备让舰船可以在隐形的情况下跃迁，但是使用两个或者多个隐形装置将会导致其作用抵消，因为不同步的光反射会造成相互干扰。" },
@@ -342,6 +382,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     91863: { en: "Replaces some of the heavier structure components with lighter, but more fragile material. Increases ship's velocity and improves maneuverability at the expense of hull strength.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "用较轻质但更脆弱的材料代替一些较重的结构部件。以牺牲结构强度为代价，提升舰船的速度增加其灵活性。\r\n\r\n注：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     91865: { en: "Replaces some of the heavier structure components with lighter, but more fragile material. Increases ship's velocity and improves maneuverability at the expense of hull strength.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "用较轻质但更脆弱的材料代替一些较重的结构部件。以牺牲结构强度为代价，提升舰船的速度增加其灵活性。\r\n\r\n注：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     91940: { en: "A fragment of a rogue drones cerebral cortex.", zhCN: "自由无人机的大脑皮层碎片。" },
+    91973: { en: "This ship modification is designed to increase a ship's total armor hit points at the expense of agility.\r\n\r\nThe drawbacks of fitting this rig may be reduced by training the <a href=showinfo:26253>Armor Rigging</a> skill.", zhCN: "该舰船改装件以牺牲灵活性为代价，可增强舰船的装甲生命总值。可通过训练<a href=showinfo:26253>装甲改装</a>技能来降低装配该改装件所带来的负面影响。" },
     92011: { en: "This ship modification is designed to increase a ship's agility at the expense of armor amount.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.\r\n\r\nThe drawbacks of fitting this rig may be reduced by training the <a href=showinfo:26254>Astronautics Rigging</a> skill.", zhCN: "这个飞船改装件通过牺牲装甲值来增加舰船的灵活度。\n\n\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。\n\n\n\n装配这个改装件的副作用可以通过训练<a href=showinfo:26254>空间航行改装技术</a>技能降低影响。" },
     92014: { en: "This ship modification is designed to increase a ship's warp speed and acceleration at the expense of increased signature radius.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.\r\n\r\nThe drawbacks of fitting this rig may be reduced by training the <a href=showinfo:26254>Astronautics Rigging</a> skill.", zhCN: "这个飞船改装件通过增大信号半径来提高飞船的跃迁速度和加速。\n\n\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。\n\n\n\n装配这个改装件的副作用可以通过训练<a href=showinfo:26254>空间航行改装技术</a>技能降低影响。" },
     92017: { en: "This ship modification is designed to increase a ship's warp speed and acceleration at the expense of increased signature radius.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.\r\n\r\nThe drawbacks of fitting this rig may be reduced by training the <a href=showinfo:26254>Astronautics Rigging</a> skill.", zhCN: "这个飞船改装件通过增大信号半径来提高飞船的跃迁速度和加速。\n\n\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。\n\n\n\n装配这个改装件的副作用可以通过训练<a href=showinfo:26254>空间航行改装技术</a>技能降低影响。" },
@@ -352,15 +393,25 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     92074: { en: "This ship modification is designed to increase a ship's targeting range at the expense of shields.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.\r\n\r\nThe drawbacks of fitting this rig may be reduced by training the <a href=showinfo:26256>Electronic Superiority Rigging</a> skill.", zhCN: "这个飞船改装件通过牺牲舰船的护盾值来增加锁定距离。\n\n\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。\n\n\n\n装配这个改装件的副作用可以通过训练<a href=showinfo:26256>电子优势改装技术</a>技能降低影响。" },
     92089: { en: "This ship modification is designed to increase the scan speed of modules which require the <a href=showinfo:3426>CPU Management</a> skill (cargo scanner and ship scanner), at the expense of shields.\r\n\r\nThe drawbacks of fitting this rig may be reduced by training the <a href=showinfo:26256>Electronic Superiority Rigging</a> skill.", zhCN: "这个飞船改装件通过牺牲护盾容量值来增加所有需要<a href=showinfo:3426>CPU管理学</a>技能的装备的扫描速度（货柜扫描器、舰船扫描器和测量扫描器）。\n\n\n\n装配这个改装件的副作用可以通过训练<a href=showinfo:26256>电子优势改装技术</a>技能降低影响。" },
     92092: { en: "This ship modification is designed to increase the scan speed of modules which require the <a href=showinfo:3426>CPU Management</a> skill (cargo scanner and ship scanner), at the expense of shields.\r\n\r\nThe drawbacks of fitting this rig may be reduced by training the <a href=showinfo:26256>Electronic Superiority Rigging</a> skill.", zhCN: "这个飞船改装件通过牺牲护盾容量值来增加所有需要<a href=showinfo:3426>CPU管理学</a>技能的装备的扫描速度（货柜扫描器、舰船扫描器和测量扫描器）。\n\n\n\n装配这个改装件的副作用可以通过训练<a href=showinfo:26256>电子优势改装技术</a>技能降低影响。" },
+    92345: { en: "Increases the maximum strength of the Armor.\r\n\r\nPenalty: Adds to your ship's mass, making it less agile and maneuverable in addition to decreasing the factor of thrust gained from speed modules like Afterburners and MicroWarpdrives.", zhCN: "增加装甲的最大强度。\n\n\n\n惩罚：增加舰船质量，使其灵活性和机动能力降低，减少诸如加力燃烧器和微型跃迁推进器等加速装备的推力加成效果。" },
+    92346: { en: "Increases the maximum strength of the Armor.\r\n\r\nPenalty: Adds to your ship's mass, making it less agile and maneuverable in addition to decreasing the factor of thrust gained from speed modules like Afterburners and MicroWarpdrives.", zhCN: "增加装甲的最大强度。\n\n\n\n惩罚：增加舰船质量，使其灵活性和机动能力降低，减少诸如加力燃烧器和微型跃迁推进器等速度装备的推力加成效果。" },
+    92352: { en: "Increases the maximum strength of the shield.", zhCN: "增加护盾的最大强度。" },
+    92717: { en: "An enhanced version of the standard explosive armor plating. Uses advanced magnetic field generators to strengthen the Nanobot Plating integrity.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "标准爆炸装甲附甲的加强版本。使用了先进的磁场发生器来增强纳米技术附甲的完整性。\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
+    92726: { en: "An enhanced version of the multispectrum armor coating. Uses advanced magnetic field generators to strengthen the effect. Grants a bonus to armor resistance against all types of damage. It is less effective than membranes tuned against a specific damage profile.\r\n\r\nPenalty: Using more than one type of this module or similar modules that affect the same attribute on the ship will be penalized.", zhCN: "多谱式装甲涂层的加强版本。使用了先进的磁场发生器来提高效果。提高装甲的所有抗性。效果比对单一伤害类型的抗性要差一些。\n\n\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备将削弱实际使用效果。" },
     92777: { en: "Skill at using Cloaking devices. 10% reduction in targeting delay after uncloaking per skill level.", zhCN: "使用隐形装置的技能。每升一级，隐形解除后的目标锁定延迟减少10%。" },
+    92933: { en: "When activated this unit attempts to compensate for fluctuations and disruptions of the ship's warp core. As a side effect, the host ship's maximum targeting range, scan resolution and drone bandwidth are penalized while this module is fitted.\r\n\r\nOnly one of this module type can be fitted at a time.", zhCN: "该装置在激活后将尽力稳定舰船跃迁核心的波动与紊乱。副作用就是，装配这一装备后，主舰的最大锁定范围、扫描分辨率和无人机带宽都会降低。一艘舰船只能同时装配一个这种装备。" },
     92939: { en: "When activated this unit attempts to compensate for fluctuations and disruptions of the ship's warp core. As a side effect, the host ship's maximum targeting range, scan resolution and drone bandwidth are penalized while this module is fitted.\r\n\r\nOnly one of this module type can be fitted at a time.", zhCN: "该装置在激活后将尽力稳定舰船跃迁核心的波动与紊乱。副作用就是，装配这一装备后，主舰的最大锁定范围、扫描分辨率和无人机带宽都会降低。一艘舰船只能同时装配一个这种装备。" },
     92991: { en: "This booster relaxes a pilot's ability to control certain shield functions, among other things. It creates a temporary feeling of euphoria that counteracts the unpleasantness inherent in activating shield boosters, and permits the pilot to force the boosters to better performance without suffering undue pain.", zhCN: "这种增效剂能降低飞行员在使用护盾某些功能时的紧张度。它会让飞行员产生一种暂时的欣快感，以此抵消其在使用护盾时会必然遭受的不适与痛苦。" },
     92994: { en: "This booster hardens a pilot's resistance to attacks, letting them withstand their impact to a greater extent. The discomfort of having their armor reduced piecemeal remains unaltered, but the pilot is filled with such a surge of rage that they bully through it like a living tank.", zhCN: "这种增效剂会增强飞行员对攻击的抵御能力，大大增加他忍受炮弹冲击的能力。虽然装甲被击碎的不适感仍然存在，但由于飞行员心中充满狂烈的怒火，他会像一艘肉体坦克一样横冲直撞。" },
     92996: { en: "This booster relaxant allows the pilot to control their ship more instinctively and expend less energy in doing so. This in turn lets the ship utilize more of its resources for mechanical functions, most notably its capacitor, rather than constantly having to compensate for the usual exaggerated motions of a stressed pilot.", zhCN: "这种弛缓增效剂使飞行员能更加依靠本能来操控飞船，减少驾驶飞船时的力气消耗。这样飞船的资源便能更多地用于机械调控——尤其是对电容器的使用，而不是用来不断调节飞行员因大量运动而产生的疲劳。" },
     93083: { en: "A thick, heavy liquid, typically stored in tanks or container systems intended for liquids. It is composed of billions of nanites that can be programmed to repair damaged ship modules on the fly. The paste is simply applied to the damaged area, and the nanites meld into an exact copy of the damaged area, thus effecting repairs upon the module. This is a one-time process, as the nanites use themselves up along with the trace elements mixed into their carrier fluid.\r\n\r\nThe Repair Paste is generally only used for emergency on-site repairs. It is then recommended to have the damaged components looked at by a certified technician at first opportunity.", zhCN: "这是一种浓稠的高比重液体，通常存放于油罐或是其它适于存放液体的容器中。它由数以亿计的纳米体构成，这些纳米体可以按需求在飞行过程中修复受损的舰船部件。使用时，只要简单地将它涂于受损区域，纳米体就能融合成为与受损区域完全相同的形状，从而对该装备进行维修。这是个一次性的过程，因为纳米体及载液中的微量元素都会使用殆尽。纳米涂料通常只用于紧急现场维修，之后建议立即让合格的技术人员再检查一下受损部件。" },
+    93488: { en: "Light Scout Drone", zhCN: "轻型侦查无人机" },
+    93489: { en: "Light Scout Drone", zhCN: "轻型侦查无人机" },
+    93533: { en: "Light Scout Drone", zhCN: "轻型侦查无人机" },
     93540: { en: "Light ECM Drone", zhCN: "轻型ECM无人机" },
     93707: { en: "A neural interface upgrade that boosts the pilot's skill at warp navigation.\r\n\r\n18% bonus to ships warp speed.", zhCN: "一款神经接口升级芯片，可以增强飞行员在跃迁导航方面的技能。舰船跃迁速度增加18%。" },
     93858: { en: "Taking what he had learned from his days in the Caldari Navy, Korako ‘The Rabbit' Kosakami, Gurista leader, decided that he would rub salt in the State's wounds by souping up their designs and making strikes against his former masters in ships whose layout was obviously stolen from them. To this end the Gila, bastard twin of the Moa, has served him well.", zhCN: "凭借以前在加达里海军学习的知识，古斯塔斯的首领“野兔”克拉克·卡萨加米打算给加达里的伤口上撒上一把盐——他窃取了合众国的飞船设计图并加以改造，并用这些改良过的飞船去攻击他以前的主人。这艘巨鸟级巡洋舰的邪恶同胞，毒蜥级巡洋舰，就是最好的例子。" },
+    94116: { en: "Massive boost to speed for a very short time. The thrust that boosts the ship, and the corresponding maximum velocity bonus, are limited by the mass of the ship that uses this module. The sheer amount of energy needed to power this system means that it must permanently reserve a fraction of the capacitor output just to maintain the integrity of its warp containment field, and when activated it substantially increases the ship's EM footprint.\r\n\r\nPenalty: Max capacitor reduced.\r\n\r\nNote: Usually fit on Frigates and Destroyers.", zhCN: "在极短时间内大幅提高航行速度。推进舰船的动力和相应的最大速度加成均受使用该装备的舰船重量所限。该系统运转所需的高额能量值意味着它必须使用部分电容输出的能量，以确保跃迁有效力场的完整性。启用该装备会显著增加舰船的电磁辐射信号。\n\n\n\n惩罚：最大电容量将减少。\n\n\n\n注：通常装配在护卫舰和驱逐舰上。" },
     94302: { en: "Proficiency at breaking into guarded computer systems. Required skill for the use of Data Analyzer modules.\r\n\r\nGives +10 Virus Coherence per level.", zhCN: "入侵受保护的计算机系统的技能。这是使用数据分析装备的必需技能。\n\n每升一级，病毒的同步率+10。" },
     94303: { en: "Proficiency at identifying and analyzing ancient artifacts. Required skill for the use of Relic Analyzer modules.\r\n\r\nGives +10 Virus Coherence per level.", zhCN: "精通古代器物鉴别和分析的技能。这是使用遗迹分析装备的必需技能。\n\n每升一级，病毒的同步率+10。" },
     94842: { en: "The Heron has good computer and electronic systems, giving it the option of participating in electronic warfare. But it has relatively poor defenses and limited weaponry, so it's more commonly used for scouting and exploration.", zhCN: "苍鹭级拥有优秀的计算机和电子系统，使其能够在电子战中发挥有力的作用。但由于它的防御和武器系统相对较弱，所以通常被用于执行侦查和搜索任务。" },
@@ -370,7 +421,10 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     95284: { en: "Massive boost to speed for a very short time. The thrust that boosts the ship, and the corresponding maximum velocity bonus, are limited by the mass of the ship that uses this module. The sheer amount of energy needed to power this system means that it must permanently reserve a fraction of the capacitor output just to maintain the integrity of its warp containment field, and when activated it substantially increases the ship's EM footprint.\r\n\r\nPenalty: Max capacitor reduced.\r\n\r\nNote: Usually fit on Frigates and Destroyers.", zhCN: "在极短时间内大幅提高航行速度。推进舰船的动力和相应的最大速度加成均受使用该装备的舰船重量所限。该系统运转所需的高额能量值意味着它必须使用部分电容输出的能量，以确保跃迁有效力场的完整性。启用该装备会显著增加舰船的电磁辐射信号。\n\n\n\n惩罚：最大电容量将减少。\n\n\n\n注：通常装配在护卫舰和驱逐舰上。" },
     95307: { en: "Scans the cargo hold of another ship.", zhCN: "扫描另一艘舰船的货柜舱。" },
     96645: { en: "Dark Blood Explosive Armor Hardener", zhCN: "黑暗血袭者爆炸装甲增强器" },
+    98557: { en: "Centii A-Type Multispectrum Coating", zhCN: "森提伊多谱式涂层 A型" },
     98666: { en: "Corpus X-Type Explosive Armor Hardener", zhCN: "科波斯爆炸装甲增强器 X型" },
+    98699: { en: "Centii A-Type Small Armor Repairer", zhCN: "森提伊小型装甲维修器 A型" },
+    98965: { en: "200mm Steel Plates II", zhCN: "200mm钢附甲板 II" },
     98985: { en: "Datacore - High Energy Physics", zhCN: "数据核心 - 高能物理" },
     99091: { en: "Talocan Sketch Books", zhCN: "塔洛迦速写本" },
     99614: { en: "Data Analyzer I", zhCN: "数据分析仪 I" },
@@ -383,9 +437,12 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     100188: { en: "Astrometric Pinpointing", zhCN: "定点测量学" },
     100668: { en: "Mid-grade Virtue Alpha", zhCN: "中级美德—阿尔法型" },
     100785: { en: "Survey", zhCN: "测量学" },
+    100793: { en: "'Chainmail' 200mm Steel Plates", zhCN: "锁甲200mm钢附甲板" },
     101021: { en: "Warp Scrambler I", zhCN: "跃迁扰频器 I" },
     101132: { en: "Relic Analyzer I", zhCN: "遗迹分析仪 I" },
     101134: { en: "Core Probe Launcher I", zhCN: "核心探针发射器 I" },
+    101198: { en: "Damage Control II", zhCN: "损伤控制 II" },
+    101211: { en: "Multispectrum Energized Membrane II", zhCN: "多谱式电压薄膜 II" },
     101240: { en: "Relic Analyzer II", zhCN: "遗迹分析仪 II" },
     101242: { en: "Data Analyzer II", zhCN: "数据分析仪 II" },
     101277: { en: "Covert Ops Cloaking Device II", zhCN: "隐秘行动隐形装置 II" },
@@ -407,6 +464,7 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     101799: { en: "Nanofiber Internal Structure II", zhCN: "纳米纤维内部构架 II" },
     101801: { en: "Type-D Restrained Nanofiber Structure", zhCN: "抑制型纳米纤维构架 D型" },
     101939: { en: "Drone Cerebral Fragment", zhCN: "无人机脑碎片" },
+    102014: { en: "Small Trimark Armor Pump II", zhCN: "小型三角装甲聚合器 II" },
     102112: { en: "Small Low Friction Nozzle Joints I", zhCN: "小型低摩擦喷嘴接口 I" },
     102119: { en: "Small Hyperspatial Velocity Optimizer I", zhCN: "小型超空间速度调节器 I" },
     102126: { en: "Small Hyperspatial Velocity Optimizer II", zhCN: "小型超空间速度调节器 II" },
@@ -417,7 +475,13 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     102259: { en: "Small Ionic Field Projector II", zhCN: "小型离子力场投射器 II" },
     102294: { en: "Small Signal Focusing Kit I", zhCN: "小型信号集中设备 I" },
     102301: { en: "Small Signal Focusing Kit II", zhCN: "小型信号集中设备 II" },
+    102893: { en: "Imperial Navy 200mm Steel Plates", zhCN: "帝国海军200mm钢附甲板" },
+    102894: { en: "Federation Navy 200mm Steel Plates", zhCN: "联邦海军200mm钢附甲板" },
+    102900: { en: "Republic Fleet Small Shield Extender", zhCN: "共和舰队小型护盾扩展装置" },
+    103470: { en: "Imperial Navy Explosive Armor Hardener", zhCN: "帝国海军爆炸装甲增强器" },
+    103486: { en: "Imperial Navy Multispectrum Energized Membrane", zhCN: "帝国海军多谱式电压薄膜" },
     103568: { en: "Cloaking", zhCN: "隐形理论" },
+    103725: { en: "'Accord' Core Compensation", zhCN: "协调核心补偿器 I" },
     103731: { en: "Warp Core Stabilizer I", zhCN: "跃迁核心稳定器 I" },
     103783: { en: "Standard Blue Pill Booster", zhCN: "标准型蓝色药丸增效体" },
     103786: { en: "Standard Exile Booster", zhCN: "标准型游离感增效体" },
@@ -426,9 +490,13 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     104066: { en: "Standard Blue Pill Booster Blueprint", zhCN: "标准型蓝色药丸增效体蓝图" },
     104074: { en: "Strong Blue Pill Booster Blueprint", zhCN: "超强型蓝色药丸增效体蓝图" },
     104489: { en: "Nanite Repair Paste", zhCN: "纳米体修复粘合剂" },
+    104958: { en: "Hobgoblin I", zhCN: "地精灵 I" },
+    104959: { en: "Hobgoblin II", zhCN: "地精灵 II" },
+    105004: { en: "Warrior II", zhCN: "武士 II" },
     105011: { en: "Hornet EC-300", zhCN: "大黄蜂EC-300" },
     105182: { en: "Eifyr and Co. 'Rogue' Warp Drive Speed WS-618", zhCN: "埃菲尔公司 游侠 跃迁引擎速度 WS-618" },
     105337: { en: "Gila", zhCN: "毒蜥级" },
+    105615: { en: "Coreli A-Type 5MN Microwarpdrive", zhCN: "克尔利伊5MN微型跃迁推进器 A型" },
     105828: { en: "Hacking", zhCN: "电脑破译原理" },
     105829: { en: "Archaeology", zhCN: "考古学" },
     106374: { en: "Heron", zhCN: "苍鹭级" },
@@ -507,6 +575,9 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     277173: { en: "Large Micro Jump Drive Blueprint", zhCN: "大型微型跳跃引擎蓝图" },
     277674: { en: "Webified", zhCN: "被停滞缠绕" },
     283702: { en: "Micro Jump Drive Blueprint", zhCN: "微型跳跃引擎蓝图" },
+    286328: { en: "Ancillary Armor Repairer", zhCN: "辅助装甲维修器" },
+    286329: { en: "Small Ancillary Armor Repairer", zhCN: "小型辅助装甲维修器" },
+    286330: { en: "This module uses nano-assemblers to repair damage done to the armor of the ship. The module can optionally use Nanite Repair Paste to increase repair effectiveness. Deactivating the module while it has no Nanite Repair Paste loaded starts reloading, if there is Nanite Repair Paste available in cargo hold. \r\n\r\nNote: Can use Nanite Repair Paste as fuel. Reloading time is 60 seconds. Prototype Inferno Module.", zhCN: "该装备使用纳米级装配器来修复对舰船装甲造成的损伤。该装备可以选用纳米体修复粘合剂来增强其效果。如果货柜舱里有纳米体修复粘合剂，那停用该装备之后，它将自动装载那些粘合剂。注：可将纳米体修复粘合剂用作燃料。它的重新装载持续时间为60秒。原型装备。" },
     286441: { en: "Armor Layering", zhCN: "装甲覆层理论" },
     286442: { en: "Skill at installing upgraded armor plates efficiently and securely, reducing the impact they have on agility and speed. Grants a 5% reduction to armor plate mass penalty per level.", zhCN: "能够安全高效地安装升级装甲附甲板的技能，可以降低其对舰船敏捷性和速度的影响。每升一级，装甲附甲板的质量惩罚降低5%。" },
     287004: { en: "Production Facility", zhCN: "生产设施" },
@@ -520,6 +591,8 @@ export const eveLocalizations: Record<number, EveLocalizationEntry> = {
     288148: { en: "Scanning Upgrade", zhCN: "扫描升级" },
     288155: { en: "Scan Rangefinding Array I", zhCN: "扫描测距阵列 I" },
     288156: { en: "Increases the scan strength when scanning with scan probes.\r\n\r\nPenalty: Using more than one type of this module or similar modules or rigs that affect the same attribute on the ship will result in diminishing returns.", zhCN: "增加扫描探针的扫描强度。\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备或改装件将削弱实际使用效果。" },
+    288276: { en: "Scan Rangefinding Array II", zhCN: "扫描测距阵列 II" },
+    288277: { en: "Increases the scan strength when scanning with scan probes.\r\n\r\nPenalty: Using more than one type of this module or similar modules or rigs that affect the same attribute on the ship will result in diminishing returns.", zhCN: "增加扫描探针的扫描强度。\n\n惩罚：在一艘舰船上使用多个这类装备或多个与该装备作用一致的类似装备或改装件将削弱实际使用效果。" },
     288911: { en: "Cyber Scanning", zhCN: "脑控扫描" },
     288914: { en: "Rig Scanning", zhCN: "改装件扫描" },
     288915: { en: "Rig Targeting", zhCN: "改装件锁定" },
@@ -713,6 +786,21 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         typeId: 605,
         typeNameLocId: 106374,
     },
+    1183: {
+        groupId: 62,
+        groupNameLocId: 63623,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 87177,
+        iconId: 80,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "icon",
+        imageSrc: type1183Url,
+        typeId: 1183,
+        typeNameLocId: 76560,
+    },
     1403: {
         groupId: 762,
         groupNameLocId: 64151,
@@ -742,6 +830,21 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         typeId: 1405,
         typeNameLocId: 76640,
     },
+    2032: {
+        groupId: 43,
+        groupNameLocId: 63609,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 87278,
+        iconId: 26457,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "icon",
+        imageSrc: type2032Url,
+        typeId: 2032,
+        typeNameLocId: 76715,
+    },
     2038: {
         groupId: 47,
         groupNameLocId: 63611,
@@ -756,6 +859,65 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         imageSrc: type2038Url,
         typeId: 2038,
         typeNameLocId: 76717,
+    },
+    2048: {
+        groupId: 60,
+        groupNameLocId: 63621,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 91377,
+        iconId: 77,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "icon",
+        imageSrc: type2048Url,
+        typeId: 2048,
+        typeNameLocId: 101198,
+    },
+    2454: {
+        groupId: 100,
+        groupNameLocId: 63650,
+        categoryId: 18,
+        categoryNameLocId: 63553,
+        descriptionLocId: 93488,
+        graphicId: 1099,
+        metaGroupId: 1,
+        metaGroupNameLocId: 66672,
+        imageSource: "graphic",
+        imageSrc: type2454Url,
+        typeId: 2454,
+        typeNameLocId: 104958,
+    },
+    2456: {
+        groupId: 100,
+        groupNameLocId: 63650,
+        categoryId: 18,
+        categoryNameLocId: 63553,
+        descriptionLocId: 93489,
+        graphicId: 1100,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "graphic",
+        imageSrc: type2456Url,
+        typeId: 2456,
+        typeNameLocId: 104959,
+    },
+    2488: {
+        groupId: 100,
+        groupNameLocId: 63650,
+        categoryId: 18,
+        categoryNameLocId: 63553,
+        descriptionLocId: 93533,
+        graphicId: 1125,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "graphic",
+        imageSrc: type2488Url,
+        typeId: 2488,
+        typeNameLocId: 105004,
     },
     2603: {
         groupId: 763,
@@ -1045,6 +1207,21 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         typeId: 11192,
         typeNameLocId: 106386,
     },
+    11269: {
+        groupId: 326,
+        groupNameLocId: 63791,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 91390,
+        iconId: 2066,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "icon",
+        imageSrc: type11269Url,
+        typeId: 11269,
+        typeNameLocId: 101211,
+    },
     11370: {
         groupId: 330,
         groupNameLocId: 63794,
@@ -1182,6 +1359,50 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         typeId: 15479,
         typeNameLocId: 103786,
     },
+    15709: {
+        groupId: 328,
+        groupNameLocId: 63792,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 92717,
+        iconId: 20943,
+        metaGroupId: 4,
+        metaGroupNameLocId: 66675,
+        metaGroupIconId: 24146,
+        imageSource: "icon",
+        imageSrc: type15709Url,
+        typeId: 15709,
+        typeNameLocId: 103470,
+    },
+    15729: {
+        groupId: 326,
+        groupNameLocId: 63791,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 92726,
+        iconId: 2066,
+        metaGroupId: 4,
+        metaGroupNameLocId: 66675,
+        metaGroupIconId: 24146,
+        imageSource: "icon",
+        imageSrc: type15729Url,
+        typeId: 15729,
+        typeNameLocId: 103486,
+    },
+    16297: {
+        groupId: 315,
+        groupNameLocId: 63782,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 92933,
+        iconId: 97,
+        metaGroupId: 1,
+        metaGroupNameLocId: 66672,
+        imageSource: "icon",
+        imageSrc: type16297Url,
+        typeId: 16297,
+        typeNameLocId: 103725,
+    },
     17715: {
         groupId: 26,
         groupNameLocId: 63598,
@@ -1211,6 +1432,21 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         typeId: 17938,
         typeNameLocId: 101134,
     },
+    18710: {
+        groupId: 98,
+        groupNameLocId: 63648,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 89351,
+        iconId: 1030,
+        metaGroupId: 6,
+        metaGroupNameLocId: 66677,
+        metaGroupIconId: 24148,
+        imageSource: "icon",
+        imageSrc: type18710Url,
+        typeId: 18710,
+        typeNameLocId: 98557,
+    },
     18937: {
         groupId: 328,
         groupNameLocId: 63792,
@@ -1225,6 +1461,51 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         imageSrc: type18937Url,
         typeId: 18937,
         typeNameLocId: 98666,
+    },
+    19009: {
+        groupId: 62,
+        groupNameLocId: 63623,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 89493,
+        iconId: 80,
+        metaGroupId: 6,
+        metaGroupNameLocId: 66677,
+        metaGroupIconId: 24148,
+        imageSource: "icon",
+        imageSrc: type19009Url,
+        typeId: 19009,
+        typeNameLocId: 98699,
+    },
+    19325: {
+        groupId: 46,
+        groupNameLocId: 63610,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 94116,
+        iconId: 10149,
+        metaGroupId: 6,
+        metaGroupNameLocId: 66677,
+        metaGroupIconId: 24148,
+        imageSource: "icon",
+        imageSrc: type19325Url,
+        typeId: 19325,
+        typeNameLocId: 105615,
+    },
+    20347: {
+        groupId: 329,
+        groupNameLocId: 63793,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 89740,
+        iconId: 79,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "icon",
+        imageSrc: type20347Url,
+        typeId: 20347,
+        typeNameLocId: 98965,
     },
     20411: {
         groupId: 333,
@@ -1378,6 +1659,21 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         imageSrc: type23707Url,
         typeId: 23707,
         typeNameLocId: 105011,
+    },
+    23787: {
+        groupId: 329,
+        groupNameLocId: 63793,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 91000,
+        iconId: 79,
+        metaGroupId: 3,
+        metaGroupNameLocId: 66674,
+        metaGroupIconId: 24147,
+        imageSource: "icon",
+        imageSrc: type23787Url,
+        typeId: 23787,
+        typeNameLocId: 100793,
     },
     23828: {
         groupId: 366,
@@ -1818,6 +2114,21 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         typeId: 30889,
         typeNameLocId: 76453,
     },
+    31057: {
+        groupId: 773,
+        groupNameLocId: 64162,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 91973,
+        iconId: 3194,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "icon",
+        imageSrc: type31057Url,
+        typeId: 31057,
+        typeNameLocId: 102014,
+    },
     31153: {
         groupId: 782,
         groupNameLocId: 64171,
@@ -1963,6 +2274,51 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         typeId: 31316,
         typeNameLocId: 102301,
     },
+    31904: {
+        groupId: 329,
+        groupNameLocId: 63793,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 92345,
+        iconId: 79,
+        metaGroupId: 4,
+        metaGroupNameLocId: 66675,
+        metaGroupIconId: 24146,
+        imageSource: "icon",
+        imageSrc: type31904Url,
+        typeId: 31904,
+        typeNameLocId: 102893,
+    },
+    31906: {
+        groupId: 329,
+        groupNameLocId: 63793,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 92346,
+        iconId: 79,
+        metaGroupId: 4,
+        metaGroupNameLocId: 66675,
+        metaGroupIconId: 24146,
+        imageSource: "icon",
+        imageSrc: type31906Url,
+        typeId: 31906,
+        typeNameLocId: 102894,
+    },
+    31924: {
+        groupId: 38,
+        groupNameLocId: 63605,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 92352,
+        iconId: 1044,
+        metaGroupId: 4,
+        metaGroupNameLocId: 66675,
+        metaGroupIconId: 24146,
+        imageSource: "icon",
+        imageSrc: type31924Url,
+        typeId: 31924,
+        typeNameLocId: 102900,
+    },
     32246: {
         groupId: 479,
         groupNameLocId: 63915,
@@ -1978,6 +2334,18 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         imageSrc: type32246Url,
         typeId: 32246,
         typeNameLocId: 75595,
+    },
+    33076: {
+        groupId: 1199,
+        groupNameLocId: 286328,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 286330,
+        iconId: 80,
+        imageSource: "icon",
+        imageSrc: type33076Url,
+        typeId: 33076,
+        typeNameLocId: 286329,
     },
     33078: {
         groupId: 1210,
@@ -2004,6 +2372,21 @@ export const eveTypes: Record<number, EveTypeEntry> = {
         imageSrc: type33180Url,
         typeId: 33180,
         typeNameLocId: 288155,
+    },
+    33201: {
+        groupId: 1223,
+        groupNameLocId: 288148,
+        categoryId: 7,
+        categoryNameLocId: 63545,
+        descriptionLocId: 288277,
+        iconId: 21027,
+        metaGroupId: 2,
+        metaGroupNameLocId: 66673,
+        metaGroupIconId: 24150,
+        imageSource: "icon",
+        imageSrc: type33201Url,
+        typeId: 33201,
+        typeNameLocId: 288276,
     },
     33468: {
         groupId: 25,

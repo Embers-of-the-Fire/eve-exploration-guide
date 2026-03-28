@@ -1,0 +1,34 @@
+---
+title: T2 钢板小白
+---
+
+import EveFit from "@/components/docs/eve/EveFit.astro";
+import EveType from "@/components/docs/eve/EveType.tsx";
+
+:::note
+需要较高的技能，和[终极小白](../astero-final)相同用法，只是不能抗超冬冲击波，开隐秘需要超载爆抗。
+:::
+
+:::tip
+注甲可以换小修，两个超空间船插可以自行调整。
+:::
+
+<EveFit
+    name="T2 钢板小白"
+    shipId={33468}
+    data={{
+        high: [{ id: 11578 }, { id: 4258 }],
+        med: [{ id: 5973 }, { id: 2038 }, { id: 30834 }, { id: 30832 }],
+        low: [{ id: 1183 }, { id: 11269 }, { id: 11646 }, { id: 20347 }],
+        rig: [{ id: 31057 }, { id: 31165, count: 2 }],
+        charges: [
+            { id: 30488, count: 16 },
+            { id: 28668, count: 200 },
+        ],
+        drones: [
+            { id: 2456, count: 5 },
+            { id: 23707, count: 5 },
+        ],
+        cargo: [{ id: 33474, count: 1 }],
+    }}
+/>

@@ -118,53 +118,64 @@ export const docsSidebar: Sidebar = [
         autogenerate: { directory: "guides/expert" },
     },
     {
-        label: "第三方网站",
-        collapsed: true,
+        label: "参考资料",
+        collapsed: false,
         items: [
             {
-                label: "EVE University",
-                link: "https://wiki.eveuniversity.org/Main_Page",
+                label: "舰船配置",
+                collapsed: true,
+                autogenerate: { directory: "guides/reference/fit" },
             },
             {
-                label: "CEVE Market",
-                link: "https://www.ceve-market.org/index/"
+                label: "第三方网站",
+                collapsed: true,
+                items: [
+                    {
+                        label: "EVE University",
+                        link: "https://wiki.eveuniversity.org/Main_Page",
+                    },
+                    {
+                        label: "CEVE Market",
+                        link: "https://www.ceve-market.org/index/",
+                    },
+                    {
+                        label: "Anoikis",
+                        link: "https://anoik.is/",
+                    },
+                    {
+                        label: "爱神虫洞",
+                        link: "http://venus5.wormholes.club/search.php?lang=zh",
+                    },
+                    {
+                        label: "EVE Scout",
+                        link: "https://eve-scout.com/#/",
+                    },
+                    {
+                        label: "DotLAN",
+                        link: "https://evemaps.dotlan.net/",
+                    },
+                    {
+                        label: "EVE Gatecamp Check",
+                        link: "https://eve-gatecheck.space/eve/",
+                    },
+                    {
+                        label: "PyFA",
+                        link: "https://github.com/pyfa-org/Pyfa",
+                    },
+                    {
+                        label: "ZKillboard",
+                        link: "https://zkillboard.com/",
+                    },
+                    {
+                        label: "CEVE Killboard",
+                        link: "https://kb.ceve-market.org/",
+                    },
+                    {
+                        label: "Daily Sov Maps",
+                        link: "https://www.verite.space/",
+                    },
+                ],
             },
-            {
-                label: "Anoikis",
-                link: "https://anoik.is/"
-            },
-            {
-                label: "爱神虫洞",
-                link: "http://venus5.wormholes.club/search.php?lang=zh"
-            },
-            {
-                label: "EVE Scout",
-                link: "https://eve-scout.com/#/"
-            },
-            {
-                label: "DotLAN",
-                link: "https://evemaps.dotlan.net/"
-            },
-            {
-                label: "EVE Gatecamp Check",
-                link: "https://eve-gatecheck.space/eve/",
-            },
-            {
-                label: "PyFA",
-                link: "https://github.com/pyfa-org/Pyfa",
-            },
-            {
-                label: "ZKillboard",
-                link: "https://zkillboard.com/",
-            },
-            {
-                label: "CEVE Killboard",
-                link: "https://kb.ceve-market.org/",
-            },
-            {
-                label: "Daily Sov Maps",
-                link: "https://www.verite.space/",
-            }
-        ]
-    }
+        ],
+    },
 ];
