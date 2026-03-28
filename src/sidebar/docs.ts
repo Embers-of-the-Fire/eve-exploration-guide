@@ -132,6 +132,10 @@ export const docsSidebar: Sidebar = [
                 autogenerate: { directory: "guides/reference/damage-database" },
             },
             {
+                label: "气云星座",
+                link: "/guides/reference/gas-region",
+            },
+            {
                 label: "第三方网站",
                 collapsed: true,
                 items: [
