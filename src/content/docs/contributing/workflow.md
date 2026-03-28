@@ -21,11 +21,11 @@ description: 文档修改、生成数据同步和 PR 提交流程说明。
 除了正文本身，你还需要同步最小化生成数据。推荐流程如下：
 
 1. 修改 `src/content/docs/**/*.md(x)` 中的组件调用。
-2. 运行 `pnpm generate:all -- --workspace /path/to/tq-source-workspace` 刷新 manifest 并同步最小化 TQ 数据。
+2. 确认 `EVE_DOCS_WORKSPACE` 已在 shell 或仓库根目录的 `.env` 中配置好，然后运行 `pnpm generate:all` 刷新 manifest 并同步最小化 TQ 数据。
    如只想单独刷新 `src/generated/extension-ids.json`，可以运行 `pnpm build:collect`
    或兼容别名 `pnpm extract:extension-ids`。
    `EveFit` 的 `shipId` 和各分组中的 `data.<section>[].id` 会在收集构建的渲染阶段写入 `eveRefs.typeIds`。
-   也可以在仓库根目录的 `.env` 中设置 `EVE_DOCS_WORKSPACE`；如需覆盖工作区内默认缓存目录，还可以设置 `EVE_DOCS_RESOURCE_CACHE_DIR`。
+   如需覆盖工作区内默认缓存目录，还可以设置 `EVE_DOCS_RESOURCE_CACHE_DIR`；如果只想临时指定一次工作区，直接运行 `pnpm generate:eve-docs-data -- --workspace /path/to/tq-source-workspace`。
 3. 检查并提交以下生成结果：
     - `src/generated/extension-ids.json`
     - `src/generated/eve/data.ts`

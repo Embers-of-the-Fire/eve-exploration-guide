@@ -32,14 +32,14 @@ uv sync --all-packages
 - `pnpm build`：渲染站点；当前等价于 `pnpm build:render`。
 - `pnpm build:collect`：执行一次收集构建，并刷新 `src/generated/extension-ids.json`。
 - `pnpm build:render`：只基于当前已生成数据渲染站点，不刷新引用 manifest。
-- `pnpm build:all`：串联执行收集、EVE 数据生成和最终渲染。
+- `pnpm build:all`：串联执行收集、EVE 数据生成和最终渲染；依赖已配置好的 `EVE_DOCS_WORKSPACE`。
 - `pnpm format`：运行 Prettier。
 - `pnpm lint`：运行 Biome 和文档 remark lint。
 - `pnpm check`：运行 Astro 类型检查。
 - `pnpm extract:extension-ids`：`pnpm build:collect` 的兼容别名。
 - `pnpm generate:eve-docs-data`：基于引用 manifest 和 TQ
   源工作区生成最小化数据。
-- `pnpm generate:all`：串联执行收集构建和 EVE 数据生成。
+- `pnpm generate:all`：串联执行收集构建和 EVE 数据生成；依赖已配置好的 `EVE_DOCS_WORKSPACE`。
 - `pnpm loc:fuzz -- <query>`：在本地化 pickle 缓存中按子串检索文本。
 - `pnpm type:fuzz -- <query>`：在类型名称中按子串检索 `type_id`。
 
@@ -111,27 +111,32 @@ pnpm type:fuzz -- cruiser --lang en-us --workspace /path/to/workspace \
 
 当你新增或修改了 `EveType`、`EveLocText`、`EveIcon`、`EveFit` 的调用点时，需要额外同步一次生成数据：
 
+先在 shell 或仓库根目录的 `.env` 中设置好 `EVE_DOCS_WORKSPACE`，然后运行：
+
 ```bash
-pnpm generate:all -- --workspace /path/to/tq-source-workspace
+pnpm generate:all
 ```
 
 如果你还想把最终站点也一起渲染出来，可以直接运行：
 
 ```bash
-pnpm build:all -- --workspace /path/to/tq-source-workspace
+pnpm build:all
 ```
 
 说明：
 
-- `--workspace` 目录应当包含 `resfileindex.txt`，以及 `fsd/`
+- `EVE_DOCS_WORKSPACE` 指向的目录应当包含 `resfileindex.txt`，以及 `fsd/`
   目录或直接放置的 FSD 文件。
 - `EveFit` 会把 `shipId` 和 `data.high[].id`、`data.med[].id`、`data.low[].id`、`data.rig[].id`、`data.charges[].id`、`data.drones[].id`、`data.cargo[].id` 一并写入 `eveRefs.typeIds`；
 - `pnpm build:collect` 会在组件实际渲染时读取这些 prop 的求值结果并写入
   manifest；只要收集构建本身能正常求值，`shipId` 和 `data.<section>[].id`
   就会被纳入 `eveRefs.typeIds`。
-- 也可以通过环境变量 `EVE_DOCS_WORKSPACE` 提供工作区；
+- `pnpm generate:all` / `pnpm build:all` 不转发额外命令行参数；
   生成器会在 Python 侧读取当前目录或父目录中的 `.env`，因此仓库根目录
   下的 `.env` 可以直接复用。
+- 如果你需要临时覆盖工作区或缓存目录，请直接运行
+  `pnpm generate:eve-docs-data -- --workspace /path/to/tq-source-workspace`
+  或对应的 `uv run --package eve-docs-generator eve-docs-generator ...`。
 - 原始资源缓存默认写到
   `<workspace>/.cache/eve-docs-generator/resources`；也可以通过
   `--resource-cache-dir`、`--workspace-cache-dir`、
