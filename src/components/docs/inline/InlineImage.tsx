@@ -1,7 +1,12 @@
 import type { CSSProperties } from "react";
+import {
+    registerImageExtensionId,
+    resolveExtensionIdRenderMeta,
+    type WithExtensionIdSourceProps,
+} from "@astro-extension-ids/runtime";
 import styles from "./InlineReference.module.css";
 
-export interface InlineImageProps {
+export interface InlineImageProps extends WithExtensionIdSourceProps {
     id?: string;
     src: string;
     alt: string;
@@ -19,6 +24,8 @@ function toCssSize(value: number | string | undefined): string | undefined {
 }
 
 export default function InlineImage({
+    __extensionIdFile,
+    __extensionIdLine,
     id,
     src,
     alt,
@@ -26,6 +33,15 @@ export default function InlineImage({
     height,
     rounded = false,
 }: InlineImageProps) {
+    const extensionIdMeta = resolveExtensionIdRenderMeta(
+        __extensionIdFile,
+        __extensionIdLine,
+    );
+
+    if (id !== undefined) {
+        registerImageExtensionId("InlineImage", id, extensionIdMeta);
+    }
+
     const className = rounded
         ? `${styles.image} ${styles.rounded}`
         : styles.image;

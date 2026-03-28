@@ -1,20 +1,20 @@
 ---
 title: 扩展组件
-description: 面向 EVE Online 文档的 React MDX 内联组件，以及对应的数据生成工作流。
+description: 面向 EVE Online 文档的 MDX 组件，以及对应的数据生成工作流。
 ---
 
+import EveFit from "@/components/docs/eve/EveFit.astro";
 import EveLocText from "@/components/docs/eve/EveLocText.tsx";
 import EveType from "@/components/docs/eve/EveType.tsx";
 
-本文记录当前站点可在 MDX 中直接使用的 EVE 文档组件。它们都是 `tsx`
-组件，渲染时只读取仓库内已生成的最小化 TQ 数据子集，不会依赖运行时请求。
+本文记录当前站点可在 MDX 中直接使用的 EVE 文档组件。它们渲染时只读取仓库内已生成的最小化 TQ 数据子集，不会依赖运行时请求。
 
 > 如果 `src/generated/eve/data.ts` 还没有针对当前文档引用完成同步，这些组件会回退为
 > `type:...`、`loc:...` 和占位图标，以保证构建本身不被阻塞。
 
 ## 当前测试引用
 
-这个页面保留了最小的真实调用点，用来验证 remark inspect 和本地数据生成：
+这个页面保留了最小的真实调用点，用来验证渲染期引用收集和本地数据生成：
 
 <p>
     文本：
@@ -26,9 +26,23 @@ import EveType from "@/components/docs/eve/EveType.tsx";
     <EveType typeId={28665} size={32} />、<EveType typeId={28666} size={32} />
 </p>
 
+<EveFit
+    name="新人挖坟"
+    shipId={605}
+    data={{
+        high: [{ id: 11370 }, { id: 17938 }],
+        med: [{ id: 5973 }, { id: 6131 }, { id: 22177 }, { id: 22175 }],
+        low: [{ id: 1403, count: 2 }],
+        rig: [{ id: 31213, count: 2 }],
+        charges: [{ id: 30013, count: 16 }],
+        drones: [{ id: 23707, count: 5 }],
+    }}
+/>
+
 ## 导入方式
 
 ```mdx
+import EveFit from "@/components/docs/eve/EveFit.astro";
 import EveLocText from "@/components/docs/eve/EveLocText.tsx";
 import EveType from "@/components/docs/eve/EveType.tsx";
 ```
@@ -74,19 +88,62 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 | `size`   | `number \| string` | Required          | 内联图标尺寸。                                                 |
 | `alt`    | `string`           | `"EVE icon {id}"` | 替代文本；如果该图标只用于装饰，建议在调用侧显式传入空字符串。 |
 
+## `EveFit` API
+
+`EveFit` 是一个 `astro` 组件，右侧代码块直接复用 Starlight 的 `<Code>` 实现，因此外观会和 markdown 三反引号代码块保持一致。左侧槽位标题则通过 Starlight UI 翻译系统渲染，当前键位定义在 `src/content/i18n/*.json` 中的 `eveFit.section.*`。
+
+| Prop     | Type                                                                                                                            | Default  | 说明                             |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------- | -------- | -------------------------------- |
+| `name`   | `string`                                                                                                                        | Required | 配装名称。                       |
+| `shipId` | `number`                                                                                                                        | Required | 舰船的 TQ `type_id`。            |
+| `data`   | `Partial<Record<"high" \| "med" \| "low" \| "rig" \| "charges" \| "drones" \| "cargo", Array<{ id: number; count?: number }>>>` | Required | 按槽位或物品类别分组的配装条目。 |
+
+行为说明：
+
+- 左侧渲染列表会按 `high`、`med`、`low`、`rig`、`charges`、`drones`、`cargo` 的固定顺序分组显示。
+- 左侧槽位标题通过 Starlight UI 翻译系统渲染，当前 locale 下会自动切换。
+- 右侧代码块会生成可直接复制的纯文本 fit 文本，舰船和条目名称使用 `en`，但不会写出任何槽位标题。
+- `shipId` 和各分组中的 `data.<section>[].id` 都会被纳入 `eveRefs.typeIds`，因此新增调用点后同样要刷新 inspect manifest。
+- `high`、`med`、`low`、`rig` 分组中的 `count` 会展开成多行；`charges`、`drones`、`cargo` 分组中的 `count` 会折叠成 `xN`。
+- `pnpm build:collect` 会在组件实际渲染时读取这些 prop 的求值结果；只要收集构建能正常运行，`shipId` 和 `data.<section>[].id` 就会进入 manifest。
+
+```mdx
+<EveFit
+    name="新人挖坟"
+    shipId={605}
+    data={{
+        high: [{ id: 11370 }, { id: 17938 }],
+        med: [{ id: 5973 }, { id: 6131 }, { id: 22177 }, { id: 22175 }],
+        low: [{ id: 1403, count: 2 }],
+        rig: [{ id: 31213, count: 2 }],
+        charges: [{ id: 30013, count: 16 }],
+        drones: [{ id: 23707, count: 5 }],
+    }}
+/>
+```
+
 ## Inspect 与生成
 
 新增或修改这类组件引用后，推荐按如下顺序刷新数据：
 
+先在 shell 或仓库根目录的 `.env` 中设置好 `EVE_DOCS_WORKSPACE`，然后运行：
+
 ```bash
-pnpm extract:extension-ids
-pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
+pnpm generate:all
 ```
 
-第二步读取的是 TQ 源工作区，而不是预构建 bundle。工作区必须显式提供：
+如果你想把最终站点渲染也串起来，可以直接运行：
 
-- 直接通过 `--workspace /path/to/tq-source-workspace`
-- 或在仓库根目录的 `.env` 中设置 `EVE_DOCS_WORKSPACE=/path/to/tq-source-workspace`
+```bash
+pnpm build:all
+```
+
+数据生成步骤读取的是 TQ 源工作区，而不是预构建 bundle。对 `pnpm generate:all` /
+`pnpm build:all` 来说，这个工作区需要提前通过环境变量提供：
+
+- 在仓库根目录的 `.env` 中设置 `EVE_DOCS_WORKSPACE=/path/to/tq-source-workspace`
+- 或在当前 shell 中预先导出 `EVE_DOCS_WORKSPACE`
+- 如需临时覆盖单次命令参数，请直接运行 `pnpm generate:eve-docs-data -- --workspace /path/to/tq-source-workspace`
 - 如需覆盖默认的工作区内缓存目录，可额外传入 `--resource-cache-dir` / `--workspace-cache-dir`，或设置 `EVE_DOCS_RESOURCE_CACHE_DIR`
 
 该目录至少需要：
@@ -99,6 +156,7 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 生成器读取 `src/generated/extension-ids.json` 中的 `eveRefs` 字段，只同步实际被文档调用到的资源：
 
 - `eveRefs.typeIds`
+  包括 `EveType.typeId`，以及 `EveFit.shipId` / `EveFit.data.<section>[].id`
 - `eveRefs.locIds`
 - `eveRefs.iconIds`
 
@@ -111,6 +169,7 @@ pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace
 ## 代码示例
 
 ```mdx
+import EveFit from "@/components/docs/eve/EveFit.astro";
 import EveLocText from "@/components/docs/eve/EveLocText.tsx";
 import EveType from "@/components/docs/eve/EveType.tsx";
 
@@ -121,4 +180,20 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 <EveType typeId={28665} size={32} />
 和
 <EveType typeId={28666} size={32} />。
+
+也可以插入一个完整的配装块：
+
+<EveFit
+    name="新人挖坟"
+    shipId={605}
+    data={{
+        high: [{ id: 11370 }, { id: 17938 }],
+        med: [{ id: 5973 }, { id: 6131 }, { id: 22177 }, { id: 22175 }],
+        low: [{ id: 1403, count: 2 }],
+        rig: [{ id: 31213, count: 2 }],
+        charges: [{ id: 30013, count: 16 }],
+        drones: [{ id: 23707, count: 5 }],
+    }}
+/>
+。
 ```

@@ -23,9 +23,13 @@ const normalizeSiteUrl = (value) => {
         : `https://${value}`;
 };
 const siteUrl = normalizeSiteUrl(
-    process.env.SITE_URL ?? "https://github.com/Embers-of-the-Fire/eve-exploration-guide"
+    process.env.SITE_URL ??
+        "https://github.com/Embers-of-the-Fire/eve-exploration-guide",
 );
 const srcDir = fileURLToPath(new URL("./src", import.meta.url));
+const extensionIdsDir = fileURLToPath(
+    new URL("./packages/astro-extension-ids/src", import.meta.url),
+);
 
 const starlightPlugins = [
     starlightBlog({
@@ -55,6 +59,7 @@ export default defineConfig({
         resolve: {
             alias: {
                 "@": srcDir,
+                "@astro-extension-ids": extensionIdsDir,
             },
         },
     },

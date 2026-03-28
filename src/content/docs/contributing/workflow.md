@@ -16,23 +16,26 @@ description: 文档修改、生成数据同步和 PR 提交流程说明。
 - `EveType`
 - `EveLocText`
 - `EveIcon`
+- `EveFit`
 
 除了正文本身，你还需要同步最小化生成数据。推荐流程如下：
 
 1. 修改 `src/content/docs/**/*.md(x)` 中的组件调用。
-2. 运行 `pnpm extract:extension-ids` 刷新 inspect manifest。
-3. 运行 `pnpm generate:eve-docs-data --workspace /path/to/tq-source-workspace` 同步最小化 TQ 数据。
-   也可以在仓库根目录的 `.env` 中设置 `EVE_DOCS_WORKSPACE`；如需覆盖工作区内默认缓存目录，还可以设置 `EVE_DOCS_RESOURCE_CACHE_DIR`。
-4. 检查并提交以下生成结果：
+2. 确认 `EVE_DOCS_WORKSPACE` 已在 shell 或仓库根目录的 `.env` 中配置好，然后运行 `pnpm generate:all` 刷新 manifest 并同步最小化 TQ 数据。
+   如只想单独刷新 `src/generated/extension-ids.json`，可以运行 `pnpm build:collect`
+   或兼容别名 `pnpm extract:extension-ids`。
+   `EveFit` 的 `shipId` 和各分组中的 `data.<section>[].id` 会在收集构建的渲染阶段写入 `eveRefs.typeIds`。
+   如需覆盖工作区内默认缓存目录，还可以设置 `EVE_DOCS_RESOURCE_CACHE_DIR`；如果只想临时指定一次工作区，直接运行 `pnpm generate:eve-docs-data -- --workspace /path/to/tq-source-workspace`。
+3. 检查并提交以下生成结果：
     - `src/generated/extension-ids.json`
     - `src/generated/eve/data.ts`
     - `src/generated/eve/icons/*.png`
     - `src/generated/eve/types/*.png`
-5. 运行验证：
+4. 运行验证：
     - `pnpm format`
     - `pnpm lint`
     - `pnpm check`
-    - `pnpm build`
+    - `pnpm build:render`
 
 不要提交整套原始资源，也不要把原始资源复制到 `public/`。站点只需要生成器筛出来的最小化子集。
 
@@ -47,7 +50,7 @@ description: 文档修改、生成数据同步和 PR 提交流程说明。
 
 请额外确认：
 
-- remark inspect 输出的 `eveRefs` 结构没有破坏兼容性
+- 收集构建输出的 `eveRefs` 结构没有破坏兼容性
 - `pnpm generate:eve-docs-data` 仍然能基于 TQ 源工作区生成可用结果
 - Python 代码已经过 `ruff format` 和 `ruff check`
 

@@ -256,6 +256,60 @@
                 ]
             },
             {
+                "id": 267688,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 104,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 35,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 267694,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 110,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 41,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 267710,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 106,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 39,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
                 "id": 267768,
                 "kind": "localization",
                 "occurrences": [
@@ -269,6 +323,84 @@
                         "component": "EveLocText",
                         "file": "src/content/docs/guides/advance/gas.mdx",
                         "line": 113,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 36,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 267780,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 108,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 37,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 267790,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 109,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 42,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 267794,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 111,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 38,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 267798,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 107,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 40,
                         "prop": "locId"
                     }
                 ]
@@ -566,6 +698,12 @@
                 "kind": "type",
                 "occurrences": [
                     {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "shipId"
+                    },
+                    {
                         "component": "EveType",
                         "file": "src/content/docs/guides/advance/ghost.mdx",
                         "line": 32,
@@ -582,6 +720,36 @@
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 15,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "shipId"
+                    }
+                ]
+            },
+            {
+                "id": 1403,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.low[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.low[].id"
                     }
                 ]
             },
@@ -599,6 +767,96 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
                         "line": 24,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 2038,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 16,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.med[].id"
+                    }
+                ]
+            },
+            {
+                "id": 2048,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.cargo[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.low[].id"
+                    }
+                ]
+            },
+            {
+                "id": 2454,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.drones[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.drones[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.drones[].id"
+                    }
+                ]
+            },
+            {
+                "id": 2456,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.drones[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 11,
                         "prop": "typeId"
                     }
                 ]
@@ -670,6 +928,84 @@
                 ]
             },
             {
+                "id": 4258,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 19,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.high[].id"
+                    }
+                ]
+            },
+            {
+                "id": 5973,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 13,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.med[].id"
+                    }
+                ]
+            },
+            {
+                "id": 6131,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 15,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.med[].id"
+                    }
+                ]
+            },
+            {
                 "id": 6160,
                 "kind": "type",
                 "occurrences": [
@@ -683,6 +1019,24 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
                         "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 9950,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 136,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 35,
                         "prop": "typeId"
                     }
                 ]
@@ -716,10 +1070,22 @@
                 "kind": "type",
                 "occurrences": [
                     {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.high[].id"
+                    },
+                    {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
                         "line": 26,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.high[].id"
                     },
                     {
                         "component": "EveType",
@@ -756,6 +1122,24 @@
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 20,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.high[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.high[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.high[].id"
                     }
                 ]
             },
@@ -792,6 +1176,12 @@
                         "file": "src/content/docs/guides/equipment/low-slots.mdx",
                         "line": 31,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.low[].id"
                     }
                 ]
             },
@@ -814,9 +1204,69 @@
                 ]
             },
             {
+                "id": 15463,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 136,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 40,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 15479,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 136,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/gas-region.mdx",
+                        "line": 38,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 16297,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.cargo[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.cargo[].id"
+                    }
+                ]
+            },
+            {
                 "id": 17938,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.high[].id"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
@@ -828,6 +1278,30 @@
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
                         "line": 18,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.high[].id"
+                    }
+                ]
+            },
+            {
+                "id": 18937,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/low-slots.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.low[].id"
                     }
                 ]
             },
@@ -856,14 +1330,92 @@
                 ]
             },
             {
+                "id": 22175,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 18,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.med[].id"
+                    }
+                ]
+            },
+            {
+                "id": 22177,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.med[].id"
+                    }
+                ]
+            },
+            {
                 "id": 23707,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.drones[].id"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/misc.mdx",
                         "line": 15,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.drones[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.drones[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.drones[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.drones[].id"
                     },
                     {
                         "component": "EveType",
@@ -934,6 +1486,72 @@
                 ]
             },
             {
+                "id": 27188,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/implants.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.cargo[].id"
+                    }
+                ]
+            },
+            {
+                "id": 28668,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.charges[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.charges[].id"
+                    }
+                ]
+            },
+            {
+                "id": 28758,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 20,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.high[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.high[].id"
+                    }
+                ]
+            },
+            {
                 "id": 29984,
                 "kind": "type",
                 "occurrences": [
@@ -947,6 +1565,78 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30013,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.charges[].id"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/high-slots.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.charges[].id"
+                    }
+                ]
+            },
+            {
+                "id": 30460,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 92,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 36,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30461,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 92,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 37,
                         "prop": "typeId"
                     }
                 ]
@@ -966,6 +1656,18 @@
                         "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
                         "line": 104,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 38,
+                        "prop": "typeId"
                     }
                 ]
             },
@@ -984,6 +1686,24 @@
                         "file": "src/content/docs/guides/equipment/high-slots.mdx",
                         "line": 23,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.charges[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.charges[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.charges[].id"
                     }
                 ]
             },
@@ -1008,6 +1728,18 @@
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 23,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.med[].id"
                     }
                 ]
             },
@@ -1050,6 +1782,42 @@
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 22,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.med[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.med[].id"
+                    }
+                ]
+            },
+            {
+                "id": 31057,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.rig[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.rig[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.rig[].id"
                     }
                 ]
             },
@@ -1072,9 +1840,39 @@
                 ]
             },
             {
+                "id": 31165,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.rig[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.rig[].id"
+                    }
+                ]
+            },
+            {
                 "id": 31213,
                 "kind": "type",
                 "occurrences": [
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "data.rig[].id"
+                    },
                     {
                         "component": "EveType",
                         "file": "src/content/docs/guides/equipment/rig-slots.mdx",
@@ -1086,6 +1884,36 @@
                         "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                         "line": 19,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.rig[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.rig[].id"
+                    }
+                ]
+            },
+            {
+                "id": 31280,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/rig-slots.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.rig[].id"
                     }
                 ]
             },
@@ -1108,6 +1936,30 @@
                 ]
             },
             {
+                "id": 33180,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/equipment/med-slots.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.cargo[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.cargo[].id"
+                    }
+                ]
+            },
+            {
                 "id": 33468,
                 "kind": "type",
                 "occurrences": [
@@ -1122,6 +1974,24 @@
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 24,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "shipId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "shipId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "shipId"
                     }
                 ]
             },
@@ -1170,6 +2040,24 @@
                         "file": "src/content/docs/guides/equipment/misc.mdx",
                         "line": 13,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                        "line": 16,
+                        "prop": "data.cargo[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 18,
+                        "prop": "data.cargo[].id"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                        "line": 13,
+                        "prop": "data.cargo[].id"
                     }
                 ]
             },
@@ -1295,12 +2183,6 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
                         "line": 30,
-                        "prop": "typeId"
-                    },
-                    {
-                        "component": "EveType",
-                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
-                        "line": 78,
                         "prop": "typeId"
                     },
                     {
@@ -1642,6 +2524,48 @@
                 ]
             },
             {
+                "id": 34454,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 39,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34455,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 203,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 40,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 41534,
                 "kind": "type",
                 "occurrences": [
@@ -1662,6 +2586,12 @@
                         "file": "src/content/docs/guides/equipment/med-slots.mdx",
                         "line": 25,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveFit",
+                        "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                        "line": 12,
+                        "prop": "data.med[].id"
                     }
                 ]
             },
@@ -1691,6 +2621,12 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/quick-guide.mdx",
                         "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                        "line": 15,
                         "prop": "typeId"
                     }
                 ]
@@ -2283,6 +3219,22 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267684,
+                "kind": "localization",
+                "line": 22,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267686,
+                "kind": "localization",
+                "line": 18,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 267688,
                 "kind": "localization",
@@ -2291,10 +3243,26 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267688,
+                "kind": "localization",
+                "line": 35,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 267694,
                 "kind": "localization",
                 "line": 110,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267694,
+                "kind": "localization",
+                "line": 41,
                 "prop": "locId"
             },
             {
@@ -2311,6 +3279,22 @@
                 "id": 267710,
                 "kind": "localization",
                 "line": 106,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267710,
+                "kind": "localization",
+                "line": 39,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267714,
+                "kind": "localization",
+                "line": 19,
                 "prop": "locId"
             },
             {
@@ -2339,6 +3323,22 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267734,
+                "kind": "localization",
+                "line": 24,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267738,
+                "kind": "localization",
+                "line": 25,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
                 "id": 267746,
                 "kind": "localization",
@@ -2351,6 +3351,14 @@
                 "id": 267758,
                 "kind": "localization",
                 "line": 10,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267766,
+                "kind": "localization",
+                "line": 21,
                 "prop": "locId"
             },
             {
@@ -2371,10 +3379,34 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267768,
+                "kind": "localization",
+                "line": 36,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267774,
+                "kind": "localization",
+                "line": 20,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 267780,
                 "kind": "localization",
                 "line": 108,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267780,
+                "kind": "localization",
+                "line": 37,
                 "prop": "locId"
             },
             {
@@ -2387,10 +3419,26 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267786,
+                "kind": "localization",
+                "line": 23,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 267790,
                 "kind": "localization",
                 "line": 109,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267790,
+                "kind": "localization",
+                "line": 42,
                 "prop": "locId"
             },
             {
@@ -2403,6 +3451,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267794,
+                "kind": "localization",
+                "line": 38,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 267798,
                 "kind": "localization",
@@ -2411,10 +3467,146 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267798,
+                "kind": "localization",
+                "line": 40,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/basic-exploration/areas/drone-region.mdx",
                 "id": 267810,
                 "kind": "localization",
                 "line": 9,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267863,
+                "kind": "localization",
+                "line": 22,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267875,
+                "kind": "localization",
+                "line": 18,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267891,
+                "kind": "localization",
+                "line": 35,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 267933,
+                "kind": "localization",
+                "line": 41,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268022,
+                "kind": "localization",
+                "line": 39,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268058,
+                "kind": "localization",
+                "line": 19,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268198,
+                "kind": "localization",
+                "line": 24,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268219,
+                "kind": "localization",
+                "line": 25,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268371,
+                "kind": "localization",
+                "line": 21,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268374,
+                "kind": "localization",
+                "line": 36,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268408,
+                "kind": "localization",
+                "line": 20,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268441,
+                "kind": "localization",
+                "line": 37,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268475,
+                "kind": "localization",
+                "line": 23,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268493,
+                "kind": "localization",
+                "line": 42,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268512,
+                "kind": "localization",
+                "line": 38,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 268549,
+                "kind": "localization",
+                "line": 40,
                 "prop": "locId"
             },
             {
@@ -2882,6 +4074,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 605,
+                "kind": "type",
+                "line": 29,
+                "prop": "shipId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/advance/ghost.mdx",
                 "id": 605,
@@ -2906,12 +4106,44 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 605,
+                "kind": "type",
+                "line": 13,
+                "prop": "shipId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 1183,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.low[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 1403,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.low[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 1403,
                 "kind": "type",
                 "line": 23,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 1403,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.low[].id"
             },
             {
                 "component": "EveType",
@@ -2930,12 +4162,108 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 2032,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 2038,
                 "kind": "type",
                 "line": 16,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 2038,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 2038,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 2038,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 2048,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 2048,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.low[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 2454,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.drones[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 2454,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.drones[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 2454,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.drones[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 2456,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.drones[].id"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 2456,
+                "kind": "type",
+                "line": 11,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 2488,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.drones[].id"
             },
             {
                 "component": "EveType",
@@ -3082,6 +4410,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 4258,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.high[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 4384,
@@ -3106,6 +4442,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 5973,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 5973,
@@ -3114,12 +4458,52 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 5973,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 5973,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 5973,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 6131,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 6131,
                 "kind": "type",
                 "line": 15,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 6131,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.med[].id"
             },
             {
                 "component": "EveType",
@@ -3139,10 +4523,34 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 9947,
+                "kind": "type",
+                "line": 36,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 9950,
                 "kind": "type",
                 "line": 136,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 9950,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 10164,
+                "kind": "type",
+                "line": 41,
                 "prop": "typeId"
             },
             {
@@ -3178,12 +4586,36 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 11269,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.low[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 11370,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.high[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 11370,
                 "kind": "type",
                 "line": 26,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 11370,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.high[].id"
             },
             {
                 "component": "EveType",
@@ -3234,6 +4666,30 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 11578,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.high[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 11578,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.high[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 11578,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.high[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 11579,
@@ -3264,6 +4720,14 @@
                 "kind": "type",
                 "line": 31,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 11646,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.low[].id"
             },
             {
                 "component": "EveType",
@@ -3299,10 +4763,42 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 15457,
+                "kind": "type",
+                "line": 42,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 15460,
+                "kind": "type",
+                "line": 39,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 15463,
                 "kind": "type",
                 "line": 136,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 15463,
+                "kind": "type",
+                "line": 40,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 15466,
+                "kind": "type",
+                "line": 37,
                 "prop": "typeId"
             },
             {
@@ -3315,11 +4811,59 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 15479,
+                "kind": "type",
+                "line": 38,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 15709,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 15729,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.low[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 16297,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 16297,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 17715,
                 "kind": "type",
                 "line": 96,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 17938,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.high[].id"
             },
             {
                 "component": "EveType",
@@ -3338,12 +4882,60 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 17938,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.high[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 18710,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.low[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/low-slots.mdx",
                 "id": 18937,
                 "kind": "type",
                 "line": 33,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 18937,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.low[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 19009,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.low[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 19325,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 20347,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.low[].id"
             },
             {
                 "component": "EveType",
@@ -3386,6 +4978,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 22175,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 22175,
@@ -3394,12 +4994,36 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 22175,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 22177,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/med-slots.mdx",
                 "id": 22177,
                 "kind": "type",
                 "line": 21,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 22177,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.med[].id"
             },
             {
                 "component": "EveType",
@@ -3450,12 +5074,52 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.drones[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/misc.mdx",
                 "id": 23707,
                 "kind": "type",
                 "line": 15,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.drones[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.drones[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.drones[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 23707,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.drones[].id"
             },
             {
                 "component": "EveType",
@@ -3472,6 +5136,14 @@
                 "kind": "type",
                 "line": 72,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 23787,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.cargo[].id"
             },
             {
                 "component": "EveType",
@@ -3511,6 +5183,70 @@
                 "id": 23828,
                 "kind": "type",
                 "line": 92,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 25268,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 25273,
+                "kind": "type",
+                "line": 36,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 25274,
+                "kind": "type",
+                "line": 37,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 25275,
+                "kind": "type",
+                "line": 38,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 25276,
+                "kind": "type",
+                "line": 40,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 25277,
+                "kind": "type",
+                "line": 39,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 25278,
+                "kind": "type",
+                "line": 42,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 25279,
+                "kind": "type",
+                "line": 41,
                 "prop": "typeId"
             },
             {
@@ -3602,6 +5338,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 27188,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.cargo[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/implants.mdx",
                 "id": 27192,
@@ -3682,12 +5426,172 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 28668,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.charges[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 28668,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.charges[].id"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28670,
+                "kind": "type",
+                "line": 18,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28672,
+                "kind": "type",
+                "line": 19,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28674,
+                "kind": "type",
+                "line": 20,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28676,
+                "kind": "type",
+                "line": 21,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28678,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28680,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28682,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28684,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28694,
+                "kind": "type",
+                "line": 18,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28695,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28696,
+                "kind": "type",
+                "line": 21,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28697,
+                "kind": "type",
+                "line": 19,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28698,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28699,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28700,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/gas-region.mdx",
+                "id": 28701,
+                "kind": "type",
+                "line": 20,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 28758,
                 "kind": "type",
                 "line": 20,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 28758,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.high[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 28758,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.high[].id"
             },
             {
                 "component": "EveType",
@@ -3714,12 +5618,28 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 30013,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.charges[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 30013,
                 "kind": "type",
                 "line": 22,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 30013,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.charges[].id"
             },
             {
                 "component": "EveType",
@@ -3747,10 +5667,42 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30460,
+                "kind": "type",
+                "line": 21,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30460,
+                "kind": "type",
+                "line": 36,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
                 "id": 30461,
                 "kind": "type",
                 "line": 92,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30461,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30461,
+                "kind": "type",
+                "line": 37,
                 "prop": "typeId"
             },
             {
@@ -3771,6 +5723,22 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30462,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30462,
+                "kind": "type",
+                "line": 38,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 30488,
                 "kind": "type",
@@ -3784,6 +5752,30 @@
                 "kind": "type",
                 "line": 23,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 30488,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.charges[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 30488,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.charges[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 30488,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.charges[].id"
             },
             {
                 "component": "EveType",
@@ -3808,6 +5800,22 @@
                 "kind": "type",
                 "line": 23,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 30832,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 30832,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.med[].id"
             },
             {
                 "component": "EveType",
@@ -3858,12 +5866,52 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 30834,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.med[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 30834,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/areas/wormhole.mdx",
                 "id": 30889,
                 "kind": "type",
                 "line": 17,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 31057,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.rig[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 31057,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.rig[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 31057,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.rig[].id"
             },
             {
                 "component": "EveType",
@@ -3898,12 +5946,36 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 31165,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.rig[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 31165,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.rig[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31171,
                 "kind": "type",
                 "line": 29,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 31213,
+                "kind": "type",
+                "line": 29,
+                "prop": "data.rig[].id"
             },
             {
                 "component": "EveType",
@@ -3920,6 +5992,22 @@
                 "kind": "type",
                 "line": 19,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 31213,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.rig[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 31213,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.rig[].id"
             },
             {
                 "component": "EveType",
@@ -3946,6 +6034,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 31280,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.rig[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/rig-slots.mdx",
                 "id": 31310,
@@ -3970,12 +6066,44 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 31904,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.low[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 31906,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.low[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 31924,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.cargo[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/high-slots.mdx",
                 "id": 32246,
                 "kind": "type",
                 "line": 24,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 33076,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.low[].id"
             },
             {
                 "component": "EveType",
@@ -3994,6 +6122,30 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 33180,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 33180,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 33201,
+                "kind": "type",
+                "line": 12,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/equipment/ships.mdx",
                 "id": 33468,
@@ -4008,6 +6160,30 @@
                 "kind": "type",
                 "line": 24,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 33468,
+                "kind": "type",
+                "line": 12,
+                "prop": "shipId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 33468,
+                "kind": "type",
+                "line": 16,
+                "prop": "shipId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 33468,
+                "kind": "type",
+                "line": 18,
+                "prop": "shipId"
             },
             {
                 "component": "EveType",
@@ -4055,6 +6231,190 @@
                 "id": 33474,
                 "kind": "type",
                 "line": 13,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate-t2.mdx",
+                "id": 33474,
+                "kind": "type",
+                "line": 16,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 33474,
+                "kind": "type",
+                "line": 18,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
+                "id": 33474,
+                "kind": "type",
+                "line": 13,
+                "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33491,
+                "kind": "type",
+                "line": 14,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33492,
+                "kind": "type",
+                "line": 15,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33493,
+                "kind": "type",
+                "line": 16,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33494,
+                "kind": "type",
+                "line": 17,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33495,
+                "kind": "type",
+                "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33496,
+                "kind": "type",
+                "line": 75,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33497,
+                "kind": "type",
+                "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33498,
+                "kind": "type",
+                "line": 77,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33499,
+                "kind": "type",
+                "line": 48,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33500,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33501,
+                "kind": "type",
+                "line": 50,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33502,
+                "kind": "type",
+                "line": 51,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33503,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33504,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33505,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33506,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33507,
+                "kind": "type",
+                "line": 61,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33508,
+                "kind": "type",
+                "line": 62,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33509,
+                "kind": "type",
+                "line": 63,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33510,
+                "kind": "type",
+                "line": 64,
                 "prop": "typeId"
             },
             {
@@ -4271,14 +6631,6 @@
                 "id": 34305,
                 "kind": "type",
                 "line": 30,
-                "prop": "typeId"
-            },
-            {
-                "component": "EveType",
-                "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
-                "id": 34305,
-                "kind": "type",
-                "line": 78,
                 "prop": "typeId"
             },
             {
@@ -4739,10 +7091,42 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 34454,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 34454,
+                "kind": "type",
+                "line": 39,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
                 "id": 34455,
                 "kind": "type",
                 "line": 203,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 34455,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 34455,
+                "kind": "type",
+                "line": 40,
                 "prop": "typeId"
             },
             {
@@ -4810,6 +7194,14 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveFit",
+                "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
+                "id": 41534,
+                "kind": "type",
+                "line": 12,
+                "prop": "data.med[].id"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 46230,
@@ -4863,6 +7255,14 @@
                 "id": 47028,
                 "kind": "type",
                 "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
+                "id": 47028,
+                "kind": "type",
+                "line": 15,
                 "prop": "typeId"
             }
         ],
@@ -4927,22 +7327,46 @@
             237262,
             263155,
             263697,
+            267684,
+            267686,
             267688,
             267694,
             267708,
             267710,
+            267714,
             267718,
             267724,
             267732,
+            267734,
+            267738,
             267746,
             267758,
+            267766,
             267768,
+            267774,
             267780,
             267784,
+            267786,
             267790,
             267794,
             267798,
             267810,
+            267863,
+            267875,
+            267891,
+            267933,
+            268022,
+            268058,
+            268198,
+            268219,
+            268371,
+            268374,
+            268408,
+            268441,
+            268475,
+            268493,
+            268512,
+            268549,
             277674,
             287004,
             287137,
@@ -4982,9 +7406,15 @@
             447,
             526,
             605,
+            1183,
             1403,
             1405,
+            2032,
             2038,
+            2048,
+            2454,
+            2456,
+            2488,
             2603,
             2605,
             3119,
@@ -5004,9 +7434,12 @@
             5973,
             6131,
             6160,
+            9947,
             9950,
+            10164,
             10998,
             11192,
+            11269,
             11370,
             11577,
             11578,
@@ -5015,11 +7448,21 @@
             11987,
             13278,
             13976,
+            15457,
+            15460,
             15463,
+            15466,
             15479,
+            15709,
+            15729,
+            16297,
             17715,
             17938,
+            18710,
             18937,
+            19009,
+            19325,
+            20347,
             20411,
             21074,
             21718,
@@ -5032,7 +7475,16 @@
             22808,
             22809,
             23707,
+            23787,
             23828,
+            25268,
+            25273,
+            25274,
+            25275,
+            25276,
+            25277,
+            25278,
+            25279,
             25303,
             25307,
             25308,
@@ -5053,6 +7505,22 @@
             28665,
             28666,
             28668,
+            28670,
+            28672,
+            28674,
+            28676,
+            28678,
+            28680,
+            28682,
+            28684,
+            28694,
+            28695,
+            28696,
+            28697,
+            28698,
+            28699,
+            28700,
+            28701,
             28758,
             28808,
             29984,
@@ -5066,6 +7534,7 @@
             30832,
             30834,
             30889,
+            31057,
             31153,
             31159,
             31165,
@@ -5076,12 +7545,37 @@
             31280,
             31310,
             31316,
+            31904,
+            31906,
+            31924,
             32246,
+            33076,
             33078,
             33180,
+            33201,
             33468,
             33470,
             33474,
+            33491,
+            33492,
+            33493,
+            33494,
+            33495,
+            33496,
+            33497,
+            33498,
+            33499,
+            33500,
+            33501,
+            33502,
+            33503,
+            33504,
+            33505,
+            33506,
+            33507,
+            33508,
+            33509,
+            33510,
             33516,
             33530,
             33531,
@@ -5121,6 +7615,7 @@
             34449,
             34450,
             34453,
+            34454,
             34455,
             40520,
             40730,
@@ -5143,6 +7638,6 @@
             }
         ]
     },
-    "generatedAt": "2026-03-25T23:18:32.369Z",
+    "generatedAt": "2026-03-28T16:05:19.889Z",
     "unresolved": []
 }

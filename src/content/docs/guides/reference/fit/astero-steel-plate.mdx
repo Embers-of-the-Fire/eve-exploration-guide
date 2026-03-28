@@ -1,0 +1,42 @@
+---
+title: 钢板小白
+---
+
+import EveFit from "@/components/docs/eve/EveFit.astro";
+import EveType from "@/components/docs/eve/EveType.tsx";
+
+:::tip
+钢板小白差不多 7K 多有效，基础技能足够可以全部换成T2，例如:
+
+- <EveType typeId={2456} />
+- <EveType typeId={33201} />
+- 等。
+
+装备技能合格下有 105.8 扫描强度，能扫出所有类型的信号，可上 <EveType typeId={47028} />。
+:::
+
+<EveFit
+    name="钢板小白"
+    shipId={33468}
+    data={{
+        high: [{ id: 11578 }, { id: 28758 }],
+        med: [{ id: 5973 }, { id: 2038 }, { id: 30834 }, { id: 30832 }],
+        low: [{ id: 2048 }, { id: 15729 }, { id: 31904 }, { id: 33076 }],
+        rig: [{ id: 31057 }, { id: 31213 }, { id: 31280 }],
+        charges: [
+            { id: 30488, count: 16 },
+            { id: 28668, count: 200 },
+        ],
+        drones: [
+            { id: 2454, count: 5 },
+            { id: 23707, count: 5 },
+        ],
+        cargo: [
+            { id: 27188, count: 2 },
+            { id: 15709, count: 2 },
+            { id: 16297, count: 1 },
+            { id: 33474, count: 1 },
+            { id: 33180, count: 3 },
+        ],
+    }}
+/>

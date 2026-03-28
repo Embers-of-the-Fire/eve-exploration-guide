@@ -4,6 +4,7 @@ import { docsSchema, i18nSchema } from "@astrojs/starlight/schema";
 import { z } from "astro/zod";
 import { blogSchema } from "starlight-blog/schema";
 import { topicSchema } from "starlight-sidebar-topics/schema";
+import { guideI18nSchemaExtension } from "./content/i18n.schema";
 
 export const collections = {
     docs: defineCollection({
@@ -16,5 +17,10 @@ export const collections = {
                 }),
         }),
     }),
-    i18n: defineCollection({ loader: i18nLoader(), schema: i18nSchema() }),
+    i18n: defineCollection({
+        loader: i18nLoader(),
+        schema: i18nSchema({
+            extend: guideI18nSchemaExtension,
+        }),
+    }),
 };
