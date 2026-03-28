@@ -1408,6 +1408,54 @@
                 ]
             },
             {
+                "id": 30460,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 92,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 36,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30461,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
+                        "line": 92,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 37,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 30462,
                 "kind": "type",
                 "occurrences": [
@@ -1421,6 +1469,18 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
                         "line": 104,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 23,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 38,
                         "prop": "typeId"
                     }
                 ]
@@ -2273,6 +2333,48 @@
                         "component": "EveType",
                         "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
                         "line": 206,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34454,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 39,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 34455,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
+                        "line": 203,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                        "line": 40,
                         "prop": "typeId"
                     }
                 ]
@@ -4867,10 +4969,42 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30460,
+                "kind": "type",
+                "line": 21,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30460,
+                "kind": "type",
+                "line": 36,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/standard-sleeper.mdx",
                 "id": 30461,
                 "kind": "type",
                 "line": 92,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30461,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30461,
+                "kind": "type",
+                "line": 37,
                 "prop": "typeId"
             },
             {
@@ -4887,6 +5021,22 @@
                 "id": 30462,
                 "kind": "type",
                 "line": 104,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30462,
+                "kind": "type",
+                "line": 23,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 30462,
+                "kind": "type",
+                "line": 38,
                 "prop": "typeId"
             },
             {
@@ -5408,6 +5558,166 @@
                 "kind": "type",
                 "line": 13,
                 "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33491,
+                "kind": "type",
+                "line": 14,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33492,
+                "kind": "type",
+                "line": 15,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33493,
+                "kind": "type",
+                "line": 16,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33494,
+                "kind": "type",
+                "line": 17,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33495,
+                "kind": "type",
+                "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33496,
+                "kind": "type",
+                "line": 75,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33497,
+                "kind": "type",
+                "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33498,
+                "kind": "type",
+                "line": 77,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33499,
+                "kind": "type",
+                "line": 48,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33500,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33501,
+                "kind": "type",
+                "line": 50,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33502,
+                "kind": "type",
+                "line": 51,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33503,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33504,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33505,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33506,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33507,
+                "kind": "type",
+                "line": 61,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33508,
+                "kind": "type",
+                "line": 62,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33509,
+                "kind": "type",
+                "line": 63,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/ghost.mdx",
+                "id": 33510,
+                "kind": "type",
+                "line": 64,
+                "prop": "typeId"
             },
             {
                 "component": "EveType",
@@ -6083,10 +6393,42 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 34454,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 34454,
+                "kind": "type",
+                "line": 39,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/superior-sleeper.mdx",
                 "id": 34455,
                 "kind": "type",
                 "line": 203,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 34455,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/damage-database/sleeper-sentry-tower.mdx",
+                "id": 34455,
+                "kind": "type",
+                "line": 40,
                 "prop": "typeId"
             },
             {
@@ -6463,6 +6805,26 @@
             33468,
             33470,
             33474,
+            33491,
+            33492,
+            33493,
+            33494,
+            33495,
+            33496,
+            33497,
+            33498,
+            33499,
+            33500,
+            33501,
+            33502,
+            33503,
+            33504,
+            33505,
+            33506,
+            33507,
+            33508,
+            33509,
+            33510,
             33516,
             33530,
             33531,
@@ -6502,6 +6864,7 @@
             34449,
             34450,
             34453,
+            34454,
             34455,
             40520,
             40730,
@@ -6524,6 +6887,6 @@
             }
         ]
     },
-    "generatedAt": "2026-03-28T14:07:07.127Z",
+    "generatedAt": "2026-03-28T15:18:54.002Z",
     "unresolved": []
 }

@@ -127,6 +127,11 @@ export const docsSidebar: Sidebar = [
                 autogenerate: { directory: "guides/reference/fit" },
             },
             {
+                label: "伤害数据",
+                collapsed: true,
+                autogenerate: { directory: "guides/reference/damage-database" },
+            },
+            {
                 label: "第三方网站",
                 collapsed: true,
                 items: [

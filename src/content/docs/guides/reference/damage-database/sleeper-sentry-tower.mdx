@@ -1,0 +1,42 @@
+---
+title: 冬眠者岗哨塔
+---
+
+import EveType from "@/components/docs/eve/EveType.jsx";
+import TopAlignedTable from "@/components/docs/TopAlignedTable.astro";
+
+:::note
+游戏内的炮塔均存在一个 BUG，当周围有一个破解过的箱子（箱子或是防御单元之类的），
+并且炮塔已经锁定你了，此时你跃迁出去，会发现所有炮塔转而开始攻击那个破解过的箱子，
+且不会转火。
+:::
+
+## 伤害
+
+<TopAlignedTable>
+
+|                       类型 | 电  | 热  | 总计 | 电 DPS | 热 DPS | 总 DPS |
+| -------------------------: | :-: | :-: | :--: | :----: | :----: | :----: |
+|         以下攻击间隔为 15s |     |     |      |        |        |        |
+| <EveType typeId={30460} /> | 390 | 390 | 780  |   26   |   26   |   52   |
+| <EveType typeId={30461} /> | 546 | 546 | 1092 |  36.4  |  36.4  |  72.8  |
+| <EveType typeId={30462} /> | 702 | 702 | 1408 |  46.8  |  46.8  |  93.6  |
+|         以下攻击间隔为 12s |     |     |      |        |        |        |
+| <EveType typeId={34454} /> | 783 | 783 | 1566 | 65.25  | 65.25  | 130.5  |
+| <EveType typeId={34455} /> | 783 | 783 | 1566 | 65.25  | 65.25  | 130.5  |
+
+</TopAlignedTable>
+
+## 防御
+
+<TopAlignedTable>
+
+|                       类型 | 甲  | 结构 | 甲抗 | 有效  |
+| -------------------------: | :-: | :--: | :--: | :---: |
+| <EveType typeId={30460} /> | 5k  | 2.5k | 40%  | 10.8k |
+| <EveType typeId={30461} /> | 7k  | 3.5k | 40%  | 15.2k |
+| <EveType typeId={30462} /> | 11k | 5.5k | 40%  | 23.8k |
+| <EveType typeId={34454} /> | 13k | 7.5k | 30%  |  26k  |
+| <EveType typeId={34455} /> | 13k | 7.5k | 30%  |  26k  |
+
+</TopAlignedTable>
