@@ -70,34 +70,31 @@ function getLineNumber(node: MdxJsxElement) {
     return node.position?.start?.line ?? 1;
 }
 
-function hasAttribute(node: MdxJsxElement, name: string) {
-    return node.attributes
-        ?.filter(isMdxJsxAttribute)
-        .some((attribute) => attribute.name === name);
-}
-
 function injectExtensionIdMetadata(
     node: MdxJsxElement,
     relativeFile: string,
     line: number,
 ) {
-    const attributes = node.attributes ?? [];
+    const attributes = (node.attributes ?? []).filter(
+        (attribute) =>
+            !(
+                isMdxJsxAttribute(attribute) &&
+                (attribute.name === extensionIdMetaFileProp ||
+                    attribute.name === extensionIdMetaLineProp)
+            ),
+    );
 
-    if (!hasAttribute(node, extensionIdMetaFileProp)) {
-        attributes.push({
-            name: extensionIdMetaFileProp,
-            type: "mdxJsxAttribute",
-            value: relativeFile,
-        });
-    }
+    attributes.push({
+        name: extensionIdMetaFileProp,
+        type: "mdxJsxAttribute",
+        value: relativeFile,
+    });
 
-    if (!hasAttribute(node, extensionIdMetaLineProp)) {
-        attributes.push({
-            name: extensionIdMetaLineProp,
-            type: "mdxJsxAttribute",
-            value: String(line),
-        });
-    }
+    attributes.push({
+        name: extensionIdMetaLineProp,
+        type: "mdxJsxAttribute",
+        value: String(line),
+    });
 
     node.attributes = attributes;
 }
