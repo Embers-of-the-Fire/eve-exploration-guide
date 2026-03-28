@@ -1,3 +1,8 @@
+import {
+    eveFitSectionOrder,
+    type EveFitSectionKey,
+} from "../../../src/components/docs/eve/EveFit.sections";
+
 export type ExtensionIdKind = "text" | "icon" | "image";
 export type EveRefKind = "icon" | "localization" | "type";
 
@@ -84,17 +89,6 @@ interface ExtensionIdCollectorState {
 }
 
 const collectorStateKey = "__eveExtensionIdCollectorState__";
-const eveFitSectionOrder = [
-    "high",
-    "med",
-    "low",
-    "rig",
-    "charges",
-    "drones",
-    "cargo",
-] as const;
-
-type EveFitSectionKey = (typeof eveFitSectionOrder)[number];
 
 function createCollectorState(): ExtensionIdCollectorState {
     return {

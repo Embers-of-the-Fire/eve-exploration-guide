@@ -1,21 +1,10 @@
+import { eveFitSectionOrder, type EveFitSectionKey } from "./EveFit.sections";
 import { getTypeEntry, resolveLocalization } from "./data";
 
 export interface EveFitEntry {
     count?: number;
     id: number;
 }
-
-export const eveFitSectionOrder = [
-    "high",
-    "med",
-    "low",
-    "rig",
-    "charges",
-    "drones",
-    "cargo",
-] as const;
-
-export type EveFitSectionKey = (typeof eveFitSectionOrder)[number];
 
 export interface EveFitData {
     cargo?: EveFitEntry[];

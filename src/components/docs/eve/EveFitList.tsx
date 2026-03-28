@@ -1,9 +1,6 @@
 import EveType from "./EveType";
-import {
-    createRenderedRows,
-    type EveFitSectionKey,
-    type ResolvedFitSection,
-} from "./EveFit.shared";
+import type { EveFitSectionKey } from "./EveFit.sections";
+import { createRenderedRows, type ResolvedFitSection } from "./EveFit.shared";
 import styles from "./EveFit.module.css";
 
 interface EveFitSectionLabel {
