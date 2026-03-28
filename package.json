@@ -22,7 +22,7 @@
         "lint": "pnpm run lint:code && pnpm run lint:docs",
         "lint:code": "biome lint .",
         "lint:docs": "remark README.md \"src/**/*.md\" \"src/**/*.mdx\" --frail",
-        "validate": "pnpm run format:check && pnpm run lint && pnpm run check && pnpm run build:render"
+        "validate": "pnpm run format:check && pnpm run lint && pnpm run check && pnpm run build:collect && pnpm run build:render"
     },
     "dependencies": {
         "@astrojs/react": "^5.0.1",
