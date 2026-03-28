@@ -17,7 +17,6 @@ export interface EveFitData {
 }
 
 export interface ResolvedFitEntry {
-    categoryId?: number;
     count: number;
     id: number;
     name: ReturnType<typeof resolveTypeName>;
@@ -34,6 +33,12 @@ export interface RenderedFitRow {
     key: string;
 }
 
+const stackedCountSections = new Set<EveFitSectionKey>([
+    "cargo",
+    "charges",
+    "drones",
+]);
+
 function normalizeCount(value: number | undefined): number {
     return typeof value === "number" && Number.isSafeInteger(value) && value > 0
         ? value
@@ -46,21 +51,16 @@ export function resolveTypeName(typeId: number) {
     return resolveLocalization(typeData?.typeNameLocId, "type", typeId);
 }
 
-export function shouldExpandCount(categoryId: number | undefined) {
-    return categoryId === 7;
+export function shouldExpandCount(sectionKey: EveFitSectionKey) {
+    return !stackedCountSections.has(sectionKey);
 }
 
 export function resolveFitEntries(entries: EveFitEntry[]): ResolvedFitEntry[] {
-    return entries.map((entry) => {
-        const typeData = getTypeEntry(entry.id);
-
-        return {
-            categoryId: typeData?.categoryId,
-            count: normalizeCount(entry.count),
-            id: entry.id,
-            name: resolveTypeName(entry.id),
-        };
-    });
+    return entries.map((entry) => ({
+        count: normalizeCount(entry.count),
+        id: entry.id,
+        name: resolveTypeName(entry.id),
+    }));
 }
 
 export function resolveFitSections(data: EveFitData): ResolvedFitSection[] {
@@ -70,9 +70,12 @@ export function resolveFitSections(data: EveFitData): ResolvedFitSection[] {
     }));
 }
 
-export function createRenderedRows(data: ResolvedFitEntry[]): RenderedFitRow[] {
+export function createRenderedRows(
+    sectionKey: EveFitSectionKey,
+    data: ResolvedFitEntry[],
+): RenderedFitRow[] {
     return data.flatMap((entry, entryIndex) => {
-        if (!shouldExpandCount(entry.categoryId)) {
+        if (!shouldExpandCount(sectionKey)) {
             return [
                 {
                     countLabel: entry.count > 1 ? `x${entry.count}` : null,
@@ -98,7 +101,7 @@ export function createFitText(
     const shipName = resolveTypeName(shipId).en;
     const itemLines = sections.flatMap((section) =>
         section.entries.flatMap((entry) => {
-            if (!shouldExpandCount(entry.categoryId)) {
+            if (!shouldExpandCount(section.key)) {
                 return entry.count > 1
                     ? [`${entry.name.en} x${entry.count}`]
                     : [entry.name.en];

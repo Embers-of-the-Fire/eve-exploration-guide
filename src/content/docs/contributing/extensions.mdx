@@ -104,7 +104,7 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 - 左侧槽位标题通过 Starlight UI 翻译系统渲染，当前 locale 下会自动切换。
 - 右侧代码块会生成可直接复制的纯文本 fit 文本，舰船和条目名称使用 `en`，但不会写出任何槽位标题。
 - `shipId` 和各分组中的 `data.<section>[].id` 都会被纳入 `eveRefs.typeIds`，因此新增调用点后同样要刷新 inspect manifest。
-- `count` 在模块与改装件（`categoryId === 7`）上会展开成多行，其他类别会折叠成 `xN`。
+- `high`、`med`、`low`、`rig` 分组中的 `count` 会展开成多行；`charges`、`drones`、`cargo` 分组中的 `count` 会折叠成 `xN`。
 - `pnpm build:collect` 会在组件实际渲染时读取这些 prop 的求值结果；只要收集构建能正常运行，`shipId` 和 `data.<section>[].id` 就会进入 manifest。
 
 ```mdx

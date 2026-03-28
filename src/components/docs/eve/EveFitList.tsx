@@ -28,7 +28,7 @@ export default function EveFitList({
         .map((section) => ({
             key: section.key,
             label: labelBySection.get(section.key) ?? section.key,
-            rows: createRenderedRows(section.entries),
+            rows: createRenderedRows(section.key, section.entries),
         }))
         .filter((section) => section.rows.length > 0);
 
