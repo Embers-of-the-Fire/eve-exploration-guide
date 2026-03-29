@@ -50,15 +50,22 @@ export function getTypeEntry(typeId: number): EveTypeEntry | undefined {
     return eveTypes[typeId];
 }
 
-export function formatTypePriceKey(regionId: number, typeId: number) {
-    return `${regionId}:${typeId}`;
+export function formatTypePriceKey(
+    regionId: number,
+    typeId: number,
+    systemId?: number | null,
+) {
+    return systemId === null || systemId === undefined
+        ? `${regionId}:${typeId}`
+        : `${regionId}:${typeId}:${systemId}`;
 }
 
 export function getTypePriceEntry(
     regionId: number,
     typeId: number,
+    systemId?: number | null,
 ): EveTypePriceDataEntry | undefined {
-    return eveTypePrices[formatTypePriceKey(regionId, typeId)];
+    return eveTypePrices[formatTypePriceKey(regionId, typeId, systemId)];
 }
 
 export function resolveLocalization(

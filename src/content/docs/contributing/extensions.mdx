@@ -9,7 +9,7 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
 
 本文记录当前站点可在 MDX 中直接使用的 EVE 文档组件。它们在渲染时都只读取仓库内已生成的数据。
-其中 `EveTypePrice` 会在 `build:collect` 阶段收集 `(regionId, typeId)` 引用，
+其中 `EveTypePrice` 会在 `build:collect` 阶段收集 `(regionId, typeId, systemId?)` 引用，
 再由额外的价格生成步骤拉取 EveTycoon 的市场快照，最终静态写入仓库内的生成文件。
 
 > 如果 `src/generated/eve/data.ts` 还没有针对当前文档引用完成同步，这些组件会回退为
@@ -76,11 +76,12 @@ import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
 
 ## `EveTypePrice` API
 
-| Prop       | Type               | Default    | 说明                                                             |
-| ---------- | ------------------ | ---------- | ---------------------------------------------------------------- |
-| `typeId`   | `number`           | Required   | TQ `type_id`。                                                   |
-| `regionId` | `number`           | `10000002` | 市场区域 ID。默认值为 The Forge。                                |
-| `size`     | `number \| string` | `16`       | 为兼容旧调用点保留；当前版本不再显示前缀图像，因此没有可见效果。 |
+| Prop       | Type               | Default    | 说明                                                               |
+| ---------- | ------------------ | ---------- | ------------------------------------------------------------------ |
+| `typeId`   | `number`           | Required   | TQ `type_id`。                                                     |
+| `regionId` | `number`           | `10000002` | 市场区域 ID。默认值为 The Forge。                                  |
+| `systemId` | `number`           | Optional   | 可选的太阳系 ID；会作为 EveTycoon API 的 `systemID` 查询参数传入。 |
+| `size`     | `number \| string` | `16`       | 为兼容旧调用点保留；当前版本不再显示前缀图像，因此没有可见效果。   |
 
 行为说明：
 
@@ -90,7 +91,7 @@ import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
   `src/generated/eve/type-price-data.ts`，并使用 EveTycoon 返回的
   `sellAvgFivePercent` 与 `buyAvgFivePercent`。
 - `build:collect` 会把组件引用写入 `src/generated/eve-type-prices.json`，
-  该文件专门用于跟踪价格组件的 `(regionId, typeId)` 清单，避免和
+  该文件专门用于跟踪价格组件的 `(regionId, typeId, systemId?)` 清单，避免和
   `src/generated/extension-ids.json` 混在一起。
 - 行内标签文本和无数据文案通过 Starlight UI 翻译系统渲染，键位定义在
   `src/content/i18n/*.json` 中的 `eveTypePrice.*`。
@@ -101,6 +102,10 @@ import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
 可以直接写 <EveTypePrice typeId={28665} />。
 
 如果你想指定市场区域，也可以写 <EveTypePrice typeId={28665} regionId={10000043} />。
+
+如果你想把价格限定到某个具体太阳系，也可以写
+
+<EveTypePrice typeId={28665} regionId={10000043} systemId={30000142} />。
 ```
 
 ## `EveLocText` API
@@ -201,7 +206,8 @@ pnpm build:all
 - `src/generated/extension-ids.json`
   中的 `eveRefs.iconIds`
 - `src/generated/eve-type-prices.json`
-  包括 `EveTypePrice.regionId` 和 `EveTypePrice.typeId` 的唯一组合，用于后续拉取市场价格快照
+  包括 `EveTypePrice.regionId`、`EveTypePrice.typeId` 以及可选的 `EveTypePrice.systemId`
+  唯一组合，用于后续拉取市场价格快照
 
 并写出：
 

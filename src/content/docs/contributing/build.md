@@ -130,7 +130,7 @@ pnpm build:all
 
 - `EVE_DOCS_WORKSPACE` 指向的目录应当包含 `resfileindex.txt`，以及 `fsd/`
   目录或直接放置的 FSD 文件。
-- `EveTypePrice` 会把 `(regionId, typeId)` 写入 `src/generated/eve-type-prices.json` 中的价格引用清单；
+- `EveTypePrice` 会把 `(regionId, typeId, systemId?)` 写入 `src/generated/eve-type-prices.json` 中的价格引用清单；
 - `EveFit` 会把 `shipId` 和 `data.high[].id`、`data.med[].id`、`data.low[].id`、`data.rig[].id`、`data.charges[].id`、`data.drones[].id`、`data.cargo[].id` 一并写入 `eveRefs.typeIds`；
 - `pnpm build:collect` 会在组件实际渲染时读取这些 prop 的求值结果并写入
   manifest；只要收集构建本身能正常求值，`shipId`、`data.<section>[].id`

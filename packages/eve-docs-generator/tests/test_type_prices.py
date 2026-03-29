@@ -8,6 +8,8 @@ from unittest.mock import patch
 
 from eve_docs_generator.type_prices import (
     TypePriceRef,
+    build_market_stats_url,
+    format_type_price_key,
     generate_type_price_data_async,
     load_type_price_refs,
     normalize_price_entry,
@@ -27,7 +29,27 @@ class LoadTypePriceRefsTests(unittest.TestCase):
                             {"regionId": 10000043, "typeId": 34},
                             {"regionId": 10000002, "typeId": 28665},
                             {"regionId": 10000002, "typeId": 28665},
+                            {
+                                "regionId": 10000002,
+                                "systemId": 30000142,
+                                "typeId": 28665,
+                            },
+                            {
+                                "regionId": 10000002,
+                                "systemId": 30000142,
+                                "typeId": 28665,
+                            },
+                            {
+                                "regionId": 10000002,
+                                "systemId": 30000144,
+                                "typeId": 28665,
+                            },
                             {"regionId": "bad", "typeId": 123},
+                            {
+                                "regionId": 10000002,
+                                "systemId": "bad",
+                                "typeId": 28665,
+                            },
                         ]
                     }
                 ),
@@ -40,8 +62,48 @@ class LoadTypePriceRefsTests(unittest.TestCase):
             refs,
             [
                 TypePriceRef(region_id=10000002, type_id=28665),
+                TypePriceRef(
+                    region_id=10000002,
+                    type_id=28665,
+                    system_id=30000142,
+                ),
+                TypePriceRef(
+                    region_id=10000002,
+                    type_id=28665,
+                    system_id=30000144,
+                ),
                 TypePriceRef(region_id=10000043, type_id=34),
             ],
+        )
+
+
+class FormatTypePriceKeyTests(unittest.TestCase):
+    def test_appends_system_id_when_present(self):
+        self.assertEqual(format_type_price_key(10000002, 28665), "10000002:28665")
+        self.assertEqual(
+            format_type_price_key(10000002, 28665, 30000142),
+            "10000002:28665:30000142",
+        )
+
+
+class BuildMarketStatsUrlTests(unittest.TestCase):
+    def test_appends_system_id_query_parameter_when_present(self):
+        self.assertEqual(
+            build_market_stats_url(
+                "https://evetycoon.com/api/v1/market/stats",
+                region_id=10000002,
+                type_id=28665,
+            ),
+            "https://evetycoon.com/api/v1/market/stats/10000002/28665",
+        )
+        self.assertEqual(
+            build_market_stats_url(
+                "https://evetycoon.com/api/v1/market/stats",
+                region_id=10000002,
+                system_id=30000142,
+                type_id=28665,
+            ),
+            "https://evetycoon.com/api/v1/market/stats/10000002/28665?systemID=30000142",
         )
 
 
@@ -96,7 +158,18 @@ class GenerateTypePriceDataAsyncTests(unittest.IsolatedAsyncioTestCase):
             manifest_path = Path(tmp_dir) / "eve-type-prices.json"
             output_path = Path(tmp_dir) / "type-price-data.ts"
             manifest_path.write_text(
-                json.dumps({"refs": [{"regionId": 10000002, "typeId": 28665}]}),
+                json.dumps(
+                    {
+                        "refs": [
+                            {"regionId": 10000002, "typeId": 28665},
+                            {
+                                "regionId": 10000002,
+                                "systemId": 30000142,
+                                "typeId": 28665,
+                            },
+                        ]
+                    }
+                ),
                 encoding="utf-8",
             )
 
@@ -126,7 +199,8 @@ class GenerateTypePriceDataAsyncTests(unittest.IsolatedAsyncioTestCase):
 
             rendered = output_path.read_text(encoding="utf-8")
 
-        self.assertEqual(summary.ref_count, 1)
+        self.assertEqual(summary.ref_count, 2)
         self.assertIsNotNone(summary.generated_at)
         self.assertIn('"10000002:28665"', rendered)
+        self.assertIn('"10000002:28665:30000142"', rendered)
         self.assertIn('"buyAvgFivePercent": null', rendered)

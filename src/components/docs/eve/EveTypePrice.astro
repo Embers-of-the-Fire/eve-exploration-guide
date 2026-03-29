@@ -10,6 +10,7 @@ import styles from "./EveReference.module.css";
 import EveTypePriceGeneratedTimestamp from "./EveTypePriceGeneratedTimestamp.astro";
 import {
     formatEveRef,
+    formatTypePriceKey,
     formatMissingLabel,
     getTypePriceEntry,
     getTypeEntry,
@@ -19,6 +20,7 @@ import {
 interface Props extends WithExtensionIdSourceProps {
     regionId?: number;
     size?: number | string;
+    systemId?: number;
     typeId: number;
 }
 
@@ -50,6 +52,7 @@ const {
     __extensionIdFile,
     __extensionIdLine,
     regionId = DEFAULT_REGION_ID,
+    systemId,
     typeId,
 } = Astro.props as Props;
 const renderMeta = resolveExtensionIdRenderMeta(
@@ -58,7 +61,7 @@ const renderMeta = resolveExtensionIdRenderMeta(
 );
 
 registerEveTypePriceId(typeId, renderMeta);
-registerEveTypePriceRef(typeId, regionId, renderMeta);
+registerEveTypePriceRef(typeId, regionId, systemId, renderMeta);
 
 const typeData = getTypeEntry(typeId);
 const name = typeData
@@ -81,7 +84,8 @@ const accessibleName = pageLocale.startsWith("en") ? name.en : name.zhCN;
 const numberFormatter = new Intl.NumberFormat(pageLocale, {
     maximumFractionDigits: 0,
 });
-const priceData = getTypePriceEntry(regionId, typeId);
+const typePriceKey = formatTypePriceKey(regionId, typeId, systemId);
+const priceData = getTypePriceEntry(regionId, typeId, systemId);
 const sellPriceValue = priceData?.sellAvgFivePercent;
 const buyPriceValue = priceData?.buyAvgFivePercent;
 const sellPrice = formatNumericStat(
@@ -148,7 +152,7 @@ const popoverRows: PopoverRow[] = [
         ),
     },
 ];
-const popoverId = `eve-type-price-${regionId}-${typeId}-popover`;
+const popoverId = `eve-type-price-${typePriceKey.replaceAll(":", "-")}-popover`;
 const initialSummary = `${sellLabel} ${sellPrice}${hasPriceData ? ` ${iskLabel}` : ""}; ${buyLabel} ${buyPrice}${hasPriceData ? ` ${iskLabel}` : ""}`;
 ---
 
@@ -163,6 +167,7 @@ const initialSummary = `${sellLabel} ${sellPrice}${hasPriceData ? ` ${iskLabel}`
     data-eve-type-price-name={accessibleName}
     data-eve-type-price-region-id={regionId}
     data-eve-type-price-sell-label={sellLabel}
+    data-eve-type-price-system-id={systemId}
     data-eve-type-price-state={hasPriceData ? "ready" : "missing"}
     data-eve-type-price-type-id={typeId}
     data-eve-type-price-unavailable-label={unavailableLabel}

@@ -8,6 +8,7 @@ import json
 import math
 from pathlib import Path
 import sys
+from urllib.parse import urlencode
 import aiohttp
 from dotenv import find_dotenv, load_dotenv
 
@@ -24,10 +25,11 @@ REQUEST_TIMEOUT_SECONDS = 30
 MAX_PARALLEL_REQUESTS = 8
 
 
-@dataclass(frozen=True, order=True)
+@dataclass(frozen=True)
 class TypePriceRef:
     region_id: int
     type_id: int
+    system_id: int | None = None
 
 
 @dataclass(frozen=True)
@@ -87,8 +89,13 @@ def main() -> int:
     return 0
 
 
-def format_type_price_key(region_id: int, type_id: int) -> str:
-    return f"{region_id}:{type_id}"
+def format_type_price_key(
+    region_id: int,
+    type_id: int,
+    system_id: int | None = None,
+) -> str:
+    key = f"{region_id}:{type_id}"
+    return key if system_id is None else f"{key}:{system_id}"
 
 
 def parse_stat(value: object) -> int | float | None:
@@ -119,8 +126,19 @@ def empty_price_entry() -> dict[str, int | float | None]:
     }
 
 
-def build_market_stats_url(api_base_url: str, *, region_id: int, type_id: int) -> str:
-    return f"{api_base_url.rstrip('/')}/{region_id}/{type_id}"
+def build_market_stats_url(
+    api_base_url: str,
+    *,
+    region_id: int,
+    type_id: int,
+    system_id: int | None = None,
+) -> str:
+    request_url = f"{api_base_url.rstrip('/')}/{region_id}/{type_id}"
+
+    if system_id is None:
+        return request_url
+
+    return f"{request_url}?{urlencode({'systemID': system_id})}"
 
 
 def coerce_type_price_ref(value: object) -> TypePriceRef | None:
@@ -128,15 +146,25 @@ def coerce_type_price_ref(value: object) -> TypePriceRef | None:
         return None
 
     region_id = value.get("regionId")
+    system_id = value.get("systemId")
     type_id = value.get("typeId")
 
     if isinstance(region_id, bool) or not isinstance(region_id, int):
         return None
 
+    if system_id is not None and (
+        isinstance(system_id, bool) or not isinstance(system_id, int)
+    ):
+        return None
+
     if isinstance(type_id, bool) or not isinstance(type_id, int):
         return None
 
-    return TypePriceRef(region_id=region_id, type_id=type_id)
+    return TypePriceRef(
+        region_id=region_id,
+        type_id=type_id,
+        system_id=system_id,
+    )
 
 
 def load_type_price_refs(manifest_path: Path) -> list[TypePriceRef]:
@@ -155,7 +183,15 @@ def load_type_price_refs(manifest_path: Path) -> list[TypePriceRef]:
         if (ref := coerce_type_price_ref(raw_ref)) is not None
     }
 
-    return sorted(refs)
+    return sorted(
+        refs,
+        key=lambda ref: (
+            ref.region_id,
+            ref.type_id,
+            ref.system_id is not None,
+            ref.system_id or 0,
+        ),
+    )
 
 
 def render_type_price_output(
@@ -246,6 +282,7 @@ async def fetch_type_prices(
                 fetch_type_price_entry(
                     session=session,
                     region_id=ref.region_id,
+                    system_id=ref.system_id,
                     type_id=ref.type_id,
                     api_base_url=api_base_url,
                 )
@@ -254,7 +291,13 @@ async def fetch_type_prices(
         )
 
     for ref, price_entry in zip(refs, results, strict=True):
-        ordered_prices[format_type_price_key(ref.region_id, ref.type_id)] = price_entry
+        ordered_prices[
+            format_type_price_key(
+                ref.region_id,
+                ref.type_id,
+                ref.system_id,
+            )
+        ] = price_entry
 
     return ordered_prices
 
@@ -263,12 +306,15 @@ async def fetch_type_price_entry(
     *,
     session: aiohttp.ClientSession,
     region_id: int,
+    system_id: int | None,
     type_id: int,
     api_base_url: str,
 ) -> dict[str, int | float | None]:
+    ref_key = format_type_price_key(region_id, type_id, system_id)
     request_url = build_market_stats_url(
         api_base_url,
         region_id=region_id,
+        system_id=system_id,
         type_id=type_id,
     )
     proxy_url = resolve_download_proxy_url(request_url)
@@ -283,13 +329,13 @@ async def fetch_type_price_entry(
         ) as response:
             if response.status >= 400:
                 raise RuntimeError(
-                    f"Unexpected response {response.status} for {region_id}:{type_id}"
+                    f"Unexpected response {response.status} for {ref_key}"
                 )
 
             payload = await response.json()
     except (aiohttp.ClientError, asyncio.TimeoutError, OSError, RuntimeError) as error:
         print(
-            f"Failed to fetch EveTycoon market stats for {region_id}:{type_id}: {error}",
+            f"Failed to fetch EveTycoon market stats for {ref_key}: {error}",
             file=sys.stderr,
         )
         return empty_price_entry()
