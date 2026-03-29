@@ -51,6 +51,19 @@
     justify-content: flex-start;
 }
 
+.statValue {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.statValueSell {
+    color: var(--sl-color-red);
+}
+
+.statValueBuy {
+    color: var(--sl-color-green);
+}
+
 .priceValueSell {
     color: var(--sl-color-red);
 }
@@ -60,6 +73,11 @@
 }
 
 .priceUnit {
+    color: var(--sl-color-gray-3);
+    white-space: nowrap;
+}
+
+.statUnit {
     color: var(--sl-color-gray-3);
     white-space: nowrap;
 }
@@ -85,6 +103,10 @@
 
 .compactAttributeTable {
     --popover-label-column: 6ch;
+}
+
+.priceStatsTable {
+    --popover-label-column: minmax(10ch, max-content);
 }
 
 .metaList {

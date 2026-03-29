@@ -1,8 +1,11 @@
 {
     "eveTypePrice.buy": "Buy",
+    "eveTypePrice.buyOrders": "Buy Order Count",
+    "eveTypePrice.buyVolume": "Buy Volume",
     "eveTypePrice.isk": "ISK",
-    "eveTypePrice.loading": "Loading",
     "eveTypePrice.sell": "Sell",
+    "eveTypePrice.sellOrders": "Sell Order Count",
+    "eveTypePrice.sellVolume": "Sell Volume",
     "eveTypePrice.unavailable": "Unavailable",
     "eveFit.section.cargo": "Cargo",
     "eveFit.section.charges": "Charges",

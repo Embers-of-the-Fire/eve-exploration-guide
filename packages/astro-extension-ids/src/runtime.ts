@@ -6,6 +6,21 @@ import {
 export type ExtensionIdKind = "text" | "icon" | "image";
 export type EveRefKind = "icon" | "localization" | "type";
 
+export interface EveTypePriceRefEntry {
+    component: "EveTypePrice";
+    file: string;
+    line: number;
+    regionId: number;
+    typeId: number;
+}
+
+export interface EveTypePriceRefUnresolved {
+    component: "EveTypePrice";
+    expectedProp: "regionId" | "typeId";
+    file: string;
+    line: number;
+}
+
 export interface ExtensionIdEntry {
     component: string;
     file: string;
@@ -70,6 +85,24 @@ export interface ExtensionIdManifest {
     unresolved: ExtensionIdUnresolved[];
 }
 
+export interface EveTypePriceRefManifest {
+    duplicates: Array<{
+        occurrences: Array<{
+            file: string;
+            line: number;
+        }>;
+        regionId: number;
+        typeId: number;
+    }>;
+    entries: EveTypePriceRefEntry[];
+    generatedAt: string;
+    refs: Array<{
+        regionId: number;
+        typeId: number;
+    }>;
+    unresolved: EveTypePriceRefUnresolved[];
+}
+
 export interface ExtensionIdRenderMeta {
     file: string;
     line: number;
@@ -85,6 +118,8 @@ interface ExtensionIdCollectorState {
     entries: Map<string, ExtensionIdEntry>;
     eveEntries: Map<string, EveRefEntry>;
     eveUnresolved: Map<string, EveRefUnresolved>;
+    eveTypePriceEntries: Map<string, EveTypePriceRefEntry>;
+    eveTypePriceUnresolved: Map<string, EveTypePriceRefUnresolved>;
     unresolved: Map<string, ExtensionIdUnresolved>;
 }
 
@@ -96,6 +131,8 @@ function createCollectorState(): ExtensionIdCollectorState {
         entries: new Map(),
         eveEntries: new Map(),
         eveUnresolved: new Map(),
+        eveTypePriceEntries: new Map(),
+        eveTypePriceUnresolved: new Map(),
         unresolved: new Map(),
     };
 }
@@ -149,6 +186,29 @@ function compareEveUnresolved(left: EveRefUnresolved, right: EveRefUnresolved) {
         left.line - right.line ||
         left.component.localeCompare(right.component) ||
         left.kind.localeCompare(right.kind) ||
+        left.expectedProp.localeCompare(right.expectedProp)
+    );
+}
+
+function compareEveTypePriceEntries(
+    left: EveTypePriceRefEntry,
+    right: EveTypePriceRefEntry,
+) {
+    return (
+        left.regionId - right.regionId ||
+        left.typeId - right.typeId ||
+        left.file.localeCompare(right.file) ||
+        left.line - right.line
+    );
+}
+
+function compareEveTypePriceUnresolved(
+    left: EveTypePriceRefUnresolved,
+    right: EveTypePriceRefUnresolved,
+) {
+    return (
+        left.file.localeCompare(right.file) ||
+        left.line - right.line ||
         left.expectedProp.localeCompare(right.expectedProp)
     );
 }
@@ -218,6 +278,53 @@ function collectEveIdList(entries: EveRefEntry[], kind: EveRefKind) {
                 .map((entry) => entry.id),
         ),
     ].sort((left, right) => left - right);
+}
+
+function collectEveTypePriceDuplicates(entries: EveTypePriceRefEntry[]) {
+    const byRef = new Map<
+        string,
+        EveTypePriceRefManifest["duplicates"][number]
+    >();
+
+    for (const entry of entries) {
+        const key = `${entry.regionId}:${entry.typeId}`;
+        const bucket = byRef.get(key) ?? {
+            occurrences: [],
+            regionId: entry.regionId,
+            typeId: entry.typeId,
+        };
+
+        bucket.occurrences.push({
+            file: entry.file,
+            line: entry.line,
+        });
+        byRef.set(key, bucket);
+    }
+
+    return [...byRef.values()]
+        .filter((entry) => entry.occurrences.length > 1)
+        .sort(
+            (left, right) =>
+                left.regionId - right.regionId || left.typeId - right.typeId,
+        );
+}
+
+function collectEveTypePriceRefs(entries: EveTypePriceRefEntry[]) {
+    const byRef = new Map<string, EveTypePriceRefManifest["refs"][number]>();
+
+    for (const entry of entries) {
+        const key = `${entry.regionId}:${entry.typeId}`;
+
+        byRef.set(key, {
+            regionId: entry.regionId,
+            typeId: entry.typeId,
+        });
+    }
+
+    return [...byRef.values()].sort(
+        (left, right) =>
+            left.regionId - right.regionId || left.typeId - right.typeId,
+    );
 }
 
 function isRenderableStringId(value: unknown): value is string {
@@ -302,6 +409,38 @@ function recordEveUnresolved(
         expectedProp,
         file: meta.file,
         kind,
+        line: meta.line,
+    });
+}
+
+function recordEveTypePriceEntry(
+    regionId: number,
+    typeId: number,
+    meta: ExtensionIdRenderMeta,
+) {
+    const state = getCollectorState();
+    const key = toMapKey([regionId, typeId, meta.file, meta.line]);
+
+    state.eveTypePriceEntries.set(key, {
+        component: "EveTypePrice",
+        file: meta.file,
+        line: meta.line,
+        regionId,
+        typeId,
+    });
+}
+
+function recordEveTypePriceUnresolved(
+    expectedProp: "regionId" | "typeId",
+    meta: ExtensionIdRenderMeta,
+) {
+    const state = getCollectorState();
+    const key = toMapKey([expectedProp, meta.file, meta.line]);
+
+    state.eveTypePriceUnresolved.set(key, {
+        component: "EveTypePrice",
+        expectedProp,
+        file: meta.file,
         line: meta.line,
     });
 }
@@ -407,6 +546,8 @@ export function clearExtensionIdCollection() {
     state.entries.clear();
     state.eveEntries.clear();
     state.eveUnresolved.clear();
+    state.eveTypePriceEntries.clear();
+    state.eveTypePriceUnresolved.clear();
     state.unresolved.clear();
 }
 
@@ -435,6 +576,24 @@ export function buildExtensionIdManifest(): ExtensionIdManifest {
             unresolved: eveUnresolved,
         },
         generatedAt: new Date().toISOString(),
+        unresolved,
+    };
+}
+
+export function buildEveTypePriceRefManifest(): EveTypePriceRefManifest {
+    const state = getCollectorState();
+    const entries = [...state.eveTypePriceEntries.values()].sort(
+        compareEveTypePriceEntries,
+    );
+    const unresolved = [...state.eveTypePriceUnresolved.values()].sort(
+        compareEveTypePriceUnresolved,
+    );
+
+    return {
+        duplicates: collectEveTypePriceDuplicates(entries),
+        entries,
+        generatedAt: new Date().toISOString(),
+        refs: collectEveTypePriceRefs(entries),
         unresolved,
     };
 }
@@ -490,6 +649,28 @@ export function registerEveTypePriceId(
     meta: ExtensionIdRenderMeta | undefined,
 ) {
     registerEveReference("EveTypePrice", "type", "typeId", value, meta);
+}
+
+export function registerEveTypePriceRef(
+    typeId: unknown,
+    regionId: unknown,
+    meta: ExtensionIdRenderMeta | undefined,
+) {
+    if (!isCollectionActive(meta)) {
+        return;
+    }
+
+    if (!isSafeIntegerId(typeId)) {
+        recordEveTypePriceUnresolved("typeId", meta);
+        return;
+    }
+
+    if (!isSafeIntegerId(regionId)) {
+        recordEveTypePriceUnresolved("regionId", meta);
+        return;
+    }
+
+    recordEveTypePriceEntry(regionId, typeId, meta);
 }
 
 export function registerEveLocId(

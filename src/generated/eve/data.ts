@@ -234,7 +234,7 @@ import type46235Url from "./types/46235.png?url";
 import type46251Url from "./types/46251.png?url";
 import type47028Url from "./types/47028.png?url";
 
-export const eveGeneratedAt = "2026-03-28T16:05:34.160707+00:00";
+export const eveGeneratedAt = "2026-03-29T01:19:37.264514+00:00";
 
 export const eveDataMetadata: EveDataMetadata | null = {
     serverId: "tq",

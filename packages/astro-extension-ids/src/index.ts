@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { AstroIntegration } from "astro";
 import {
+    buildEveTypePriceRefManifest,
     buildExtensionIdManifest,
     clearExtensionIdCollection,
     setExtensionIdCollectionEnabled,
@@ -10,6 +11,7 @@ import {
 
 interface ExtensionIdsIntegrationOptions {
     outputFile?: string;
+    priceOutputFile?: string;
 }
 
 interface MdxJsxAttribute {
@@ -168,6 +170,7 @@ export default function extensionIdsIntegration(
     options: ExtensionIdsIntegrationOptions = {},
 ): AstroIntegration {
     let outputFile: string | undefined;
+    let priceOutputFile: string | undefined;
 
     return {
         name: "@eve-exploration-guide/astro-extension-ids",
@@ -178,6 +181,11 @@ export default function extensionIdsIntegration(
                 outputFile = path.resolve(
                     rootDir,
                     options.outputFile ?? "src/generated/extension-ids.json",
+                );
+                priceOutputFile = path.resolve(
+                    rootDir,
+                    options.priceOutputFile ??
+                        "src/generated/eve-type-prices.json",
                 );
 
                 updateConfig({
@@ -197,11 +205,12 @@ export default function extensionIdsIntegration(
 
                 setExtensionIdCollectionEnabled(false);
 
-                if (!collectMode || !outputFile) {
+                if (!collectMode || !outputFile || !priceOutputFile) {
                     return;
                 }
 
                 const manifest = buildExtensionIdManifest();
+                const priceManifest = buildEveTypePriceRefManifest();
 
                 await mkdir(path.dirname(outputFile), { recursive: true });
                 await writeFile(
@@ -209,9 +218,20 @@ export default function extensionIdsIntegration(
                     `${JSON.stringify(manifest, null, 4)}\n`,
                     "utf8",
                 );
+                await mkdir(path.dirname(priceOutputFile), { recursive: true });
+                await writeFile(
+                    priceOutputFile,
+                    `${JSON.stringify(priceManifest, null, 4)}\n`,
+                    "utf8",
+                );
                 logger.info(
                     `Wrote extension ID manifest to ${normalizeSlashes(
                         path.relative(process.cwd(), outputFile),
+                    )}`,
+                );
+                logger.info(
+                    `Wrote EVE type price manifest to ${normalizeSlashes(
+                        path.relative(process.cwd(), priceOutputFile),
                     )}`,
                 );
             },

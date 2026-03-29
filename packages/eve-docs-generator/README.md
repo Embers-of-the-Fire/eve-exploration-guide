@@ -3,8 +3,16 @@
 Local `uv` workspace helper for generating the minimal checked-in EVE docs
 dataset used by the MDX React components in this repository.
 
-From the repository root, run it with `pnpm run generate:eve-docs-data -- ...`
-or directly with `uv run --package eve-docs-generator eve-docs-generator ...`.
+From the repository root, run the TQ data generator with
+`pnpm run generate:eve-docs-data -- ...` or directly with
+`uv run --package eve-docs-generator eve-docs-generator ...`.
+
+The same package also provides the EveTycoon market price generator used by
+`pnpm run generate:eve-type-price-data`, which can be invoked directly with:
+
+```bash
+uv run --package eve-docs-generator eve-docs-type-price-data
+```
 
 Inputs are a TQ source workspace, not a prebuilt bundle:
 

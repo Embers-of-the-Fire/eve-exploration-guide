@@ -1,6 +1,7 @@
 ---
 import {
     registerEveTypePriceId,
+    registerEveTypePriceRef,
     resolveExtensionIdRenderMeta,
     type WithExtensionIdSourceProps,
 } from "@astro-extension-ids/runtime";
@@ -9,10 +10,9 @@ import styles from "./EveReference.module.css";
 import {
     formatEveRef,
     formatMissingLabel,
-    getIconEntry,
+    getTypePriceEntry,
     getTypeEntry,
     resolveLocalization,
-    shouldShowMissingDataNote,
 } from "./data";
 
 interface Props extends WithExtensionIdSourceProps {
@@ -23,22 +23,41 @@ interface Props extends WithExtensionIdSourceProps {
 
 const DEFAULT_REGION_ID = 10000002;
 
-function toCssSize(value: number | string): string {
-    return typeof value === "number" ? `${value}px` : value;
+interface PopoverRow {
+    hasValue: boolean;
+    label: string;
+    tone?: "buy" | "sell";
+    unit?: string;
+    value: string;
+}
+
+function hasNumericStat(value: number | null | undefined): value is number {
+    return typeof value === "number";
+}
+
+function formatNumericStat(
+    value: number | null | undefined,
+    formatter: Intl.NumberFormat,
+    unavailableLabel: string,
+) {
+    return hasNumericStat(value)
+        ? formatter.format(Math.round(value))
+        : unavailableLabel;
 }
 
 const {
     __extensionIdFile,
     __extensionIdLine,
     regionId = DEFAULT_REGION_ID,
-    size = 16,
     typeId,
 } = Astro.props as Props;
-
-registerEveTypePriceId(
-    typeId,
-    resolveExtensionIdRenderMeta(__extensionIdFile, __extensionIdLine),
+const renderMeta = resolveExtensionIdRenderMeta(
+    __extensionIdFile,
+    __extensionIdLine,
 );
+
+registerEveTypePriceId(typeId, renderMeta);
+registerEveTypePriceRef(typeId, regionId, renderMeta);
 
 const typeData = getTypeEntry(typeId);
 const name = typeData
@@ -51,31 +70,85 @@ const name = typeData
 const sellLabel = Astro.locals.t("eveTypePrice.sell");
 const buyLabel = Astro.locals.t("eveTypePrice.buy");
 const iskLabel = Astro.locals.t("eveTypePrice.isk");
-const loadingLabel = Astro.locals.t("eveTypePrice.loading");
 const unavailableLabel = Astro.locals.t("eveTypePrice.unavailable");
+const sellVolumeLabel = Astro.locals.t("eveTypePrice.sellVolume");
+const buyVolumeLabel = Astro.locals.t("eveTypePrice.buyVolume");
+const sellOrdersLabel = Astro.locals.t("eveTypePrice.sellOrders");
+const buyOrdersLabel = Astro.locals.t("eveTypePrice.buyOrders");
 const pageLocale = (Astro.currentLocale ?? "zh-CN").toLowerCase();
 const accessibleName = pageLocale.startsWith("en") ? name.en : name.zhCN;
-const resolvedSize = toCssSize(size);
-const iconStyle = {
-    height: resolvedSize,
-    width: resolvedSize,
-};
-const overlaySize =
-    typeof size === "number"
-        ? `${Math.max(12, Math.min(16, size * 0.5))}px`
-        : "0.6em";
-const overlayStyle = {
-    height: overlaySize,
-    width: overlaySize,
-};
-const metaGroupIcon = getIconEntry(typeData?.metaGroupIconId ?? -1);
-const showMissingNote = shouldShowMissingDataNote([
-    !typeData,
-    name.missing,
-    !typeData?.imageSrc,
-]);
+const numberFormatter = new Intl.NumberFormat(pageLocale, {
+    maximumFractionDigits: 0,
+});
+const priceData = getTypePriceEntry(regionId, typeId);
+const sellPriceValue = priceData?.sellAvgFivePercent;
+const buyPriceValue = priceData?.buyAvgFivePercent;
+const sellPrice = formatNumericStat(
+    sellPriceValue,
+    numberFormatter,
+    unavailableLabel,
+);
+const buyPrice = formatNumericStat(
+    buyPriceValue,
+    numberFormatter,
+    unavailableLabel,
+);
+const hasPriceData =
+    hasNumericStat(sellPriceValue) && hasNumericStat(buyPriceValue);
+const popoverRows: PopoverRow[] = [
+    {
+        hasValue: hasNumericStat(sellPriceValue),
+        label: sellLabel,
+        tone: "sell",
+        unit: hasNumericStat(sellPriceValue) ? iskLabel : undefined,
+        value: sellPrice,
+    },
+    {
+        hasValue: hasNumericStat(buyPriceValue),
+        label: buyLabel,
+        tone: "buy",
+        unit: hasNumericStat(buyPriceValue) ? iskLabel : undefined,
+        value: buyPrice,
+    },
+    {
+        hasValue: hasNumericStat(priceData?.sellVolume),
+        label: sellVolumeLabel,
+        value: formatNumericStat(
+            priceData?.sellVolume,
+            numberFormatter,
+            unavailableLabel,
+        ),
+    },
+    {
+        hasValue: hasNumericStat(priceData?.buyVolume),
+        label: buyVolumeLabel,
+        value: formatNumericStat(
+            priceData?.buyVolume,
+            numberFormatter,
+            unavailableLabel,
+        ),
+    },
+    {
+        hasValue: hasNumericStat(priceData?.sellOrders),
+        label: sellOrdersLabel,
+        value: formatNumericStat(
+            priceData?.sellOrders,
+            numberFormatter,
+            unavailableLabel,
+        ),
+    },
+    {
+        hasValue: hasNumericStat(priceData?.buyOrders),
+        label: buyOrdersLabel,
+        value: formatNumericStat(
+            priceData?.buyOrders,
+            numberFormatter,
+            unavailableLabel,
+        ),
+    },
+];
 const popoverId = `eve-type-price-${regionId}-${typeId}-popover`;
-const initialSummary = `${sellLabel} ${loadingLabel}; ${buyLabel} ${loadingLabel}`;
+const initialSummary = `${sellLabel} ${sellPrice}${hasPriceData ? ` ${iskLabel}` : ""}; ${buyLabel} ${buyPrice}${hasPriceData ? ` ${iskLabel}` : ""}`;
 ---
 
 <button
@@ -86,53 +159,15 @@ const initialSummary = `${sellLabel} ${loadingLabel}; ${buyLabel} ${loadingLabel
     data-eve-type-price=""
     data-eve-type-price-buy-label={buyLabel}
     data-eve-type-price-isk-label={iskLabel}
-    data-eve-type-price-loading-label={loadingLabel}
     data-eve-type-price-name={accessibleName}
     data-eve-type-price-region-id={regionId}
     data-eve-type-price-sell-label={sellLabel}
-    data-eve-type-price-state="loading"
+    data-eve-type-price-state={hasPriceData ? "ready" : "missing"}
     data-eve-type-price-type-id={typeId}
     data-eve-type-price-unavailable-label={unavailableLabel}
     data-inline-popover-root=""
     type="button"
 >
-    <span class={baseStyles.iconPrefix}>
-        <span class={styles.typeImage}>
-            {
-                typeData?.imageSrc ? (
-                    <img
-                        alt={accessibleName}
-                        class={`${baseStyles.icon} ${styles.typeImageMain}`}
-                        decoding="async"
-                        src={typeData.imageSrc}
-                        style={iconStyle}
-                    />
-                ) : (
-                    <span
-                        aria-hidden="true"
-                        class={`${styles.missingIcon} ${styles.typeImageMain}`}
-                        style={iconStyle}
-                    >
-                        ?
-                    </span>
-                )
-            }
-            {
-                metaGroupIcon ? (
-                    <span class={styles.typeOverlay}>
-                        <img
-                            alt=""
-                            aria-hidden="true"
-                            class={styles.typeOverlayIcon}
-                            decoding="async"
-                            src={metaGroupIcon.src}
-                            style={overlayStyle}
-                        />
-                    </span>
-                ) : null
-            }
-        </span>
-    </span>
     <strong
         class={`${baseStyles.label} ${styles.inlineLabel} ${styles.priceLabelBlock}`}
     >
@@ -142,7 +177,7 @@ const initialSummary = `${sellLabel} ${loadingLabel}; ${buyLabel} ${loadingLabel
                 class={`${styles.priceValue} ${styles.priceValueSell}`}
                 data-eve-type-price-value="sell"
             >
-                {loadingLabel}
+                {sellPrice}
             </span>
             <span class={styles.priceUnit}>{iskLabel}</span>
             <span class={styles.priceRowLabel}>{buyLabel}</span>
@@ -150,7 +185,7 @@ const initialSummary = `${sellLabel} ${loadingLabel}; ${buyLabel} ${loadingLabel
                 class={`${styles.priceValue} ${styles.priceValueBuy}`}
                 data-eve-type-price-value="buy"
             >
-                {loadingLabel}
+                {buyPrice}
             </span>
             <span class={styles.priceUnit}>{iskLabel}</span>
         </span>
@@ -163,69 +198,44 @@ const initialSummary = `${sellLabel} ${loadingLabel}; ${buyLabel} ${loadingLabel
     >
         <span class={styles.detailGrid}>
             <span class={styles.section}>
-                <span class={baseStyles.popoverTable}>
-                    <span class={baseStyles.popoverRow}>
-                        <span class={baseStyles.popoverLabel}>NAME.ZH-CN</span>
-                        <span class={baseStyles.popoverValue}>{name.zhCN}</span>
-                    </span>
-                    <span class={baseStyles.popoverRow}>
-                        <span class={baseStyles.popoverLabel}>NAME.EN</span>
-                        <span class={baseStyles.popoverValue}>{name.en}</span>
-                    </span>
-                </span>
-            </span>
-            <span class={styles.section}>
                 <span
-                    class={`${baseStyles.popoverTable} ${styles.compactAttributeTable}`}
+                    class={`${baseStyles.popoverTable} ${styles.priceStatsTable}`}
                 >
-                    <span class={baseStyles.popoverRow}>
-                        <span class={baseStyles.popoverLabel}>{sellLabel}</span>
-                        <span class={baseStyles.popoverValue}>
-                            <span class={styles.pricePopoverValue}>
-                                <span
-                                    class={`${styles.priceValue} ${styles.priceValueSell}`}
-                                    data-eve-type-price-value="sell"
-                                >
-                                    {loadingLabel}
+                    {
+                        popoverRows.map((row) => (
+                            <Fragment key={row.label}>
+                                <span class={baseStyles.popoverRow}>
+                                    <span class={baseStyles.popoverLabel}>
+                                        {row.label}
+                                    </span>
+                                    <span class={baseStyles.popoverValue}>
+                                        <span class={styles.pricePopoverValue}>
+                                            <span
+                                                class:list={[
+                                                    styles.statValue,
+                                                    row.hasValue &&
+                                                        row.tone === "sell" &&
+                                                        styles.statValueSell,
+                                                    row.hasValue &&
+                                                        row.tone === "buy" &&
+                                                        styles.statValueBuy,
+                                                ]}
+                                            >
+                                                {row.value}
+                                            </span>
+                                            {row.unit ? (
+                                                <span class={styles.statUnit}>
+                                                    {row.unit}
+                                                </span>
+                                            ) : null}
+                                        </span>
+                                    </span>
                                 </span>
-                                <span class={styles.priceUnit}>{iskLabel}</span>
-                            </span>
-                        </span>
-                    </span>
-                    <span class={baseStyles.popoverRow}>
-                        <span class={baseStyles.popoverLabel}>{buyLabel}</span>
-                        <span class={baseStyles.popoverValue}>
-                            <span class={styles.pricePopoverValue}>
-                                <span
-                                    class={`${styles.priceValue} ${styles.priceValueBuy}`}
-                                    data-eve-type-price-value="buy"
-                                >
-                                    {loadingLabel}
-                                </span>
-                                <span class={styles.priceUnit}>{iskLabel}</span>
-                            </span>
-                        </span>
-                    </span>
-                </span>
-            </span>
-            <span class={styles.metaList}>
-                <span class={styles.metaRow}>
-                    <span class={styles.metaLabel}>Type ID</span>
-                    <span class={styles.metaValue}>{typeId}</span>
-                </span>
-                <span class={styles.metaRow}>
-                    <span class={styles.metaLabel}>Region ID</span>
-                    <span class={styles.metaValue}>{regionId}</span>
+                            </Fragment>
+                        ))
+                    }
                 </span>
             </span>
         </span>
-        {
-            showMissingNote ? (
-                <span class={styles.missingNote}>
-                    Missing generated TQ type data. Run the EVE docs generator
-                    after updating doc references.
-                </span>
-            ) : null
-        }
     </span>
 </button>

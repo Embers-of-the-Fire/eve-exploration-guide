@@ -610,7 +610,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 21,
+                        "line": 24,
                         "prop": "locId"
                     },
                     {
@@ -700,7 +700,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "shipId"
                     },
                     {
@@ -736,7 +736,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.low[].id"
                     },
                     {
@@ -952,7 +952,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.med[].id"
                     },
                     {
@@ -988,7 +988,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.med[].id"
                     },
                     {
@@ -1072,7 +1072,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.high[].id"
                     },
                     {
@@ -1264,7 +1264,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.high[].id"
                     },
                     {
@@ -1336,7 +1336,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.med[].id"
                     },
                     {
@@ -1360,7 +1360,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.med[].id"
                     },
                     {
@@ -1384,7 +1384,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.drones[].id"
                     },
                     {
@@ -1504,6 +1504,24 @@
                 ]
             },
             {
+                "id": 28665,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 28668,
                 "kind": "type",
                 "occurrences": [
@@ -1576,7 +1594,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.charges[].id"
                     },
                     {
@@ -1870,7 +1888,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.rig[].id"
                     },
                     {
@@ -3870,7 +3888,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 297962,
                 "kind": "localization",
-                "line": 21,
+                "line": 24,
                 "prop": "locId"
             },
             {
@@ -4078,7 +4096,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 605,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "shipId"
             },
             {
@@ -4126,7 +4144,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 1403,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.low[].id"
             },
             {
@@ -4446,7 +4464,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 5973,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.med[].id"
             },
             {
@@ -4486,7 +4504,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 6131,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.med[].id"
             },
             {
@@ -4598,7 +4616,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 11370,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.high[].id"
             },
             {
@@ -4862,7 +4880,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 17938,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.high[].id"
             },
             {
@@ -4982,7 +5000,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 22175,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.med[].id"
             },
             {
@@ -5006,7 +5024,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 22177,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.med[].id"
             },
             {
@@ -5078,7 +5096,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 23707,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.drones[].id"
             },
             {
@@ -5406,7 +5424,15 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 28665,
                 "kind": "type",
-                "line": 26,
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 28665,
+                "kind": "type",
+                "line": 34,
                 "prop": "typeId"
             },
             {
@@ -5414,7 +5440,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 28666,
                 "kind": "type",
-                "line": 26,
+                "line": 29,
                 "prop": "typeId"
             },
             {
@@ -5622,7 +5648,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 30013,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.charges[].id"
             },
             {
@@ -5974,7 +6000,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 31213,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.rig[].id"
             },
             {
@@ -7638,6 +7664,6 @@
             }
         ]
     },
-    "generatedAt": "2026-03-28T16:05:19.889Z",
+    "generatedAt": "2026-03-29T01:35:04.249Z",
     "unresolved": []
 }
