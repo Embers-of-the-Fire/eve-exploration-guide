@@ -7,6 +7,7 @@ import {
 } from "@astro-extension-ids/runtime";
 import baseStyles from "../inline/InlineReference.module.css";
 import styles from "./EveReference.module.css";
+import EveTypePriceGeneratedTimestamp from "./EveTypePriceGeneratedTimestamp.astro";
 import {
     formatEveRef,
     formatMissingLabel,
@@ -236,6 +237,7 @@ const initialSummary = `${sellLabel} ${sellPrice}${hasPriceData ? ` ${iskLabel}`
                     }
                 </span>
             </span>
+            <EveTypePriceGeneratedTimestamp />
         </span>
     </span>
 </button>

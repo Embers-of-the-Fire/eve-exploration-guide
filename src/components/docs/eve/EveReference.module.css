@@ -109,6 +109,21 @@
     --popover-label-column: minmax(10ch, max-content);
 }
 
+.generatedTimestamp {
+    border-top: 1px solid var(--sl-color-gray-5);
+    color: var(--sl-color-gray-3);
+    display: block;
+    font-size: var(--sl-text-xs);
+    line-height: 1.5;
+    padding-top: 0.7rem;
+    text-wrap: pretty;
+}
+
+.generatedTimestamp time {
+    color: var(--sl-color-white);
+    font-variant-numeric: tabular-nums;
+}
+
 .metaList {
     display: grid;
     gap: 0.3rem;
