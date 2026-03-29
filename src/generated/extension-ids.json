@@ -4,6 +4,78 @@
     "eveRefs": {
         "duplicates": [
             {
+                "id": 61291,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 25,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 26,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 61841,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 27,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 28,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 61842,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 29,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 30,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
+                "id": 61850,
+                "kind": "localization",
+                "occurrences": [
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 31,
+                        "prop": "locId"
+                    },
+                    {
+                        "component": "EveLocText",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 32,
+                        "prop": "locId"
+                    }
+                ]
+            },
+            {
                 "id": 111162,
                 "kind": "localization",
                 "occurrences": [
@@ -610,7 +682,7 @@
                     {
                         "component": "EveLocText",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 21,
+                        "line": 24,
                         "prop": "locId"
                     },
                     {
@@ -700,7 +772,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "shipId"
                     },
                     {
@@ -736,7 +808,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.low[].id"
                     },
                     {
@@ -952,7 +1024,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.med[].id"
                     },
                     {
@@ -988,7 +1060,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.med[].id"
                     },
                     {
@@ -1072,7 +1144,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.high[].id"
                     },
                     {
@@ -1264,7 +1336,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.high[].id"
                     },
                     {
@@ -1306,6 +1378,60 @@
                 ]
             },
             {
+                "id": 21088,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 46,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 46,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 21569,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 40,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 40,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 21586,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 42,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 42,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 21718,
                 "kind": "type",
                 "occurrences": [
@@ -1330,13 +1456,49 @@
                 ]
             },
             {
+                "id": 21720,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 41,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 41,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 21733,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 22175,
                 "kind": "type",
                 "occurrences": [
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.med[].id"
                     },
                     {
@@ -1360,7 +1522,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.med[].id"
                     },
                     {
@@ -1378,13 +1540,193 @@
                 ]
             },
             {
+                "id": 23128,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 47,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 47,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23132,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 49,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 49,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23134,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 44,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 44,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23137,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 45,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 45,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23149,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23152,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23154,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23156,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23172,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 48,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 48,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 23177,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 43,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                        "line": 43,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 23707,
                 "kind": "type",
                 "occurrences": [
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.drones[].id"
                     },
                     {
@@ -1482,6 +1824,312 @@
                         "file": "src/content/docs/guides/advance/gas.mdx",
                         "line": 46,
                         "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 49,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25308,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 69,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 52,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25530,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 22,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25538,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 14,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 21,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25590,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25591,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25608,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25612,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 36,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 36,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25613,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 35,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 35,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25614,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25615,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25617,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25619,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25621,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25622,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
+                        "line": 94,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 24,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 24,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25624,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 31,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 31,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 25625,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                        "line": 27,
+                        "prop": "typeId"
                     }
                 ]
             },
@@ -1500,6 +2148,24 @@
                         "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
                         "line": 18,
                         "prop": "data.cargo[].id"
+                    }
+                ]
+            },
+            {
+                "id": 28665,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/contributing/extensions.mdx",
+                        "line": 34,
+                        "prop": "typeId"
                     }
                 ]
             },
@@ -1576,7 +2242,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.charges[].id"
                     },
                     {
@@ -1704,6 +2370,78 @@
                         "file": "src/content/docs/guides/reference/fit/astero-steel-plate.mdx",
                         "line": 18,
                         "prop": "data.charges[].id"
+                    }
+                ]
+            },
+            {
+                "id": 30744,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30745,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                        "line": 31,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                        "line": 31,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30746,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 30747,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                        "line": 33,
+                        "prop": "typeId"
                     }
                 ]
             },
@@ -1870,7 +2608,7 @@
                     {
                         "component": "EveFit",
                         "file": "src/content/docs/contributing/extensions.mdx",
-                        "line": 29,
+                        "line": 37,
                         "prop": "data.rig[].id"
                     },
                     {
@@ -2058,6 +2796,282 @@
                         "file": "src/content/docs/guides/reference/fit/heron-beginner.mdx",
                         "line": 13,
                         "prop": "data.cargo[].id"
+                    }
+                ]
+            },
+            {
+                "id": 33520,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33522,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33529,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33530,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 72,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 30,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33531,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 73,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 31,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33532,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 74,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33533,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 75,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 26,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 27,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33534,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/ghost.mdx",
+                        "line": 76,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33539,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 25,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33577,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 24,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 24,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33700,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 28,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 33702,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 29,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                        "line": 29,
+                        "prop": "typeId"
                     }
                 ]
             },
@@ -2596,6 +3610,126 @@
                 ]
             },
             {
+                "id": 46235,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 69,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 37,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 37,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 46238,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 32,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 46240,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 33,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 46246,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 35,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 35,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 46247,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 36,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 36,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
+                "id": 46251,
+                "kind": "type",
+                "occurrences": [
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/advance/gas.mdx",
+                        "line": 46,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveTypePrice",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    },
+                    {
+                        "component": "EveType",
+                        "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                        "line": 34,
+                        "prop": "typeId"
+                    }
+                ]
+            },
+            {
                 "id": 47028,
                 "kind": "type",
                 "occurrences": [
@@ -2635,6 +3769,22 @@
         "entries": [
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61291,
+                "kind": "localization",
+                "line": 25,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61291,
+                "kind": "localization",
+                "line": 26,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/expert/shortcut-setting.mdx",
                 "id": 61359,
                 "kind": "localization",
@@ -2647,6 +3797,62 @@
                 "id": 61566,
                 "kind": "localization",
                 "line": 31,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61841,
+                "kind": "localization",
+                "line": 27,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61841,
+                "kind": "localization",
+                "line": 28,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61842,
+                "kind": "localization",
+                "line": 29,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61842,
+                "kind": "localization",
+                "line": 30,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61843,
+                "kind": "localization",
+                "line": 24,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61850,
+                "kind": "localization",
+                "line": 31,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 61850,
+                "kind": "localization",
+                "line": 32,
                 "prop": "locId"
             },
             {
@@ -3611,6 +4817,14 @@
             },
             {
                 "component": "EveLocText",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 269090,
+                "kind": "localization",
+                "line": 23,
+                "prop": "locId"
+            },
+            {
+                "component": "EveLocText",
                 "file": "src/content/docs/guides/survival/escape.mdx",
                 "id": 277674,
                 "kind": "localization",
@@ -3870,7 +5084,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 297962,
                 "kind": "localization",
-                "line": 21,
+                "line": 24,
                 "prop": "locId"
             },
             {
@@ -4078,7 +5292,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 605,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "shipId"
             },
             {
@@ -4126,7 +5340,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 1403,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.low[].id"
             },
             {
@@ -4446,7 +5660,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 5973,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.med[].id"
             },
             {
@@ -4486,7 +5700,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 6131,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.med[].id"
             },
             {
@@ -4598,7 +5812,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 11370,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.high[].id"
             },
             {
@@ -4862,7 +6076,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 17938,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.high[].id"
             },
             {
@@ -4946,11 +6160,283 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 20559,
+                "kind": "type",
+                "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 20560,
+                "kind": "type",
+                "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 20563,
+                "kind": "type",
+                "line": 65,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 20564,
+                "kind": "type",
+                "line": 65,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 20569,
+                "kind": "type",
+                "line": 75,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 20570,
+                "kind": "type",
+                "line": 75,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 20637,
+                "kind": "type",
+                "line": 70,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 20638,
+                "kind": "type",
+                "line": 70,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 21074,
                 "kind": "type",
                 "line": 106,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21088,
+                "kind": "type",
+                "line": 46,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21088,
+                "kind": "type",
+                "line": 46,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21470,
+                "kind": "type",
+                "line": 83,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21471,
+                "kind": "type",
+                "line": 83,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21472,
+                "kind": "type",
+                "line": 84,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21473,
+                "kind": "type",
+                "line": 84,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21474,
+                "kind": "type",
+                "line": 85,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21475,
+                "kind": "type",
+                "line": 85,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21476,
+                "kind": "type",
+                "line": 86,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21477,
+                "kind": "type",
+                "line": 86,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21478,
+                "kind": "type",
+                "line": 87,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21479,
+                "kind": "type",
+                "line": 87,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21480,
+                "kind": "type",
+                "line": 88,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21481,
+                "kind": "type",
+                "line": 88,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21484,
+                "kind": "type",
+                "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21485,
+                "kind": "type",
+                "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21486,
+                "kind": "type",
+                "line": 82,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21487,
+                "kind": "type",
+                "line": 82,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21493,
+                "kind": "type",
+                "line": 69,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21494,
+                "kind": "type",
+                "line": 69,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21510,
+                "kind": "type",
+                "line": 80,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 21511,
+                "kind": "type",
+                "line": 80,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21569,
+                "kind": "type",
+                "line": 40,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21569,
+                "kind": "type",
+                "line": 40,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21586,
+                "kind": "type",
+                "line": 42,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21586,
+                "kind": "type",
+                "line": 42,
                 "prop": "typeId"
             },
             {
@@ -4978,11 +6464,43 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21720,
+                "kind": "type",
+                "line": 41,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21720,
+                "kind": "type",
+                "line": 41,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21733,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 21733,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveFit",
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 22175,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.med[].id"
             },
             {
@@ -5006,7 +6524,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 22177,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.med[].id"
             },
             {
@@ -5074,11 +6592,219 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 22889,
+                "kind": "type",
+                "line": 68,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 22890,
+                "kind": "type",
+                "line": 68,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23128,
+                "kind": "type",
+                "line": 47,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23128,
+                "kind": "type",
+                "line": 47,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23132,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23132,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23134,
+                "kind": "type",
+                "line": 44,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23134,
+                "kind": "type",
+                "line": 44,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23137,
+                "kind": "type",
+                "line": 45,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23137,
+                "kind": "type",
+                "line": 45,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23149,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23149,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23152,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23152,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23154,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23154,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23156,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23156,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23172,
+                "kind": "type",
+                "line": 48,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23172,
+                "kind": "type",
+                "line": 48,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23177,
+                "kind": "type",
+                "line": 43,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 23177,
+                "kind": "type",
+                "line": 43,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23416,
+                "kind": "type",
+                "line": 66,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23417,
+                "kind": "type",
+                "line": 66,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23418,
+                "kind": "type",
+                "line": 67,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23419,
+                "kind": "type",
+                "line": 67,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveFit",
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 23707,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.drones[].id"
             },
             {
@@ -5138,12 +6864,124 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23785,
+                "kind": "type",
+                "line": 79,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23786,
+                "kind": "type",
+                "line": 79,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveFit",
                 "file": "src/content/docs/guides/reference/fit/astero-final.mdx",
                 "id": 23787,
                 "kind": "type",
                 "line": 12,
                 "prop": "data.cargo[].id"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23797,
+                "kind": "type",
+                "line": 72,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23798,
+                "kind": "type",
+                "line": 72,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23803,
+                "kind": "type",
+                "line": 78,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23804,
+                "kind": "type",
+                "line": 78,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23805,
+                "kind": "type",
+                "line": 64,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23806,
+                "kind": "type",
+                "line": 64,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23817,
+                "kind": "type",
+                "line": 81,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23818,
+                "kind": "type",
+                "line": 81,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23819,
+                "kind": "type",
+                "line": 73,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23820,
+                "kind": "type",
+                "line": 73,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23824,
+                "kind": "type",
+                "line": 77,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23825,
+                "kind": "type",
+                "line": 77,
+                "prop": "typeId"
             },
             {
                 "component": "EveType",
@@ -5183,6 +7021,22 @@
                 "id": 23828,
                 "kind": "type",
                 "line": 92,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23868,
+                "kind": "type",
+                "line": 71,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 23869,
+                "kind": "type",
+                "line": 71,
                 "prop": "typeId"
             },
             {
@@ -5275,10 +7129,66 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25307,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 25308,
                 "kind": "type",
                 "line": 69,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25308,
+                "kind": "type",
+                "line": 52,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25504,
+                "kind": "type",
+                "line": 47,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25506,
+                "kind": "type",
+                "line": 48,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25511,
+                "kind": "type",
+                "line": 51,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25530,
+                "kind": "type",
+                "line": 22,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25530,
+                "kind": "type",
+                "line": 22,
                 "prop": "typeId"
             },
             {
@@ -5290,11 +7200,243 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25538,
+                "kind": "type",
+                "line": 21,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25538,
+                "kind": "type",
+                "line": 21,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 25539,
+                "kind": "type",
+                "line": 50,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25590,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25590,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25591,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25591,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25608,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25608,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25612,
+                "kind": "type",
+                "line": 36,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25612,
+                "kind": "type",
+                "line": 36,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25613,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25613,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25614,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25614,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25615,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25615,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25617,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25617,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25619,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25619,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25621,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25621,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/basic-exploration/site-types.mdx",
                 "id": 25622,
                 "kind": "type",
                 "line": 94,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25622,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25622,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25624,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25624,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25625,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+                "id": 25625,
+                "kind": "type",
+                "line": 27,
                 "prop": "typeId"
             },
             {
@@ -5406,7 +7548,15 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 28665,
                 "kind": "type",
-                "line": 26,
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/contributing/extensions.mdx",
+                "id": 28665,
+                "kind": "type",
+                "line": 34,
                 "prop": "typeId"
             },
             {
@@ -5414,7 +7564,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 28666,
                 "kind": "type",
-                "line": 26,
+                "line": 29,
                 "prop": "typeId"
             },
             {
@@ -5622,7 +7772,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 30013,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.charges[].id"
             },
             {
@@ -5776,6 +7926,70 @@
                 "kind": "type",
                 "line": 18,
                 "prop": "data.charges[].id"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 30744,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 30744,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 30745,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 30745,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 30746,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 30746,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 30747,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 30747,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
             },
             {
                 "component": "EveType",
@@ -5974,7 +8188,7 @@
                 "file": "src/content/docs/contributing/extensions.mdx",
                 "id": 31213,
                 "kind": "type",
-                "line": 29,
+                "line": 37,
                 "prop": "data.rig[].id"
             },
             {
@@ -6426,11 +8640,91 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33520,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33520,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33521,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33522,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33522,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33523,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33529,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33529,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/advance/ghost.mdx",
                 "id": 33530,
                 "kind": "type",
                 "line": 72,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33530,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33530,
+                "kind": "type",
+                "line": 30,
                 "prop": "typeId"
             },
             {
@@ -6443,10 +8737,66 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33531,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33531,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/ghost.mdx",
                 "id": 33532,
                 "kind": "type",
                 "line": 74,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33532,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33532,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33532,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33532,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33532,
+                "kind": "type",
+                "line": 32,
                 "prop": "typeId"
             },
             {
@@ -6459,10 +8809,234 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33533,
+                "kind": "type",
+                "line": 26,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33533,
+                "kind": "type",
+                "line": 27,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33533,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33533,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33533,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/ghost.mdx",
                 "id": 33534,
                 "kind": "type",
                 "line": 76,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33534,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33536,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33539,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33539,
+                "kind": "type",
+                "line": 25,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33543,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33545,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33546,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33547,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33548,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33556,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33558,
+                "kind": "type",
+                "line": 30,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33560,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33562,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33564,
+                "kind": "type",
+                "line": 31,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33566,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33577,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33577,
+                "kind": "type",
+                "line": 24,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33700,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33700,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33701,
+                "kind": "type",
+                "line": 28,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33702,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33702,
+                "kind": "type",
+                "line": 29,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+                "id": 33703,
+                "kind": "type",
+                "line": 29,
                 "prop": "typeId"
             },
             {
@@ -6479,6 +9053,70 @@
                 "id": 34201,
                 "kind": "type",
                 "line": 97,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 34278,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 34279,
+                "kind": "type",
+                "line": 49,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 34282,
+                "kind": "type",
+                "line": 50,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 34283,
+                "kind": "type",
+                "line": 50,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 34290,
+                "kind": "type",
+                "line": 47,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 34291,
+                "kind": "type",
+                "line": 47,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 34294,
+                "kind": "type",
+                "line": 48,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+                "id": 34295,
+                "kind": "type",
+                "line": 48,
                 "prop": "typeId"
             },
             {
@@ -7203,6 +9841,14 @@
             },
             {
                 "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 41638,
+                "kind": "type",
+                "line": 57,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 46230,
                 "kind": "type",
@@ -7218,11 +9864,107 @@
                 "prop": "typeId"
             },
             {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46235,
+                "kind": "type",
+                "line": 37,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46235,
+                "kind": "type",
+                "line": 37,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46238,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46238,
+                "kind": "type",
+                "line": 32,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46240,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46240,
+                "kind": "type",
+                "line": 33,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46246,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46246,
+                "kind": "type",
+                "line": 35,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46247,
+                "kind": "type",
+                "line": 36,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46247,
+                "kind": "type",
+                "line": 36,
+                "prop": "typeId"
+            },
+            {
                 "component": "EveType",
                 "file": "src/content/docs/guides/advance/gas.mdx",
                 "id": 46251,
                 "kind": "type",
                 "line": 46,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveTypePrice",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46251,
+                "kind": "type",
+                "line": 34,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/gas.mdx",
+                "id": 46251,
+                "kind": "type",
+                "line": 34,
                 "prop": "typeId"
             },
             {
@@ -7264,12 +10006,33 @@
                 "kind": "type",
                 "line": 15,
                 "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 83640,
+                "kind": "type",
+                "line": 58,
+                "prop": "typeId"
+            },
+            {
+                "component": "EveType",
+                "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+                "id": 83641,
+                "kind": "type",
+                "line": 59,
+                "prop": "typeId"
             }
         ],
         "iconIds": [],
         "locIds": [
+            61291,
             61359,
             61566,
+            61841,
+            61842,
+            61843,
+            61850,
             63735,
             63773,
             63841,
@@ -7367,6 +10130,7 @@
             268493,
             268512,
             268549,
+            269090,
             277674,
             287004,
             287137,
@@ -7464,8 +10228,41 @@
             19325,
             20347,
             20411,
+            20559,
+            20560,
+            20563,
+            20564,
+            20569,
+            20570,
+            20637,
+            20638,
             21074,
+            21088,
+            21470,
+            21471,
+            21472,
+            21473,
+            21474,
+            21475,
+            21476,
+            21477,
+            21478,
+            21479,
+            21480,
+            21481,
+            21484,
+            21485,
+            21486,
+            21487,
+            21493,
+            21494,
+            21510,
+            21511,
+            21569,
+            21586,
             21718,
+            21720,
+            21733,
             22175,
             22177,
             22456,
@@ -7474,9 +10271,41 @@
             22807,
             22808,
             22809,
+            22889,
+            22890,
+            23128,
+            23132,
+            23134,
+            23137,
+            23149,
+            23152,
+            23154,
+            23156,
+            23172,
+            23177,
+            23416,
+            23417,
+            23418,
+            23419,
             23707,
+            23785,
+            23786,
             23787,
+            23797,
+            23798,
+            23803,
+            23804,
+            23805,
+            23806,
+            23817,
+            23818,
+            23819,
+            23820,
+            23824,
+            23825,
             23828,
+            23868,
+            23869,
             25268,
             25273,
             25274,
@@ -7488,8 +10317,25 @@
             25303,
             25307,
             25308,
+            25504,
+            25506,
+            25511,
+            25530,
             25538,
+            25539,
+            25590,
+            25591,
+            25608,
+            25612,
+            25613,
+            25614,
+            25615,
+            25617,
+            25619,
+            25621,
             25622,
+            25624,
+            25625,
             25739,
             25810,
             25811,
@@ -7531,6 +10377,10 @@
             30461,
             30462,
             30488,
+            30744,
+            30745,
+            30746,
+            30747,
             30832,
             30834,
             30889,
@@ -7577,13 +10427,44 @@
             33509,
             33510,
             33516,
+            33520,
+            33521,
+            33522,
+            33523,
+            33529,
             33530,
             33531,
             33532,
             33533,
             33534,
+            33536,
+            33539,
+            33543,
+            33545,
+            33546,
+            33547,
+            33548,
+            33556,
+            33558,
+            33560,
+            33562,
+            33564,
+            33566,
+            33577,
+            33700,
+            33701,
+            33702,
+            33703,
             33971,
             34201,
+            34278,
+            34279,
+            34282,
+            34283,
+            34290,
+            34291,
+            34294,
+            34295,
             34299,
             34300,
             34301,
@@ -7623,10 +10504,17 @@
             41040,
             41533,
             41534,
+            41638,
             46230,
             46235,
+            46238,
+            46240,
+            46246,
+            46247,
             46251,
-            47028
+            47028,
+            83640,
+            83641
         ],
         "unresolved": [
             {
@@ -7638,6 +10526,6 @@
             }
         ]
     },
-    "generatedAt": "2026-03-28T16:05:19.889Z",
+    "generatedAt": "2026-03-29T18:08:30.545Z",
     "unresolved": []
 }

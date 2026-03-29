@@ -6,6 +6,22 @@ import {
 export type ExtensionIdKind = "text" | "icon" | "image";
 export type EveRefKind = "icon" | "localization" | "type";
 
+export interface EveTypePriceRefEntry {
+    component: "EveTypePrice";
+    file: string;
+    line: number;
+    regionId: number;
+    systemId?: number;
+    typeId: number;
+}
+
+export interface EveTypePriceRefUnresolved {
+    component: "EveTypePrice";
+    expectedProp: "regionId" | "systemId" | "typeId";
+    file: string;
+    line: number;
+}
+
 export interface ExtensionIdEntry {
     component: string;
     file: string;
@@ -70,6 +86,26 @@ export interface ExtensionIdManifest {
     unresolved: ExtensionIdUnresolved[];
 }
 
+export interface EveTypePriceRefManifest {
+    duplicates: Array<{
+        occurrences: Array<{
+            file: string;
+            line: number;
+        }>;
+        regionId: number;
+        systemId?: number;
+        typeId: number;
+    }>;
+    entries: EveTypePriceRefEntry[];
+    generatedAt: string;
+    refs: Array<{
+        regionId: number;
+        systemId?: number;
+        typeId: number;
+    }>;
+    unresolved: EveTypePriceRefUnresolved[];
+}
+
 export interface ExtensionIdRenderMeta {
     file: string;
     line: number;
@@ -85,6 +121,8 @@ interface ExtensionIdCollectorState {
     entries: Map<string, ExtensionIdEntry>;
     eveEntries: Map<string, EveRefEntry>;
     eveUnresolved: Map<string, EveRefUnresolved>;
+    eveTypePriceEntries: Map<string, EveTypePriceRefEntry>;
+    eveTypePriceUnresolved: Map<string, EveTypePriceRefUnresolved>;
     unresolved: Map<string, ExtensionIdUnresolved>;
 }
 
@@ -96,6 +134,8 @@ function createCollectorState(): ExtensionIdCollectorState {
         entries: new Map(),
         eveEntries: new Map(),
         eveUnresolved: new Map(),
+        eveTypePriceEntries: new Map(),
+        eveTypePriceUnresolved: new Map(),
         unresolved: new Map(),
     };
 }
@@ -151,6 +191,45 @@ function compareEveUnresolved(left: EveRefUnresolved, right: EveRefUnresolved) {
         left.kind.localeCompare(right.kind) ||
         left.expectedProp.localeCompare(right.expectedProp)
     );
+}
+
+function compareEveTypePriceEntries(
+    left: EveTypePriceRefEntry,
+    right: EveTypePriceRefEntry,
+) {
+    return (
+        left.regionId - right.regionId ||
+        left.typeId - right.typeId ||
+        compareOptionalEveTypePriceSystemId(left.systemId, right.systemId) ||
+        left.file.localeCompare(right.file) ||
+        left.line - right.line
+    );
+}
+
+function compareEveTypePriceUnresolved(
+    left: EveTypePriceRefUnresolved,
+    right: EveTypePriceRefUnresolved,
+) {
+    return (
+        left.file.localeCompare(right.file) ||
+        left.line - right.line ||
+        left.expectedProp.localeCompare(right.expectedProp)
+    );
+}
+
+function compareOptionalEveTypePriceSystemId(
+    left: number | undefined,
+    right: number | undefined,
+) {
+    if (left === undefined) {
+        return right === undefined ? 0 : -1;
+    }
+
+    if (right === undefined) {
+        return 1;
+    }
+
+    return left - right;
 }
 
 function collectDuplicates(entries: ExtensionIdEntry[]) {
@@ -218,6 +297,70 @@ function collectEveIdList(entries: EveRefEntry[], kind: EveRefKind) {
                 .map((entry) => entry.id),
         ),
     ].sort((left, right) => left - right);
+}
+
+function collectEveTypePriceDuplicates(entries: EveTypePriceRefEntry[]) {
+    const byRef = new Map<
+        string,
+        EveTypePriceRefManifest["duplicates"][number]
+    >();
+
+    for (const entry of entries) {
+        const key = toMapKey([
+            entry.regionId,
+            entry.typeId,
+            entry.systemId ?? "",
+        ]);
+        const bucket = byRef.get(key) ?? {
+            occurrences: [],
+            regionId: entry.regionId,
+            systemId: entry.systemId,
+            typeId: entry.typeId,
+        };
+
+        bucket.occurrences.push({
+            file: entry.file,
+            line: entry.line,
+        });
+        byRef.set(key, bucket);
+    }
+
+    return [...byRef.values()]
+        .filter((entry) => entry.occurrences.length > 1)
+        .sort(
+            (left, right) =>
+                left.regionId - right.regionId ||
+                left.typeId - right.typeId ||
+                compareOptionalEveTypePriceSystemId(
+                    left.systemId,
+                    right.systemId,
+                ),
+        );
+}
+
+function collectEveTypePriceRefs(entries: EveTypePriceRefEntry[]) {
+    const byRef = new Map<string, EveTypePriceRefManifest["refs"][number]>();
+
+    for (const entry of entries) {
+        const key = toMapKey([
+            entry.regionId,
+            entry.typeId,
+            entry.systemId ?? "",
+        ]);
+
+        byRef.set(key, {
+            regionId: entry.regionId,
+            systemId: entry.systemId,
+            typeId: entry.typeId,
+        });
+    }
+
+    return [...byRef.values()].sort(
+        (left, right) =>
+            left.regionId - right.regionId ||
+            left.typeId - right.typeId ||
+            compareOptionalEveTypePriceSystemId(left.systemId, right.systemId),
+    );
 }
 
 function isRenderableStringId(value: unknown): value is string {
@@ -302,6 +445,46 @@ function recordEveUnresolved(
         expectedProp,
         file: meta.file,
         kind,
+        line: meta.line,
+    });
+}
+
+function recordEveTypePriceEntry(
+    regionId: number,
+    typeId: number,
+    systemId: number | undefined,
+    meta: ExtensionIdRenderMeta,
+) {
+    const state = getCollectorState();
+    const key = toMapKey([
+        regionId,
+        typeId,
+        systemId ?? "",
+        meta.file,
+        meta.line,
+    ]);
+
+    state.eveTypePriceEntries.set(key, {
+        component: "EveTypePrice",
+        file: meta.file,
+        line: meta.line,
+        regionId,
+        systemId,
+        typeId,
+    });
+}
+
+function recordEveTypePriceUnresolved(
+    expectedProp: "regionId" | "systemId" | "typeId",
+    meta: ExtensionIdRenderMeta,
+) {
+    const state = getCollectorState();
+    const key = toMapKey([expectedProp, meta.file, meta.line]);
+
+    state.eveTypePriceUnresolved.set(key, {
+        component: "EveTypePrice",
+        expectedProp,
+        file: meta.file,
         line: meta.line,
     });
 }
@@ -407,6 +590,8 @@ export function clearExtensionIdCollection() {
     state.entries.clear();
     state.eveEntries.clear();
     state.eveUnresolved.clear();
+    state.eveTypePriceEntries.clear();
+    state.eveTypePriceUnresolved.clear();
     state.unresolved.clear();
 }
 
@@ -435,6 +620,24 @@ export function buildExtensionIdManifest(): ExtensionIdManifest {
             unresolved: eveUnresolved,
         },
         generatedAt: new Date().toISOString(),
+        unresolved,
+    };
+}
+
+export function buildEveTypePriceRefManifest(): EveTypePriceRefManifest {
+    const state = getCollectorState();
+    const entries = [...state.eveTypePriceEntries.values()].sort(
+        compareEveTypePriceEntries,
+    );
+    const unresolved = [...state.eveTypePriceUnresolved.values()].sort(
+        compareEveTypePriceUnresolved,
+    );
+
+    return {
+        duplicates: collectEveTypePriceDuplicates(entries),
+        entries,
+        generatedAt: new Date().toISOString(),
+        refs: collectEveTypePriceRefs(entries),
         unresolved,
     };
 }
@@ -483,6 +686,50 @@ export function registerEveTypeId(
     meta: ExtensionIdRenderMeta | undefined,
 ) {
     registerEveReference("EveType", "type", "typeId", value, meta);
+}
+
+export function registerEveTypePriceId(
+    value: unknown,
+    meta: ExtensionIdRenderMeta | undefined,
+) {
+    registerEveReference("EveTypePrice", "type", "typeId", value, meta);
+}
+
+export function registerEveTypePriceRef(
+    typeId: unknown,
+    regionId: unknown,
+    systemId: unknown,
+    meta: ExtensionIdRenderMeta | undefined,
+) {
+    if (!isCollectionActive(meta)) {
+        return;
+    }
+
+    if (!isSafeIntegerId(typeId)) {
+        recordEveTypePriceUnresolved("typeId", meta);
+        return;
+    }
+
+    if (!isSafeIntegerId(regionId)) {
+        recordEveTypePriceUnresolved("regionId", meta);
+        return;
+    }
+
+    if (
+        systemId !== undefined &&
+        systemId !== null &&
+        !isSafeIntegerId(systemId)
+    ) {
+        recordEveTypePriceUnresolved("systemId", meta);
+        return;
+    }
+
+    recordEveTypePriceEntry(
+        regionId,
+        typeId,
+        isSafeIntegerId(systemId) ? systemId : undefined,
+        meta,
+    );
 }
 
 export function registerEveLocId(

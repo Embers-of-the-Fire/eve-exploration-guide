@@ -1,0 +1,98 @@
+---
+import { eveTypePriceGeneratedAt } from "@/generated/eve/type-price-data";
+import styles from "./EveReference.module.css";
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+function addUtcYears(date: Date, years: number) {
+    return new Date(
+        Date.UTC(
+            date.getUTCFullYear() + years,
+            date.getUTCMonth(),
+            date.getUTCDate(),
+            date.getUTCHours(),
+            date.getUTCMinutes(),
+            date.getUTCSeconds(),
+            date.getUTCMilliseconds(),
+        ),
+    );
+}
+
+function getElapsedYearsAndDays(start: Date, end: Date) {
+    if (end <= start) {
+        return {
+            days: 0,
+            years: 0,
+        };
+    }
+
+    let years = end.getUTCFullYear() - start.getUTCFullYear();
+    let anniversary = addUtcYears(start, years);
+
+    if (anniversary > end) {
+        years -= 1;
+        anniversary = addUtcYears(start, years);
+    }
+
+    return {
+        days: Math.floor((end.getTime() - anniversary.getTime()) / DAY_MS),
+        years,
+    };
+}
+
+const pageLocale = (Astro.currentLocale ?? "zh-CN").toLowerCase();
+const generatedAt = eveTypePriceGeneratedAt
+    ? new Date(eveTypePriceGeneratedAt)
+    : null;
+const hasGeneratedAt =
+    generatedAt !== null && !Number.isNaN(generatedAt.getTime());
+
+let generatedTimestampMessage: string | null = null;
+
+if (hasGeneratedAt) {
+    const timestamp = new Intl.DateTimeFormat(pageLocale, {
+        dateStyle: "medium",
+        timeStyle: "short",
+    }).format(generatedAt);
+    const { days, years } = getElapsedYearsAndDays(generatedAt, new Date());
+    const daysText = Astro.locals.t("eveTypePrice.generatedTimestamp.days", {
+        count: days,
+    });
+    const ageText =
+        years > 0
+            ? Astro.locals.t("eveTypePrice.generatedTimestamp.ageWithYears", {
+                  days: daysText,
+                  years: Astro.locals.t(
+                      "eveTypePrice.generatedTimestamp.years",
+                      {
+                          count: years,
+                      },
+                  ),
+              })
+            : Astro.locals.t(
+                  "eveTypePrice.generatedTimestamp.ageWithoutYears",
+                  {
+                      days: daysText,
+                  },
+              );
+
+    generatedTimestampMessage = Astro.locals.t(
+        "eveTypePrice.generatedTimestamp.message",
+        {
+            age: ageText,
+            interpolation: { escapeValue: false },
+            isoTimestamp: generatedAt.toISOString(),
+            timestamp,
+        },
+    );
+}
+---
+
+{
+    generatedTimestampMessage ? (
+        <span
+            class={styles.generatedTimestamp}
+            set:html={generatedTimestampMessage}
+        />
+    ) : null
+}

@@ -1,0 +1,248 @@
+---
+import {
+    registerEveTypePriceId,
+    registerEveTypePriceRef,
+    resolveExtensionIdRenderMeta,
+    type WithExtensionIdSourceProps,
+} from "@astro-extension-ids/runtime";
+import baseStyles from "../inline/InlineReference.module.css";
+import styles from "./EveReference.module.css";
+import EveTypePriceGeneratedTimestamp from "./EveTypePriceGeneratedTimestamp.astro";
+import {
+    formatEveRef,
+    formatTypePriceKey,
+    formatMissingLabel,
+    getTypePriceEntry,
+    getTypeEntry,
+    resolveLocalization,
+} from "./data";
+
+interface Props extends WithExtensionIdSourceProps {
+    regionId?: number;
+    size?: number | string;
+    systemId?: number;
+    typeId: number;
+}
+
+const DEFAULT_REGION_ID = 10000002;
+
+interface PopoverRow {
+    hasValue: boolean;
+    label: string;
+    tone?: "buy" | "sell";
+    unit?: string;
+    value: string;
+}
+
+function hasNumericStat(value: number | null | undefined): value is number {
+    return typeof value === "number";
+}
+
+function formatNumericStat(
+    value: number | null | undefined,
+    formatter: Intl.NumberFormat,
+    unavailableLabel: string,
+) {
+    return hasNumericStat(value)
+        ? formatter.format(Math.round(value))
+        : unavailableLabel;
+}
+
+const {
+    __extensionIdFile,
+    __extensionIdLine,
+    regionId = DEFAULT_REGION_ID,
+    systemId,
+    typeId,
+} = Astro.props as Props;
+const renderMeta = resolveExtensionIdRenderMeta(
+    __extensionIdFile,
+    __extensionIdLine,
+);
+
+registerEveTypePriceId(typeId, renderMeta);
+registerEveTypePriceRef(typeId, regionId, systemId, renderMeta);
+
+const typeData = getTypeEntry(typeId);
+const name = typeData
+    ? resolveLocalization(typeData.typeNameLocId, "type", typeId)
+    : {
+          en: formatMissingLabel("type", typeId),
+          missing: true,
+          zhCN: formatMissingLabel("type", typeId),
+      };
+const sellLabel = Astro.locals.t("eveTypePrice.sell");
+const buyLabel = Astro.locals.t("eveTypePrice.buy");
+const iskLabel = Astro.locals.t("eveTypePrice.isk");
+const unavailableLabel = Astro.locals.t("eveTypePrice.unavailable");
+const sellVolumeLabel = Astro.locals.t("eveTypePrice.sellVolume");
+const buyVolumeLabel = Astro.locals.t("eveTypePrice.buyVolume");
+const sellOrdersLabel = Astro.locals.t("eveTypePrice.sellOrders");
+const buyOrdersLabel = Astro.locals.t("eveTypePrice.buyOrders");
+const pageLocale = (Astro.currentLocale ?? "zh-CN").toLowerCase();
+const accessibleName = pageLocale.startsWith("en") ? name.en : name.zhCN;
+const numberFormatter = new Intl.NumberFormat(pageLocale, {
+    maximumFractionDigits: 0,
+});
+const typePriceKey = formatTypePriceKey(regionId, typeId, systemId);
+const priceData = getTypePriceEntry(regionId, typeId, systemId);
+const sellPriceValue = priceData?.sellAvgFivePercent;
+const buyPriceValue = priceData?.buyAvgFivePercent;
+const sellPrice = formatNumericStat(
+    sellPriceValue,
+    numberFormatter,
+    unavailableLabel,
+);
+const buyPrice = formatNumericStat(
+    buyPriceValue,
+    numberFormatter,
+    unavailableLabel,
+);
+const hasPriceData =
+    hasNumericStat(sellPriceValue) && hasNumericStat(buyPriceValue);
+const popoverRows: PopoverRow[] = [
+    {
+        hasValue: hasNumericStat(sellPriceValue),
+        label: sellLabel,
+        tone: "sell",
+        unit: hasNumericStat(sellPriceValue) ? iskLabel : undefined,
+        value: sellPrice,
+    },
+    {
+        hasValue: hasNumericStat(buyPriceValue),
+        label: buyLabel,
+        tone: "buy",
+        unit: hasNumericStat(buyPriceValue) ? iskLabel : undefined,
+        value: buyPrice,
+    },
+    {
+        hasValue: hasNumericStat(priceData?.sellVolume),
+        label: sellVolumeLabel,
+        value: formatNumericStat(
+            priceData?.sellVolume,
+            numberFormatter,
+            unavailableLabel,
+        ),
+    },
+    {
+        hasValue: hasNumericStat(priceData?.buyVolume),
+        label: buyVolumeLabel,
+        value: formatNumericStat(
+            priceData?.buyVolume,
+            numberFormatter,
+            unavailableLabel,
+        ),
+    },
+    {
+        hasValue: hasNumericStat(priceData?.sellOrders),
+        label: sellOrdersLabel,
+        value: formatNumericStat(
+            priceData?.sellOrders,
+            numberFormatter,
+            unavailableLabel,
+        ),
+    },
+    {
+        hasValue: hasNumericStat(priceData?.buyOrders),
+        label: buyOrdersLabel,
+        value: formatNumericStat(
+            priceData?.buyOrders,
+            numberFormatter,
+            unavailableLabel,
+        ),
+    },
+];
+const popoverId = `eve-type-price-${typePriceKey.replaceAll(":", "-")}-popover`;
+const initialSummary = `${sellLabel} ${sellPrice}${hasPriceData ? ` ${iskLabel}` : ""}; ${buyLabel} ${buyPrice}${hasPriceData ? ` ${iskLabel}` : ""}`;
+---
+
+<button
+    aria-describedby={popoverId}
+    aria-label={`${accessibleName}: ${initialSummary}`}
+    class={`${baseStyles.localized} ${styles.inlineReference} ${styles.priceReference}`}
+    data-eve-ref={formatEveRef("type", typeId)}
+    data-eve-type-price=""
+    data-eve-type-price-buy-label={buyLabel}
+    data-eve-type-price-isk-label={iskLabel}
+    data-eve-type-price-name={accessibleName}
+    data-eve-type-price-region-id={regionId}
+    data-eve-type-price-sell-label={sellLabel}
+    data-eve-type-price-system-id={systemId}
+    data-eve-type-price-state={hasPriceData ? "ready" : "missing"}
+    data-eve-type-price-type-id={typeId}
+    data-eve-type-price-unavailable-label={unavailableLabel}
+    data-inline-popover-root=""
+    type="button"
+>
+    <strong
+        class={`${baseStyles.label} ${styles.inlineLabel} ${styles.priceLabelBlock}`}
+    >
+        <span class={styles.priceRows}>
+            <span class={styles.priceRowLabel}>{sellLabel}</span>
+            <span
+                class={`${styles.priceValue} ${styles.priceValueSell}`}
+                data-eve-type-price-value="sell"
+            >
+                {sellPrice}
+            </span>
+            <span class={styles.priceUnit}>{iskLabel}</span>
+            <span class={styles.priceRowLabel}>{buyLabel}</span>
+            <span
+                class={`${styles.priceValue} ${styles.priceValueBuy}`}
+                data-eve-type-price-value="buy"
+            >
+                {buyPrice}
+            </span>
+            <span class={styles.priceUnit}>{iskLabel}</span>
+        </span>
+    </strong>
+    <span
+        class={baseStyles.popover}
+        data-inline-popover=""
+        id={popoverId}
+        role="tooltip"
+    >
+        <span class={styles.detailGrid}>
+            <span class={styles.section}>
+                <span
+                    class={`${baseStyles.popoverTable} ${styles.priceStatsTable}`}
+                >
+                    {
+                        popoverRows.map((row) => (
+                            <Fragment key={row.label}>
+                                <span class={baseStyles.popoverRow}>
+                                    <span class={baseStyles.popoverLabel}>
+                                        {row.label}
+                                    </span>
+                                    <span class={baseStyles.popoverValue}>
+                                        <span class={styles.pricePopoverValue}>
+                                            <span
+                                                class:list={[
+                                                    styles.statValue,
+                                                    row.hasValue &&
+                                                        row.tone === "sell" &&
+                                                        styles.statValueSell,
+                                                    row.hasValue &&
+                                                        row.tone === "buy" &&
+                                                        styles.statValueBuy,
+                                                ]}
+                                            >
+                                                {row.value}
+                                            </span>
+                                            {row.unit ? (
+                                                <span class={styles.statUnit}>
+                                                    {row.unit}
+                                                </span>
+                                            ) : null}
+                                        </span>
+                                    </span>
+                                </span>
+                            </Fragment>
+                        ))
+                    }
+                </span>
+            </span>
+            <EveTypePriceGeneratedTimestamp />
+        </span>
+    </span>
+</button>

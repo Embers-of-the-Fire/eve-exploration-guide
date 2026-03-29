@@ -13,6 +13,7 @@ dependencies = [
 
 [project.scripts]
 eve-docs-generator = "eve_docs_generator.__main__:main"
+eve-docs-type-price-data = "eve_docs_generator.type_prices:main"
 
 [build-system]
 requires = ["setuptools>=69"]

@@ -127,6 +127,11 @@ export const docsSidebar: Sidebar = [
                 autogenerate: { directory: "guides/reference/fit" },
             },
             {
+                label: "挖坟产出",
+                collapsed: true,
+                autogenerate: { directory: "guides/reference/loot" },
+            },
+            {
                 label: "伤害数据",
                 collapsed: true,
                 autogenerate: { directory: "guides/reference/damage-database" },

@@ -1,0 +1,36 @@
+---
+title: 幽灵坟
+---
+
+import EveLocText from "@/components/docs/eve/EveLocText.jsx";
+import EveType from "@/components/docs/eve/EveType.jsx";
+import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
+import EveTypePriceGeneratedTimestamp from "@/components/docs/eve/EveTypePriceGeneratedTimestamp.astro";
+import TopAlignedTable from "@/components/docs/TopAlignedTable.astro";
+
+<EveTypePriceGeneratedTimestamp />
+
+---
+
+:::note
+这里只罗列了挖坟产出较高的物品和部分现在/曾经价格较高的蓝图。
+蓝图不提供参考价格，因为其价格波动较大而且材料成本不稳定。
+:::
+
+<TopAlignedTable>
+
+| 名称                                                                                     | 来源                                                      | 市价                                                           |
+| ---------------------------------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------- |
+| <EveType typeId={33577} />                                                               | 任何箱子                                                  | <EveTypePrice typeId={33577} />                                |
+| <EveType typeId={33539} />                                                               | <EveType typeId={33530} /><br/><EveType typeId={33531} /> | <EveTypePrice typeId={33539} />                                |
+| <EveType typeId={33521} />                                                               | <EveType typeId={33532} /><br/><EveType typeId={33533} /> | <EveType typeId={33520} /><br/><EveTypePrice typeId={33520} /> |
+| <EveType typeId={33523} />                                                               | <EveType typeId={33532} /><br/><EveType typeId={33533} /> | <EveType typeId={33522} /><br/><EveTypePrice typeId={33522} /> |
+| <EveType typeId={33701} />                                                               | <EveType typeId={33532} /><br/><EveType typeId={33533} /> | <EveType typeId={33700} /><br/><EveTypePrice typeId={33700} /> |
+| <EveType typeId={33703} />                                                               | <EveType typeId={33532} /><br/><EveType typeId={33533} /> | <EveType typeId={33702} /><br/><EveTypePrice typeId={33702} /> |
+| <EveType typeId={33556} /><br/><EveType typeId={33558} />                                | <EveType typeId={33530} />                                | N/A                                                            |
+| <EveType typeId={33564} /><br/><EveType typeId={33560} /><br/><EveType typeId={33562} /> | <EveType typeId={33531} />                                | N/A                                                            |
+| <EveType typeId={33566} /><br/><EveType typeId={33536} /><br/><EveType typeId={33543} /> | <EveType typeId={33532} />                                | N/A                                                            |
+| <EveType typeId={33545} /><br/><EveType typeId={33547} /><br/><EveType typeId={33546} /> | <EveType typeId={33533} />                                | N/A                                                            |
+| <EveType typeId={33548} />                                                               | <EveType typeId={33534} />                                | <EveType typeId={33529} /><br/><EveTypePrice typeId={33529} /> |
+
+</TopAlignedTable>

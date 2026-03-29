@@ -6,8 +6,11 @@ description: 面向 EVE Online 文档的 MDX 组件，以及对应的数据生�
 import EveFit from "@/components/docs/eve/EveFit.astro";
 import EveLocText from "@/components/docs/eve/EveLocText.tsx";
 import EveType from "@/components/docs/eve/EveType.tsx";
+import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
 
-本文记录当前站点可在 MDX 中直接使用的 EVE 文档组件。它们渲染时只读取仓库内已生成的最小化 TQ 数据子集，不会依赖运行时请求。
+本文记录当前站点可在 MDX 中直接使用的 EVE 文档组件。它们在渲染时都只读取仓库内已生成的数据。
+其中 `EveTypePrice` 会在 `build:collect` 阶段收集 `(regionId, typeId, systemId?)` 引用，
+再由额外的价格生成步骤拉取 EveTycoon 的市场快照，最终静态写入仓库内的生成文件。
 
 > 如果 `src/generated/eve/data.ts` 还没有针对当前文档引用完成同步，这些组件会回退为
 > `type:...`、`loc:...` 和占位图标，以保证构建本身不被阻塞。
@@ -24,6 +27,11 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 <p>
     类型：
     <EveType typeId={28665} size={32} />、<EveType typeId={28666} size={32} />
+</p>
+
+<p>
+    市场价格：
+    <EveTypePrice typeId={28665} />
 </p>
 
 <EveFit
@@ -45,6 +53,7 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 import EveFit from "@/components/docs/eve/EveFit.astro";
 import EveLocText from "@/components/docs/eve/EveLocText.tsx";
 import EveType from "@/components/docs/eve/EveType.tsx";
+import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
 ```
 
 ## `EveType` API
@@ -63,6 +72,40 @@ import EveType from "@/components/docs/eve/EveType.tsx";
 
 ```mdx
 可以直接写 <EveType typeId={28665} size={32} /> 或 <EveType typeId={28666} size={32} />。
+```
+
+## `EveTypePrice` API
+
+| Prop       | Type               | Default    | 说明                                                               |
+| ---------- | ------------------ | ---------- | ------------------------------------------------------------------ |
+| `typeId`   | `number`           | Required   | TQ `type_id`。                                                     |
+| `regionId` | `number`           | `10000002` | 市场区域 ID。默认值为 The Forge。                                  |
+| `systemId` | `number`           | Optional   | 可选的太阳系 ID；会作为 EveTycoon API 的 `systemID` 查询参数传入。 |
+| `size`     | `number \| string` | `16`       | 为兼容旧调用点保留；当前版本不再显示前缀图像，因此没有可见效果。   |
+
+行为说明：
+
+- 正文中会直接显示两行价格，分别对应卖单与买单，数值颜色分别为红色与绿色。
+- 价格数据来自 `packages/eve-docs-generator/` 提供的 Python 生成器
+  `pnpm generate:eve-type-price-data` 写出的静态文件
+  `src/generated/eve/type-price-data.ts`，并使用 EveTycoon 返回的
+  `sellAvgFivePercent` 与 `buyAvgFivePercent`。
+- `build:collect` 会把组件引用写入 `src/generated/eve-type-prices.json`，
+  该文件专门用于跟踪价格组件的 `(regionId, typeId, systemId?)` 清单，避免和
+  `src/generated/extension-ids.json` 混在一起。
+- 行内标签文本和无数据文案通过 Starlight UI 翻译系统渲染，键位定义在
+  `src/content/i18n/*.json` 中的 `eveTypePrice.*`。
+- 悬停浮层会显示当前静态 API 结果，包括买卖均价、成交量和订单量。
+- 如果某个字段当前没有已生成的数据，会在对应行显示当前 locale 下配置的“暂无报价”文案。
+
+```mdx
+可以直接写 <EveTypePrice typeId={28665} />。
+
+如果你想指定市场区域，也可以写 <EveTypePrice typeId={28665} regionId={10000043} />。
+
+如果你想把价格限定到某个具体太阳系，也可以写
+
+<EveTypePrice typeId={28665} regionId={10000043} systemId={30000142} />。
 ```
 
 ## `EveLocText` API
@@ -153,16 +196,24 @@ pnpm build:all
 
 如果存在 `start.ini`，生成器还会把游戏版本和 build 一并写进生成数据。
 
-生成器读取 `src/generated/extension-ids.json` 中的 `eveRefs` 字段，只同步实际被文档调用到的资源：
+生成步骤会读取两份收集结果，只同步实际被文档调用到的资源：
 
-- `eveRefs.typeIds`
-  包括 `EveType.typeId`，以及 `EveFit.shipId` / `EveFit.data.<section>[].id`
-- `eveRefs.locIds`
-- `eveRefs.iconIds`
+- `src/generated/extension-ids.json`
+  中的 `eveRefs.typeIds`
+  包括 `EveType.typeId`、`EveTypePrice.typeId`，以及 `EveFit.shipId` / `EveFit.data.<section>[].id`
+- `src/generated/extension-ids.json`
+  中的 `eveRefs.locIds`
+- `src/generated/extension-ids.json`
+  中的 `eveRefs.iconIds`
+- `src/generated/eve-type-prices.json`
+  包括 `EveTypePrice.regionId`、`EveTypePrice.typeId` 以及可选的 `EveTypePrice.systemId`
+  唯一组合，用于后续拉取市场价格快照
 
 并写出：
 
+- `src/generated/eve-type-prices.json`
 - `src/generated/eve/data.ts`
+- `src/generated/eve/type-price-data.ts`
 - `src/generated/eve/icons/*.png`
 - `src/generated/eve/types/*.png`
 
@@ -172,12 +223,15 @@ pnpm build:all
 import EveFit from "@/components/docs/eve/EveFit.astro";
 import EveLocText from "@/components/docs/eve/EveLocText.tsx";
 import EveType from "@/components/docs/eve/EveType.tsx";
+import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
 
 在正文中可以直接混排
 
 <EveLocText locId={297962} />
 、
 <EveType typeId={28665} size={32} />
+、
+<EveTypePrice typeId={28665} />
 和
 <EveType typeId={28666} size={32} />。
 

@@ -1,0 +1,38 @@
+---
+title: 普通遗迹
+---
+
+import EveLocText from "@/components/docs/eve/EveLocText.jsx";
+import EveType from "@/components/docs/eve/EveType.jsx";
+import EveTypePrice from "@/components/docs/eve/EveTypePrice.astro";
+import EveTypePriceGeneratedTimestamp from "@/components/docs/eve/EveTypePriceGeneratedTimestamp.astro";
+import TopAlignedTable from "@/components/docs/TopAlignedTable.astro";
+
+<EveTypePriceGeneratedTimestamp />
+
+---
+
+:::note
+这里只罗列了挖坟产出较高的物品和部分现在/曾经价格较高的蓝图。
+蓝图不提供参考价格，因为其价格波动较大而且材料成本不稳定。
+:::
+
+<TopAlignedTable>
+
+| 名称                       | 势力                         | 市价                            |
+| -------------------------- | ---------------------------- | ------------------------------- |
+| <EveType typeId={25622} /> | <EveLocText locId={61843} /> | <EveTypePrice typeId={25622} /> |
+| <EveType typeId={25615} /> | <EveLocText locId={61291} /> | <EveTypePrice typeId={25615} /> |
+| <EveType typeId={25591} /> | <EveLocText locId={61291} /> | <EveTypePrice typeId={25591} /> |
+| <EveType typeId={25625} /> | <EveLocText locId={61841} /> | <EveTypePrice typeId={25625} /> |
+| <EveType typeId={25608} /> | <EveLocText locId={61841} /> | <EveTypePrice typeId={25608} /> |
+| <EveType typeId={25621} /> | <EveLocText locId={61842} /> | <EveTypePrice typeId={25621} /> |
+| <EveType typeId={25614} /> | <EveLocText locId={61842} /> | <EveTypePrice typeId={25614} /> |
+| <EveType typeId={25624} /> | <EveLocText locId={61850} /> | <EveTypePrice typeId={25624} /> |
+| <EveType typeId={25590} /> | <EveLocText locId={61850} /> | <EveTypePrice typeId={25590} /> |
+| <EveType typeId={25619} /> | N/A                          | <EveTypePrice typeId={25619} /> |
+| <EveType typeId={25617} /> | N/A                          | <EveTypePrice typeId={25617} /> |
+| <EveType typeId={25613} /> | N/A                          | <EveTypePrice typeId={25613} /> |
+| <EveType typeId={25612} /> | N/A                          | <EveTypePrice typeId={25612} /> |
+
+</TopAlignedTable>

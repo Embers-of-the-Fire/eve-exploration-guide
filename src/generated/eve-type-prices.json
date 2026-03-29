@@ -1,0 +1,864 @@
+{
+    "duplicates": [],
+    "entries": [
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 74,
+            "regionId": 10000002,
+            "typeId": 20559
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 65,
+            "regionId": 10000002,
+            "typeId": 20563
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 75,
+            "regionId": 10000002,
+            "typeId": 20569
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 70,
+            "regionId": 10000002,
+            "typeId": 20637
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 46,
+            "regionId": 10000002,
+            "typeId": 21088
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 83,
+            "regionId": 10000002,
+            "typeId": 21470
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 84,
+            "regionId": 10000002,
+            "typeId": 21472
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 85,
+            "regionId": 10000002,
+            "typeId": 21474
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 86,
+            "regionId": 10000002,
+            "typeId": 21476
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 87,
+            "regionId": 10000002,
+            "typeId": 21478
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 88,
+            "regionId": 10000002,
+            "typeId": 21480
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 76,
+            "regionId": 10000002,
+            "typeId": 21484
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 82,
+            "regionId": 10000002,
+            "typeId": 21486
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 69,
+            "regionId": 10000002,
+            "typeId": 21493
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 80,
+            "regionId": 10000002,
+            "typeId": 21510
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 40,
+            "regionId": 10000002,
+            "typeId": 21569
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 42,
+            "regionId": 10000002,
+            "typeId": 21586
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 41,
+            "regionId": 10000002,
+            "typeId": 21720
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 26,
+            "regionId": 10000002,
+            "typeId": 21733
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 68,
+            "regionId": 10000002,
+            "typeId": 22889
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 47,
+            "regionId": 10000002,
+            "typeId": 23128
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 49,
+            "regionId": 10000002,
+            "typeId": 23132
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 44,
+            "regionId": 10000002,
+            "typeId": 23134
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 45,
+            "regionId": 10000002,
+            "typeId": 23137
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 28,
+            "regionId": 10000002,
+            "typeId": 23149
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 27,
+            "regionId": 10000002,
+            "typeId": 23152
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 30,
+            "regionId": 10000002,
+            "typeId": 23154
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 29,
+            "regionId": 10000002,
+            "typeId": 23156
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 48,
+            "regionId": 10000002,
+            "typeId": 23172
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-data.mdx",
+            "line": 43,
+            "regionId": 10000002,
+            "typeId": 23177
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 66,
+            "regionId": 10000002,
+            "typeId": 23416
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 67,
+            "regionId": 10000002,
+            "typeId": 23418
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 79,
+            "regionId": 10000002,
+            "typeId": 23785
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 72,
+            "regionId": 10000002,
+            "typeId": 23797
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 78,
+            "regionId": 10000002,
+            "typeId": 23803
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 64,
+            "regionId": 10000002,
+            "typeId": 23805
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 81,
+            "regionId": 10000002,
+            "typeId": 23817
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 73,
+            "regionId": 10000002,
+            "typeId": 23819
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 77,
+            "regionId": 10000002,
+            "typeId": 23824
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 71,
+            "regionId": 10000002,
+            "typeId": 23868
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/gas.mdx",
+            "line": 22,
+            "regionId": 10000002,
+            "typeId": 25530
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/gas.mdx",
+            "line": 21,
+            "regionId": 10000002,
+            "typeId": 25538
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 32,
+            "regionId": 10000002,
+            "typeId": 25590
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 26,
+            "regionId": 10000002,
+            "typeId": 25591
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 28,
+            "regionId": 10000002,
+            "typeId": 25608
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 36,
+            "regionId": 10000002,
+            "typeId": 25612
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 35,
+            "regionId": 10000002,
+            "typeId": 25613
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 30,
+            "regionId": 10000002,
+            "typeId": 25614
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 25,
+            "regionId": 10000002,
+            "typeId": 25615
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 34,
+            "regionId": 10000002,
+            "typeId": 25617
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 33,
+            "regionId": 10000002,
+            "typeId": 25619
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 29,
+            "regionId": 10000002,
+            "typeId": 25621
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 24,
+            "regionId": 10000002,
+            "typeId": 25622
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 31,
+            "regionId": 10000002,
+            "typeId": 25624
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/common-relic.mdx",
+            "line": 27,
+            "regionId": 10000002,
+            "typeId": 25625
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/contributing/extensions.mdx",
+            "line": 34,
+            "regionId": 10000002,
+            "typeId": 28665
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 30,
+            "regionId": 10000002,
+            "systemId": 30000133,
+            "typeId": 30744
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 31,
+            "regionId": 10000002,
+            "systemId": 30000133,
+            "typeId": 30745
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 32,
+            "regionId": 10000002,
+            "systemId": 30000133,
+            "typeId": 30746
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 33,
+            "regionId": 10000002,
+            "systemId": 30000133,
+            "typeId": 30747
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+            "line": 26,
+            "regionId": 10000002,
+            "typeId": 33520
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+            "line": 27,
+            "regionId": 10000002,
+            "typeId": 33522
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+            "line": 34,
+            "regionId": 10000002,
+            "typeId": 33529
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+            "line": 25,
+            "regionId": 10000002,
+            "typeId": 33539
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+            "line": 24,
+            "regionId": 10000002,
+            "typeId": 33577
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+            "line": 28,
+            "regionId": 10000002,
+            "typeId": 33700
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/ghost.mdx",
+            "line": 29,
+            "regionId": 10000002,
+            "typeId": 33702
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 49,
+            "regionId": 10000002,
+            "typeId": 34278
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 50,
+            "regionId": 10000002,
+            "typeId": 34282
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 47,
+            "regionId": 10000002,
+            "typeId": 34290
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/sleeper.mdx",
+            "line": 48,
+            "regionId": 10000002,
+            "typeId": 34294
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/gas.mdx",
+            "line": 37,
+            "regionId": 10000002,
+            "typeId": 46235
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/gas.mdx",
+            "line": 32,
+            "regionId": 10000002,
+            "typeId": 46238
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/gas.mdx",
+            "line": 33,
+            "regionId": 10000002,
+            "typeId": 46240
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/gas.mdx",
+            "line": 35,
+            "regionId": 10000002,
+            "typeId": 46246
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/gas.mdx",
+            "line": 36,
+            "regionId": 10000002,
+            "typeId": 46247
+        },
+        {
+            "component": "EveTypePrice",
+            "file": "src/content/docs/guides/reference/loot/gas.mdx",
+            "line": 34,
+            "regionId": 10000002,
+            "typeId": 46251
+        }
+    ],
+    "generatedAt": "2026-03-29T18:08:30.545Z",
+    "refs": [
+        {
+            "regionId": 10000002,
+            "typeId": 20559
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 20563
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 20569
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 20637
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21088
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21470
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21472
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21474
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21476
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21478
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21480
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21484
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21486
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21493
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21510
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21569
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21586
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21720
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 21733
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 22889
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23128
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23132
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23134
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23137
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23149
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23152
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23154
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23156
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23172
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23177
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23416
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23418
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23785
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23797
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23803
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23805
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23817
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23819
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23824
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 23868
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25530
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25538
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25590
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25591
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25608
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25612
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25613
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25614
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25615
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25617
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25619
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25621
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25622
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25624
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 25625
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 28665
+        },
+        {
+            "regionId": 10000002,
+            "systemId": 30000133,
+            "typeId": 30744
+        },
+        {
+            "regionId": 10000002,
+            "systemId": 30000133,
+            "typeId": 30745
+        },
+        {
+            "regionId": 10000002,
+            "systemId": 30000133,
+            "typeId": 30746
+        },
+        {
+            "regionId": 10000002,
+            "systemId": 30000133,
+            "typeId": 30747
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 33520
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 33522
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 33529
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 33539
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 33577
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 33700
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 33702
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 34278
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 34282
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 34290
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 34294
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 46235
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 46238
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 46240
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 46246
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 46247
+        },
+        {
+            "regionId": 10000002,
+            "typeId": 46251
+        }
+    ],
+    "unresolved": []
+}
